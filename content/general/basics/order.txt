@@ -1,0 +1,7 @@
+the-control-panel
+organization
+pyrocms-tags
+pyrocms-urls
+themes
+widgets-plugins-and-modules
+add-ons
