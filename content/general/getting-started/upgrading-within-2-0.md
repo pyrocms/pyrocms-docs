@@ -1,3 +1,5 @@
+# Upgrading Within 2.0
+
 PyroCMS is in heavy active development, meaning there are frequently new versions with bug fixes and new features. You can follow the [blog](http://www.pyrocms.com/blog) and our [Twitter feed](http://www.twitter.com/pyrocms) to be notified of new versions.
 
 Upgrading PyroCMS is quick and easy. Just follow the steps below:
