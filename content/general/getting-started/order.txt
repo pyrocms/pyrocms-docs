@@ -1,8 +1,8 @@
 server-requirements
 installation
-upgrading-from-1-x
-upgrading-within-2-0
-removing-index.php-from-urls
+upgrading-from-1-x | Upgrading from 1.x
+upgrading-within-2-0 | Upgrading within 2.0
+removing-indexphp-from-urls | Removing index.php from URLs
 environments
-pyrocms-folder-structure
-pyrocms-versions
+pyrocms-folder-structure | PyroCMS Folder Structure
+pyrocms-versions | PyroCMS Versions
