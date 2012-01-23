@@ -1472,6 +1472,8 @@ body.home { background-color: #f9f9f9; background-image: url(../img/body-bg-lge.
 
 #doc_body {
 	padding: 0!important;
+	margin-bottom: 25px;
+	overflow: hidden;
 }
 #doc_body p {
 	font-size: 12px!important;
@@ -1537,39 +1539,26 @@ body.home { background-color: #f9f9f9; background-image: url(../img/body-bg-lge.
 }
 
 /* Footer --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-footer { background: #262626; width: 100%; height: 400px; margin: -75px 0 0 0; padding: 25px 0 0 0; border-top: 1px solid #ffffff; clear: both; float: left; }
-footer #upper img.pagodabox { margin-top: -56px; float: right; }
-footer #upper .footer_news { margin-right: 100px; }
-footer #upper .footer_connect { width: 150px; }
-footer #upper h6 { color: #efa92e; text-shadow: 0 -1px 0 rgba(0, 0, 0, 1); text-transform: uppercase; margin-bottom: 10px; }
-footer #upper p { font-size: 13px; color: rgba(255, 255, 255, 0.5); text-shadow: 0 -1px 0 rgba(0, 0, 0, 1); }
-footer #upper ul { margin: 0; padding: 8px 0 0 0; }
-footer #upper ul li { list-style: none; padding: 0 0 8px 0; }
-footer #upper ul li img { margin-top: -3px; }
-footer #upper ul li a { font-size: 13px; color: rgba(255, 255, 255, 0.5); text-shadow: 0 -1px 0 rgba(0, 0, 0, 1); }
-footer #upper ul li a:hover { color: #EFA92E; }
 
-footer .contact-form p { display: none; }
-footer #upper input[type="text"] { width: 280px; background: rgba(0, 0, 0, 0.8); border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 3px 0 3px 5px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1); -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1); -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1); }
-footer #upper textarea { width: 280px; height: 110px; background: rgba(0, 0, 0, 0.8); border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 3px 0 3px 5px; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1); -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1); -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);  }
-footer #upper input[type="submit"] { margin: 5px 15px 0 0; float: right; }
+#footer {
+	padding-top: 0px;
+	margin-top: 35px;
+	border-top: 2px solid #A6AEB4;
+	overflow: hidden;
+}
+#footer ul {
+	margin: 0 0 45px -15px;
+	list-style-type: none;
+}
+#footer ul li {
+	font-size: 11px;
+	color: #536572;
+}
+#footer ul li a {
+	color: #536572;
+}
 
-footer #lower { background: #222222; height: 82px; padding-top: 10px; margin-top: 350px; border-top: 1px solid rgba(0, 0, 0, 0.2); }
-footer #footerlogo { width: 250px; margin: 0; padding: 0; float: left; }
-footer #footerlogo img { margin: 25px 0 0 0; float: left; }
-#installs { font-size: 10px; text-transform: uppercase; color: #737373; text-shadow: 0 -1px 0 #000000; margin: 32px 0 0 10px; float: left; }
-
-ul#footernav { float: right; margin: 28px 0 0 0; padding: 0; }
-ul#footernav li { padding: 0 0 0 20px; float: left; height: 35px; list-style: none; }
-ul#footernav li.madeby { float: right; margin-top: -15px; }
-ul#footernav li.madeby img { width: 131px; height: 46px; }
-ul#footernav li a{ font-family: Arial, helvetica, sans-serif; font-size: 12px; color: #737373; text-shadow: 0 -1px 0 #000000; position: relative; }
-ul#footernav li a:hover, ul#footernav li a:visited:hover { color: #ffffff; text-shadow: none; }
-ul#footernav li a.current { color: #fbfbf7; }
-
--------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
-
+/*
 @Media Queries for responsive design. These override the primary('mobile first') styles.
 
 Ensure your main styling comes before this!
