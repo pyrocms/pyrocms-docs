@@ -1506,7 +1506,7 @@ body.home { background-color: #f9f9f9; background-image: url(../img/body-bg-lge.
 }
 #doc_nav {
 	width: 100%;
-	background: #324C68;
+	background: #aa3c00;
 	overflow: hidden;
 	box-shadow: 1px 2px 5px #ccc;
 	-webkit-box-shadow: 1px 2px 5px #ccc;
@@ -1521,8 +1521,11 @@ body.home { background-color: #f9f9f9; background-image: url(../img/body-bg-lge.
 	text-shadow: none!important;
 	color: #fff;
 }
+#doc_nav ul li a:hover {
+	background: #9b3701;
+}
 #doc_nav ul li.current a {
-	background: #233242;
+	background: #702c07;
 }
 
 /* Footer --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
