@@ -1,6 +1,6 @@
 # Upgrading to 2.0 from 1.x
 
-{{ noparse }}To update your PyroCMS installation you will need to do a little bit of work. We've made it as easy as possible but 2.0 brings lots of new features and changes the way a few things work. We feel that the only way the upgrade could be easier is if we did not change anything, which is not how the PyroCMS team roll.
+To update your PyroCMS installation you will need to do a little bit of work. We've made it as easy as possible but 2.0 brings lots of new features and changes the way a few things work. We feel that the only way the upgrade could be easier is if we did not change anything, which is not how the PyroCMS team roll.
 
 ## Step 1: Backup your config and addons
 
@@ -54,7 +54,6 @@ This will let PyroCMS know which database connection group to use.
 * uploads/
 * addons/
 
-
 ## Step 6: Upgrade your themes
 
 You may be using a third-party theme. If so go to the Add-on Store and see if it has been upgraded to 2.0. Otherwise you'll need to upgrade this theme to use the new Lex Parser - which is a slightly different and greatly improved Tag system added in 2.0.
@@ -69,7 +68,7 @@ The delimiters in Lex are two (2) braces "{{ }}", not one (1) "{ }".  You will n
 
 Example:
 
-    {{name}}
+	{{ noparse }}{{name}}{{ /noparse }}
 
 ### Whitespace in Tags
 
@@ -77,7 +76,7 @@ You can now put whitespace in your tags before and after the delimiters. ***The 
 
 Example
 
-    {{ name }}
+    {{ noparse }}{{ name }}{{ /noparse }}
 
 ### Variables in Conditionals
 
@@ -87,11 +86,11 @@ Likewise, if the variable returns a string, you do not have to surround it with 
 
 **Old style:**
 
-    {if '{name}' == 'Dan'}
+	{{ noparse }}{if '{name}' == 'Dan'}{{ /noparse }}
 
 **New style:**
 
-    {{ if name == 'Dan' }}
+    {{ noparse }}{{ if name == 'Dan' }}{{ /noparse }}
 
 _Note that you can use the whitespace in conditional tags as well._
 
@@ -101,9 +100,9 @@ Using a callback tag in a conditional is simple.  Use it just like any other var
 
 **Examples**
 
-    {{ if user:logged_in }} {{ endif }}
+    {{ noparse }}{{ if user:logged_in }} {{ endif }}
 
-    {{ if user:logged_in and {user:logged_in group="admin"} }} {{ endif }}
+{{ if user:logged_in and {user:logged_in group="admin"} }} {{ endif }}{{ /noparse }}
 
 ## Step 7: Upgrade your modules
 
