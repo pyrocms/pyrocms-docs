@@ -56,6 +56,16 @@ Each of these corresponds to a database group in your database.php configuration
 
 Once you have PyroCMS set up for multiple environments, you can stop worrying about accidentally overwriting configs in git and get coding.
 
+### Checking the Environment In Layouts
+
+If you'd like to conditionally check the environment in your PyroCMS layout, you can do so with the **global:environment** tag:
+
+	{{ noparse }}{{ if global:environment == 'production' }}
+	
+	// Production-only content
+	
+{{ endif }}{{ /noparse }}
+
 ## Ignoring Folders with Git
 
 If you have your project with PyroCMS on git, you can ignore files that you shouldn't share between environments by creating a <strong>.gitignore</strong> file and adding files and folders you want it to ignore to it. Here is a good start for a PyroCMS .gitignore:
