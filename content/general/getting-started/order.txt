@@ -5,4 +5,3 @@ upgrading-within-2-0 | Upgrading within 2.0
 removing-indexphp-from-urls | Removing index.php from URLs
 environments
 pyrocms-folder-structure | PyroCMS Folder Structure
-pyrocms-versions | PyroCMS Versions
