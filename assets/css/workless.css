@@ -1495,6 +1495,11 @@ body.home { background-color: #f9f9f9; background-image: url(../img/body-bg-lge.
 	color: #324C68;
 	font-weight: bold;
 }
+#doc_body h4 {
+	font-size: 14px;
+	font-weight: bold;
+}
+
 #doc_body a {
 	color: #65809C;
 }
