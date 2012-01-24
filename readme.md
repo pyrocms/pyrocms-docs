@@ -39,10 +39,17 @@ The yellow "tip" boxes (as seen on such pages as the Lex Parser developer guide)
 
 	<div class="tip"><strong>Note:</strong> Content Here</div>
 	
-These boxes should be used when there is important information the user should take note of that may get lost in a general paragrapht
+These boxes should be used when there is important information the user should take note of that may get lost in a general paragraph.
 
 ### Organization
 
-The docs are organized into four sections - General Info, Modules & Tags, Developers, and PyroCMS Pro. Within these sections are sub sections.
+The docs are organized into four sections:
+
+* General Info
+* Modules & Tags
+* Developers
+* PyroCMS Pro
+
+Within these sections are sub sections separated into columns.
 
 If you are creating a new page, it should fit reasonably within one of the existing sections. If you think we need a new section, or want to suggest some organizational changes, please email [adam@pyrocms.com](mailto:adam@pyrocms.com).
