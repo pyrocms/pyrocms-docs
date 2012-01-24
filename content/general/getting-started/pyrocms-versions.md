@@ -1,8 +1,10 @@
+# PyroCMS Versions
+
 PyroCMS is in constant active development, so it helps to know a little bit about how PyroCMS is developed from a version number standpoint.
 
 ## The Latest Stable Version
 
-The button on the [home page](http://www.pyrocms.com) will always download the latest stable version. The latest stable release is the last version that the PyroCMS community has tested and stamped out as many bugs as possible in.
+The download button on the [home page](http://www.pyrocms.com) will always download the latest stable version. The latest stable release is the last version that the PyroCMS community has tested and stamped out as many bugs as possible in.
 
 ## Beta Versions
 
