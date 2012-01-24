@@ -44,9 +44,9 @@ You can tell PyroCMS what environment to load by setting a variable in your .hta
 
      SetEnv PYRO_ENV production
 
-This sets a variable called **PYRO_ENV** that will be read by PyroCMS and used to pull up the right database.
+This sets a variable called **PYRO_ENV** that will be read by PyroCMS and used to load the right database for the current environment.
 
-You choices for the value of **PYRO_ENV** include:
+You choices for the value of **PYRO_ENV** are:
 
 * development
 * staging
@@ -54,7 +54,7 @@ You choices for the value of **PYRO_ENV** include:
 
 Each of these corresponds to a database group in your database.php configuration file.
 
-Once you have PyroCMS set up for multiple environments, you can stop worrying about accidentally overwriting configs in git and get coding.
+<div class="tip"><strong>Tip:</strong> If you are versioning your PyroCMS site with git, once you have PyroCMS set up for multiple environments, keep your database.php under version control since you will no longer need separate database.php files for development, staging, and production.</div>
 
 ### Checking the Environment In Layouts
 
