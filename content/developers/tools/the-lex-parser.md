@@ -45,5 +45,5 @@ You can also get and use the full content between the tags in a plugin by callin
 
 ## Full Lex Documentation
 
-You can find full Lex documentation on the Lex parser github repo <a href="https://github.com/happyninjas/lex">here</a>. We'll be updating this section soon with some more advanced Lex techniques as ewel..
+You can find full Lex documentation on the Lex parser github repo <a href="https://github.com/happyninjas/lex">here</a>. We'll be updating this section soon with some more advanced Lex techniques as well.
 
