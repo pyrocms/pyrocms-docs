@@ -14,6 +14,7 @@
 * Fixed some positioning and subfolder dropdown style issues in the Files module
 * Fixed PHP notices when the navigation plugin is used as a tag pair
 * Fixed a bug where a user with permission to access the Newsletters module and not the Users module, would see a "Manage Users" link in the CP nav bar
+* Fixed an issue with the MSM (Professional only) that didn't record the correct migration version when creating a new site
 
 ### Pro
 
