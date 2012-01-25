@@ -15,6 +15,10 @@
 * Fixed PHP notices when the navigation plugin is used as a tag pair
 * Fixed a bug where a user with permission to access the Newsletters module and not the Users module, would see a "Manage Users" link in the CP nav bar
 
+### Pro
+
+* Removed incorrect line in license that stated you could not remove the PyroCMS logo from PyroCMS Professional
+
 ### For Developers
 
 * Added HTML5 Shim to the control panel
