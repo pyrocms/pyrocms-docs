@@ -99,9 +99,9 @@ This general structure will look very familiar if you are acquainted with condit
 
 You can use operators to compare values in an if statement. These used to compare two values. Here's an example:
 
-   {{ noparse }}{{ if {url:segments segment="2"} == 'categories' }}
+    {{ noparse }}{{ if {url:segments segment="2"} == 'categories' }}
     
-   &lt;p>Looks like you are in the categories section.&lt;/p>
+    &lt;p>Looks like you are in the categories section.&lt;/p>
     
 {{ endif }}{{ /noparse }}
 
