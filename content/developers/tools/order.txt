@@ -2,5 +2,4 @@ constants-and-globals | Constants and Globals
 the-lex-parser
 events
 pyrocache | PyroCache
-streams_core_api | Streams Core API
 cp-style-guide | Control Panel GUI Guidelines
