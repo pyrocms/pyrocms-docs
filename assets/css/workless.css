@@ -1510,6 +1510,9 @@ body.home { background-color: #f9f9f9; background-image: url(../img/body-bg-lge.
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.1);
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
+#doc_body var {
+	color: #92ADB8;
+}
 
 .tip {
 	padding: 20px;
