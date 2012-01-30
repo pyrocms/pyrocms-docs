@@ -1,4 +1,4 @@
-# Wdiget Development
+# Developing Widgets
 
 Widgets are quite similar to <a href="/docs/glossary#plugins">Plugins</a> in the way they are inserted into content, but they are a little more clever. They allow even your least experienced client or administrator to manage chunks of intelligent content on their site without needing to learn loads of tags, HTML or call you in to help.</p>
 <p>

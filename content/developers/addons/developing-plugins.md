@@ -1,4 +1,4 @@
-# Plugin Development
+# Developing Plugins
 
 One of the central concepts of PyroCMS's functionality is tags. If you are familiar with PyroCMS you've definitely seem them. Here's an example of a simple tag that returns the current URL:
 

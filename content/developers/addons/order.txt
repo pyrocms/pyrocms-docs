@@ -1,3 +1,2 @@
-plugin-development
-widget-development
-module-development
+developing-plugins
+developing-widgets
