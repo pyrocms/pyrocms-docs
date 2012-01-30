@@ -1483,13 +1483,11 @@ body.home { background-color: #f9f9f9; background-image: url(../img/body-bg-lge.
 	color: #324C68;
 	font-weight: bold;
 }
-
 #doc_body h2 {
 	font-size: 22px;
 	color: #324C68;
 	border-bottom: 2px dotted #D8E0E9;
 }
-
 #doc_body h3 {
 	font-size: 16px;
 	color: #324C68;
@@ -1499,7 +1497,9 @@ body.home { background-color: #f9f9f9; background-image: url(../img/body-bg-lge.
 	font-size: 14px;
 	font-weight: bold;
 }
-
+#doc_body ul li {
+	font-size: 12px;
+}
 #doc_body a {
 	color: #65809C;
 }
