@@ -2,13 +2,23 @@
 
 PyroCMS is built to be modular, so creating modules is a pretty simple process. The core modules are stored in <def>system/pyrocms/modules</def> and you can install extra ones to <def>addons/default/modules</def> or <def>addons/shared_addons/modules</def>. Any module you create should go into one of those two locations, not in system/cms/modules.
 
-Each module can contain the following directories: config, controllers, helpers, libraries, models, views, js, css and img. If a module will have a front-end (something that displays to the user) then it should contain at least one controller, and that controller should be the same name as the module.
+Each module can contain the following directories:
 
-	E.g: addons/&lt;site-ref&gt;/modules/blog/controllers/blog.php
+* config
+* controllers
+* helpers
+* libraries
+* models
+* views
+* js
+* css
+* img
 
-The rest of it is pretty much normal CodeIgniter development except for a few things.
+If a module will have a front-end (something that displays to the user) then it should contain at least one controller, and that controller should be the same name as the module.
 
-## Module Details
+	E.g: addons/<site-ref>/modules/blog/controllers/blog.php
+
+## The Module details.php File
 
 Each module contains a details.php file which contains its name, description, version, whether it's available in the backend and/or frontend, admin menus, etc. &nbsp;If you set a module to backend => false then it will not show in the admin panel menu. Likewise if you set it to frontend => false it will not be available in places like Navigation where it shows a list of modules to link to.
 
