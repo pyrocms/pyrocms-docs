@@ -22,7 +22,120 @@ If you wish to create a module that is available for use across all sites on a M
 
 Here is the basic structure for the details.php file:
 
-<script src="https://gist.github.com/1529194.js"> </script>
+	<?php defined('BASEPATH') or exit('No direct script access allowed');
+	
+	class Module_Sample extends Module {
+	
+		public $version = '2.0';
+		
+		public function info()
+		{
+			return array(
+				'name' => array(
+					'en' => 'Sample'
+				),
+				'description' => array(
+					'en' => 'This is a PyroCMS module sample.'
+				),
+				'frontend' => TRUE,
+				'backend' => TRUE,
+				'menu' => 'content', // You can also place modules in their top level menu. For example try: 'menu' => 'Sample',
+				'sections' => array(
+					'items' => array(
+						'name' 	=> 'sample.items', // These are translated from your language file
+						'uri' 	=> 'admin/sample',
+							'shortcuts' => array(
+								'create' => array(
+									'name' 	=> 'sample.create',
+									'uri' 	=> 'admin/sample/create',
+									'class' => 'add'
+									)
+								)
+							)
+					)
+			);
+		}
+		
+		public function install()
+		{
+			$this->dbforge->drop_table('sample');
+			$this->db->delete('settings', array('module' => 'sample'));
+		
+			$sample = array(
+		        'id' => array(
+				'type' => 'INT',
+					'constraint' => '11',
+					'auto_increment' => TRUE
+				),
+				'name' => array(
+					'type' => 'VARCHAR',
+					'constraint' => '100'
+				),
+				'slug' => array(
+					'type' => 'VARCHAR',
+					'constraint' => '100'
+				),
+			);
+		
+			$sample_setting = array(
+				'slug' => 'sample_setting',
+				'title' => 'Sample Setting',
+				'description' => 'A Yes or No option for the Sample module',
+				'`default`' => '1',
+				'`value`' => '1',
+				'type' => 'select',
+				'`options`' => '1=Yes|0=No',
+				'is_required' => 1,
+				'is_gui' => 1,
+				'module' => 'sample'
+			);
+		
+			$this->dbforge->add_field($sample);
+			$this->dbforge->add_key('id', TRUE);
+		
+			// Let's try running our DB Forge Table and inserting some settings
+			if ( ! $this->dbforge->create_table('sample') OR ! $this->db->insert('settings', $sample_setting))
+			{
+				return FALSE;
+			}
+		
+			// No upload path for our module? If we can't make it then fail
+			if ( ! is_dir($this->upload_path.'sample') AND ! @mkdir($this->upload_path.'sample',0777,TRUE))
+			{
+				return FALSE;
+			}
+		
+			// We made it!
+			return TRUE;
+		}
+		
+		public function uninstall()
+		{
+			$this->dbforge->drop_table('sample');
+		
+			$this->db->delete('settings', array('module' => 'sample'));
+		
+			// Put a check in to see if something failed, otherwise it worked
+			return TRUE;
+		}
+		
+		
+		public function upgrade($old_version)
+		{
+			// Your Upgrade Logic
+			return TRUE;
+		}
+		
+		public function help()
+		{
+			// Return a string containing help info
+			return "Here you can enter HTML with paragrpah tags or whatever you like";
+		
+			// You could include a file and return it here.
+			return $this->load->view('help', NULL, TRUE); // loads modules/sample/views/help.php
+		}
+	}
+	/* End of file details.php */
 
 The array contains details that will be read and saved to the database on install. You can supply as many extra languages as you like, by default the en version of name and description will be used.
 
