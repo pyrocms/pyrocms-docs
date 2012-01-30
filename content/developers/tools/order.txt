@@ -1,5 +1,4 @@
 constants-and-globals | Constants and Globals
-the-lex-parser
 events
 pyrocache | PyroCache
 cp-style-guide | Control Panel GUI Guidelines

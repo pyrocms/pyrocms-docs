@@ -1,6 +1,10 @@
 # Plugin Development
 
-When editing content through the Control Panel (like pages and blog articles) or building themes, there will be certain tags available to the user and designer. These are called <a href="/docs/glossary#plugins">Plugins</a> and can represent data or be a way to add extra functionality to the page, like inserting <a href="/docs/glossary#widget-areas">Widget areas</a>, displaying settings or user details.
+One of the central concepts of PyroCMS's functionality is tags. If you are familiar with PyroCMS you've definitely seem them. Here's an example of a simple tag that returns the current URL:
+
+	{{ noparse }}{{ url:current }}{{ /noparse }}
+	
+The code behind tags like these is called a plugin. Plugins are special PHP files that have the ability to be called via PyroCMS tags, and have the ability to do things like grab tag parameters. They are simple to write and make incorporating complex functionality into PyroCMS layouts clean and organized.
 
 ## Modular vs. Standalone Plugins
 
@@ -8,15 +12,9 @@ Although they are identical in structure, a plugin can either be standalone file
 
 A plugin inside a module would be something that compliments a custom module you have built, while a standalone plugin would be something general like a Google Maps plugin or a way to list out Tweets in your own syntax. A standalone plugin does not need a larger module structure - it can be used on its own.
 
-## Plugins vs. Widgets
-
-A Plugin is pure syntax, a <a href="/docs/glossary#widgets">Widget</a> is entirely self contained. That means you can drag and drop Widgets into an area and it will know exactly what to do by itself. Plugins give people a lot more freedom if they know how to use them and are capable of editing HTML.
-
 ## Example Plugin
 
-This is the Session plugin which can be found here <def>system/pyrocms/plugins/session.php</def>
-
-For an explanation of plugin functions such as **get_attribute**, please see the {{ link title="Lex Documentation" uri="developers/tools/the-lex-parser" }}.
+This is the Session plugin which can be found in <def>system/pyrocms/plugins/session.php</def>.
 
 	<?php defined('BASEPATH') or exit('No direct script access allowed');
 	/**
@@ -85,19 +83,77 @@ For an explanation of plugin functions such as **get_attribute**, please see the
 	}
 
 	/* End of file theme.php */
+	
+In the above code, please note a new important items:
 
-## Example Usage
+* The class name is **Plugin_** followed by the plugin name in all lowercase.
+* The plugin class extend the class **Plugin**.
+* Each tag function corresponds directly to a class function.
+* The data of each function is returned, not echoed.
+	
+## Getting Plugin Tag Attributes
 
-All you need to do for this to work is open up a theme, page, article, etc and enter:</p>
-
-	{{ noparse }}{{ session:data name="foo" value="bar" }}{{ /noparse }}
-
-Then somewhere else you could do this:
+What makes tags really powerful is they can take attributes that give you the freedom to modify the tag output based on input data. Here is an example:
 
 	{{ noparse }}{{ session:data name="foo" }}{{ /noparse }}
-<p>
-	That will display bar on your page. Obviously this is a very simple example, but with plugins, you can do things from very simple to much more complex.</p>
 
-## Installing? Loading?
+In the above code, we can access the name parameter within the data function like this:
 
-Nope! You don't need to install Plugins, or worry about loading them. Just use them and whatever is returned by the plugin method will replace the tag in your theme, page, article, etc.
+	$this->attribute('name');
+
+In the case that no attribute is set, you can specify a default value:
+
+	$this->attribute('name', 'a default value');
+	
+If no value has been specified, $this->attribute will use the default value.
+
+## Tag Pairs
+
+Tags aren't always just one line that returns a simple string. Tags can also be pairs, meaning they have an opening and closing tag and content between them.
+
+Plugins have some features built into them in order to easily handle tag pairs. Here's an example - the blog:posts tag: 
+
+	{{ noparse }}{{ blog:posts limit="5" order-by="title" }}
+	&lt;h2>{{ title }}&lt/h2>
+	Written by: &lta href="/users/profile/{{ author_id }}">{{ author_name }}&lt/a>&lt/p>
+{{ /blog:posts  }}{{ /noparse }}
+
+As you can see, the top tag takes parameters, and there is a bottom closing tag. Inside the tag are variables that we need to replace with data, so obviously just returning a string won't cut it.
+
+In cases like these, we can return an associative array data, and the variables will be replaced with the data we send. In this case, we can return an array of blog entries to this tag from the plugin file will cause the tag parser to loop through each array node (each blog post in our case) and replace the variables between the opening and closing tags with the variables you've defined.
+
+Here's an example of what we would return:
+
+	return array(
+		array(
+			'title'			=> 'First Blog Post',
+			'author_id'		=> 1,
+			'author_name'	=> 'Phil Sturgeon',
+		),
+		array(
+			'title'			=> 'Second Blog Post',
+			'author_id'		=> 2,
+			'author_name'	=> 'Jerel Unruh',
+		)
+	);
+
+Obviously you'd want to query the database to get the right blog posts, but that's the general idea.
+
+You can even send variables that are associative arrays and these can be looped through in within the tags:
+
+	{{ noparse }}{{ categories }}
+	{{ category_name }}
+{{ /categories}}{{ /noparse }}
+
+### Tag Pair Raw Content
+
+You can also get and use the full content between the tags in a plugin by calling this in your plugin file:
+
+	$this->content();
+	
+If you need to modify the tag pair content before you parse it, you can do so by calling up the Lex parser itself and returning a string:
+
+	$parser = new Lex_Parser();
+	$parser->scope_glue(':');
+	
+	return $parser->parse($this->content(), $data = array(), array($this->parser, 'parser_callback'));
