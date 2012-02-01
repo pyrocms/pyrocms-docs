@@ -66,7 +66,7 @@ The **add_stream** function allows you to create a stream. It will create the ac
 
 In this example we add the recipe stream. Since the module is also called "recipes", our namespace is called "recipes". We are not providing a prefix in this case, so our table will be created a **default_recipes**. If we had a prefix, let's say 'rec_', it would be **default\_rec\_recipes**.
 
-	$this->streams->streams->add_stream('Recipes', 'recipes', 'recipes', NULL, 'Our recipes');
+	$this->streams->streams->add_stream('FAQs', 'faqs', 'streams_sample', 'sample_', NULL);
 
 ## get_stream(<var>$stream\_slug, $namespace</var>)
 
@@ -74,25 +74,25 @@ Gets data about a stream. It does not retrieve entries, just the stream metadata
 	
 ### Example:
 
-	$this->streams->streams->get_stream('recipes', 'recipes');
+	$this->streams->streams->get_stream('faqs', 'streams_sample');
 
 Returns:
 	
 	stdClass Object
 	(
-	    [id] => 16
-	    [stream_name] => Recipes
-	    [stream_slug] => recipes
-	    [stream_namespace] => recipes
-	    [stream_prefix] => 
-	    [about] => Our recipes
+	    [id] => 18
+	    [stream_name] => FAQs
+	    [stream_slug] => faqs
+	    [stream_namespace] => streams_sample
+	    [stream_prefix] => sample_
+	    [about] => 
 	    [view_options] => Array
 	        (
 	            [0] => id
 	            [1] => created
 	        )
 	
-	    [title_column] => 
+	    [title_column] => question
 	    [sorting] => title
 	)
 	
@@ -104,7 +104,7 @@ Gets basic data about all the streams in a namespace.
 
 ### Example:
 
-	$this->streams->streams->get_streams('recipes');
+	$this->streams->streams->get_streams('streams_sample');
 	
 Returns:
 
@@ -112,19 +112,19 @@ Returns:
 	(
 	    [0] => stdClass Object
 	        (
-	            [id] => 16
-	            [stream_name] => Recipes
-	            [stream_slug] => recipes
-	            [stream_namespace] => recipes
-	            [stream_prefix] => 
-	            [about] => Our recipes
+	            [id] => 18
+	            [stream_name] => FAQs
+	            [stream_slug] => faqs
+	            [stream_namespace] => streams_sample
+	            [stream_prefix] => sample_
+	            [about] => 
 	            [view_options] => Array
 	                (
 	                    [0] => id
 	                    [1] => created
 	                )
 	
-	            [title_column] => 
+	            [title_column] => question
 	            [sorting] => title
 	        )
 	)
@@ -135,13 +135,13 @@ Allows you to update basic stream metadata. You can pass any stream metadata val
 
 ### Example:
 
-	$data = array(
-		'stream_slug'	=> 'le_recipes',
-		'about'			=> 'A list of recipes',
-		'view_options'	=> serialize(array('name'))
+	$update_data = array(
+		'stream_slug'	=> 'the_faqs',
+		'about'			=> 'A list of frequently asked questions.',
+		'view_options'	=> array('question')
 	);
 	
-	$this->streams->streams->update_stream('recipes', 'recipes', $data);
+	$this->streams->streams->update_stream('faqs', 'streams_sample', $update_data);
 
 ## delete_stream(<var>$stream\_slug, $namespace</var>)
 
@@ -151,8 +151,59 @@ This streams returns TRUE or FALSE, based on whether the streams was successfull
 		
 ### Example:
 
-	$this->streams->streams->delete_stream('recipes', 'recipes');
+	$this->streams->streams->delete_stream('faqs', 'streams_sample');
 
 ## get_assignments(<var>$stream, $namespace</var>)
 
 Gets assignments for a stream. More information forthcoming.
+
+### Example:
+
+	$this->streams->streams->get_assignments('faqs', 'streams_sample');
+	
+Returns:
+
+	Array
+	(
+	    [0] => stdClass Object
+	        (
+	            [id] => 10
+	            [stream_name] => FAQs
+	            [stream_slug] => faqs
+	            [stream_namespace] => streams_sample
+	            [stream_prefix] => sample_
+	            [about] => 
+	            [title_column] => question
+	            [sorting] => title
+	            [stream_view_options] => a:2:{i:0;s:2:"id";i:1;s:7:"created";}
+	            [stream_id] => 18
+	            [field_id] => 10
+	            [field_name] => Question
+	            [field_slug] => question
+	            [field_namespace] => streams_sample
+	            [field_type] => text
+	            [field_data] => a:1:{s:10:"max_length";i:200;}
+	            [field_view_options] => 
+	        )
+	
+	    [1] => stdClass Object
+	        (
+	            [id] => 11
+	            [stream_name] => FAQs
+	            [stream_slug] => faqs
+	            [stream_namespace] => streams_sample
+	            [stream_prefix] => sample_
+	            [about] => 
+	            [title_column] => question
+	            [sorting] => title
+	            [stream_view_options] => a:2:{i:0;s:2:"id";i:1;s:7:"created";}
+	            [stream_id] => 18
+	            [field_id] => 11
+	            [field_name] => Answer
+	            [field_slug] => answer
+	            [field_namespace] => streams_sample
+	            [field_type] => textarea
+	            [field_data] => a:0:{}
+	            [field_view_options] => 
+	        )
+	)
