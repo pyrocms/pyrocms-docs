@@ -30,7 +30,33 @@ or
 
 No real PHP experience is required to edit this file, just remember to change the last part of &quot;Theme\_Custom&quot; to match your folder. It must always start with &quot;Theme\_&quot; and then have the folder name with the first letter capitalized. As mentioned below in the Theme Options section the &quot;public $options&quot; array is optional. If you do not want to add options, simply remove that section.
 
-<script src="https://gist.github.com/1447647.js?file=gistfile1.aw"></script>
+	<?php defined('BASEPATH') OR exit('No direct script access allowed');
+	class Theme_Custom extends Theme
+	{
+	    public $name            = 'My Theme';
+	    public $author          = 'John Smith';
+	    public $author_website  = 'http://example.com';
+	    public $website         = 'http://example.com/themes/mytheme';
+	    public $description     = 'An awesome theme in blue and green with two columns and stuff.';
+	    public $version         = '1.0';
+	
+	    public $options         =  array(
+	        'show_breadcrumbs' =>   array('title'         => 'Show Breadcrumbs',
+	                                      'description'   => 'Would you like to display breadcrumbs?',
+	                                      'default'       => 'yes',
+	                                      'type'          => 'radio',
+	                                      'options'       => 'yes=Yes|no=No',
+	                                      'is_required'   => TRUE),
+	        'layout' =>             array('title'         => 'Layout',
+	                                      'description'   => 'Which type of layout shall we use?',
+	                                      'default'       => '2 column',
+	                                      'type'          => 'select',
+	                                      'options'       => '2 column=Two Column|full-width=Full Width',
+	                                      'is_required'   => TRUE),
+	     );
+	
+	 }
+	/* End of file theme.php */
 
 ## Theme Options
 

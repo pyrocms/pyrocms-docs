@@ -2,7 +2,7 @@
 
 PyroCMS works off a simple page tree concept. Under **Content &rarr; Pages**, you'll find a listing of your pages. Each page has a URL that a user can access (although PyroCMS does come with page-based permissions).
 
-<img src="http://www.pyrocms.com/uploads/default/files/pages.png" alt="Page Tree" class="doc_image" />
+{{ asset:img file="docs/pages.png" alt="Page Tree" class="doc_image" }}
 
 However, PyroCMS is also a modular CMS, and one of its unique features is to allow modules to have their own public URLs. For example, the **Blog** module has a control panel interface, but it also contains all the logic to display blog posts and even an RSS feed, accessible via the URL.
 

@@ -1,8 +1,8 @@
 # Widgets, Plugins, and Modules
 
-Simply put, modules, widgets and plugins are ways to get more complex functionality into your sites using PyroCMS's simple [tag system](http://www.pyrocms.com/docs/2.0/basics/pyrocms-tags). PyroCMS comes with its own core modules, widgets, and plugins, and you can also download free and paid third party ones via the PyroCMS [add-on store](http://www.pyrocms.com/store).
+Simply put, modules, widgets and plugins are ways to get more complex functionality into your sites using PyroCMS's simple {{ link uri="general/basics/pyrocms-tags" title="tag system" }}. PyroCMS comes with its own core modules, widgets, and plugins, and you can also download free and paid third party ones via the PyroCMS [add-on store](http://www.pyrocms.com/store).
 
-_Note: if you are a developer and interested in developing your own widgets, plugins, and modules, you can find information on how to do that in our [dev guide](http://www.pyrocms.com/docs/2.0/developers)._
+<div class="tip"><strong>Note:</strong> if you are a developer and interested in developing your own widgets, plugins, and modules, you can find information on how to do that in our {{ link uri="developers" title="dev guide" }}.</div>
 
 Below is an overview of each.
 
@@ -40,7 +40,7 @@ Plugins can also use two tags to loop through data:
 	
 {{ /blog:post }}{{ /noparse }}
 
-_For more information on PyroCMS tags and how to use them, see the [tag reference](http://www.pyrocms.com/docs/2.0/tag-reference)._
+_For more information on PyroCMS tags and how to use them, see the {{ link uri="modules-and-tags" title="tag reference" }}._
 
 ## Modules
 
@@ -53,5 +53,3 @@ For instance, the Pages module contains the control panel area that allows you t
 What makes PyroCMS modules unique is the fact that they can have public-facing pages as well.
 
 For instance, the Blog module allows you to manage posts in the control panel, but yoursite.com/blog maps to the blog module and displays posts using your theme.
-
-_For more on PyroCMS URLs and modularity, see [PyroCMS URLS](http://www.pyrocms.com/docs/2.0/basics/pyrocms-urls)._

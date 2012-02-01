@@ -5,10 +5,10 @@ One of the unique features of PyroCMS is PyroCMS tags, powered by the Lex Parser
 The following guide will teach you the basics of tags and how to use them in your layouts.
 
 <ul id="doc_sub_nav">
-<li><a href="#basic">Basic Tags</a></li>
-<li><a href="#attributes">Tag Attributes</a></li>
-<li><a href="#pairs">Tag Pairs</a></li>
-<li><a href="#conditionals">Tag Conditionals</a></li>
+<li><a href="{{ url:current_url }}#basic">Basic Tags</a></li>
+<li><a href="{{ url:current_url }}#attributes">Tag Attributes</a></li>
+<li><a href="{{ url:current_url }}#pairs">Tag Pairs</a></li>
+<li><a href="{{ url:current_url }}#conditionals">Tag Conditionals</a></li>
 </ul>
 
 <div id="basic"></div>
@@ -77,6 +77,8 @@ Occasionally, tags will contain arrays of data that you can loop through. You ca
      
 {{ /images }}{{ /noparse }}
 
+<div id="conditionals"></div>
+
 ## Conditional Tags
 
 Many times in your layouts you will want to show something under certain conditions. For instance, if a user is logged in or if a url segment has a certain value. PyroCMS tags allow you to do that with an if/else tag syntax.
@@ -92,8 +94,6 @@ Here is a simple example of a conditional tag statement:
 {{ endif }}{{ /noparse }}
 
 This general structure will look very familiar if you are acquainted with conditionals in languages like PHP. The if tag checks if the value of **user:logged_in** is true, and returns what is between that tag and the **endif** tag.
-
-<div id="conditionals"></div>
 
 ### Conditional Operators
 
