@@ -1,10 +1,10 @@
 # Configuring Nginx with PHP-FPM
 
-For those of you that like using Nginx, I have good news, you can run PyroCMS just fine. 
+For those of you that like using Nginx, we have good news, you can run PyroCMS just fine. 
 
 ## Setting up your virtual host
 
-We are going to use try\_files instead of the Rewrite Module. You can find out more about try\_files [here](http://wiki.nginx.org/HttpCoreModule#try_files)
+We are going to use try\_files instead of the Rewrite Module. You can find out more about try\_files [here](http://wiki.nginx.org/HttpCoreModule#try_files).
 
 
 	server {
@@ -58,14 +58,14 @@ We are going to use try\_files instead of the Rewrite Module. You can find out m
 	        include drop.conf;
 	}
 	
-This configuration will work out of the box when PyroCMS is first uploaded to the web root.  One recommendation I have is to make the following changes to the **/installer/config/config.php** and **/system/cms/config/config.php**
+This configuration will work out of the box when PyroCMS is first uploaded to the web root.  One recommendation I have is to make the following changes to the **/installer/config/config.php** and **/system/cms/config/config.php**.
 
 	$config['index_page'] = "";
 	$config['uri_protocol'] = "REQUEST_URI";
 
 ## Fast CGI Params
 
-Below are the included fastcgi\_params that I have had luck with:
+Below are the included fastcgi\_params that users have reported have worked:
 
 	fastcgi_param  QUERY_STRING       $query_string;
 	fastcgi_param  REQUEST_METHOD     $request_method;
@@ -110,7 +110,7 @@ The first two lines stops the robot and favicon 404 from logging. The third line
 
 ## Setting up the PHP\-FPM Pool
 
-The pool is setup using Unix sockets to reduce the TCP overhead. I find this method to increase performance on small VPS environments. For more information about the PHP\-FPM config file click [here](http://php-fpm.org/wiki/Configuration_File)
+The pool is setup using Unix sockets to reduce the TCP overhead. I find this method to increase performance on small VPS environments. For more information about the PHP\-FPM config file click [here](http://php-fpm.org/wiki/Configuration_File).
 
 	[domain]
 	listen = /tmp/domain.sock
