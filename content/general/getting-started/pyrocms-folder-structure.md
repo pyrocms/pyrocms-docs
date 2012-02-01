@@ -13,7 +13,7 @@ Since PyroCMS Pro is multi-site enabled, even single install of PyroCMS get its 
 
 If you are using PyroCMS Pro, all add-ons that you want to be shared between sites go in your shared_addons folder. Add-ons that only belong to specific sites can go in their respective folders that are created on installation of the site.
 
-If you are running the regular PyroCMS version with one site, you can put your add-ons in either folder - PyroCMS will look in both places.
+If you are running PyroCMS Community edition, you can put your add-ons in either folder - PyroCMS will look in both places.
 
 ## /system/
 
@@ -34,5 +34,3 @@ However, if you start out without mod_rewrite URLs (ie: with index.php still in 
 and changing it to:
 
 	$config['index_page'] = '';
-
-That's it! PyroCMS' folder structure is very neat and tidy, so that's all there is to it!
