@@ -11,21 +11,20 @@ Here is a cached module call:
 	$this->pyrocache->model('blog_m', 'get_posts', array($category_id, 'live'), 120); // keep for 2 minutes 
 
 	// Keep forever
-	$this-&gt;pyrocache-&gt;library(&#39;some_library&#39;, 
-                          &#39;calculate_something&#39;, array($foo, $bar, $bla)); // keep for default time (0 = unlimited)
+	$this->pyrocache->library('some_library', 'calculate_something', array($foo, $bar, $bla)); // keep for default time (0 = unlimited)
 
 	// Clear / Delete cache for a library or model
-	$this-&gt;pyrocache-&gt;delete_all(&#39;some_library&#39;);</pre>
+	$this->pyrocache->delete_all('some_library');
 
-This is basically a really simple way to wrap your model and library calls with cache logic to save you having to manually check expirey dates and the like. If you feel like doing it manually or are dealing with caching that is not inside a model or library method then you can do things the old fashioned way too:
+This is basically a really simple way to wrap your model and library calls with cache logic to save you having to manually check expiry dates and the like. If you feel like doing it manually or are dealing with caching that is not inside a model or library method then you can do things the old fashioned way too:
 
-if ( ! $data = $this-&gt;pyrocache-&gt;get(&#39;cached-name&#39;))
-{{ 
-    $data = $this-&gt;some_library-&gt;massive_query();
-    $this-&gt;pyrocache-&gt;write($data, &#39;cached-name&#39;);
- }}
+    if ( ! $data = $this->pyrocache->get('cached-name'))
+    { 
+        $data = $this->some_library->massive_query();
+        $this->pyrocache->write($data, 'cached-name');
+    }
 
-$this-&gt;pyrocache-&gt;delete(&#39;cached-name&#39;);
+    $this->pyrocache->delete('cached-name');
 
 ### Where is the cache saved?
 
@@ -41,4 +40,4 @@ This will remove any cached models. To remove a library, mention the name instea
 
 ### Can I make PyroCache use Memcache, XCache, etc?
 
-Nope, for that you&#39;ll want to work with the <a href="http://codeigniter.com/user_guide/libraries/caching.html" target="_blank">Cache class</a> in CodeIgniter Reactor. It does not have the model / library call features, but will let you work with multiple caching mechanisms very easily.
+Nope, for that you need to work with the <a href="http://codeigniter.com/user_guide/libraries/caching.html" target="_blank">Cache class</a> in CodeIgniter Reactor. It does not have the model / library call features, but will let you work with multiple caching mechanisms very easily.

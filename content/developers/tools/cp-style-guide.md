@@ -4,9 +4,9 @@ To keep the user experience seamless throughout the back end from module to modu
 
 ## Buttons
 
-Buttons on the PyroCMS back-end come in two flavors: the smaller, gray buttons (secondary buttons) and the larger buttons (primary) that can be colored.
+Buttons on the PyroCMS admin area come in two flavors: the smaller, gray buttons (secondary buttons) and the larger buttons (primary) that can be colored.
 
-Secondary buttons require a class of _button_. Primary buttons require a class of _btn_ and a color class, such as _blue_ or _gray_.
+Secondary buttons require a class of *button*. Primary buttons require a class of *btn* and a color class, such as *blue* or *gray*.
 
 ### Color Options
 
@@ -32,7 +32,7 @@ Action buttons such as Save, Save & Close, Cancel, etc. should be primary button
 
 ## Sections
 
-Sections are the main building block of the PyroCMS 1.4 interface. They consist of a section title and a section item:
+Sections are the main building block of the PyroCMS 2.0 interface. They consist of a section title and a section item:
 
 	<section class="title"><h4>Title</h4></section>
 	<section class="item">Content</section>
@@ -59,3 +59,5 @@ To be determined.
 Filtering and search functionality should be located above data listings. Filtering and searching tools should not be located in the section header.
 
 ## Forms
+
+To be determined.

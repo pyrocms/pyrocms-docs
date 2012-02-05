@@ -14,13 +14,13 @@ Each module can contain the following directories:
 * css
 * img
 
-If a module will have a front-end (something that displays to the user) then it should contain at least one controller, and that controller should be the same name as the module.
+If a module will need to have a front-end (something that displays to the user) then it should contain at least one controller, and that controller should ba named after the module.
 
-	E.g: addons/<site-ref>/modules/blog/controllers/blog.php
+	addons/<site-ref>/modules/blog/controllers/blog.php
 
 ## The Module details.php File
 
-Each module contains a details.php file which contains its name, description, version, whether it's available in the backend and/or frontend, admin menus, etc. &nbsp;If you set a module to backend => false then it will not show in the admin panel menu. Likewise if you set it to frontend => false it will not be available in places like Navigation where it shows a list of modules to link to.
+Each module contains a details.php file which contains its name, description, version, whether it is available in the backend and/or frontend, admin menus, etc. If you set a module to backend => false then it will not show in the admin panel menu. Likewise if you set it to frontend => false it will not be available in places like Navigation where it shows a list of modules to link to.
 
 When the CP > Addons page is loaded or when PyroCMS is installed it indexes all details.php files and stores the data from the info() method in the default_modules table. If you make edits to this file the changes will not be seen until it is re-installed or you edit the table manually. One exception is the sections and shortcuts used by the admin panel. These are loaded each time they are needed so you can place permission checks around them and control the menus the way you need to.
 
@@ -145,11 +145,10 @@ Here is the basic structure for the details.php file:
 			return $this->load->view('help', NULL, TRUE); // loads modules/sample/views/help.php
 		}
 	}
-	/* End of file details.php */
 
 The array contains details that will be read and saved to the database on install. You can supply as many extra languages as you like, by default the en version of name and description will be used.
 
-This array will be available in your Public\_Controller&#39;s and Admin\_Controller&#39;s via $this-&gt;module\_details[&#39;name&#39;]. Notice, name and description will use the active language, not return the whole array.
+This array will be available in your Public\_Controller's and Admin\_Controller's via $this-&gt;module\_details['name']. Notice, name and description will use the active language, not return the whole array.
 
 ## Public Controllers
 
@@ -166,11 +165,11 @@ In normal CodeIgniter there is only one controller class. In PyroCMS there are f
 		 }
 	}
 
-This page will be available to anyone whether logged in or not and will use the frontend design. That means it will use the current active theme and show any login data and navigation, etc and can be viewed via &quot;http://example.com/modulename&quot;.
+This page will be available to anyone whether logged in or not and will use the frontend design. That means it will use the current active theme and show any login data and navigation, etc and can be viewed via "http://example.com/modulename".
 
 ## Admin Controllers
 
-Admin controllers have a few different properties to them. It will automatically check that a user has permission to be there, and redirect them to a login page if not. This means they either need to have a user role of &quot;admin&quot; or be allowed specific permission to access the module.
+Admin controllers have a few different properties to them. It will automatically check that a user has permission to be there, and redirect them to a login page if not. This means they either need to have a user role of "admin" or be allowed specific permission to access the module.
 
 <def>addons/</def>&lt;site-ref&gt;<def>/modules/&lt;module-name&gt;/controllers/admin.php</def>
 
@@ -185,4 +184,4 @@ Admin controllers have a few different properties to them. It will automatically
 		 }
 	}
 
-This page can be accessed via &quot;http://example.com/admin/&lt;module-name&gt;&quot;.
+This page can be accessed via "http://example.com/admin/&lt;module-name&gt;".
