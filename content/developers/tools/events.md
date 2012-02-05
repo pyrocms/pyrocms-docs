@@ -4,11 +4,11 @@ Events allow you add your own functionality to the PyroCMS core by hooking into 
 
 ## Using Events in your modules
 
-Create an events.php file in the root of your module (it will be autoloaded when PyroCMS starts to run). Below is an example file from a module named &quot;Sample&quot;:</p>
+Create an events.php file in the root of your module (it will be autoloaded when PyroCMS starts to run). Below is an example file from a module named "Sample":
 
 <script src="https://gist.github.com/1373989.js?file=gistfile1.aw"></script>
 
-In the above example, the Events&#95;Sample registers the function 'run' to run when the 'public_controller' trigger is called in PyroCMS.
+In the above example, the Events_Sample registers the function 'run' to run when the 'public_controller' trigger is called in PyroCMS.
 
 It is important to note that some triggers pass data that you can use in your function as well.
 
