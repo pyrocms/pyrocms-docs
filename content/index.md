@@ -12,8 +12,8 @@ In the {{ link uri="modules-and-tags" title="Modules &amp; Tags" }} section, you
 
 ## Developers
 
-In the {{ link uri="developers" title="Developers" }} section, you can find docs for developing PyroCMS addons, as well as a guide to contributing to PyroCMS.
+In the {{ link uri="developers" title="Developers" }} section, you can find documentation for developing PyroCMS addons, as well as a guide to contributing to PyroCMS.
 
 ## PyroCMS Pro
 
-In the {{ link uri="pyrocms-pro" title="PyroCMS Pro" }} section, you can find docs specifically for the Pro version of PyroCMS.
+In the {{ link uri="pyrocms-pro" title="PyroCMS Pro" }} section, you can find documentation specifically for the Pro version of PyroCMS.
