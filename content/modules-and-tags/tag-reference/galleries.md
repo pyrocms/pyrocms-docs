@@ -1,4 +1,4 @@
-# Galleries
+# Galleries Tags
 
 The <em>galleries</em> tag displays images from a gallery.
 
