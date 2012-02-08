@@ -151,6 +151,12 @@ The array contains details that will be read and saved to the database on instal
 
 This array will be available in your Public\_Controller&#39;s and Admin\_Controller&#39;s via $this-&gt;module\_details[&#39;name&#39;]. Notice, name and description will use the active language, not return the whole array.
 
+## Detail File Resources
+
+Although it is likely that your third party module will be installed via the Add-ons section of the control panel, it is a good precaution to take note that your module may be installed when the PyroCMS installer runs. Modules that are in the shared_addons folder will be installed along with core modules during installation.
+
+Because the installer is a separate CodeIgniter application, you cannot load any module files such as configs or helpers when your module is being installed via the PyroCMS installer. Because of this, we recommend that your details.php file be independent of other configs, helpers, or other CodeIgniter-loaded resources.
+
 ## Public Controllers
 
 In normal CodeIgniter there is only one controller class. In PyroCMS there are four. Controller, MY\_Controller, Admin\_Controller and Public\_Controller. To use one of these you can extend them like so:
