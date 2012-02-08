@@ -1,4 +1,4 @@
-# Control Panel GUI Guidelines
+# Control Panel GUI
 
 To keep the user experience seamless throughout the back end from module to module, the following control panel tools and guidelines have been developed to serve as a guide when deciding on UI elements. They exist in order to provide a consistent back end experience, so if you need to bend these a little for your module, please keep the goal of consistency in mind.
 

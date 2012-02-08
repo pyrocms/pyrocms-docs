@@ -1,5 +1,5 @@
 constants-and-globals | Constants and Globals
 events
 pyrocache | PyroCache
-cp-style-guide | Control Panel GUI Guidelines
+cp-style-guide | Control Panel GUI
 template-library | Template Library
