@@ -29,9 +29,9 @@ As you can see, we have two _section_ elements: title and item. Very simple! All
 
 ## Buttons
 
-Buttons on the PyroCMS back-end come in two flavors: the smaller, gray buttons (secondary buttons) and the larger buttons (primary) that can be colored.
+Buttons on the PyroCMS admin area come in two flavors: the smaller, gray buttons (secondary buttons) and the larger buttons (primary) that can be colored.
 
-Secondary buttons require a class of _button_. Primary buttons require a class of _btn_ and a color class, such as _blue_ or _gray_.
+Secondary buttons require a class of *button*. Primary buttons require a class of *btn* and a color class, such as *blue* or *gray*.
 
 ### Color Guidelines
 
@@ -49,9 +49,9 @@ Action buttons such as Save, Save & Close, Cancel, etc. should be primary button
 
 * Buttons on the same line should be of the same size (ie: don't mix primary and secondary buttons next to each other).
 
-## Sections
-
 ## Data Listings
+
+Sections are the main building block of the PyroCMS 2.0 interface. They consist of a section title and a section item:
 
 Listing data in a table format is a common module need - PyroCMS has a default table style that is automatically applied to table elements.
 
