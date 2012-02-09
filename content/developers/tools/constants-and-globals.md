@@ -72,14 +72,6 @@ A number of constants and properties are made available across PyroCMS.
 		</tr>
 		<tr>
 			<td width="100">
-				<strong>Since v1.3.0</strong></td>
-			<td>
-				&nbsp;</td>
-			<td>
-				&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="100">
 				ADMIN_THEME</td>
 			<td>
 				pyrocms</td>

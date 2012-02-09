@@ -1,5 +1,7 @@
 constants-and-globals | Constants and Globals
+assets
 events
+keywords
 pyrocache | PyroCache
 cp-style-guide | Control Panel GUI
 template-library | Template Library

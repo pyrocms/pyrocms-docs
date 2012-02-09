@@ -1,4 +1,3 @@
 the-addons-directory | The Add-ons Directory
-store-submission-guidelines
 modular-routing
-coding-standards
+environments

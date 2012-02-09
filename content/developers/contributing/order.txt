@@ -1,2 +1,4 @@
+coding-standards
 using-git
 translating-language-files
+store-submission-guidelines
