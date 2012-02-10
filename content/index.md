@@ -4,7 +4,7 @@ Welcome to documentation for PyroCMS.
 
 ## General Info
 
-In the {{ link uri="general-info" title="General Info" }} section, you can find documentation on installing and using PyroCMS, including using and building themes.
+In the {{ link uri="general" title="General Info" }} section, you can find documentation on installing and using PyroCMS, including using and building themes.
 
 ## Modules &amp; Tags
 
