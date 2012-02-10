@@ -52,4 +52,4 @@ You can of course use database interactions however you'd like in your modules, 
 
 It will be clearer to have an example thread that runs through these docs, so here is our example:
 
-_Our module is a simple recipe-keeping module. Users add recipes and view them in a list. Our only stream is a recipe stream._
+_Our module is a simple FAQ module. Users add FAQs and view them in a list. Our only stream is a faq stream and our namespace is streams_sample._
