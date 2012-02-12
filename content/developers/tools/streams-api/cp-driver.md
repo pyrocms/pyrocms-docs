@@ -6,7 +6,7 @@ You can call the entries driver like this:
 
 	$this->streams->cp->function();
 
-## form(<var>$stream\_slug, $namespace\_slug, $mode = 'new', $entry = NULL, $view\_override = FALSE, $skips = array()</var>)
+## form(<var>$stream\_slug, $namespace\_slug, $mode = 'new', $entry = NULL, $view\_override = FALSE, $extra = array(), $skips = array()</var>)
 
 Creates an entry form for the control panel. Also manages and sets validation.
 
@@ -51,10 +51,57 @@ So if you really want to go simple, you could have a controller function that lo
 		<td>Setting this to TRUE removes the need to load a template in your controller function.</td>
 	</tr>
 	<tr> 
+		<td>extra</td>
+		<td>array</td>
+		<td>An array of extra parameters that all have default values. See section below.</td>
+	</tr>
+	<tr> 
 		<td>skips</td>
 		<td>array</td>
 		<td>You can remove fields from the form by adding their field slugs to this array. Field slugs in this array will not be put through validation. This is handy if you want to set a form value manually without allowing your user to do it.</td>
 	</tr>
 </table>
 
+### $extra Parameters
 
+<table cellpadding="0" cellspacing="0" class="docs_table"> 
+	<thead> 
+	<tr> 
+		<th width="150">Param</th> 
+		<th width="250">Default</th> 
+		<th></th> 
+	</tr>
+	</thead>
+	<tbody> 
+	<tr> 
+		<td>return</td>
+		<td>current url</td>
+		<td>The URL to return to after the form submission. **-id-** in this string will get replaced by the edit or new entry id, depending on the entry mode (edit or new).</td>
+	</tr> 
+	<tr> 
+		<td>success_message</td>
+		<td>generic successful entry submission message</td>
+		<td>Flash message to show after successful entry submission.</td>
+	</tr> 
+	<tr> 
+		<td>failure_message</td>
+		<td>generic failed entry submission message</td>
+		<td>Flash message to show after failed entry submission.</td>
+	</tr> 
+	<tr> 
+		<td>required</td>
+		<td>&lt;span&gt;*&lt;/span&gt;</td>
+		<td>This defaults to the standard required marker for the PyroCMS CP, so it shouldn't usually be changed, but if you need to you can pass a new value here.</td>
+	</tr>
+	<tr> 
+		<td>title</td>
+		<td>null</td>
+		<td>A title for the header bar.</td>
+	</tr> 
+	<tr> 
+		<td>email_notifications</td>
+		<td>null</td>
+		<td>An array of email notification data. More docs coming on this.</td>
+	</tr> 
+	</tbody>
+</table>
