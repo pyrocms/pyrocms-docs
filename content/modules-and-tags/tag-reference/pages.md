@@ -124,6 +124,45 @@ Returns:
 	<h2>Page Title</h2>
 	<p>Page Body</p>
 
+## pages:chunk
+
+	{{ noparse }}{{ pages:chunk }}{{ /noparse }}
+
+A tag that allows any one page chunk to be displayed anywhere on the site, even inside another page's content.
+
+### Attributes
+
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">id</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>ID of the page that the chunk belongs to.</td>
+		</tr>
+		<tr>
+			<td width="100">name</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>The name of the page chunk that you want to display.</td>
+		</tr>
+	</tbody>
+</table>
+
+### Example
+
+	{{ noparse }}{{ pages:chunk id="1" name="default" }}{{ /noparse }}
+
+Returns:
+
+	<p>Welcome to our homepage. We have not quite finished setting up our website yet, but please add us to your bookmarks and come back soon.</p>
+
 ## pages:is
 
 	{{ noparse }}{{ pages:is }}{{ /noparse }}
