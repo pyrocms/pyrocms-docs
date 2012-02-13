@@ -16,7 +16,7 @@ The **remove\_namespace()** function with destroy all data associated with a nam
 
 Obviously, this should be used with caution!
 
-## convert\_table\_to\_stream(<var>$table\_slug, $namespace\_slug, $prefix, $stream\_name, $about = NULL, $title_column = NULL, $view_options = array('id', 'created')</var>)
+## convert\_table\_to\_stream(<var>$table\_slug, $namespace\_slug, $prefix, $stream\_name, $about = NULL, $title\_column = NULL, $view\_options = array('id', 'created')</var>)
 
 The **convert\_table\_to\_stream()** function takes an existing table and creates the streams metadata for it based on the given parameters.
 
