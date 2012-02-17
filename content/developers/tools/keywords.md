@@ -4,7 +4,7 @@ Keywords are the same as what other systems would call Tags. We have Tags alread
 
 ## Using Keywords in your modules
 
-Simply add a `char(32)` field to your database. This stored the MD5 string that represents the combination of keywords that were used.
+Simply add a **char(32)** field to your database. This stored the MD5 string that represents the combination of keywords that were used.
 
 <script src="https://gist.github.com/1777448.js?file=gistfile1.aw"></script>
 
