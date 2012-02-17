@@ -73,7 +73,9 @@ The column heading for the actions column does not need a title. It can be left 
 
 Indexes of data with no entries should have a simple line of text indicating there is no data to be displayed inside of a div with a class of **no_data**:
 
-	<div class="no_data"><?php echo lang('sample:no_items); ?>'</div>
+	<div class="no_data">
+		<?php echo lang('sample:no_items'); ?>
+	</div>
 	
 ### Batch Actions
 
@@ -81,16 +83,16 @@ Some data listings need the ability to affect multiple items in the list via a c
 
 	<td><?php echo form_checkbox('action_to[]', $item->id); ?></td>
 	
-After switching out $item->id to whatever variable you want to send to the controller in the action_to array, this will give you a checkbox on every row.
+After switching out **$item->id** to whatever variable you want to send to the controller in the action\_to array, this will give you a checkbox on every row.
 
 In the header, you may wish to have a checkbox that, when checked, checks all of the rows in the table. This can be done with a checkbox with the class of **check-all**:
 
 	<th><?php echo form_checkbox(array('name' => 'action_to_all', 'class' => 'check-all'));?></th>
 
-Finally, PyroCMS has built-in logic to disable/enable table batch action buttons based on whether or not any rows in the database are checked. You can use this logic by wrapping your batch action buttons in a div with a class of **table_action_buttons**:
+Finally, PyroCMS has built-in logic to disable/enable table batch action buttons based on whether or not any rows in the database are checked. You can use this logic by wrapping your batch action buttons in a div with a class of **table\_action\_buttons**:
 
 	<div class="table_action_buttons">
-		<?php $this->load->view('admin/partials/buttons', array('buttons' => array('delete'))); ?&gt;
+		<?php $this->load->view('admin/partials/buttons', array('buttons' => array('delete'))); ?>;
 	</div>
 	
 ### Filtering and Searching
