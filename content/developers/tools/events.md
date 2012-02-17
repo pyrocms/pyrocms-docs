@@ -8,7 +8,7 @@ Create an events.php file in the root of your module (it will be autoloaded when
 
 <script src="https://gist.github.com/1373989.js?file=gistfile1.aw"></script>
 
-In the above example, the Events_Sample registers the function 'run' to run when the 'public_controller' trigger is called in PyroCMS.
+In the above example, the **Events\_Sample** registers the function 'run' to run when the **public\_controller** trigger is called in PyroCMS.
 
 It is important to note that some triggers pass data that you can use in your function as well.
 
