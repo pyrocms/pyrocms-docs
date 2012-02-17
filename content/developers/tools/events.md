@@ -16,6 +16,19 @@ It is important to note that some triggers pass data that you can use in your fu
 
 PyroCMS includes the following event triggers:
 
+### System Triggers (In places other than modules)
+
+<table>
+<tr>
+<td class="one_third">Events::trigger('<b>public_controller</b>')</td>
+<td>This is triggered when the Public_Controller begins to run.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>admin_notification</b>')</td>
+<td>Fired when error, notice or success messages are displayed in the Admin area.</td>
+</tr>
+</table>
+
 ### Blog Triggers
 
 <table>
@@ -50,6 +63,10 @@ PyroCMS includes the following event triggers:
 
 <table>
 <tr>
+<td class="one_third">Events::trigger('<b>comment_approved</b>', $comment)</td>
+<td>Fired when a comment has been approved.</td>
+</tr>
+<tr>
 <td class="one_third">Events::trigger('<b>comment_deleted</b>', $comments)</td>
 <td>Fired when one or more comments were deleted.</td>
 </tr>
@@ -60,15 +77,6 @@ PyroCMS includes the following event triggers:
 <tr>
 <td class="one_third">Events::trigger('<b>comment_updated</b>', $id)</td>
 <td>Fired when a comment has been updated.</td>
-</tr>
-</table>
-
-### Core Triggers
-
-<table>
-<tr>
-<td class="one_third">Events::trigger('<b>public_controller</b>')</td>
-<td>This is triggered when the Public_Controller begins to run.</td>
 </tr>
 </table>
 
@@ -140,11 +148,11 @@ PyroCMS includes the following event triggers:
 <table>
 <tr>
 <td class="one_third">Events::trigger('<b>module_disabled</b>', $slug)</td>
-<td>Fired when a module has been disabled, uninstalled or deleted (by clicking <em>disable</em>, <em>uninstall</em> or <em>delete</em> through the Modules admin).</td>
+<td>Fired when a module has been disabled, uninstalled or deleted (by clicking <em>disable</em>, <em>uninstall</em> or <em>delete</em> through the Modules' admin area).</td>
 </tr>
 <tr>
 <td class="one_third">Events::trigger('<b>module_enabled</b>', $slug)</td>
-<td>Fired when a module has been uploaded, installed or enabled (by clicking <em>install</em> or <em>enable</em> through the Modules admin).</td>
+<td>Fired when a module has been uploaded, installed or enabled (by clicking <em>install</em> or <em>enable</em> through the Modules' admin area).</td>
 </tr>
 <tr>
 <td class="one_third">Events::trigger('<b>module_upgraded</b>', $slug)</td>
@@ -162,6 +170,43 @@ PyroCMS includes the following event triggers:
 <tr>
 <td class="one_third">Events::trigger('<b>navigation_group_deleted</b>', $deleted_ids)</td>
 <td>Fired when one or more navigation groups have been deleted.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>post_navigation_create</b>', $input)</td>
+<td>Fired when a new navigation item has been created.</td>
+</tr>
+<tr>
+<tr>
+<td class="one_third">Events::trigger('<b>post_navigation_delete</b>', $deleted_ids)</td>
+<td>Fired when one or more navigation items have been deleted.</td>
+</tr>
+<td class="one_third">Events::trigger('<b>post_navigation_edit</b>', $input)</td>
+<td>Fired when a new navigation item has been edited.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>post_navigation_order</b>', array($order, $group))</td>
+<td>Fired when a navigation item has been reordered within a group.</td>
+</tr>
+</table>
+
+### Pages Triggers
+
+<table>
+<tr>
+<td class="one_third">Events::trigger('<b>post_page_create</b>', $input)</td>
+<td>Fired when a page has been created.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>post_page_edit</b>', $input)</td>
+<td>Fired when a page has been edited.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>post_page_delete</b>', $deleted_ids)</td>
+<td>Fired when one or more pages have been deleted.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>post_page_order</b>', array($order, $root_pages))</td>
+<td>Fired when pages have been reordered.</td>
 </tr>
 </table>
 
