@@ -6,11 +6,11 @@ The PyroCMS control panel has been completely redesigned for version 2.0 and has
 
 To log into your control panel, go to **yoursite.com/admin**. Enter your email address and password, and you should be good to go!
 
-<img src="http://www.pyrocms.com/uploads/default/files/login.png" alt="Login Screen" class="doc_image" />
+{{ asset:img file="docs/login.png" alt="Login Screen" class="doc_image" }}
 
 After you've logged in, you'll see the PyroCMS control panel dashboard:
 
-<img src="http://www.pyrocms.com/uploads/default/files/dashboard.png" alt="Dashboard" class="doc_image" />
+{{ asset:img file="docs/dashboard.png" alt="Dashboard" class="doc_image" }}
 
 ## The CP Menu
 
@@ -23,10 +23,10 @@ All the sections of your control panel are contained within the top black naviga
 - **Settings:** This section holds settings for the entire site, from the site name to language preferences.
 - **Add-ons:** A list of currently installed core modules, as well as third party modules. You can install and manage third party modules here.
 
-<img src="http://www.pyrocms.com/uploads/default/files/menu.png" alt="PyroCMS menu bar" class="doc_image" />
+{{ asset:img file="docs/menu.png" alt="PyroCMS menu bar" class="doc_image" }}
 
 ## Changing the Default Language
 
 PyroCMS comes in many different languages, and to change the language (English, by default), choose a new language from the menu on the right hand side of the footer:
 
-<img src="http://www.pyrocms.com/uploads/default/files/change_language.png" alt="PyroCMS change language" class="doc_image" />
+{{ asset:img file="docs/change-language.png" alt="PyroCMS change language" class="doc_image" }}

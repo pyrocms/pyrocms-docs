@@ -75,4 +75,4 @@ If you have your project with PyroCMS on git, you can ignore files that you shou
     .htaccess
     uploads/
 
-_Note: In some cases you might want to keep your uploads folder under version control. This is just a suggestion for ignored items._
+<div class="tip"><strong>Note:</strong> In some cases you might want to keep your uploads folder under version control. This is just a suggestion for ignored items.</div>

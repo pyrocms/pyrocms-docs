@@ -1,6 +1,4 @@
-# License
-
-PyroCMS "Community Edition" License
+# PyroCMS "Community Edition" License
 
 Copyright (c) 2010 - 2012, HappyNinjas Ltd.
 All rights reserved.

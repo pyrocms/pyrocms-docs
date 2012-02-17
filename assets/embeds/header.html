@@ -81,6 +81,9 @@
 	<div class="one_quarter">
 		<h4>Getting Started</h4>
 		{{ nav:auto start='general/getting-started' }}
+		
+		<p><strong>Alternate Server Environments</strong></p>
+		{{ nav:auto start='general/getting-started/alternate-server-environments' }}	
 	</div>
 
 	<div class="one_quarter">
@@ -114,16 +117,37 @@
 	<div class="one_quarter">
 		<h4>Developer Tools</h4>
 		{{ nav:auto start='developers/tools' }}	
+		
+		<p><strong>Streams Core API</strong></p>
+		{{ nav:auto start='developers/tools/streams-api' }}	
 	</div>
 
 	<div class="one_quarter">
 		<h4>Add-on Development</h4>
-		{{ nav:auto start='developers/addons' }}	
+		{{ nav:auto start='developers/addons' }}
+		
+		<p><strong>Module Development</strong></p>	
+		{{ nav:auto start='developers/addons/modules' }}
 	</div>
 
 	<div class="one_quarter">
 		<h4>Contributing to PyroCMS</h4>
 		{{ nav:auto start='developers/contributing' }}	
+	</div>
+
+{{ endif }}
+
+
+{{ if segment_1 == 'pyrocms-pro' }}
+
+	<div class="one_quarter">
+		<h4>About</h4>
+		{{ nav:auto start='pyrocms-pro/about' }}	
+	</div>
+
+	<div class="one_quarter">
+		<h4>Features</h4>
+		{{ nav:auto start='pyrocms-pro/features' }}	
 	</div>
 
 {{ endif }}

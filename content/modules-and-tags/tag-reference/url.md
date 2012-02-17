@@ -1,4 +1,4 @@
-# URL
+# URL Tags
 
 The url plugin gives you access to url data and logic.
 
@@ -69,7 +69,7 @@ Returns:
 
 	http://www.example.com/
 
-## url:segments
+## {{ noparse }}url:segments{{ /noparse }}
 
 Displays a specific URL segment.
 
@@ -122,9 +122,7 @@ The tag above will return:
 
 	products
 
-## url:anchor
-
-{{ url:anchor }}</h5>
+## {{ noparse }}url:anchor{{ /noparse }}</h5>
 
 Generates an anchor tag based on the supplied attributes. This is essentially a wrapper for the built in anchor() function found in the url helper.
 

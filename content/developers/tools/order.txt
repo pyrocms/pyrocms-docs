@@ -1,6 +1,7 @@
 constants-and-globals | Constants and Globals
-the-lex-parser
+assets
 events
+keywords
 pyrocache | PyroCache
-streams_core_api | Streams Core API
-cp-style-guide | Control Panel GUI Guidelines
+cp-style-guide | Control Panel GUI
+template-library | Template Library

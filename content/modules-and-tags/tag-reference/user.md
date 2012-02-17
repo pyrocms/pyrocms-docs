@@ -1,4 +1,4 @@
-# User
+# User Tags
 
 The <em>user</em> plugin gives you access to user data and logic.
 

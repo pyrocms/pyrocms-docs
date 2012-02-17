@@ -12,7 +12,7 @@ That's it, pretty simple.
 
 So we can start by looking at the page designs. They are pretty awful, but we have a basic idea of what we need to get up on the site.
 
-<img src="http://www.pyrocms.com/uploads/default/files/barbershop_pages.jpg" alt="Example Pages" class="doc_image" />
+{{ asset:img file="docs/barbershop-pages.jpeg" alt="Example Pages" class="doc_image" }}
 
 Before we get into how we will organize this site, let's take a look at the different tools available to you. There are four main ones:
 
@@ -65,13 +65,13 @@ Now that we have gone over the different parts of a PyroCMS page, we can easily 
 
 First, we can take the header and footer and put it into a **theme layout**. We know these elements won't change from page to page, so we can keep them all in one place. Here are the areas that will be included in our **theme layout**:
 
-<img src="http://www.pyrocms.com/uploads/default/files/barbershop_theme_layouts.jpg" alt="Theme Layouts" class="doc_image" />
+{{ asset:img file="docs/barbershop-theme-layouts.jpeg" alt="Theme" class="doc_image" }}
 
-_Note: If we want to, we can keep the header and footer code in their own **partials** and load them into the main layout. This not required, however._
+<div class="note"><strong>Note:</strong> If we want to, we can keep the header and footer code in their own **partials** and load them into the main layout. This not required, however.</div>
 
 Now that we have those areas accounted for, we can turn to our individual pages. We have three pages, and we know each page has a different HTML structure between the header and footer. The home page is more complex, the about page is simple, and the Hours & Map page just needs two columns. Here are the areas of our pages that will be handled by page layouts:
 
-<img src="http://www.pyrocms.com/uploads/default/files/barbershop_page_layouts.jpg" alt="Page Layout Areas" class="doc_image" />
+{{ asset:img file="docs/barbershop-page-layouts.jpeg" alt="Page Layout Areas" class="doc_image" }}
 
 We can create these structures with **page layouts**. For this example, we'll be creating three:
 
@@ -83,7 +83,7 @@ Two of these are very specific (Home and Hours & Location), but default (which w
 
 Let's take the Hours & Map page for our example. This page layout will need two columns - the page content in one, and a Google map (using the Google Maps widget) in the other: 
 
-<img src="http://www.pyrocms.com/uploads/default/files/barbershop_single.jpg" alt="Single page" class="doc_image" />
+{{ asset:img file="docs/barbershop-single.jpeg" alt="Single page" class="doc_image" }}
 
 So we'll go to **Content &rarr; Pages** in the control panel and select the **Layouts** section. Click on **Add Page Layout** to create a new one.
 

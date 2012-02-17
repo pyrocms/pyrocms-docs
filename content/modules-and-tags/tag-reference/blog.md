@@ -1,4 +1,4 @@
-# Blog
+# Blog Tags
 
 ## blog:posts
 
