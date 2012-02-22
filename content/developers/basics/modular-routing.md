@@ -10,6 +10,6 @@ This URL will tell PyroCMS to load /addons/modules/artists/config/routes.php.
 
 	/top-10-artists
 
-Trying to route this URL does not suggest which module is in use, so the route would need to be in system/pyrocms/config/routes.php
+Trying to route this URL does not suggest which module is in use, so the route would need to be in **system/pyrocms/config/routes.php**.
 
 Editing the main PyroCMS main route file may seem like a bad idea, but if it is backed up along with config.php and database.php when upgraded there is no downside here. Routing is done this way because if every single routes.php was loaded in every module before each page load then performance would be heavily effected.
