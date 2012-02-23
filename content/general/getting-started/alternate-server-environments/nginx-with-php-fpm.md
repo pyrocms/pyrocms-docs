@@ -105,7 +105,7 @@ The first two lines stops the robot and favicon 404 from logging. The third line
 
 	location = /robots.txt  { access_log off; log_not_found off; }
 	location = /favicon.ico { access_log off; log_not_found off; }
-	location ~ /.          { access_log off; log_not_found off; deny all; }
+	location ~ /\.          { access_log off; log_not_found off; deny all; }
 	location ~ ~$           { access_log off; log_not_found off; deny all; }
 
 ## Setting up the PHP\-FPM Pool
