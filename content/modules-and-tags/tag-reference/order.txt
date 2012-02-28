@@ -1,0 +1,10 @@
+blog
+galleries
+lang
+navigation
+pages
+settings
+url
+user
+variables
+widgets
