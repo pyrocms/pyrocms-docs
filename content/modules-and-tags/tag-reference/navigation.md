@@ -75,20 +75,15 @@ Creates a list of links for a group.
 	</tbody>
 </table>
 
-### Simple Usage
+### Single Tag Usage
 
 You can use the basic single-tag approach to output a chunk of HTML by itself. This will apply the class names to the <kdb>&lt;li&gt;</kdb> tags (default) and use the <kdb>&lt;a&gt;</kdb> tags (default) to wrap the anchors.</p>
 
-	{{ noparse }}{{ navigation:links group=&quot;header&quot; }}{{ /noparse }}
+	{{ noparse }}{{ navigation:links group="header" }}{{ /noparse }}
 	
 Returns:
 
-	<li class="first current">
-		<a href="http://localhost/pyrocms/index.php">Home</a>
-	</li>
-	<li class="last">
-		<a href="http://www.google.com">About Us</a>
-	</li>
+	<li class="first current"><a href="http://localhost/pyrocms/index.php">Home</a></li><li class="last"><a href="http://www.google.com">About Us</a></li>
 
 You can use the basic single-tag approach like this to output a chunk of HTML that renders indented source code and adds a custom class name to all link anchors.
 
@@ -131,7 +126,60 @@ Returns:
 	<li class="last">
 		<a href="http://example.com/blog">Blog</a>
 	</li>
-	
+
+### Tag Pair Usage
+
+If you'd like complete control over your navigation markup, you can use the links function as a tag pair:
+
+	{{ noparse }}&lt;ul>
+{{ navigation:links group="header" }}
+&lt;li><a href="{{ url }}" class="{{ class }}">{{ title }}</a>
+	{{ if children }}
+	&lt;ul>
+	{{ children }}
+		&lt;li>&lt;a href="{{ url }}">{{ title }}&lt;/a>&lt;/li>
+	{{ /children }}
+	&lt;/ul>
+	{{ endif }}
+&lt;/li>
+{{ /navigation:links }}
+&lt;/ul>{{ /noparse }}
+
+### Variables
+
+The following variables are available to you in the tag pair:
+
+<table cellpadding="0" cellspacing="0">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td width="150">{{ noparse }}{{ url }}{{ /noparse }}</td>
+			<td>Full URL of the link.</td>
+		</tr>
+		<tr>
+			<td width="150">{{ noparse }}{{ title }}{{ /noparse }}</td>
+			<td>Link title.</td>
+		</tr>
+		<tr>
+			<td width="150">{{ noparse }}{{ class }}{{ /noparse }}</td>
+			<td>Link class.</td>
+		</tr>
+		<tr>
+			<td width="150">{{ noparse }}{{ target }}{{ /noparse }}</td>
+			<td>Link target.</td>
+		</tr>
+		<tr>
+			<td width="150">{{ noparse }}{{ children }}{{ /noparse }}</td>
+			<td>Tag pair of child link elements. Each child element has all the same above variables as the main elements.</td>
+		</tr>
+	</tbody>
+</table>
+
 ### Advanced Options
 
 You can use a combination of params to output a chunk of HTML that shows a short paragraph of navigation, using <p> as list_tag to wrap all items by disabling items_only and using the tag <span> to wrap each anchor link.
