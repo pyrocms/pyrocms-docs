@@ -48,11 +48,11 @@ Adds a string to the end of the auto-generated metadata output.
 
 #### Example:
 
-	$this->template->append\_metadata('<script src="/js/jquery.flot.js"></script>');
+	$this->template->append_metadata('<script src="/js/jquery.flot.js"></script>');
 	
 ### set\_layout(<var>$layout\_name</var>)
 
-Allows you to set a layout from your your_theme/views/layouts folder.
+Allows you to set a layout from your **your_theme/views/layouts** folder.
 
 #### Example:
 
@@ -71,6 +71,26 @@ Allows you to set a theme.
 	$this->template->set_layout('my_theme');
 	
 <div class="tip"><strong>Note:</strong> As with set_layout, the theme is already set when extending either the Public\_Controller and Admin\_Controller.</div>
+
+### enable\_parser(<var>bool</var>)
+
+This allows you to enable the PyroCMS Lex tag parser. When the tag parser is off, PyroCMS tags will not work in your views.
+
+#### Example
+
+	$this->template->enable_parser(true);
+
+### enable_minify(<var>bool</var>)
+
+Enables/disables the minification of assets added via the template library.
+
+#### Example
+
+	$this->template->enable_minify(true);
+
+### get\_theme\_path()
+
+Returns the path of the current theme.
 
 ## Chaining
 

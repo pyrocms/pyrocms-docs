@@ -67,7 +67,7 @@ First, we can take the header and footer and put it into a **theme layout**. We 
 
 {{ asset:img file="docs/barbershop-theme-layouts.jpeg" alt="Theme" class="doc_image" }}
 
-<div class="note"><strong>Note:</strong> If we want to, we can keep the header and footer code in their own **partials** and load them into the main layout. This not required, however.</div>
+<div class="tip"><strong>Note:</strong> If we want to, we can keep the header and footer code in their own <strong>partials</strong> and load them into the main layout. This not required, however.</div>
 
 Now that we have those areas accounted for, we can turn to our individual pages. We have three pages, and we know each page has a different HTML structure between the header and footer. The home page is more complex, the about page is simple, and the Hours & Map page just needs two columns. Here are the areas of our pages that will be handled by page layouts:
 

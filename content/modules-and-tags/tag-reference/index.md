@@ -16,4 +16,4 @@ For a more complete tutorial on the PyroCMS tag syntax, see the <a href="http://
 
 ## Under the hood
 
-If you are developer and want to more about how plugin tags work and how you can make your own, check out the <a href="http://www.pyrocms.com/docs/2.0/developers">developer docs</a>.{{ /noparse }}</p>
+If you are developer and want to more about how plugin tags work and how you can make your own, check out the <a href="http://www.pyrocms.com/docs/2.0/developers">developer docs</a>.

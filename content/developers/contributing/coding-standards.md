@@ -6,15 +6,14 @@ These standards for code formatting and documentation must be followed by anyone
 
 ### Closing PHP Tag
 
-Files containing only PHP code should always omit the closing PHP tag `?>`. This prevents many of the elusive white screens of death.
+Files containing only PHP code should always omit the closing PHP tag. This prevents many of the elusive white screens of death caused by white space after the closing PHP tag.
 
 ### Indentation
 
-All indentation should be done using real tabs, NOT spaces.<br />
-But aligning things after the indentation should be done using spaces, NOT tabs.
+All indentation should be done using real tabs, NOT spaces. Aligning items after the indentation should be done using spaces, NOT tabs.
 
 	// indented 2 tabs
-	$var       = 'something';  // indented with tabs and aligned value &amp; comments
+	$var       = 'something';  // indented with tabs and aligned value & comments
 	$variable  = 'else';       // with those above/below using spaces
 
 ### Line Endings
@@ -33,7 +32,7 @@ Files should be saved with UTF-8 encoding and the BOM should not be used.
 
 ### Classes
 
-Class names should use underscores to separate words, and each word in the class name should begin with a capital letter. The use of camelcase is discouraged but cannot be prevented in some cases.
+Class names should use underscores to separate words, and each word in the class name should begin with a capital letter. The use of CamelCase is discouraged but cannot be prevented in some cases.
 
 	class Theme
 	{
@@ -49,10 +48,7 @@ Class names should use underscores to separate words, and each word in the class
 
 ### Methods
 
-Like class names, method names should use underscores to separate words, not CamelCase. Method names should
-	also be all lower case. Visibility should always be included (public, protected, private).<br />
-	An underscore can be used at the beginning of the name to make it clear the method is protected/private or
-	to signify it should be considered as such when you need it public.
+Like class names, method names should use underscores to separate words, not CamelCase. Method names should also be all lower case. Visibility should always be included (public, protected, private). An underscore can be used at the beginning of the name to make it clear the method is protected/private or to signify it should be considered as such when you need it public.
 
 	class Session
 	{
@@ -123,18 +119,22 @@ The structure keywords such as <kbd>if</kbd>, <kbd>for</kbd>, <kbd>foreach</kbd>
 	{
 		//catch all do something here
 	}
+	
 	foreach ($array as $key => $value)
 	{
 		//loop here
 	}
+	
 	for ($i = 0; $i < $max; $i++)
 	{
 		//loop here
 	}
+	
 	while ($i < $max)
 	{
 		//loop here
 	}
+	
 	switch ($var)
 	{
 		case 'value1':
@@ -147,11 +147,11 @@ The structure keywords such as <kbd>if</kbd>, <kbd>for</kbd>, <kbd>foreach</kbd>
 
 ## Alternative if statements
 
-In some cases, a full <kbd>if</kbd> statement is a bit too much code for a simple conditional assignment or function
-	call. In those cases, you can use PHP's execution logic to use a shorter boolean-operator based syntax.
-	Using <kbd>and</kbd> means the second part only gets evaluated if the first part were true, using
-	<kbd>or</kbd> means the second part only gets executed if the first part were false.<br />
-	Don't use this when both <kbd>if</kbd> and <kbd>else</kbd> are needed, just in cases like single conditional statements.
+In some cases, a full <kbd>if</kbd> statement is a bit too much code for a simple conditional assignment or function call. In those cases, you can use PHP's execution logic to use a shorter boolean-operator based syntax.
+
+Using <kbd>and</kbd> means the second part only gets evaluated if the first part were true, using <kbd>or</kbd> means the second part only gets executed if the first part were false.
+
+Don't use this when both <kbd>if</kbd> and <kbd>else</kbd> are needed, just in cases like single conditional statements.
 
 	// instead of if (isset($var)) { Config::set('var', $var); }
 	isset($var) and Config::set('var', $var);
