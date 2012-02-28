@@ -72,6 +72,14 @@ Allows you to set a theme.
 	
 <div class="tip"><strong>Note:</strong> As with set_layout, the theme is already set when extending either the Public\_Controller and Admin\_Controller.</div>
 
+### enable\_parser(<var>true</var>)
+
+This allows you to enable the PyroCMS Lex tag parser. When the tag parser is off, PyroCMS tags will not work in your views.
+
+#### Example
+
+	$this->template->enable_parser(true);
+
 ## Chaining
 
 The template library methods are frequently chained in PyroCMS, so you may see the functions called like this:
