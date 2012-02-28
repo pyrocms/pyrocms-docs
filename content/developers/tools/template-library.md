@@ -48,11 +48,11 @@ Adds a string to the end of the auto-generated metadata output.
 
 #### Example:
 
-	$this->template->append\_metadata('<script src="/js/jquery.flot.js"></script>');
+	$this->template->append_metadata('<script src="/js/jquery.flot.js"></script>');
 	
 ### set\_layout(<var>$layout\_name</var>)
 
-Allows you to set a layout from your your_theme/views/layouts folder.
+Allows you to set a layout from your **your_theme/views/layouts** folder.
 
 #### Example:
 
