@@ -4,6 +4,7 @@ lang
 navigation
 pages
 settings
+theme
 url
 user
 variables

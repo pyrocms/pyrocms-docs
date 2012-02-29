@@ -1,0 +1,254 @@
+# Theme
+
+The _theme_ plugin gives you access to theme assets and partials. It a critical and extremely useful plugin for building your sites with PyroCMS.
+
+The theme plugin's slug is __theme__, so it can be used like so:
+
+	{{ noparse }}{{ theme:<em>function</em> }}{{ /noparse }}
+
+#### Functions
+
+#### &#123;&#123; theme:options &#125;&#125; ####
+
+Displays an option for the current theme. To read more about this tag and its usage refer to the <a href="#designers/getting_started.html">theme documentation.</a>
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">option</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>The option slug to request from the theme.</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example:**
+
+	{{ noparse }}&#123;&#123; if theme:options:layout == 'full-width' &#125;&#125;{{ /noparse }}
+			
+		{{ noparse }}&lt;div class="full-width"&gt;{{ /noparse }}
+				
+			{{ noparse }}{{ template:body }}{{ /noparse }}
+			
+		{{ noparse }}&lt;/div&gt;{{ /noparse }}
+		
+	{{ noparse }}{{ endif }}{{ /noparse }}
+
+#### {{ theme:partial }} ####
+
+Loads partial from the current theme.
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">name</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>Name slug of the theme to be loaded.</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example:**
+
+	{{ noparse }}&#123;&#123; theme:partial name="header" &#125;&#125;{{ /noparse }}
+
+#### {{ theme:css }} ####
+
+Generates a &lt;link&gt; to a css file in the current theme.
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">file</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>Name of the css file.</td>
+		</tr>
+		<tr>
+			<td width="100"><em>misc</em></td>
+			<td width="100">None</td>
+			<td width="100">No</td>
+			<td>This function will take any other link tag attributes and pass them along to the link tag. By default, 'type' and 'rel' are included with default values.</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example:**
+	
+	{{ noparse }}&#123;&#123; theme:css file="style.css" &#125;&#125;{{ /noparse }}
+	
+	{{ noparse }}&lt;link href="themes/default/css/style.css" type="text/css" rel="stylesheet" /&gt;{{ /noparse }}
+
+#### {{ theme:image }} ####
+
+Generates an &lt;img&gt; tag for an file in the current theme.
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">file</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>The name of the image file.</td>
+		</tr>
+		<tr>
+			<td width="100"><em>misc</em></td>
+			<td width="100">None</td>
+			<td width="100">No</td>
+			<td>This function will take any other image tag attributes and pass them along to the image tag.</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example:**
+	
+	{{ noparse }}&#123;&#123; theme:image file="fun.jpg" alt="Fun!" &#125;&#125;{{ /noparse }}
+
+	{{ noparse }}&lt;img href="themes/default/img/fun.jpg" alt="Fun!" /&gt;{{ /noparse }}
+
+#### {{ theme:js }} ####
+
+Generates a &lt;js&gt; script link for a javascript file in the current theme.
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">file</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>The name of the javascript file.</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example:**
+	
+	{{ noparse }}&#123;&#123; theme:js file="extra.js" &#125;&#125;{{ /noparse }}
+	
+	{{ noparse }}&lt;script type="text/javascript" src="themes/default/js/extra.js"&gt;{{ /noparse }}
+
+#### {{ theme:favicon }} ####
+
+Generates a &lt;link&gt; tag for a favicon file in the current theme.
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th width="100">Name</th>
+			<th width="100">Default</th>
+			<th width="100">Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>file</td>
+			<td>favicon.ico</td>
+			<td>No</td>
+			<td>Favicon file.</td>
+		</tr>
+		<tr>
+			<td>rel</td>
+			<td>shortcut icon</td>
+			<td>No</td>
+			<td>Favicon rel.</td>
+		</tr>
+		<tr>
+			<td>type</td>
+			<td>image/x-icon</td>
+			<td>No</td>
+			<td>Favicon type.</td>
+		</tr>
+		<tr>
+			<td>xhtml</td>
+			<td>true</td>
+			<td>No</td>
+			<td>Build a W3C valid link tag xhtml? enter false if you uses html5.</td>
+		</tr>
+		<tr>
+			<td>base</td>
+			<td>path</td>
+			<td>No</td>
+			<td>"path" or "url".</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example:**
+	
+	{{ noparse }}&#123;&#123; theme:favicon file="favicon.png" &#125;&#125;{{ /noparse }}
+
+	{{ noparse }}&lt;link href="/system/pyrocms/themes/default/img/favicon.png" rel="shortcut icon" type="imagem/x-icon"&gt;{{ /noparse }}
+
+#### &#123;&#123; theme:variables &#125;&#125; ####
+
+Sets or retrieves a variable for the theme of your choosing. Variables can be set in a layout and be used anywhere thereafter.
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">name</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>The name of the variable.</td>
+		</tr>
+		<tr>
+			<td width="100">value</td>
+			<td width="100">None</td>
+			<td width="100">No</td>
+			<td>Value for the variable to be set. Leave blank to retrieve a previously set variable.</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example (Variable Setting - nothing displayed):**
+
+	{{ noparse }}{{ theme:variables name="day_or_night" value="day" }}{{ /noparse }}
+
+**Example (Variable Retrieval):**
+
+	{{ noparse }}{{ theme:variables name="day_or_night" }}{{ /noparse }}
+	{{ noparse }}day{{ /noparse }}
