@@ -8,7 +8,7 @@ The theme plugin's slug is __theme__, so it can be used like so:
 
 #### Functions
 
-	{{ noparse }}{{ theme:options }}{{ /noparse }}
+#### &#123;&#123; theme:options &#125;&#125; ####
 
 Displays an option for the current theme. To read more about this tag and its usage refer to the <a href="#designers/getting_started.html">theme documentation.</a>
 
@@ -31,13 +31,16 @@ Displays an option for the current theme. To read more about this tag and its us
 </table>
 
 **Example:**
-	{{ noparse }}
-		{{ if theme:options:layout == 'full-width' }}
-			&lt;div class="full-width"&gt;
-			{{ template:body }}
-			&lt;/div&gt;
-		{{ endif }}
-	{{ /noparse }}
+
+	{{ noparse }}&#123;&#123; if theme:options:layout == 'full-width' &#125;&#125;{{ /noparse }}
+			
+		{{ noparse }}&lt;div class="full-width"&gt;{{ /noparse }}
+				
+			{{ noparse }}{{ template:body }}{{ /noparse }}
+			
+		{{ noparse }}&lt;/div&gt;{{ /noparse }}
+		
+	{{ noparse }}{{ endif }}{{ /noparse }}
 
 #### {{ theme:partial }} ####
 
@@ -63,7 +66,7 @@ Loads partial from the current theme.
 
 **Example:**
 
-{{ noparse }}{{ theme:partial name="header" }}{{ /noparse }}
+	{{ noparse }}&#123;&#123; theme:partial name="header" &#125;&#125;{{ /noparse }}
 
 #### {{ theme:css }} ####
 
@@ -94,7 +97,9 @@ Generates a &lt;link&gt; to a css file in the current theme.
 </table>
 
 **Example:**
-	{{ noparse }}{{ theme:css file="style.css" }}{{ /noparse }}
+	
+	{{ noparse }}&#123;&#123; theme:css file="style.css" &#125;&#125;{{ /noparse }}
+	
 	{{ noparse }}&lt;link href="themes/default/css/style.css" type="text/css" rel="stylesheet" /&gt;{{ /noparse }}
 
 #### {{ theme:image }} ####
@@ -126,7 +131,9 @@ Generates an &lt;img&gt; tag for an file in the current theme.
 </table>
 
 **Example:**
-	{{ noparse }}{{ theme:image file="fun.jpg" alt="Fun!" }}{{ /noparse }}
+	
+	{{ noparse }}&#123;&#123; theme:image file="fun.jpg" alt="Fun!" &#125;&#125;{{ /noparse }}
+
 	{{ noparse }}&lt;img href="themes/default/img/fun.jpg" alt="Fun!" /&gt;{{ /noparse }}
 
 #### {{ theme:js }} ####
@@ -152,7 +159,9 @@ Generates a &lt;js&gt; script link for a javascript file in the current theme.
 </table>
 
 **Example:**
-	{{ noparse }}{{ theme:js file="extra.js" }}{{ /noparse }}
+	
+	{{ noparse }}&#123;&#123; theme:js file="extra.js" &#125;&#125;{{ /noparse }}
+	
 	{{ noparse }}&lt;script type="text/javascript" src="themes/default/js/extra.js"&gt;{{ /noparse }}
 
 #### {{ theme:favicon }} ####
@@ -202,10 +211,12 @@ Generates a &lt;link&gt; tag for a favicon file in the current theme.
 </table>
 
 **Example:**
-	{{ noparse }}{{ theme:favicon file="favicon.png" }}{{ /noparse }}
+	
+	{{ noparse }}&#123;&#123; theme:favicon file="favicon.png" &#125;&#125;{{ /noparse }}
+
 	{{ noparse }}&lt;link href="/system/pyrocms/themes/default/img/favicon.png" rel="shortcut icon" type="imagem/x-icon"&gt;{{ /noparse }}
 
-#### {{ theme:variables }} ####
+#### &#123;&#123; theme:variables &#125;&#125; ####
 
 Sets or retrieves a variable for the theme of your choosing. Variables can be set in a layout and be used anywhere thereafter.
 
@@ -239,6 +250,5 @@ Sets or retrieves a variable for the theme of your choosing. Variables can be se
 
 **Example (Variable Retrieval):**
 
-{{ noparse }}{{ theme:variables name="day_or_night" }}{{ /noparse }}
-
-{{ noparse }}day{{ /noparse }}
+	{{ noparse }}{{ theme:variables name="day_or_night" }}{{ /noparse }}
+	{{ noparse }}day{{ /noparse }}
