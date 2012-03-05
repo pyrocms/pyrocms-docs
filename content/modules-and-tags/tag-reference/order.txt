@@ -3,6 +3,7 @@ galleries
 lang
 navigation
 pages
+session
 settings
 theme
 url
