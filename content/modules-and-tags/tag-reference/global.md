@@ -1,6 +1,6 @@
 # Global
 
-The _global_ plugin gives you access to most constants and global variables listed in [Constants & Globals](http://pyrocms.com/docs/2.0/manuals/developers/developer-tools/constants-globals/)
+The _global_ plugin gives you access to most constants and global variables listed in [Constants & Globals](http://docs.pyrocms.com/2.1/manual/developers/tools/constants-and-globals)
 
 The global plugin's slug is **global**, so it can be used like so:
 
