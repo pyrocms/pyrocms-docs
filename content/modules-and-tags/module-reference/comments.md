@@ -47,3 +47,44 @@ This helper is loaded by default
 
 	display_comments($sample->id, 'sample');
 	
+***
+
+### count_comments
+
+	count_comments($module_item_id = '', $module_slug = NULL, $return_as_number = FALSE)
+
+### Parameters
+
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">$module_item_id</td>
+			<td width="100">int</td>
+			<td width="100">Yes</td>
+			<td>The ID of the module item to count comments for</td>
+		</tr>
+		<tr>
+			<td width="100">$module_slug</td>
+			<td width="100">string</td>
+			<td width="100">No</td>
+			<td>Specify the module slug or the current module's slug will be used</td>
+		</tr>
+		<tr>
+			<td width="100">$return_as_number</td>
+			<td width="100">bool</td>
+			<td width="100">no</td>
+			<td>True to return a number or False to return a language string</td>
+		</tr>
+	</tbody>
+</table>
+
+### Example
+
+	count_comments($sample->id, 'sample', true);
+	
