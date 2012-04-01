@@ -44,6 +44,10 @@ You can tell PyroCMS what environment to load by setting a variable in your .hta
 
      SetEnv PYRO_ENV production
 
+If you are using Nginx and php-fpm, you can add PYRO_ENV parameter to Nginx config file like this:
+
+     fastcgi_param PYRO_ENV production;
+
 This sets a variable called **PYRO_ENV** that will be read by PyroCMS and used to load the right database for the current environment.
 
 You choices for the value of **PYRO_ENV** are:
