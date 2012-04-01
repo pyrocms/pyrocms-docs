@@ -1,26 +1,61 @@
-/* Author: 
-
+/* 
+ * Author: Scott Parry - iKreativ
 */
 
-// Drop Menu
-$("nav#primary ul ul").css({display: "none"});
+jQuery(document).ready(function($) {
+	
+	// Control Bar
+(function() {
 
-$("nav#primary ul li").hover(function(){
-	$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown(400);
-},function(){
-	$(this).find('ul:first').css({visibility: "visible"}).slideUp(400);
+	//settings
+	var fadeSpeed = 200, fadeTo = 0.6, topDistance = 30;
+	var topbarME = function() { $('.topbar').fadeTo(fadeSpeed,1); }, topbarML = function() { $('.topbar').fadeTo(fadeSpeed,fadeTo); };
+	var inside = false;
+
+	//do
+	$(window).scroll(function() {
+		position = $(window).scrollTop();
+		
+		if(position > topDistance && !inside) {
+
+			//add events
+			topbarML();
+			$('.topbar').bind('mouseenter',topbarME);
+			$('.topbar').bind('mouseleave',topbarML);
+			inside = true;
+		}
+
+		else if (position < topDistance) {
+			topbarME();
+			$('.topbar').unbind('mouseenter',topbarME);
+			$('.topbar').unbind('mouseleave',topbarML);
+			inside = false;
+		}
+	});
+})();
+	
+// Select menu for smaller screens
+$("<select />").appendTo("nav");
+
+// Create default option "Menu"
+$("<option />", {
+   "selected": "selected",
+   "value"   : "",
+   "text"    : "Menu"
+}).appendTo("nav select");
+
+// Populate dropdown with menu items
+$("nav a").each(function() {
+ var el = $(this);
+ $("<option />", {
+     "value"   : el.attr("href"),
+     "text"    : el.text()
+ }).appendTo("nav select");
 });
 
-// Disable Parent li if has child items
-$("nav#primary ul li:has(ul)").hover(function () {
-	$(this).children("a").click(function () {
-return false;
+$("nav select").change(function() {
+  window.location = $(this).find("option:selected").val();
 });
-});
-
-// Pretty Photo
-$('#main a:has(img)').addClass('prettyPhoto');
-$("a[class^='prettyPhoto']").prettyPhoto();
 
 // Tipsy
 $('.tooltip').tipsy({
@@ -47,18 +82,7 @@ $('.tooltip-w').tipsy({
 	html: true
 });
 
-// Chosen
-$(".chzn").chosen();
+// Prettyprint
+$('pre').addClass('prettyprint linenums');
 
-
-
-
-
-
-
-
-
-
-
-
-
+});
