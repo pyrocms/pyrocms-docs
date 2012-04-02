@@ -31,7 +31,7 @@ Checks if a user is logged in or not. Can be used as a variable pair to display 
 
 	{{ noparse }}{{ if user:logged_in }}
 	&lt;p&gt;This is just for logged in users.&lt;/p&gt;
-{{ /user:logged_in }}{{ /noparse }}
+{{ endif }}{{ /noparse }}
 
 ## user:not\_logged\_in
 
@@ -39,13 +39,21 @@ Checks if a user is logged in or not. Can be used as a variable pair to display 
 
 Identical to the function above, but checks to see if a user is not logged in. Also takes the <em>group</em> parameter. Must be used as a tag pair.</p>
 
-### Variables
+## Single User Profile Variables
 
 The user plugin also gives you access to various user variables using the following syntax:
 
 	{{ noparse }}{{ user:<em>variable</em> }}{{ /noparse }}
 
-<p>Below is a table of available variables.</p>
+These calls default to the current logged in user, but you can also specify a user's ID with an optional user_id parameter:
+
+	{{ noparse }}{{ user:<em>variable</em> user_id="4" }}{{ /noparse }}
+
+If you are using custom streams fields that return multiple values, you can access the values within as a tag pair:
+
+	{{ noparse }}{{ user:country }}{{ name }} {{ /user:country }}{{ /noparse }}
+
+<p>Below is a table of available variables that are always available and are hard-coded into the system. Addtionally, you can </p>
 
 <table cellpadding="0" cellspacing="0">
 	<tbody>
@@ -105,81 +113,48 @@ The user plugin also gives you access to various user variables using the follow
 			<td width="200">group_description</td>
 			<td>Group name.</td>
 		</tr>
-		<tr>
-			<td width="200">first_name</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">last_name</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">company</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">phone</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">lang</td>
-			<td>Language code (ie: &quot;en&quot; for English).</td>
-		</tr>
-		<tr>
-			<td width="200">bio</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">dob</td>
-			<td>Date of birth. Unix format.</td>
-		</tr>
-		<tr>
-			<td width="200">gender</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">mobile</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">address_line1</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">address_line2</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">address_line3</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">postcode</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">website</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">msn_handle</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">aim_handle</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">yim_handle</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">gtalk_handle</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">gravatar</td>
-			<td>&nbsp;</td>
-		</tr>
 	</tbody>
 </table>
+
+## user:profile
+
+Aside from accessing user profile fields individually, you can also access them using the profile function. Inside the tag pair, you can access any of the user profile variables, including your custom fields.
+
+	{{ noparse }}{{ user:profile }}
+
+	{{ display_name }}
+
+	{{ custom_field }}
+
+	{{ custom_field:sub_value }}
+
+{{ /user:profile }}{{ /noparse }}
+
+The profile tag also takes an optional user_id value.
+
+	{{ noparse }}{{ user:profile user_id="4" }}{{ /noparse }}
+
+## user:profile\_fields
+
+In the event you want to just show all user profile data in a list, you can do so with this function. Each piece of user data can be accessed via the following variables:
+
+<table>
+	<tr>
+		<td>value</td>
+		<td>The value of the field. For user profile fields that return multiple values, this will be the alternate canonical display that field types can and should provide.</td>
+	</tr>
+	<tr>
+		<td>name</td>
+		<td>Name of the field.</td>
+	</tr>
+	<tr>
+		<td>slug</td>
+		<td>The sluf of the field.</td>
+	</tr>
+</table>
+
+	{{ noparse }}{{ user:profile_fields }}
+
+	&lt;p>&lt;strong>{{ name }}: {{ value }}&lt;/strong>&lt;/p>
+
+{{ /user:profile_fields }}{{ /noparse }}

@@ -1,0 +1,306 @@
+body {
+	background: #ffffff;
+}
+
+/* 
+-----------------------------------------------------
+wrapper, used to center and set width
+-----------------------------------------------------
+*/
+.wrapper {
+	margin: 0 auto;
+}
+
+/* 
+-----------------------------------------------------
+header 
+-----------------------------------------------------
+*/
+header {
+	width: 100%;
+	border-bottom: 1px solid #eeeeee;
+	height: 100px;
+	padding: 15px 0;
+}
+
+/* 
+-----------------------------------------------------
+logo
+-----------------------------------------------------
+*/
+#logo {
+	margin-top: 3px;
+	float: left;
+}
+
+#logo h1 a {
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #333333;
+}
+
+#logo h1 a:hover {
+	filter: alpha(opacity=50);
+  	-khtml-opacity: 0.5;
+  	-moz-opacity: 0.5;
+  	opacity: 0.5;
+}
+
+/* 
+-----------------------------------------------------
+navigation
+-----------------------------------------------------
+*/
+#primary { 
+	position: relative; 
+	z-index: 999; 
+	margin: 38px 0 0 0; 
+	padding: 0; 
+	float: right; 
+}
+
+#primary li {
+	float: left;
+	margin-right: 20px;
+	position: relative;
+}
+
+#primary a {
+	color: #aaaaaa;
+	display: block;
+	padding: 3px 5px;
+	font-size: 16px;
+}
+
+#primary a:hover {
+	color: #EE933B; 
+}
+
+#primary .current a {
+	color: #333333;
+}
+
+/* navigation dropdown */
+#primary ul ul{
+	background: #ffffff;
+	list-style: none;
+	position: absolute;
+	left: -9999px;
+	padding-top: 5px;
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+#primary ul ul li {
+	padding: 1px 3px 0 3px;
+	float: none;
+}
+
+#primary ul ul a {
+	white-space: nowrap;
+}
+
+#primary ul li:hover ul {
+	left: 0;
+}
+
+#primary ul li:hover a {
+	text-shadow: none;
+}
+
+#primary ul li:hover ul a {
+	text-decoration: none;
+	text-shadow: none;
+}
+
+/* 
+-----------------------------------------------------
+main content 
+-----------------------------------------------------
+*/
+#content {
+	width: 100%;
+	background: url(../img/grad_bg.jpg) repeat-x;
+	border-bottom: 1px solid #eeeeee;
+	border-top: 1px solid #eeeeee;
+	padding: 35px 0 150px 0;
+	margin: 0;
+	float: left;
+}
+
+.intro {
+	width: 100%;
+	margin-bottom: 25px;
+	padding-bottom: 25px;
+	float: left;
+	border-bottom: 1px solid #eeeeee;
+}
+
+#doc_menu {
+	padding-bottom: 25px;
+}
+
+/* 
+-----------------------------------------------------
+footer
+-----------------------------------------------------
+*/
+footer {
+	background: #f9f9f9;
+	width: 100%;
+	padding: 25px 0 15px 0;
+}
+
+footer, footer p, footer li {
+	font-size: 14px;
+	color: #777777;
+}
+
+footer .widget:nth-child(4n+4) {
+	margin-right: 0;
+	float: right;
+}
+
+footer .footer_form {
+	color: #777777;
+	text-shadow: none;
+}
+
+footer textarea {
+	max-width: 308px;
+}
+
+/* quotes */
+footer .quote h3 {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+footer .quote p {
+	margin-left: 15px;
+	font-size: 14px;
+	font-style: italic;
+}
+
+footer .quote p:before { 
+	content: '\201C'; 
+	font-size: 96px; 
+	margin-top: 15px;
+	margin-left: -40px;
+	position: absolute; 
+	color: rgba(0, 0, 0, 0.1); 
+}
+
+footer .quote img {
+	position: relative;
+	left: 33%;
+	filter: alpha(opacity=50);
+  	-khtml-opacity: 0.5;
+  	-moz-opacity: 0.5;
+  	opacity: 0.5;
+}
+
+footer .who {
+	float: right;
+	margin: 25px 10px 0 0;
+	font-style: italic;
+}
+
+/* sub footer */
+#sub_footer {
+	background: #f0f0f0;
+	border-top: 1px solid #e9e9e9;
+	width: 100%;
+	float: left;
+	margin-top: 75px;
+	padding: 25px 0 35px 0;
+	color: #ffffff;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	font-size: 12px;
+}
+
+#sub_footer h3, #sub_footer .widget h3 {
+	font-size: 18px;
+}
+
+/* install/social */
+footer #install_social {
+	width: 100%;
+	background: #dddddd;
+	border-top: 1px solid #cecece;
+	padding: 35px 0 60px 0;
+	float: left;
+}
+
+footer #install_social h4 {
+	margin-top: 0;
+}
+
+footer #install_social .digit {
+	background: url(../img/digit.png) no-repeat;
+	width: 50px;
+	height: 59px;
+	margin: 0 5px;
+	padding-top: 10px;
+	float: left;
+	font-family: "Impact", Arial, sans-serif;
+	color: #ffffff;
+	text-shadow: 0 1px 0 #000000;
+	font-size: 32px;
+	text-align: center;
+}
+
+footer #connect {
+	width: 400px;
+	float: right;
+}
+
+footer #connect li {
+	margin-right: 10px;
+	float: left;
+}
+
+footer #connect li a {
+	filter: alpha(opacity=30);
+  	-khtml-opacity: 0.3;
+  	-moz-opacity: 0.3;
+  	opacity: 0.3;
+}
+
+footer #connect li a:hover {
+	filter: alpha(opacity=50);
+  	-khtml-opacity: 0.5;
+  	-moz-opacity: 0.5;
+  	opacity: 0.5;
+}
+
+/* lower footer */
+footer #lower {
+	width: 100%;
+	background: url(../img/bg_fabric.jpg) repeat;
+	padding-top: 25px;
+	float: left;
+}
+
+footer #lower #builtby {
+	float: left;
+	font-size: 12px;
+	color: rgba(255, 255, 255, 0.5);
+	margin-top: 8px;
+}
+
+ul#footernav {
+	float: right;
+}
+
+ul#footernav li {
+	font-size: 12px;
+	margin-left: 15px;
+	float: left;
+}
+
+ul#footernav li a {
+	color: rgba(255, 255, 255, 0.5);
+}
