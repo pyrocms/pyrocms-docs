@@ -16,11 +16,11 @@ PHP 5.2 and PHP 5.3 are both fully supported.
 
 ### GD 2
 
-This library will need to be installed on your server, and PHP will need to be compiled to include it. Details on how to do that can be found <a href="http://www.libgd.org/FAQ_PHP#How_do_I_get_gd_to_work_with_PHP.3F" target="_blank" title="Find out how to make GD2 work with PHP">here</a>
+This library needs to be installed on your server with PHP compiled to include it.  Usually your package manager will take care of this for you, if not you can get it <a href="https://bitbucket.org/pierrejoye/gd-libgd/overview" target="_blank" title="Find out how to make GD2 work with PHP">here</a> (the Libgd wiki is currently unavailable.)
 
 ### cURL
 
-<a href="http://curl.haxx.se/" target="_blank">libcurl 7.10.5 or greater</a> will need to be installed on your server and PHP will need to be compiled to include it. Details on how to do that can be found <a href="http://curl.haxx.se/libcurl/php/install.html" target="_blank" title="Find out how to make cURL work  with PHP">here</a>.
+<a href="http://curl.haxx.se/" target="_blank">libcurl 7.10.5 or greater</a> need's to be installed on your server with PHP compiled to include it. Usually your package manager will take care of this for you, if not see instructions <a href="http://curl.haxx.se/libcurl/php/install.html" target="_blank" title="Find out how to make cURL work  with PHP">here</a>.
 
 ### Bundled requirements
 
