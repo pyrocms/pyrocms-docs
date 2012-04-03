@@ -2,7 +2,7 @@
 
 Asset management is handled by a PHP library called Asset written by Antony Male. It is an easy-to-use asset management library which boasts the following features:
 
-- Speficy which assets to use for a particular page in your view/controller, and print them in your template.
+- Specify which assets to use for a particular page in your view/controller, and print them in your template.
 - Collect your assets into groups, either pre-defined or on-the-fly.
 - Enable/disable specific groups from your view/controller.
 - Minify your groups and combine into single files to reduce browser requests and loading times.

@@ -1,12 +1,12 @@
 # Theme Layouts
 
-The basic idea is that most of your pages will share the same header, footer, wrapping navigation, etc and only the actual body of the page will change. Using this logic you can avoid repeating yourself and having lots of similar HTML. By using multiple layout files you can change the layout of your site for each module or for each page.
+The basic idea is that most of your pages will share the same header, footer, wrapping navigation, etc and only the actual body of the page will change. Using this logic you can avoid repeating yourself or having lots of identical HTML. By using multiple layout files you can change the layout of your site for each module or for each page.
 
 All layouts exist in <dfn>addons/&lt;site-ref&gt;/themes/&lt;theme-name&gt;/views/layouts/</dfn> or <dfn>shared_addons/themes/&lt;theme-name&gt;/views/layouts/</dfn>. Every theme should have a layout named &quot;default&quot; in <dfn>addons/themes/views/layouts/.</dfn> Additional layout files are optional.
 
 ## Example Layout
 
-Using the template Tag you can output the title, metadata and body to create the most basic layout possible:
+Using the template Tag you can output the title, metadata (which includes CSS and javascript) and body to create the most basic layout possible:
 
 <pre class="prettyprint">{{ noparse }}
 &lt;!DOCTYPE html&gt;
@@ -34,10 +34,12 @@ To take advantage of this feature, move your layouts into a folder called "web" 
 
      your-theme/views/web/layouts/default.html
 
-When a user accesses your browser from a web browser, these layouts will be used. If the user is on a mobile device, however, you can supply different layouts in a folder called mobile, so your default mobile layout would be here:
+When a user accesses your browser from a web browser, these layouts will be used. If the user is on a mobile device, however, you can supply different layouts in a folder called *mobile*, so your default mobile layout would be here:
 
      your-theme/views/mobile/layouts/default.html
 
 Same for all your other layout files, they will load the mobile version if you browse to the page with anything CodeIgniter thinks is a mobile phone.
 
-<div class="tip"><strong>Note:</strong> PyroCMS does not consider an iPad a mobile device, so it will not load your mobile layouts if the user is accessing your site via an iPad.</div>
+<strong>Note:</strong> PyroCMS does not consider an iPad a mobile device, so it will not load your mobile layouts if the user is accessing your site via an iPad. Note also that new PyroCMS default themes use 
+[responsive design](http://en.wikipedia.org/wiki/Responsive_Web_Design) (try resizing this page in your browser.)
+

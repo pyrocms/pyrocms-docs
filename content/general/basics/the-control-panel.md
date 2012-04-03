@@ -8,20 +8,23 @@ To log into your control panel, go to **yoursite.com/admin**. Enter your email a
 
 {{ asset:img file="docs/login.png" alt="Login Screen" class="doc_image" }}
 
-After you've logged in, you'll see the PyroCMS control panel dashboard:
+After you've logged in, you'll see the PyroCMS control panel dashboard: 
 
 {{ asset:img file="docs/dashboard.png" alt="Dashboard" class="doc_image" }}
 
+The news feed (which you can change) shows the latest entries from the PyroCMS [blog](http://www.pyrocms.com/blog) &mdash; keep an eye on it to see when a new version is released.
+
 ## The CP Menu
 
-All the sections of your control panel are contained within the top black navigation bar. This nav bar changes with what you have access to (if you are an admin, you'll have access to everything). Things are divided into the following sections:
+Your entire control panel can be accessed from the top black navigation bar.  The items with vary depending on which sections you have access to (you're the administrator? that's everything). It's divided into the following sections:
 
-- **Content:** Modules that deal with your sites content. You can find the pages, widgets, and blog modules in here, among others.
-- **Design:** Modules that deal with your site's design structure, such as navigation and themes.
+- **Content:** Modules that deal with your site's content. You can find the pages, widgets, uploaded files and blog modules in here, among others.
+- **Design:** Modules concerned with a site's presentation, such as navigation and themes. It also contains your email templates.
 - **Users:** Controls for users, groups, and permissions.
 - **Utilities:** Here you can find admin utilities like redirects and maintenance.
 - **Settings:** This section holds settings for the entire site, from the site name to language preferences.
 - **Add-ons:** A list of currently installed core modules, as well as third party modules. You can install and manage third party modules here.
+- **Profile:** View your details or change your password.  Plus a link back to the public website.
 
 {{ asset:img file="docs/menu.png" alt="PyroCMS menu bar" class="doc_image" }}
 
