@@ -105,7 +105,7 @@ You can change any of these options on-the-fly using
 	
 Or the CSS- and JS- specific versions
 
-	Caset::set_js_option($group, $key, $value)
+	Asset::set_js_option($group, $key, $value)
 	Asset::set_css_option($group, $key, $value)
 	
 **$group** has some special values: an empty string is a shortcut to the 'global' group (to which files are added if a group is not specified), and '\*' is a shortcut to all groups.
@@ -123,7 +123,7 @@ Examples:
 	Asset::set_css_option('', 'inline', true);
 
 	// Turn off minification for all groups, regardless of per-group settings, for the current page:
-	AssetLLset_js_option('*', 'min', false);
+	Asset::set_js_option('*', 'min', false);
 	
 
 When you call **Asset::render()** (or the js- and css-specific variants), the order that groups are rendered is determined by the order in which they were created, with groups present in the config file appearing first.
