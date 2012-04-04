@@ -8,7 +8,7 @@ The _session_ plugin gives you the ability to set and read session data.
 	
 Displays or sets a piece of session data.
 
-If this function is provided a value, it will set the session data and display nothing. If no value is provided, the value of the name provided will be displayed by the function.
+If you supply a *value*, it will set the session data and display nothing, otherwise the existing value of *name* will be displayed.
 
 ### Attributes
 
@@ -30,7 +30,7 @@ If this function is provided a value, it will set the session data and display n
 			<td width="100">value</td>
 			<td width="100">None</td>
 			<td width="100">No</td>
-			<td>Add a value if you want to use the tag to set data instead of display it.</td>
+			<td>Add a value to set data instead of displaying it.</td>
 		</tr>
 	</tbody>
 </table>

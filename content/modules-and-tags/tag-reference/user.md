@@ -6,7 +6,7 @@ The <em>user</em> plugin gives you access to user data and logic.
 
 	{{ noparse }}{{ user:logged_in }}{{ /noparse }}
 
-Checks if a user is logged in or not. Can be used as a variable pair to display data only to logged in users, and a single tag to return TRUE or FALSE whether or not the user is logged in.
+Checks if a user is logged in or not. Can be used as a tag pair to limit display of certain code to logged in users, or a single tag that returns TRUE or FALSE depending on whether the user is logged in.
 
 ### Attributes
 
@@ -22,7 +22,7 @@ Checks if a user is logged in or not. Can be used as a variable pair to display 
 			<td width="100">group</td>
 			<td width="100">None</td>
 			<td width="100">No</td>
-			<td>Group slug. Used to check if a user is not only logged in, but part of a particular group.</td>
+			<td>Group slug. Check if a user is not only logged in, but also a member of the specified group.</td>
 		</tr>
 	</tbody>
 </table>
@@ -37,7 +37,7 @@ Checks if a user is logged in or not. Can be used as a variable pair to display 
 
 	{{ noparse }}{{ user:not_logged_in }}{{ /noparse }}
 
-Identical to the function above, but checks to see if a user is not logged in. Also takes the <em>group</em> parameter. Must be used as a tag pair.</p>
+Identical to the previous function, but instead checks to see if a user is NOT logged in. Also takes the _group_ parameter. Must be used in a tag pair.</p>
 
 ## Single User Profile Variables
 
@@ -45,15 +45,15 @@ The user plugin also gives you access to various user variables using the follow
 
 	{{ noparse }}{{ user:<em>variable</em> }}{{ /noparse }}
 
-These calls default to the current logged in user, but you can also specify a user's ID with an optional user_id parameter:
+These calls default to the current logged in user, but you may also specify a user's ID with the optional <em>user_id</em> parameter:
 
 	{{ noparse }}{{ user:<em>variable</em> user_id="4" }}{{ /noparse }}
 
-If you are using custom streams fields that return multiple values, you can access the values within as a tag pair:
+If you are using custom stream fields that return multiple records, you can access the values within as a tag pair:
 
 	{{ noparse }}{{ user:country }}{{ name }} {{ /user:country }}{{ /noparse }}
 
-<p>Below is a table of available variables that are always available and are hard-coded into the system. Addtionally, you can </p>
+Below is a table of variables that are hard-coded into the system and always available.
 
 <table cellpadding="0" cellspacing="0">
 	<tbody>
@@ -83,11 +83,11 @@ If you are using custom streams fields that return multiple values, you can acce
 		</tr>
 		<tr>
 			<td width="200">created_on</td>
-			<td>Unix format.</td>
+			<td>Unix epoch format.</td>
 		</tr>
 		<tr>
 			<td width="200">last_login</td>
-			<td>Unix format.</td>
+			<td>Unix epoch format.</td>
 		</tr>
 		<tr>
 			<td width="200">username</td>
@@ -141,15 +141,15 @@ In the event you want to just show all user profile data in a list, you can do s
 <table>
 	<tr>
 		<td>value</td>
-		<td>The value of the field. For user profile fields that return multiple values, this will be the alternate canonical display that field types can and should provide.</td>
+		<td>Field value. For user profile fields that return multiple values, this will be the alternate canonical display that field types can and should provide.</td>
 	</tr>
 	<tr>
 		<td>name</td>
-		<td>Name of the field.</td>
+		<td>Field name.</td>
 	</tr>
 	<tr>
 		<td>slug</td>
-		<td>The sluf of the field.</td>
+		<td>Field slug.</td>
 	</tr>
 </table>
 
