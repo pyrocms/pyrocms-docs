@@ -1,6 +1,6 @@
 # Configuring Nginx with PHP-FPM
 
-For those of you that like using Nginx, we have good news, you can run PyroCMS just fine. 
+For those of you that like using [Nginx](http://nginx.org/), we have good news, you can run PyroCMS just fine. 
 
 ## Setting up your virtual host
 

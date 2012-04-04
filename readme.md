@@ -6,7 +6,7 @@ This repo is home to the PyroCMS documentation source.
 
 ## Doc Status
 
-These docs will be release with PyroCMS 2.1, so information in these docs may not pertain to the current stable release, PyroCMS 2.0. Once PyroCMS 2.1 is released, we will begin to tag the docs with the same tags as PyroCMS. 
+These docs will be released with PyroCMS 2.1, so information in these docs may not pertain to the current stable release, PyroCMS 2.0. Once PyroCMS 2.1 is released, we will begin to tag the docs with the same tags as PyroCMS. 
 
 ## Contributing to the Docs
 

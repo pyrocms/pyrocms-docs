@@ -1,6 +1,6 @@
 # Add-ons
 
-Add-ons are things you can download and install in PyroCMS to add functionality. They come in three types: **Widgets**, **Plugins**, and **Modules**. You can find an overview of what each add-on type does [here](/docs/2.0/basics/widgets-plugins-and-modules).
+Add-ons are things you can download and install in PyroCMS to add functionality. They come in three types: **Widgets**, **Plugins**, and **Modules** ({{ link title="overview" uri="/general/basics/widgets-plugins-and-modules" }}).
 
 ## Installing Modules
 
