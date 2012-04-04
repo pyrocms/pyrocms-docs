@@ -10,7 +10,7 @@ The download button on the [home page](http://www.pyrocms.com) will always downl
 
 All development for PyroCMS is done on the PyroCMS [GitHub Page](https://github.com/pyrocms/pyrocms). Git allows for different versions of software to exist via branches, and PyroCMS uses branches to create development versions that you can download and use if you'd like to test out new features.
 
-For instance, during the development of PyroCMS 2.0, PyroCMS 2.0 was on the **2.0/develop** branch. You can choose the branch you want from the branch drop down menu, and download a copy by clicking the .zip button.
+For instance, during the development of PyroCMS 2.1, PyroCMS 2.1 was on the **2.1/develop** branch. You can choose the branch you want from the branch drop down menu, and download a copy by clicking the .zip button.
 
 ### Beta Stability
 

@@ -21,11 +21,13 @@ Replace the following files and folders with the new content from the zip you do
 * index.php
 * .htaccess
 
-If you had any changes in your index.php (if you had customised any locations of system, application or addon folders for example) then please recreate these changes.
+If you had any changes in your index.php (e.g. customised locations of system, application or addon folders) please recreate these.
 
-If you had custom addons in there please be careful you do not delete them. Also if you are upgrading PyroCMS Professional and had purchased Newsletter module by Jerel Unruh or the Streams module by Adam Fairholm then please delete them as they are now included in the system folder of PyroCMS Professional 2.0. 
+If you have any custom addons, please be careful you do not delete them.
 
-The Galleries module is no longer bundled with PyroCMS but you may download it from the store or from [its repository on GitHub](http://pyrocms.com/pyrocms/galleries). Simply place it back into the addons folder and it will continue operating as usual. 
+**Upgrading PyroCMS Professional:** If you had previously purchased the [Newsletters](http://www.pyrocms.com/store/details/newsletters) module by Jerel Unruh or the [Streams](http://parse19.com/pyrostreams) module by Adam Fairholm then please delete them as they are now included in the system folder of PyroCMS Professional 2.0. 
+
+The [Galleries](http://www.pyrocms.com/store/details/galleries) module is no longer bundled with PyroCMS but you may download it from the [store](http://www.pyrocms.com/store/details/galleries) or from [its repository on GitHub](https://github.com/pyrocms/galleries). Simply place it back into the addons folder and it will continue operating as usual.  (Note: at the time of writing, Galleries are not compatible with PyroCMS 2.1)
 
 ## Step 3: Re-apply database config
 
@@ -33,9 +35,9 @@ Open your backed-up system/cms/config/database.php file and re-apply the config 
 
 ## Step 4: Set the PYRO_ENV variable on your production server
 
-In previous versions of PyroCMS the "environment" would be defined by the URL which was rather inflexible. In 2.0 the environment can be set by server configuration or in the .htaccess.
+In previous versions the "environment" would be defined by the URL &mdash; which was rather inflexible. Since 2.0 the environment can be set by server configuration or in .htaccess.
 
-If you are uploading straight to the production (or live site) with FTP or similar than edit the .htaccess file and change this line:
+If you are uploading straight to the production (or live site) with FTP or similar than edit the .htaccess file and change this line (to enable it):
 
     # SetEnv PYRO_ENV production
 
@@ -56,7 +58,7 @@ This will let PyroCMS know which database connection group to use.
 
 ## Step 6: Upgrade your themes
 
-You may be using a third-party theme. If so go to the Add-on Store and see if it has been upgraded to 2.0. Otherwise you'll need to upgrade this theme to use the new Lex Parser - which is a slightly different and greatly improved Tag system added in 2.0.
+You may be using a third-party theme. If so go to the [Add-on Store](http://www.pyrocms.com/store) and see if it has been upgraded to 2.0. Otherwise you'll need to upgrade this theme to use the new [Lex Parser](https://github.com/happyninjas/lex) - which is a slightly different but greatly improved Tag system added in 2.0.
 
 This is not a list of all of the new features of Lex, it is simply a guide for upgrading your templates to work with Lex.
 
@@ -106,5 +108,4 @@ Using a callback tag in a conditional is simple.  Use it just like any other var
 
 ## Step 7: Upgrade your modules
 
-Check out the [Add-on Store](/store) to see if the modules you use have been upgraded to be compatible PyroCMS 2.0.
-{{ /noparse }}
+Check out the [Add-on Store](http://www.pyrocms.com/store) to see if the modules you use have been upgraded to be compatible with PyroCMS 2.0.

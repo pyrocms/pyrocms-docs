@@ -1,16 +1,16 @@
 # Organization
 
-One of the most important functions of a CMS is to provide a flexible organizational structure for designers, developers, and site builders to create their sites in a modular and flexible way. In this section, we'll talk about how you can structure and organize your site using PyroCMS.
+One of the most important functions of a CMS is to provide an organizational structure for designers, developers, and site builders to create their sites in a modular and flexible way. In this section, we'll talk about how you can structure your site using PyroCMS.
 
-For an example, let's take a simple site for a barbershop. This is going to be a really simple site, so let's take a look at the pages we need:
+For an example, let's take a simple site for a barbershop. This is going to be a really basic, so let's take a look at the pages we need:
 
 * A home page
 * An about page
 * A page with the shop hours and a location map
 
-That's it, pretty simple.
+That's it, pretty straightfoward.
 
-So we can start by looking at the page designs. They are pretty awful, but we have a basic idea of what we need to get up on the site.
+We can start by looking at the page designs. They are pretty awful, but we have a basic idea of what we need to get up on the site.
 
 {{ asset:img file="docs/barbershop-pages.jpeg" alt="Example Pages" class="doc_image" }}
 
@@ -67,21 +67,21 @@ First, we can take the header and footer and put it into a **theme layout**. We 
 
 {{ asset:img file="docs/barbershop-theme-layouts.jpeg" alt="Theme" class="doc_image" }}
 
-<div class="tip"><strong>Note:</strong> If we want to, we can keep the header and footer code in their own <strong>partials</strong> and load them into the main layout. This not required, however.</div>
+<div class="tip"><strong>Note:</strong> If we want to, we can keep the header and footer code in their own <strong>partials</strong> and load them into the main layout. This not required, however.</div>  
 
-Now that we have those areas accounted for, we can turn to our individual pages. We have three pages, and we know each page has a different HTML structure between the header and footer. The home page is more complex, the about page is simple, and the Hours & Map page just needs two columns. Here are the areas of our pages that will be handled by page layouts:
+Now that we have those areas accounted for, we can turn to our individual pages. We have three, and we know each page has a different HTML structure between the header and footer. The home page is more complex (with the photo and coupon), the about page is simple, and Hours & Map just needs two columns. Here is the area that will be handled by page layouts:
 
 {{ asset:img file="docs/barbershop-page-layouts.jpeg" alt="Page Layout Areas" class="doc_image" }}
 
-We can create these structures with **page layouts**. For this example, we'll be creating three:
+So for this example we'll be creating three **page layouts**:
 
 1. Home
 2. Default
 3. Hours & Location
 
-Two of these are very specific (Home and Hours & Location), but default (which we'll use for the about page) can be re-used for new pages down the road since it is so generic (a title and body text).
+Two of these are very specific (Home and Hours & Location), but default (which we'll use for the About page) is generic enough to be re-used for new pages down the road - it's only a title and body text after all.
 
-Let's take the Hours & Map page for our example. This page layout will need two columns - the page content in one, and a Google map (using the Google Maps widget) in the other: 
+Let's take Hours & Map for our **page layout** example. This will need two columns - the page content in one, and a Google map (using the Google Maps {{ link uri='/general/basics/widgets-plugins-and-modules' title="widget" }}) in the other: 
 
 {{ asset:img file="docs/barbershop-single.jpeg" alt="Single page" class="doc_image" }}
 
@@ -89,17 +89,17 @@ So we'll go to **Content &rarr; Pages** in the control panel and select the **La
 
 Here's an example of what our layout code might look like for Hours & Map:
 
-     <h1>{{ page:title }}</h1>
+     <h1>{{ noparse }}{{ page:title }}{{ /noparse }}</h1>
      
-     <div class="one_third">{{ page:body }}</div>
+     <div class="one_third">{{ noparse }}{{ page:body }}{{ /noparse }}</div>
 
-     <div class="two_thirds">{{ widgets:instance id="1"}}</div>
+     <div class="two_thirds">{{ noparse }}{{ widgets:instance id="1"}}{{ /noparse }}</div>
 
-_Note: The {{ page:title }} and {{ page:body }} are special PyroCMS tags for use in page layouts._
+*The {{ noparse }} {{ page:title }}  and {{ page:body }} are special PyroCMS tags for use in page layouts. {{ /noparse }}*
 
-Notice that we don't need to include any code about our theme layout. The page layout content will go where we put **{{ template:body }}** in our theme layout.
+Notice the page layout doesn't need to refer to it's parent theme layout. The page layout content will go where we put **{{ noparse }}{{ template:body }}{{ /noparse }}** in our theme layout.
 
-If we have our page layouts ready, we can go into the Page tree under **Content &rarr; Pages** and create a page for each in our example, assigning the corresponding page layout under the **Design** tab.
+If we have our page layouts ready, we can go into the Page tree under **Content &rarr; Pages** and create a page for each page in our example, assigning the corresponding layout under the **Design** tab.
 
 ## Roundup
 
