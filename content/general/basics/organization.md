@@ -111,4 +111,3 @@ PyroCMS provides some nice organizational tools:
 Once you get used to creating pages, page layouts, and theme layouts, you can really experiment with new ways to organize your site. For instance, you can use PyroCMS tags in page content boxes. You can also create page "chunks" to separate your page content into several different pieces.
 
 PyroCMS aims to be flexible, so use that flexibility to build the way you feel fits your project best.
-{{ /noparse }}
