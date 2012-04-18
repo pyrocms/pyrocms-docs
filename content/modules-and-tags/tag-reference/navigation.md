@@ -43,6 +43,24 @@ Creates a list of links for a group.
 			<td>The class to use when an element is the current page.</td>
 		</tr>
 		<tr>
+			<td>more-class</td>
+			<td>has_children</td>
+			<td>No</td>
+			<td>The class applied to a parent li when it contains a ul or ol.</td>
+		</tr>
+		<tr>
+			<td>first-class</td>
+			<td>first</td>
+			<td>No</td>
+			<td>The class applied the first in a list of dropdown links.</td>
+		</tr>
+		<tr>
+			<td>last-class</td>
+			<td>last</td>
+			<td>No</td>
+			<td>The class applied to the last in a list of dropdown links.</td>
+		</tr>
+		<tr>
 			<td>separator</td>
 			<td>None</td>
 			<td>No</td>
@@ -52,7 +70,7 @@ Creates a list of links for a group.
 			<td>items-only</td>
 			<td>true</td>
 			<td>No</td>
-			<td>true or false. Set if the output source code should be wrapped with an optional list_tag.</td>
+			<td>true or false. Set if the output source code should be wrapped with an optional list-tag.</td>
 		</tr>
 		<tr>
 			<td>indent</td>
@@ -65,6 +83,12 @@ Creates a list of links for a group.
 			<td>None</td>
 			<td>No</td>
 			<td>The class names to apply in all anchor elements.</td>
+		</tr>
+		<tr>
+			<td>wrap</td>
+			<td>None</td>
+			<td>No</td>
+			<td>Html that that you wish to wrap the link title in. Most likely a span element</td>
 		</tr>
 		<tr>
 			<td>top</td>
