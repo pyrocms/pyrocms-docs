@@ -1,6 +1,6 @@
 # Theme
 
-The _theme_ plugin gives you access to theme assets and partials. It a critical and extremely useful plugin for building your sites with PyroCMS.
+The _theme_ plugin gives you access to theme assets and partials. It is a critical and extremely useful plugin for building your sites with PyroCMS.
 
 The theme plugin's slug is __theme__, so it can be used like so:
 
@@ -10,7 +10,7 @@ The theme plugin's slug is __theme__, so it can be used like so:
 
 #### &#123;&#123; theme:options &#125;&#125; ####
 
-Displays an option for the current theme. To read more about this tag and its usage refer to the <a href="#designers/getting_started.html">theme documentation.</a>
+Displays an option for the current theme. To read more about this tag and its usage refer to the {{ link uri="/general/basics/themes" title="theme documentation" }}.</a>
 
 **Attributes**
 <table cellpadding="0" cellspacing="0">
@@ -25,7 +25,7 @@ Displays an option for the current theme. To read more about this tag and its us
 			<td width="100">option</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>The option slug to request from the theme.</td>
+			<td>Option slug to request from theme.</td>
 		</tr>
 	</tbody>
 </table>
@@ -42,7 +42,7 @@ Displays an option for the current theme. To read more about this tag and its us
 		
 	{{ noparse }}{{ endif }}{{ /noparse }}
 
-#### {{ theme:partial }} ####
+#### {{ noparse }} {{ theme:partial }} {{ /noparse }} ####
 
 Loads partial from the current theme.
 
@@ -68,7 +68,7 @@ Loads partial from the current theme.
 
 	{{ noparse }}&#123;&#123; theme:partial name="header" &#125;&#125;{{ /noparse }}
 
-#### {{ theme:css }} ####
+#### {{ noparse }}{{ theme:css }}{{ /noparse }} ####
 
 Generates a &lt;link&gt; to a css file in the current theme.
 
@@ -102,7 +102,7 @@ Generates a &lt;link&gt; to a css file in the current theme.
 	
 	{{ noparse }}&lt;link href="themes/default/css/style.css" type="text/css" rel="stylesheet" /&gt;{{ /noparse }}
 
-#### {{ theme:image }} ####
+#### {{ noparse }}{{ theme:image }}{{ /noparse }} ####
 
 Generates an &lt;img&gt; tag for an file in the current theme.
 
@@ -119,7 +119,7 @@ Generates an &lt;img&gt; tag for an file in the current theme.
 			<td width="100">file</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>The name of the image file.</td>
+			<td>Name of the image file.</td>
 		</tr>
 		<tr>
 			<td width="100"><em>misc</em></td>
@@ -136,7 +136,7 @@ Generates an &lt;img&gt; tag for an file in the current theme.
 
 	{{ noparse }}&lt;img href="themes/default/img/fun.jpg" alt="Fun!" /&gt;{{ /noparse }}
 
-#### {{ theme:js }} ####
+#### {{ noparse }}{{ theme:js }}{{ /noparse }} ####
 
 Generates a &lt;js&gt; script link for a javascript file in the current theme.
 
@@ -153,7 +153,7 @@ Generates a &lt;js&gt; script link for a javascript file in the current theme.
 			<td width="100">file</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>The name of the javascript file.</td>
+			<td>Name of the javascript file.</td>
 		</tr>
 	</tbody>
 </table>
@@ -164,7 +164,7 @@ Generates a &lt;js&gt; script link for a javascript file in the current theme.
 	
 	{{ noparse }}&lt;script type="text/javascript" src="themes/default/js/extra.js"&gt;{{ /noparse }}
 
-#### {{ theme:favicon }} ####
+#### {{ noparse}}{{ theme:favicon }}{{ /noparse }} ####
 
 Generates a &lt;link&gt; tag for a favicon file in the current theme.
 
@@ -199,7 +199,7 @@ Generates a &lt;link&gt; tag for a favicon file in the current theme.
 			<td>xhtml</td>
 			<td>true</td>
 			<td>No</td>
-			<td>Build a W3C valid link tag xhtml? enter false if you uses html5.</td>
+			<td>Need a W3C valid link tag xhtml? Enter false if you use HTML5.</td>
 		</tr>
 		<tr>
 			<td>base</td>
@@ -233,13 +233,13 @@ Sets or retrieves a variable for the theme of your choosing. Variables can be se
 			<td width="100">name</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>The name of the variable.</td>
+			<td>Name of variable.</td>
 		</tr>
 		<tr>
 			<td width="100">value</td>
 			<td width="100">None</td>
 			<td width="100">No</td>
-			<td>Value for the variable to be set. Leave blank to retrieve a previously set variable.</td>
+			<td>Value to set. Leave blank to retrieve a previously set variable.</td>
 		</tr>
 	</tbody>
 </table>

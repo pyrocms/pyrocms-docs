@@ -1,8 +1,10 @@
 # Widgets
 
-The _widgets_ tag displays widgets data as defined in the Content -&gt; Widgets section of PyroCMS.
+The _widgets_ tag displays widgets data as defined in the Content &gt; Widgets section of the control panel.
 
 ## Tags
+
+## widgets:area
 
 	{{ noparse }}{{ widgets:area }}{{ /noparse }}
 
@@ -30,6 +32,8 @@ Displays all widgets in a widget area.</p>
 ### Example
 
 	{{ noparse }}{{ widgets:area slug="sidebar" }}{{ /noparse }}
+
+## widgets:instance
 
 	{{ noparse }}{{ widgets:instance }}{{ /noparse }}
 

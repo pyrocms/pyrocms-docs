@@ -22,7 +22,7 @@ Gets a page's URL based on its ID.
 			<td width="100">id</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>The page id of&nbsp; the page you want the URL for.</td>
+			<td>The page id of the page you want the URL for.</td>
 		</tr>
 	</tbody>
 </table>
@@ -55,7 +55,7 @@ Tag pair that loops through the children of a parent page.
 			<td width="100">id</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>Page ID of the page you want the children for.</td>
+			<td>Page ID of parent page whose children you want.</td>
 		</tr>
 		<tr>
 			<td width="100">limit</td>
@@ -85,7 +85,7 @@ Returns:
 
 	{{ noparse }}{{ pages:display }}{{ /noparse }}
 
-A tag that allows any one page to be displayed inside other content. Can be used as a double tag for ultimate control or a single tag to output the page body only.
+Display a page inside other content. Can be used as a single tag to output the page body only, or tag pair for ultimate control. 
 
 ### Attributes
 
@@ -167,7 +167,7 @@ Returns:
 
 	{{ noparse }}{{ pages:is }}{{ /noparse }}
 
-A tag that says if a page is a direct child of another page or is a descendent of another page.
+A tag that confirms if a page is a direct child of another page, or is a descendent of another page.
 
 ### Attributes
 
@@ -183,7 +183,7 @@ A tag that says if a page is a direct child of another page or is a descendent o
 			<td width="100">child</td>
 			<td width="100">None</td>
 			<td width="100">No</td>
-			<td>ID or Slug of the page you want check relation.</td>
+			<td>ID or Slug of the page whose relation you want to check.</td>
 		</tr>
 		<tr>
 			<td width="100">children</td>
@@ -248,7 +248,7 @@ A tag that displays a tree of pages starting from the id specified.
 			<td width="100">start-id</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>The ID of the page you want to display children for.</td>
+			<td>ID of the page you want to display children for.</td>
 		</tr>
 		<tr>
 			<td width="100">disable-levels</td>
@@ -260,13 +260,13 @@ A tag that displays a tree of pages starting from the id specified.
 			<td width="100">order-by</td>
 			<td width="100">title</td>
 			<td width="100">No</td>
-			<td>The database column to order the pages by</td>
+			<td>Database column to order pages by.</td>
 		</tr>
 		<tr>
 			<td width="100">order-dir</td>
 			<td width="100">asc</td>
 			<td width="100">No</td>
-			<td>The direction to sort the pages</td>
+			<td>Direction to sort the pages.</td>
 		</tr>
 	</tbody>
 </table>

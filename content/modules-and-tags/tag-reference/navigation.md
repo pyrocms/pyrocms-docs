@@ -1,6 +1,6 @@
 # Navigation Tags
 
-The _navigation_ tag creates lists of navigation links based on navigation groups defined in CP &gt; Design -&gt; Navigation.
+The _navigation_ tag creates lists of navigation links based on navigation groups defined in CP &gt; Design &gt; Navigation.
 
 ## navigation:links
 
@@ -22,7 +22,7 @@ Creates a list of links for a group.
 			<td width="100">group</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>Required. The navigation group the tag should use.</td>
+			<td>The navigation group the tag should use.</td>
 		</tr>
 		<tr>
 			<td>list-tag</td>
@@ -40,7 +40,7 @@ Creates a list of links for a group.
 			<td>class</td>
 			<td>current</td>
 			<td>No</td>
-			<td>The class to use when an element is the current page.</td>
+			<td>The CSS class to add when an element is the current page.</td>
 		</tr>
 		<tr>
 			<td>more-class</td>
@@ -206,7 +206,7 @@ The following variables are available to you in the tag pair:
 
 ### Advanced Options
 
-You can use a combination of params to output a chunk of HTML that shows a short paragraph of navigation, using <p> as list_tag to wrap all items by disabling items_only and using the tag <span> to wrap each anchor link.
+You can use a combination of params to output a chunk of HTML that shows a short paragraph of navigation, using `<p>` as list\_tag to wrap all items by disabling items_only and using the tag `<span>` to wrap each anchor link.
 
 	{{ noparse }}{{ navigation:links group="header" tag="span" class="active" separator="|" list-tag="p" items-only="false" }}{{ /noparse }}
 	
