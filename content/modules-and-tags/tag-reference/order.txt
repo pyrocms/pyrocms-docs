@@ -1,5 +1,6 @@
 blog
 galleries
+helper
 lang
 navigation
 pages
