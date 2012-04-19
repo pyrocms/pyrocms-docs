@@ -16,7 +16,7 @@ Returns:
 
 ## url:site
 
-Displays the full site url.
+Displays the full site URL. Use this to generate links within your site - supply URL segments and generate a full (absolute) URL with domain name and path.
 
 ### Attributes
 
@@ -32,7 +32,7 @@ Displays the full site url.
 			<td width="100">uri</td>
 			<td width="100">None</td>
 			<td width="100">No</td>
-			<td>The URI segments passed to the site_url function.</td>
+			<td>URI segments passed to the site_url function.</td>
 		</tr>
 	</tbody>
 </table>
@@ -55,7 +55,7 @@ Returns:
 
 	http://www.example.com/contact
 
-<div class="tip"><strong>Note:</strong> The site URL includes index.php if you are not using mod_rewrite to remove index.php and you have not changed the index_page variable in your config.php file. For more information, see [Removing index.php]().</div>
+<div class="tip"><strong>Note:</strong> The site URL includes index.php if you are not using mod_rewrite to remove it and you've not changed the <strong>$config['index_page']</strong> variable in <em>/system/cms/config/config.php</em>. For more information, see {{ link title="Removing index.php from URLs" uri="/general/getting-started/removing-indexphp-from-urls" }}.</div>
 
 ## url:base
 
@@ -95,7 +95,7 @@ Displays a specific URL segment.
 			<td width="100">
 				Yes</td>
 			<td>
-				Number of the segment of the URL you want to use.</td>
+				Number of segment (left to right, first segment is 1).</td>
 		</tr>
 		<tr>
 			<td width="100">
@@ -104,8 +104,7 @@ Displays a specific URL segment.
 				None</td>
 			<td width="100">
 				No</td>
-			<td>
-				A default value to use if nothing is in the URL segment specified.</td>
+			<td>Default value if selected segment does not exist/is not in use.</td>
 		</tr>
 	</tbody>
 </table>
@@ -124,7 +123,7 @@ The tag above will return:
 
 ## {{ noparse }}url:anchor{{ /noparse }}</h5>
 
-Generates an anchor tag based on the supplied attributes. This is essentially a wrapper for the built in anchor() function found in the url helper.
+Generates an anchor tag (a link) with an absolute URL (domain name and path) from URI segments. Essentially a wrapper for built in anchor() function found in the url helper.
 
 ### Attributes
 
@@ -148,7 +147,7 @@ Generates an anchor tag based on the supplied attributes. This is essentially a 
 			<td width="100">
 				Yes</td>
 			<td>
-				The segments passed to the anchor function.</td>
+				Segments passed to the anchor function.</td>
 		</tr>
 		<tr>
 			<td width="100">
@@ -158,7 +157,7 @@ Generates an anchor tag based on the supplied attributes. This is essentially a 
 			<td width="100">
 				No</td>
 			<td>
-				The text that is displayed between the &lt;a&gt;&lt;/a&gt; tags. If omitted, the generated url will be displayed.</td>
+				Text displayed between &lt;a href&gt;&lt;/a&gt; tags. If omitted, URL is duplicated.</td>
 		</tr>
 		<tr>
 			<td width="100">
@@ -168,7 +167,7 @@ Generates an anchor tag based on the supplied attributes. This is essentially a 
 			<td width="100">
 				No</td>
 			<td>
-				A class to be assigned to the anchor tag.</td>
+				Optional CSS class.</td>
 		</tr>
 	</tbody>
 </table>

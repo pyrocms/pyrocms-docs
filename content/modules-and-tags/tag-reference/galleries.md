@@ -1,5 +1,7 @@
 # Galleries Tags
 
+**Note:** As of PyroCMS 2.1, the *Galleries* module is no longer included in the PyroCMS core code, although it can be downloaded for free from the [store](http://www.pyrocms.com/store/details/galleries).
+
 The <em>galleries</em> tag displays images from a gallery.
 
 ## galleries:images
