@@ -6,7 +6,7 @@ You can call the entries driver like this:
 
 	$this->streams->cp->function();
 
-## entries_table(<var>$stream_slug, $namespace_slug, $pagination = null, $pagination_uri = null, $buttons = array(), $view_override = false</var>)
+## entries\_table(<var>$stream_slug, $namespace_slug, $pagination = null, $pagination_uri = null, $buttons = array(), $view_override = false</var>)
 
 Allows you to more painlessly create a table of entries on the back end, including pagination.
 
@@ -44,20 +44,22 @@ This function returns the table string unless **$view_override** is set to true,
 		<td>URI to be used in pagination, not including the offset section. No trailing slash.</td>
 	</tr>
 	<tr> 
-		<td>buttons</td>
-		<td>array</td>
-		<td>An array of buttons for each row. Each button is an array of the <strong>label</strong>, <strong>url</strong>, and optionally <strong>confirm</strong>. See the example below for more information. **-entry_id-** is replaced with the row's entry id.</td>
-	</tr>
-	<tr> 
 		<td>view_override</td>
 		<td>bool</td>
 		<td>Setting this to true removes the need to load a template in your controller function.</td>
+	</tr>
+	<tr> 
+		<td>extra</td>
+		<td>array</td>
+		<td>An array of extra parameters that all have default values. See section below.</td>
 	</tr>
 </table>
 
 ### Example:
 
-	$buttons = array(
+	$extra['title'] = lang('streams_sample.title');
+
+	$extra['buttons'] = array(
 		array(
 			'label' 	=> lang('global:edit'),
 			'url' 		=> 'admin/streams_sample/edit/-entry_id-'
@@ -69,7 +71,7 @@ This function returns the table string unless **$view_override** is set to true,
 		)
 	);
 	
-	$this->streams->cp->entries_table('faqs', 'streams_sample', 15, 'admin/streams_sample/index', $buttons, true);
+	$this->streams->cp->entries_table('faqs', 'streams_sample', 15, 'admin/streams_sample/index', true, $extra);
 
 ## form(<var>$stream\_slug, $namespace\_slug, $mode = 'new', $entry = null, $view\_override = false, $extra = array(), $skips = array()</var>)
 
@@ -172,6 +174,7 @@ This function returns the form string unless **$view_override** is set to true, 
 ### Example:
 
 	$extra = array(
+		'title' => lang('streams_sample.title'),
 		'return'			=> 'admin/streams_sample',
 		'success_message'	=> lang('streams_sample:submit_success'),
 		'failure_message'	=> lang('streams_sample:submit_failure'),
