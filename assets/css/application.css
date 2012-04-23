@@ -336,4 +336,18 @@ h2 var {
 
 pre.prettyprint, code.prettyprint {
 	box-shadow: 1px 2px 3px #ccc;
+	-moz-box-shadow: 1px 2px 3px #ccc;
+	-webkit-box-shadow: 1px 2px 3px #ccc;
+}
+
+.tip {
+	background-color: #FFFFF5;
+	padding: 15px;
+	font-size: 12px;
+	line-height: 18px;
+	border: 1px solid #ECECC2;
+	margin-bottom: 15px;
+	box-shadow: 1px 2px 3px #E0E0E0;
+	-moz-box-shadow: 1px 2px 3px #E0E0E0;
+	-webkit-box-shadow: 1px 2px 3px #E0E0E0;
 }
