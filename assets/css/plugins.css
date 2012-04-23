@@ -1,4 +1,4 @@
-/* Plugin CSS, all added to one file to reduce HTTP requests */
+f/* Plugin CSS, all added to one file to reduce HTTP requests */
 
 /* Tooltip */
 .tipsy { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #ffffff; padding: 5px; position: absolute; z-index: 100000; }
