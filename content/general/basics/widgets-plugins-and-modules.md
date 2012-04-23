@@ -2,7 +2,7 @@
 
 Simply put, modules, widgets and plugins are ways to get more complex functionality into your sites using PyroCMS's simple {{ link uri="general/basics/pyrocms-tags" title="tag system" }}. PyroCMS comes with its own core modules, widgets, and plugins, and you can also download free and paid third party ones via the PyroCMS [add-on store](http://www.pyrocms.com/store).
 
-<div class="tip"><strong>Note:</strong> if you are a developer and interested in developing your own widgets, plugins, and modules, you can find information on how to do that in our {{ link uri="developers" title="dev guide" }}.</div>
+<div class="tip"><strong>Note:</strong> if you are a developer and interested in developing your own widgets, plugins, and modules, find how to do so in our {{ link uri="developers" title="dev guide" }}.</div>
 
 Below is an overview of each.
 
@@ -35,9 +35,7 @@ You can also do things like show a page tree:
 Plugins can also use two tags to loop through data:
 
 	{{ noparse }}{{ blog:posts limit="5" order-by="title" }}
-	
      &lt;h2>&lt;a href="{{ url }}">{{ title }}&lt;/a>&lt;/h2>
-	
 {{ /blog:post }}{{ /noparse }}
 
 _For more information on PyroCMS tags and how to use them, see the {{ link uri="modules-and-tags" title="tag reference" }}._
@@ -48,7 +46,7 @@ Many add-ons need more than just functionality you can access via PyroCMS tags. 
 
 Modules are the largest type of PyroCMS add-on. They have a place in the control panel menu (usually), have control panel controls, their own widgets, and their own plugins.
 
-For instance, the Pages module contains the control panel area that allows you to create and organize pages, and also the pages plugin, which allows you to do things like display a page tree with PyroCMS tags.
+For instance, the Pages module contains the control panel area that allows you to create and organize pages, and also the {{ link title="pages plugin" uri="/modules-and-tags/tag-reference/pages" }}, which allows you to do things like display a page tree with PyroCMS tags.
 
 What makes PyroCMS modules unique is the fact that they can have public-facing pages as well.
 

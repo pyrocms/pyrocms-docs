@@ -12,7 +12,7 @@ Go to out [GitHub Repository](http://github.com/pyrocms/pyrocms/) and click "For
 
 You will be set up with a new repository which is a copy of ours. That means you can work on your copy of our repository without us needing to give you access to anything. You can use the following command to get a copy on your computer in your current directory. Best to put this into htdocs (or somewhere you have a server/domains's document root set).
 
-	git clone git@github.com:yourusername/pyrocms.git -b 2.0/develop
+	git clone git@github.com:yourusername/pyrocms.git -b 2.1/develop
 
 Now you can edit away on the source code and everything is tracked. When you commit your work *please* commit carefully and do not send use your config.php or database.php files in the changes.
 
@@ -33,11 +33,11 @@ When stuff is done, find out what files are changed, add/remove the correct file
 
 When you have committed this, it does not actually go anywhere. It only gets commited to your local copy of the repository. You need to push your work to the github repository (also known as a remote repository). This means you can "commit" lots of work, but only send it all off when you are ready. Means multiple commits to secure what you have done, but the rest of the world is not lumbered with incomplete work until you are ready!
 
-	git push origin 2.0/develop
+	git push origin 2.1/develop
 
 If that says "rejected" anywhere it is most likely that your copy is out of date. This will only happen if anyone else is working on your fork or external repository. Pull the latest copy, then try again.
 
-	git pull origin 2.0/develop
+	git pull origin 2.1/develop
 	
 If you have anything to "revert" (meaning undo back to how it was before you edited it) then you can do this:
 
@@ -48,8 +48,8 @@ If you have anything to "revert" (meaning undo back to how it was before you edi
 Even if you have a copy of our repository then you are basically taking a snapshot of our repository as it is at the time. If we push new commits you will miss out entirely unless you add us as another remote (this works for either workflow).
 
 	git remote add pyrocms git://github.com/pyrocms/pyrocms.git
-	git pull pyrocms 2.0/develop
-	git push origin 2.0/develop
+	git pull pyrocms 2.1/develop
+	git push origin 2.1/develop
 
 That will take any new commits from the main PyroCMS repository and push them to your own repository.
 

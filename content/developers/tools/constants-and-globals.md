@@ -42,7 +42,7 @@ A number of constants and properties are made available across PyroCMS.
 			<td width="100">
 				BASE_URL</td>
 			<td>
-				http://site.com</td>
+				http://site.com/</td>
 			<td>
 				The equivalent to CodeIgniter&#39;s base_url(). Does not change with or without mod_rewrite.</td>
 		</tr>
@@ -252,7 +252,7 @@ A number of constants and properties are made available across PyroCMS.
 			<td width="100">
 				SITE_URL</td>
 			<td>
-				http://site.com or http://site.com/index.php</td>
+				http://site.com/ or http://site.com/index.php/</td>
 			<td>
 				admin</td>
 			<td>

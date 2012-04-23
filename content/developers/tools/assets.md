@@ -2,7 +2,7 @@
 
 Asset management is handled by a PHP library called Asset written by Antony Male. It is an easy-to-use asset management library which boasts the following features:
 
-- Speficy which assets to use for a particular page in your view/controller, and print them in your template.
+- Specify which assets to use for a particular page in your view/controller, and print them in your template.
 - Collect your assets into groups, either pre-defined or on-the-fly.
 - Enable/disable specific groups from your view/controller.
 - Minify your groups and combine into single files to reduce browser requests and loading times.
@@ -105,7 +105,7 @@ You can change any of these options on-the-fly using
 	
 Or the CSS- and JS- specific versions
 
-	Caset::set_js_option($group, $key, $value)
+	Asset::set_js_option($group, $key, $value)
 	Asset::set_css_option($group, $key, $value)
 	
 **$group** has some special values: an empty string is a shortcut to the 'global' group (to which files are added if a group is not specified), and '\*' is a shortcut to all groups.
@@ -123,7 +123,7 @@ Examples:
 	Asset::set_css_option('', 'inline', true);
 
 	// Turn off minification for all groups, regardless of per-group settings, for the current page:
-	AssetLLset_js_option('*', 'min', false);
+	Asset::set_js_option('*', 'min', false);
 	
 
 When you call **Asset::render()** (or the js- and css-specific variants), the order that groups are rendered is determined by the order in which they were created, with groups present in the config file appearing first.

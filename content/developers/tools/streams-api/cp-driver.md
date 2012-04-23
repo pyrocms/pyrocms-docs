@@ -6,7 +6,7 @@ You can call the entries driver like this:
 
 	$this->streams->cp->function();
 
-## entries_table(<var>$stream_slug, $namespace_slug, $pagination = null, $pagination_uri = null, $buttons = array(), $view_override = false</var>)
+## entries\_table(<var>$stream\_slug, $namespace\_slug, $pagination = null, $pagination\_uri = null, $buttons = array(), $view\_override = false</var>)
 
 Allows you to more painlessly create a table of entries on the back end, including pagination.
 
