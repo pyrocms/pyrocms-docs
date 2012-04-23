@@ -1670,6 +1670,17 @@ Scaffolding.
 -------------------------------------------------------------------------------------------------------
 */
 
+.tags ul {
+	max-height: 150px;
+	margin-bottom: 25px;
+	float: left;
+}
+
+.tags ul li {
+	width: 200px;
+	float: left;
+}
+
 .wrapper {
 	margin: 0 auto;
 }
