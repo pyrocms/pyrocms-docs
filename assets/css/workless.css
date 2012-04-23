@@ -1681,6 +1681,10 @@ Scaffolding.
 	float: left;
 }
 
+.tags ul li a {
+	font-size: 14px;
+}
+
 .wrapper {
 	margin: 0 auto;
 }
