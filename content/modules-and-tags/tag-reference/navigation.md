@@ -61,6 +61,12 @@ Creates a list of links for a group.
 			<td>The class applied to the last in a list of dropdown links.</td>
 		</tr>
 		<tr>
+			<td>more-class</td>
+			<td>None</td>
+			<td>No</td>
+			<td>The class to use when an element has child elements.</td>
+		</tr>
+		<tr>
 			<td>separator</td>
 			<td>None</td>
 			<td>No</td>
