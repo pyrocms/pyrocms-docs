@@ -98,19 +98,15 @@ font-size: 13px; }
 pre, code { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
 
 code, pre {
-	font-family: Menlo,Monaco,"Courier New",monospace;
+	font-family: "Menlo", Monaco, monospace;
 	display: block;
 	overflow: hidden;
-	background: #fefefe;
-	color: #333333;
+	background: #111111;
+	color: #eeeeee;
 	margin-top: 15px;
 	margin-bottom: 15px;
-	-webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
+	padding-left: 8px;
 	border-radius: 2px;
-	-webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
-	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 q { quotes: none; }
@@ -1818,26 +1814,6 @@ Non-semantic helper classes.
 .rn70 { transform: rotate(-70deg); -moz-transform: rotate(-70deg); -webkit-transform: rotate(-70deg); -ms-transform: rotate(-70deg); -o-transform: rotate(-70deg); }
 .rn80 { transform: rotate(-80deg); -moz-transform: rotate(-80deg); -webkit-transform: rotate(-80deg); -ms-transform: rotate(-80deg); -o-transform: rotate(-80deg); }
 .rn90 { transform: rotate(-90deg); -moz-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); -o-transform: rotate(-90deg); }
-
-/* Pretty Print */
-.com { color: #aaaaaa; }
-.lit { color: #195f91; }
-.pun, .opn, .clo { color: #34ade8; }
-.fun { color: #4F6677; }
-.str, .atv { color: #268bd2; }
-.kwd, .tag { color: #195f91; }
-.typ, .atn, .dec, .var { color: #CB4B16; }
-.pln { color: #4F6677; }
-
-pre.prettyprint, code.prettyprint {
-  background: #fefefe;
-  padding: 9px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-/* Specify class=linenums on a pre to get line numbering */
-ol.linenums { margin: 0; padding: 0; } /* IE indents via margin-left */
-ol.linenums li { line-height: 20px; }
 
 /*
 -------------------------------------------------------------------------------------------------------

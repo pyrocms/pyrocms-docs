@@ -131,11 +131,15 @@ main content
 	float: left;
 }
 
-#content table th {
-	border-bottom: 1px solid #949494;
-}
 #content table td {
+	font-family: "Menlo", Monaco, monospace;
+	background: #eeeeee;
+	color: #333333;
 	border-bottom: 1px solid #E6E6E6;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-left: 15px;
+	border-radius: 2px;
 }
 
 .intro {
@@ -341,13 +345,11 @@ pre.prettyprint, code.prettyprint {
 }
 
 .tip {
-	background-color: #FFFFF5;
+	 background: #fff0c0;
+  	border: 1px solid #ffe38d;
 	padding: 15px;
 	font-size: 12px;
 	line-height: 18px;
-	border: 1px solid #ECECC2;
+	margin-top: 15px;
 	margin-bottom: 15px;
-	box-shadow: 1px 2px 3px #E0E0E0;
-	-moz-box-shadow: 1px 2px 3px #E0E0E0;
-	-webkit-box-shadow: 1px 2px 3px #E0E0E0;
 }

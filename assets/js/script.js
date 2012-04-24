@@ -83,6 +83,6 @@ $('.tooltip-w').tipsy({
 });
 
 // Prettyprint
-$('pre').addClass('prettyprint linenums');
+//$('pre').addClass('prettyprint linenums');
 
 });
