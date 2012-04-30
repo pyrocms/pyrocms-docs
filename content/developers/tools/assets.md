@@ -97,7 +97,7 @@ You can also add groups on-the-fly using **Asset::add\_group($group\_type, $grou
 	);
 
 This method is provided merely for convenience when adding lots of files to a group at once.
-You don't have to create a group before adding files to it - the group will be created it it doesn't exist.
+You don't have to create a group before adding files to it - the group will be created if it doesn't exist.
 
 You can change any of these options on-the-fly using 
 
