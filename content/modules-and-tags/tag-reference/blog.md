@@ -42,16 +42,6 @@ Display all blog posts or blog posts by category.
 		</tr>
 		<tr>
 			<td width="100">
-				order*</td>
-			<td width="100">
-				asc</td>
-			<td width="100">
-				No</td>
-			<td>
-				<strong>*Deprecated in v1.3.0</strong> order-dir and order-by have taken it&#39;s place.</td>
-		</tr>
-		<tr>
-			<td width="100">
 				order-by</td>
 			<td width="100">
 				created_on</td>
