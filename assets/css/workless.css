@@ -176,6 +176,9 @@ dl dd { margin-left: 9px; }
 ul, ol { margin: 15px 0; padding: 0; }
 dd { margin: 0 0 0 25px; }
 
+#content li { list-style: square; }
+#content ul, ol { margin: 15px 0; padding: 0 0 0 35px; }
+
 /* We probably don't want list-styles showing if it's in a navigation. */
 nav ul, nav ol, #nav ul, #nav ol, #navigation ul, #navigation ol, .nav { list-style: none; 
 list-style-image: none; margin: 0; padding: 0; }
