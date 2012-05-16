@@ -48,6 +48,12 @@ Creates a list of files within the specified folder.
 			<td>No</td>
 			<td>Return the files in the subfolders specified. Separate multiple folders with the pipe character: "blog|pages"</td>
 		</tr>
+		<tr>
+			<td>order-by</td>
+			<td>id</td>
+			<td>No</td>
+			<td>Database column to order pages by.</td>
+		</tr>
 	</tbody>
 </table>
 
