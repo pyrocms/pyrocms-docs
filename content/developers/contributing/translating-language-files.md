@@ -34,8 +34,8 @@ Either way, install your language pack to system/codeigniter/languages/*&lt;lang
 
 PyroCMS language files exist both in the main application folder and inside each module. This is a list of all folders that contain language files:
 
-1. system/pyrocms/language/*&lt;language-name&gt;*/
-2. system/pyrocms/modules/*&lt;module-name&gt;*/language/*&lt;language-name&gt;*/
+1. system/cms/language/*&lt;language-name&gt;*/
+2. system/cms/modules/*&lt;module-name&gt;*/language/*&lt;language-name&gt;*/
 3. addons/modules/*&lt;module-name&gt;*/language/*&lt;language-name&gt;*/
 
 To get these new folders, just copy the **english** folder, rename it and translate all of the English text into your language.
@@ -46,7 +46,7 @@ Each module has a details.php file that contains details about the module such a
 
 ### Step #4: Add language to config
 
-Open up system/pyrocms/config/languages.php and add your language to the array with the same two digit code used in Step 3. Once this is done you will see your language available in the dropdown menu in the Control Panel.
+Open up system/cms/config/languages.php and add your language to the array with the same two digit code used in Step 3. Once this is done you will see your language available in the dropdown menu in the Control Panel.
 
 That should be it! If you get any language related errors when you switch to your new language and want to switch back to English then just add ?lang=en to any URL.
 
