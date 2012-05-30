@@ -1,4 +1,4 @@
-# PyroCMS Documentation
+# PyroCMS Documentation v2.1
 
 This repo is home to the PyroCMS documentation source. 
 
