@@ -173,3 +173,21 @@ The **get_entry()** function allows you to get a single entry. If you'd like to 
 ## delete\_entry(<var>$entry\_id, $stream\_slug, $namespace\_slug</var>)
 
 Allows you to delete an entry.
+
+## insert\_entry(<var>$entry\_data, $stream\, $namespace,$skips=array(), $extra = array()</var>)
+
+Allows you to add an entry in the stream. 
+
+$entry_data  = array()
+ex : 
+	$data=array(
+		"category-name"=>"test"
+	);
+
+$stream = int,slug,or object
+
+$namespace = string
+
+$skips = fiel slugs to skip
+
+$extra = extra datat to add in
