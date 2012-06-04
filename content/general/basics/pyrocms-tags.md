@@ -5,10 +5,10 @@ One of the unique features of PyroCMS is Tags, powered by the [Lex Parser](https
 The following guide will teach you the basics of tags and how to use them in your layouts.
 
 <ul id="doc_sub_nav">
-<li><a href="{{ url:current_url }}#basic">Basic Tags</a></li>
-<li><a href="{{ url:current_url }}#attributes">Tag Attributes</a></li>
-<li><a href="{{ url:current_url }}#pairs">Tag Pairs</a></li>
-<li><a href="{{ url:current_url }}#conditionals">Tag Conditionals</a></li>
+<li><a href="#basic">Basic Tags</a></li>
+<li><a href="#attributes">Tag Attributes</a></li>
+<li><a href="#pairs">Tag Pairs</a></li>
+<li><a href="#conditionals">Tag Conditionals</a></li>
 </ul>
 
 <div id="basic"></div>
@@ -19,7 +19,7 @@ Let's start with a very simple example, a tag that returns one of our site setti
 
     {{ noparse }}{{ settings:site_name }}{{ /noparse }}
 
-_Side note:</strong> The white-space inside the curly braces is optional, but does help with aesthetics and readability._
+<div class="tip"><strong>Note:</strong> The white-space inside the curly braces is optional, but does help with aesthetics and readability.</div>
 
 This tag has some basic parts: two curly braces on either site, and two text strings separated by a colon. The first string, **settings** in this case, tells the tag what plugin to reference, and then the second string, **site_name** in this case, tells the tag what function or variable to call.
 
