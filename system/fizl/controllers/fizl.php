@@ -234,7 +234,7 @@ class Fizl extends CI_Controller {
 		$parser = new Lex_Parser();
 		$parser->scope_glue(':');
 		
-		echo $parser->parse($template, $this->vars, array($this->parse, 'callback'));
+		echo $parser->parse($template, $this->vars, array($this->parse, 'callback'), TRUE);
 	}
 	
 	// --------------------------------------------------------------------------

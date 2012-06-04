@@ -5,3 +5,4 @@ entries-driver
 cp-driver | CP Driver
 utilities-driver
 core-field-types
+locked-fields

@@ -1,4 +1,4 @@
-# PyroCMS Documentation v2.2
+# PyroCMS Documentation v2.2.0-dev
 
 This repo is home to the PyroCMS documentation source. 
 
@@ -6,7 +6,7 @@ This repo is home to the PyroCMS documentation source.
 
 ## Doc Versions
 
-The documentation tags mirror the .x release tags of PyroCMS, so the 2.1 documentation is on branch 2.1, and so on. Once a new version of PyroCMS is in development, a new branch of documentation will be available on this repo. Please make sure when you are contributing a documentation change you are using the appropriate branch!
+The documentation tags mirror the x.y release tags of PyroCMS, so the v2.2.0 documentation is on branch `2.2`, and so on. Once a new version of PyroCMS is in development, a new branch of documentation will be available on this repo. Please make sure when you are contributing a documentation change you are using the appropriate branch.
 
 ## Contributing to the Docs
 

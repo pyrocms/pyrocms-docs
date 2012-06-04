@@ -24,6 +24,10 @@ PyroCMS includes the following event triggers:
 <td>This is triggered when the Public_Controller begins to run.</td>
 </tr>
 <tr>
+<td class="one_third">Events::trigger('<b>admin_controller</b>')</td>
+<td>This is triggered when the Admin_Controller runs.</td>
+</tr>
+<tr>
 <td class="one_third">Events::trigger('<b>admin_notification</b>')</td>
 <td>Fired when error, notice or success messages are displayed in the Admin area.</td>
 </tr>

@@ -88,10 +88,22 @@ Generates a &lt;link&gt; to a css file in the current theme.
 			<td>Name of the css file.</td>
 		</tr>
 		<tr>
-			<td width="100"><em>misc</em></td>
+			<td width="100">type</td>
+			<td width="100">text/css</td>
+			<td width="100">No</td>
+			<td>The type attribute.</td>
+		</tr>
+		<tr>
+			<td width="100">title</td>
 			<td width="100">None</td>
 			<td width="100">No</td>
-			<td>This function will take any other link tag attributes and pass them along to the link tag. By default, 'type' and 'rel' are included with default values.</td>
+			<td>The title attribute.</td>
+		</tr>
+		<tr>
+			<td width="100">media</td>
+			<td width="100">None</td>
+			<td width="100">No</td>
+			<td>The media attribute.</td>
 		</tr>
 	</tbody>
 </table>
