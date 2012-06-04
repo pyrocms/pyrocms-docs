@@ -33,12 +33,20 @@ PyroCMS includes the following event triggers:
 
 <table>
 <tr>
-<td class="one_third">Events::trigger('<b>blog_article_deleted</b>', $deleted_ids)</td>
-<td>Fired when a one or more blog posts have been deleted.</td>
+<td class="one_third">Events::trigger('<b>post_created</b>', $id)</td>
+<td>Fired when a blog post is created. A blog post may or may not be live, so do not confuse with published.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>blog_article_published</b>', $id)</td>
+<td class="one_third">Events::trigger('<b>post_updated</b>', $id)</td>
+<td>Fired when a blog post is updated, but much like <b>post_created</b> it may not be live, or may have been put back into draft from live.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>post_published</b>', $id)</td>
 <td>Fired when a blog post has been published.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>post_deleted</b>', $deleted_ids)</td>
+<td>Fired when a one or more blog posts have been deleted.</td>
 </tr>
 <tr>
 <td class="one_third">Events::trigger('<b>blog_category_deleted</b>', $deleted_ids)</td>
@@ -193,19 +201,19 @@ PyroCMS includes the following event triggers:
 
 <table>
 <tr>
-<td class="one_third">Events::trigger('<b>post_page_create</b>', $input)</td>
+<td class="one_third">Events::trigger('<b>page_created</b>', $id)</td>
 <td>Fired when a page has been created.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>post_page_edit</b>', $input)</td>
+<td class="one_third">Events::trigger('<b>page_updated</b>', $id)</td>
 <td>Fired when a page has been edited.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>post_page_delete</b>', $deleted_ids)</td>
+<td class="one_third">Events::trigger('<b>page_deleted</b>', $deleted_ids)</td>
 <td>Fired when one or more pages have been deleted.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>post_page_order</b>', array($order, $root_pages))</td>
+<td class="one_third">Events::trigger('<b>page_ordered</b>', array($order, $root_pages))</td>
 <td>Fired when pages have been reordered.</td>
 </tr>
 </table>
