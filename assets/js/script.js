@@ -57,6 +57,19 @@ $("nav select").change(function() {
   window.location = $(this).find("option:selected").val();
 });
 
+// toc
+$("#open").click(function(){
+	$("#doc_menu").slideDown(1000);	
+});	
+	
+$("#close").click(function(){
+	$("#doc_menu").slideUp(1000);	
+});		
+	
+$("#toggle a").click(function () {
+	$("#toggle a").toggle();
+});
+
 // Tipsy
 $('.tooltip').tipsy({
 	gravity: $.fn.tipsy.autoNS,

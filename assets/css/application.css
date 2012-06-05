@@ -150,8 +150,36 @@ main content
 	border-bottom: 1px solid #eeeeee;
 }
 
+#toc {
+	background: #fefefe;
+	width: 100%;
+	float: left;
+}
+
+#toc ul {
+	width: 150px;
+	height: 42px;
+	padding: 0;
+	margin: 0 auto;
+}
+
+#toc ul li a {
+	font-size: 14px;
+	font-weight: bold;
+	color: #faa732;
+	cursor: pointer;
+	margin: 0;
+	padding: 5px 0;
+	float: left;
+}
+
+#toc .toggle {
+	font-size: 18px;
+}
+
 #doc_menu {
-	padding-bottom: 25px;
+	padding-bottom: 50px!important;
+	display: none;
 }
 #doc_menu ul li {
 	font-size: 12px!important;
