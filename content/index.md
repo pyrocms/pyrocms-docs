@@ -1,6 +1,6 @@
 <div class="intro">
-<h1>PyroCMS Documentation</h1>
-<p class="flarge muted">Welcome to the documentation for PyroCMS.</p>
+<h1>Welcome to PyroCMS</h1>
+<p class="flarge muted">If you are new to PyroCMS, we recommend starting with the Getting Started docs in order to get PyroCMS up and running, and then taking a look through the Basics to get the core concepts down.</p>
 </div>
 
 <div class="one_quarter">
