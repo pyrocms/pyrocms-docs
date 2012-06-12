@@ -1,5 +1,8 @@
 blog
+contact
+files
 galleries
+global
 helper
 lang
 navigation
