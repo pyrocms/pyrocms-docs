@@ -12,7 +12,7 @@ Then you need to make sure your web-server (probably Apache) knows how to respon
 
 With the server setup done you can just go to http://whatever.com/sites and &quot;Create a New Site&quot;. Follow the wizard through and add a site ref. This site ref is important and will be used in the folder structure and as the prefix for your sites database tables.
 
-<a class="iframe" href="/uploads/default/files/msm.png"><img alt="Multi-Site Manager" class="pyro-image" src="/files/thumb/24/700/450" style="float: none; width: 550px;" /></a>
+<a class="iframe" href="http://www.pyrocms.com/files/large/23"><img alt="Multi-Site Manager" class="pyro-image" src="http://pyrocms.com/files/thumb/24/700/450" style="float: none; width: 550px;" /></a>
 
 ## Add-on Management
 
@@ -22,4 +22,4 @@ One of the most important things is to disable Add-on uploading. A site administ
 
 Going further you can upload, install, upgrade, uninstall and delete modules for each or every site right from this interface.
 
-<a class="iframe prettyPhoto" href="/uploads/default/files/msm-addons.png"><img alt="Multi-Site Add-On Manager" class="pyro-image" src="/files/thumb/23/700/450" style="float: none; width: 550px;" /></a>
+<a class="iframe prettyPhoto" href="http://www.pyrocms.com/files/large/23"><img alt="Multi-Site Add-On Manager" class="pyro-image" src="http://pyrocms.com/files/thumb/23/700/450" style="float: none; width: 550px;" /></a>
