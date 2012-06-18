@@ -1,33 +1,32 @@
+/**
+ * Set defaults
+ */
 body {
-	background: #ffffff;
+	background: #f9f9f9;
 }
 
-/* 
------------------------------------------------------
-wrapper, used to center and set width
------------------------------------------------------
-*/
+/**
+ * wrapper, used to center and set width
+ */
 .wrapper {
 	margin: 0 auto;
 }
 
-/* 
------------------------------------------------------
-header 
------------------------------------------------------
-*/
+/** 
+ * header 
+ */
 header {
+	background: #ffffff;
 	width: 100%;
-	border-bottom: 1px solid #eeeeee;
 	height: 100px;
+	border-bottom: 1px solid #eeeeee;
 	padding: 15px 0;
+	float: left;
 }
 
-/* 
------------------------------------------------------
-logo
------------------------------------------------------
-*/
+/**
+ * logo
+ */
 #logo {
 	margin-top: 3px;
 	float: left;
@@ -47,15 +46,13 @@ logo
   	opacity: 0.5;
 }
 
-/* 
------------------------------------------------------
-navigation
------------------------------------------------------
-*/
+/**
+ * navigation
+ */
 #primary { 
 	position: relative; 
 	z-index: 999; 
-	margin: 38px 0 0 0; 
+	margin: 35px 0 0 0; 
 	padding: 0; 
 	float: right; 
 	font-size: 11px;
@@ -71,7 +68,8 @@ navigation
 	color: #aaaaaa;
 	display: block;
 	padding: 3px 5px;
-	font-size: 16px;
+	font-size: 14px;
+	font-weight: 600;
 }
 
 #primary a:hover {
@@ -83,7 +81,7 @@ navigation
 }
 
 /* navigation dropdown */
-#primary ul ul{
+#primary ul ul {
 	background: #ffffff;
 	list-style: none;
 	position: absolute;
@@ -116,17 +114,42 @@ navigation
 	text-shadow: none;
 }
 
-/* 
------------------------------------------------------
-main content 
------------------------------------------------------
-*/
+/**
+ * Doc menu
+ */
+#doc_menu {
+	width: 175px;
+	margin-right: 50px;
+	margin-top: 2px;
+	float: left;
+	font-size: 14px;
+}
+
+#doc_menu ul {
+	padding-left: 0;
+	padding-bottom: 15px;
+}
+
+#doc_menu ul li {
+	font-size: 14px!important;
+	margin-bottom: 4px;
+	list-style: none;
+}
+
+#doc_menu p {
+	margin-bottom: 2px;
+}
+#doc_menu h4 {
+	margin-bottom: 2px;
+}
+
+/**
+ * main content 
+ */
 #content {
 	width: 100%;
-	background: url(../img/grad_bg.jpg) repeat-x;
 	border-bottom: 1px solid #eeeeee;
-	border-top: 1px solid #eeeeee;
-	padding: 35px 0 150px 0;
+	padding: 25px 0 150px 0;
 	margin: 0;
 	float: left;
 }
@@ -142,6 +165,11 @@ main content
 	border-radius: 2px;
 }
 
+#main {
+	width: 750px;
+	float: left;
+}
+
 .intro {
 	width: 100%;
 	margin-bottom: 25px;
@@ -150,55 +178,11 @@ main content
 	border-bottom: 1px solid #eeeeee;
 }
 
-#toc {
-	background: #fefefe;
-	width: 100%;
-	float: left;
-}
-
-#toc ul {
-	width: 150px;
-	height: 42px;
-	padding: 0;
-	margin: 0 auto;
-}
-
-#toc ul li a {
-	font-size: 14px;
-	font-weight: bold;
-	color: #faa732;
-	cursor: pointer;
-	margin: 0;
-	padding: 5px 0;
-	float: left;
-}
-
-#toc .toggle {
-	font-size: 18px;
-}
-
-#doc_menu {
-	padding-bottom: 50px!important;
-	display: none;
-}
-#doc_menu ul li {
-	font-size: 14px!important;
-	margin-bottom: 4px;
-}
-#doc_menu p {
-	margin-bottom: 2px;
-}
-#doc_menu h4 {
-	margin-bottom: 2px;
-}
-
-/* 
------------------------------------------------------
-footer
------------------------------------------------------
-*/
+/**
+ * footer
+ */
 footer {
-	background: #f9f9f9;
+	background: #ffffff;
 	width: 100%;
 	padding: 25px 0 15px 0;
 }

@@ -54,93 +54,64 @@
 	</header>
 	<!-- /header -->
 	
-	<!-- toc -->
-	<div id="toc">
-		<ul id="toggle">
-			<li><a id="open">Table of Contents <span class="toggle">+</span></a></li>
-			<li><a id="close" style="display:none;">Table of Contents <span class="toggle">-</span></a></li>
-		</ul> 
-	</div>
-	<!-- /toc -->
-
-	<!-- doc_menu -->
-	<div id="doc_menu">
+	<!-- content -->
+	<section id="content">
 		<div class="wrapper">
-			{{ if segment_1 == 'general' }}
-				<div class="one_quarter">
-					<h4>About PyroCMS</h4>
-					{{ nav:auto start='general/about' }}
-				</div>
 
-				<div class="one_quarter">
-					<h4>Getting Started</h4>
+			<!-- doc_menu -->
+			<div id="doc_menu">
+				<h5>TABLE OF CONTENTS</h5>
+				{{ if segment_1 == 'general' }}
+					<strong>About PyroCMS</strong>
+					{{ nav:auto start='general/about' }}
+
+					<strong>Getting Started</strong>
 					{{ nav:auto start='general/getting-started' }}
 		
-					<h4>Alternate Server Environments</h4>
+					<strong>Alternate Server Environments</strong>
 					{{ nav:auto start='general/getting-started/alternate-server-environments' }}	
-				</div>
 
-				<div class="one_quarter">
-					<h4>Basics</h4>
+					<strong>Basics</strong>
 					{{ nav:auto start='general/basics' }}
-				</div>
 
-				<div class="one_quarter last">
-					<h4>Theming</h4>
+					<strong>Theming</strong>
 					{{ nav:auto start='general/theming' }}
-				</div>
-			{{ endif }}
+				{{ endif }}
 
-			{{ if segment_1 == 'modules-and-tags' }}
-				<div class="one_full tags">
-					<h4>Tag Reference</h4>
+				{{ if segment_1 == 'modules-and-tags' }}
+					<strong>Tag Reference</strong>
 					{{ nav:auto start='modules-and-tags/tag-reference' }}	
-				</div>
-			{{ endif }}
+				{{ endif }}
 
-			{{ if segment_1 == 'developers' }}
-				<div class="one_quarter">
-					<h4>Developer Basics</h4>
+				{{ if segment_1 == 'developers' }}
+					<strong>Developer Basics</strong>
 					{{ nav:auto start='developers/basics' }}	
 
 					<p><strong>Contributing to PyroCMS</strong></p>
 					{{ nav:auto start='developers/contributing' }}	
-				</div>
 
-				<div class="one_quarter">
-					<h4>Add-on Development</h4>
+					<strong>Add-on Development</strong>
 					{{ nav:auto start='developers/addons' }}
 		
-					<p><strong>Module Development</strong></p>	
+					<strong><strong>Module Development</strong></p>	
 					{{ nav:auto start='developers/addons/modules' }}
-				</div>
 
-				<div class="one_quarter">
-					<h4>Developer Tools</h4>
+					<strong>Developer Tools</strong>
 					{{ nav:auto start='developers/tools' }}	
-				</div>
 
-				<div class="one_quarter last">
-					<h4>Streams Core API</h4>
+					<strong>Streams Core API</strong>
 					{{ nav:auto start='developers/tools/streams-api' }}	
-				</div>
-			{{ endif }}
+				{{ endif }}
 
-			{{ if segment_1 == 'pyrocms-pro' }}
-				<div class="one_quarter">
-					<h4>About</h4>
+				{{ if segment_1 == 'pyrocms-pro' }}
+					<strong>About</strong>
 					{{ nav:auto start='pyrocms-pro/about' }}	
-				</div>
 
-				<div class="one_quarter last">
-					<h4>Features</h4>
+					<strong>Features</strong>
 					{{ nav:auto start='pyrocms-pro/features' }}	
-				</div>
-			{{ endif }}
+				{{ endif }}
 		</div>
-	</div>
-	<!-- /doc_menu -->
-	
-	<!-- content -->
-	<section id="content">
-		<div class="wrapper">
+		<!-- /doc_menu -->
+
+		<!-- main -->
+		<div id="main">

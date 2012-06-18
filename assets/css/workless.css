@@ -43,7 +43,7 @@ Base
 * { font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif; }
 html, body { background: transparent; height: 100%; }
 body {  margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
-body, button, input, select, textarea { color: #444444; }
+body, button, input, select, textarea { color: #333333; }
 
 ::-moz-selection { background: #FFA335; color: #ffffff; text-shadow: none; }
 ::selection { background: #FFA335; color: #ffffff; text-shadow: none; }
@@ -58,7 +58,7 @@ Links
 -------------------------------------------------------------------------------------------------------
 */
 
-a { color: #faa732; font-weight: inherit; font-size: inherit; text-decoration: none; -webkit-transition: 250ms linear all; 
+a { color: #ff9900; font-weight: inherit; font-size: inherit; text-decoration: none; -webkit-transition: 250ms linear all; 
 -moz-transition: 250ms linear all; transition: 250ms linear all; }
 a:hover { color: #555555; }
 a:active { color: #333333; }
@@ -120,24 +120,24 @@ sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
 /* Give paragraphs some default styling. */
-p { font-size: 14px; color: #777777; font-weight: normal; line-height: 22px; margin: 0 3px 25px 3px; }
-p small { font-size: 12px; color: #777777; }
+p { font-size: 14px; color: #333333; font-weight: normal; line-height: 22px; margin: 0 3px 25px 3px; }
+p small { font-size: 12px; color: #333333; }
 
 /* Give headings some default styling. */
 h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: 200; margin-bottom: 25px; }
 h1, h2, h3, h4, h5, h6 { color: #444444; }
 
 /* Set individual heading styles */
-h1 { font-size: 32px; line-height: 36px; }
+h1 { font-size: 28px; line-height: 32px; }
 h1 small { font-size: 12px; }
 
-h2 { font-size: 28px; line-height: 32px; }
+h2 { font-size: 24px; line-height: 28px; }
 h2 small { font-size: 12px; }
 
-h3 { font-size: 24px; line-height: 28px; }
+h3 { font-size: 20px; line-height: 24px; }
 h3 small { font-size: 12px; }
 
-h4 { font-size: 20px; line-height: 24px; }
+h4 { font-size: 18px; line-height: 22px; }
 h4 small { font-size: 12px; }
 
 h5 { font-size: 16px; line-height: 20px; }
@@ -164,7 +164,7 @@ ul, ol { margin: 0 0 15px 0; padding: 0; }
 ul ul, ul ol, ol ol, ol ul { margin-bottom: 0; }
 ul { list-style: disc; }
 ol { list-style: decimal; }
-li { font-size: 14px; line-height: 20px; color: #555555; margin-bottom: 10px; list-style: none; }
+li { font-size: 14px; line-height: 20px; color: #333333; margin-bottom: 10px; list-style: none; }
 
 /* Add a simple class for removing list style */
 ul.unstyled { list-style: none; margin-left: 0; }
