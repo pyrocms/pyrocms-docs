@@ -64,9 +64,9 @@ The **add_stream** function allows you to create a stream. It will create the ac
 
 ### Example:
 
-In this example we add the recipe stream. Since the module is also called "recipes", our namespace is called "recipes". We are not providing a prefix in this case, so our table will be created a **default_recipes**. If we had a prefix, let's say 'rec_', it would be **default\_rec\_recipes**.
+In this example we add the "FAQ" stream. The module is also called "faqs", our namespace is called "faq". We are providing the "faq_" prefix, so our table will be created a **default\_faq\_faqs** (sitename, prefix and slug concatenated). Without specifying any prefix, it would be **default\_faqs** (sitename and slug concatenated).
 
-	$this->streams->streams->add_stream('FAQs', 'faqs', 'streams_sample', 'sample_', NULL);
+	$this->streams->streams->add_stream('FAQ', 'faqs', 'stream_sample', 'faq_', NULL);
 
 ## get_stream(<var>$stream\_slug, $namespace</var>)
 
