@@ -61,7 +61,7 @@ Display all images from any one gallery.
 
 	{{ noparse }}{{&nbsp;galleries:images slug=&quot;test-gallery&quot; limit=&quot;5&quot; }}
 	&lt;h2&gt;{{&nbsp;title }}&lt;/h2&gt;
-	&lt;a href=&quot;http://yoursite.com/galleries/{{&nbsp;gallery_slug }}/{{&nbsp;file_id }}&quot;&gt;
+	&lt;a href=&quot;http://yoursite.com/galleries/{{&nbsp;gallery_slug }}/{{&nbsp;id }}&quot;&gt;
 		&lt;img src=&quot;http://yoursite.com/files/thumb/{{&nbsp;file_id }}/100/75&quot; alt=&quot;{{&nbsp;name }}&quot;/&gt;
 		100/75 is desired thumbnail width/height respectively
 	&lt;/a&gt;
