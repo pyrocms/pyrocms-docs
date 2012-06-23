@@ -1,6 +1,5 @@
 # Changelog
 
-
 ## 2.1.2 - June 4, 2012
 
 ### Security Patches

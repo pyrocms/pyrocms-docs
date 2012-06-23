@@ -1,6 +1,6 @@
 # Tag Reference
 
-Tags are a way to put dynamic content into your theme or page content. They may also be used to as a shorthand way to insert an image tag, link to javascript files, etc. They can be embedded in Page content, Blog posts, and directly in a Theme file.
+Tags are a way to put dynamic content into your theme or page content. They may also be used as a shorthand way to insert an image tag, link to javascript files, etc. They can be embedded in Page content, Blog posts, and directly in a Theme file.
 
 For example, here is a simple tag that returns the site's URL:
 

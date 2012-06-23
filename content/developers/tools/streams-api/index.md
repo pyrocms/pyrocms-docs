@@ -1,6 +1,6 @@
 # Streams Core API
 
-Starting with PyroCMS 2.1, the core of PyroStreams is now a module in PyroCMS called Streams Core. This means that all modules in PyroCMS can now take advantage of streams functions. To make this easy, a Streams API has developed in order to make working with Streams Core simple.
+Starting with PyroCMS 2.1, the core of PyroStreams is now a module in PyroCMS called Streams Core. This means that all modules in PyroCMS can now take advantage of streams functions. To make this easy, a Streams API has benn developed in order to make working with Streams Core simple.
 
 ## API Basics
 
@@ -28,7 +28,7 @@ We'll go into depth about what each of these drivers does, but first, an overvie
 
 ## Streams Overview
 
-Streams is essentially a database abstraction layer. Streams are 
+"Streams" is essentially a database abstraction layer.
 
 ### Namespacing and Prefixing
 
@@ -53,3 +53,5 @@ You can of course use database interactions however you'd like in your modules, 
 It will be clearer to have an example thread that runs through these docs, so here is our example:
 
 _Our module is a simple FAQ module. Users add FAQs and view them in a list. Our only stream is a faq stream and our namespace is streams_sample._
+
+FAQ Stream module sources can be found at https://github.com/pyrocms/streams-enabled-module-sample
