@@ -27,7 +27,7 @@
 	
 	<base href="{{ base_url }}" /> 
 
-  	<title>{{ title }} | {{ site_title }}</title>
+  	<title>{{ variables:get_var name="title" }} | {{ site_title }}</title>
 
   	{{ asset:css file="style.css" }}
 
