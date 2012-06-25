@@ -1,6 +1,6 @@
 # Streams Core API
 
-Starting with PyroCMS 2.1, the core of PyroStreams is now a module in PyroCMS called Streams Core. This means that all modules in PyroCMS can now take advantage of streams functions. To make this easy, a Streams API has benn developed in order to make working with Streams Core simple.
+Starting with PyroCMS 2.1, the core of PyroStreams is now a module in PyroCMS called Streams Core. This means that all modules in PyroCMS can now take advantage of streams functions. To make this easy, a Streams API has been developed in order to make working with Streams Core simple.
 
 ## API Basics
 
