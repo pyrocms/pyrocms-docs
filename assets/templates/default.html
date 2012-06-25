@@ -1,4 +1,6 @@
-{{ embed file="header" title="Home" }}
+{{ variables:set name="title" regex="(\#)s? (.+)" }}{{ content }}{{ /variables:set }}
+
+{{ embed file="header" }}
 
 {{ content }}
 
