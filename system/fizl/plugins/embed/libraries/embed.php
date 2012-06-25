@@ -38,7 +38,7 @@ class Embed extends Plugin {
 		$parser = new Lex_Parser();
 		$parser->scope_glue(':');
 		
-		return $parser->parse($embed_content, $CI->vars, array($CI->parse, 'callback'));
+		return $parser->parse($embed_content, $vars, array($CI->parse, 'callback'));
 	}
 	
 }
