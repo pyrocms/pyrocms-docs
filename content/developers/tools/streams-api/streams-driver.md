@@ -33,7 +33,7 @@ When you create a stream, the following fields are created automatically.
 	</tr>
 </table>
 
-## add_stream(<var>$stream\_name, $stream\_slug, $namespace, $prefix = NULL, $about = NULL</var>)
+## add_stream(<var>$stream\_name, $stream\_slug, $namespace, $prefix = null, $about = null</var>)
 
 The **add_stream** function allows you to create a stream. It will create the actual table in the database, as well as the streams metadata in the streams table.
 	
@@ -66,7 +66,7 @@ The **add_stream** function allows you to create a stream. It will create the ac
 
 In this example we add the "FAQ" stream. The module is also called "faqs", our namespace is called "faq". We are providing the "faq_" prefix, so our table will be created a **default\_faq\_faqs** (sitename, prefix and slug concatenated). Without specifying any prefix, it would be **default\_faqs** (sitename and slug concatenated).
 
-	$this->streams->streams->add_stream('FAQ', 'faqs', 'stream_sample', 'faq_', NULL);
+	$this->streams->streams->add_stream('FAQ', 'faqs', 'stream_sample', 'faq_', null);
 
 ## get_stream(<var>$stream\_slug, $namespace</var>)
 
@@ -147,7 +147,7 @@ Allows you to update basic stream metadata. You can pass any stream metadata val
 
 Deletes a stream. This will delete all the entries associated with this stream as well, as well as run all of the field destruct functions for fields assigned to this stream.
 
-This streams returns TRUE or FALSE, based on whether the streams was successfully deleted.
+This streams returns true or FALSE, based on whether the streams was successfully deleted.
 		
 ### Example:
 
