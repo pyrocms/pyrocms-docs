@@ -1818,6 +1818,10 @@ Non-semantic helper classes.
 .rn80 { transform: rotate(-80deg); -moz-transform: rotate(-80deg); -webkit-transform: rotate(-80deg); -ms-transform: rotate(-80deg); -o-transform: rotate(-80deg); }
 .rn90 { transform: rotate(-90deg); -moz-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); -o-transform: rotate(-90deg); }
 
+
+/* GIST */
+.gist-highlight span.nx, .gist-highlight span.p { color: #ff9900!important;}
+
 /*
 -------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
