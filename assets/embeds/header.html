@@ -60,7 +60,15 @@
 
 			<!-- doc_menu -->
 			<div id="doc_menu">
-				<h5>TABLE OF CONTENTS</h5>
+                                <h5>TABLE OF CONTENTS</h5>
+                                {{ if !segment_1 }}
+                                    <ul>
+					<li{{ if segment_1 == 'general' }} class="current"{{ endif }}>{{ link uri="general" title="General Info" }}</li>
+					<li{{ if segment_1 == 'modules-and-tags' }} class="current"{{ endif }}>{{ link uri="modules-and-tags" title="Modules &amp; Tags" }}</li>
+					<li{{ if segment_1 == 'developers' }} class="current"{{ endif }}>{{ link uri="developers" title="Developers" }}</li>
+					<li{{ if segment_1 == 'pyrocms-pro' }} class="current"{{ endif }}>{{ link uri="pyrocms-pro" title="PyroCMS Pro" }}</li>
+				</ul>
+                                {{ endif }}
 				{{ if segment_1 == 'general' }}
 					<strong>About PyroCMS</strong>
 					{{ nav:auto start='general/about' }}
