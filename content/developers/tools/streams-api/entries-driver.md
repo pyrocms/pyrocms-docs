@@ -166,7 +166,7 @@ The get_entries() function will return an array with several values:
 	</tr>
 </table>
 
-## get\_entry(<var>$entry\_id, $stream\_slug, $namespace\_slug, $format = TRUE</var>)
+## get\_entry(<var>$entry\_id, $stream\_slug, $namespace\_slug, $format = true</var>)
 
 The **get_entry()** function allows you to get a single entry. If you'd like to bypass the streams formatting, you can set the fourth parameter to FALSE.
 
