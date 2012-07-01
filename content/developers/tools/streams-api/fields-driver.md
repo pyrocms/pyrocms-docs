@@ -4,6 +4,7 @@ The fields driver is used to create and manipulate fields.
 
 You can call the fields driver like this:
 
+	$this->load->driver('Streams');
 	$this->streams->fields->function();
 
 <hr id="add-field">

@@ -4,6 +4,7 @@ The entries driver is used to get entries (database table rows) from a stream.
 
 You can call the entries driver like this:
 
+	$this->load->driver('Streams');
 	$this->streams->entries->function();
 
 ## get_entries(<var>$params, $pagination\_config = array()</var>)
