@@ -4,6 +4,7 @@ The CP driver has functions that take care of common PyroCMS control panel routi
 
 You can call the entries driver like this:
 
+	$this->load->driver('Streams');
 	$this->streams->cp->function();
 
 <hr id="entries-table"/>

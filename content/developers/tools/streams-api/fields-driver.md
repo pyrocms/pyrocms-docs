@@ -4,6 +4,7 @@ The fields driver is used to create and manipulate fields.
 
 You can call the fields driver like this:
 
+	$this->load->driver('Streams');
 	$this->streams->fields->function();
 
 <hr id="add-field">
@@ -50,9 +51,9 @@ Creates a field. The function takes a single array which can have the following 
 		'type'			=> 'text',
 		'extra'			=> array('max_length' => 200),
 		'assign'		=> 'faqs',
-		'title_column'	=> TRUE,
-		'required'		=> TRUE,
-		'unique'		=> TRUE
+		'title_column'	=> true,
+		'required'		=> true,
+		'unique'		=> true
 	)
 	
 	$this->streams->fields->add_field($field);
@@ -71,9 +72,9 @@ Allows you to add an array of fields in the same format of add_field() above.
 			'type'			=> 'text',
 			'extra'			=> array('max_length' => 200),
 			'assign'		=> 'faqs',
-			'title_column'	=> TRUE,
-			'required'		=> TRUE,
-			'unique'		=> TRUE
+			'title_column'	=> true,
+			'required'		=> true,
+			'unique'		=> true
 		),
 		array(
 			'name'			=> 'Answer',
@@ -81,7 +82,7 @@ Allows you to add an array of fields in the same format of add_field() above.
 			'namespace'		=> 'streams_sample',
 			'type'			=> 'textarea',
 			'assign'		=> 'faqs',
-			'required'		=> TRUE
+			'required'		=> true
 		)
 	);
 	
@@ -112,7 +113,7 @@ Assigns a field to a stream. These must both be in the same namespace. The last 
 
 ### Example
 
-	$this->streams->fields->assign_field('streams_sample', 'faqs', 'question', array('required' => TRUE));
+	$this->streams->fields->assign_field('streams_sample', 'faqs', 'question', array('required' => true));
 	
 <div class="tip"><strong>Note:</strong> If you use the assign option when adding a field, you do not need to assign it.</div>
 

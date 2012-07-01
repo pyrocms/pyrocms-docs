@@ -4,6 +4,7 @@ The utilities driver is used to run uncommon streams functions that usually have
 
 You can call the entries driver like this:
 
+	$this->load->driver('Streams');
 	$this->streams->utilities->function();
 
 ## remove\_namespace(<var>$namespace\_slug</var>)

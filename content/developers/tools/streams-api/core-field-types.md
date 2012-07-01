@@ -1,3 +1,5 @@
+<div id="top"></div>
+
 # Core Field Types
 
 PyroCMS comes with a variety of field types in the Streams Core module that you can count on being available in PyroCMS 2.2 and above for your module.
@@ -25,7 +27,7 @@ Below is a reference of all the core PyroCMS field types.
 * {{ link uri="developers/tools/streams-api/core-field-types#wysiwyg" title="WYSIWYG" }}
 * {{ link uri="developers/tools/streams-api/core-field-types#year" title="Year" }}
 
-<h2 id="choice">Choice</h2>
+<h2 id="choice">Choice {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
 
 The choice field type allows you to make drop downs, radio buttons, or check boxes.
 
@@ -67,7 +69,7 @@ The choice field type allows you to make drop downs, radio buttons, or check box
 	</tr>
 </table>
 
-<h2 id="country">Country</h2>
+<h2 id="country">Country {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
 
 The country field type creates a dropdown list of countries to choose from.
 
@@ -88,7 +90,7 @@ The country field type creates a dropdown list of countries to choose from.
 	</tr>
 </table>
 
-<h2 id="datetime">Date/Time</h2>
+<h2 id="datetime">Date/Time {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
 
 The date/time field type stores date and time information. You can choose to just store the date, or store the date and time.
 
@@ -154,7 +156,7 @@ If you set this as the end_date, the user would be able to select a date up unti
 
 	-18Y
 
-<h2 id="email">Email</h2>
+<h2 id="email">Email {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
 
 The email field type is similar to the text field, but adds validation for a valid email address and uses the HTML5 email input type that optimizes email input for mobile devices.
 
@@ -178,7 +180,7 @@ The email field type is similar to the text field, but adds validation for a val
 		<td>Checks to make sure it is a valid email address.</td>
 	</tr></table>
 
-<h2 id="encrypt">Encrypt</h2>
+<h2 id="encrypt">Encrypt {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
 
 The encrypt field type stores a string as encrypted data in the database and decrypts it for output. Uses the CodeIgniter encryption library to encrypt the date and decrypt it before output.
 
@@ -212,4 +214,498 @@ The encrypt field type stores a string as encrypted data in the database and dec
 		<td>'yes' or 'no'</td>
 		<td>If set to yes, the form input will be a password input instead of a regular text box.</td>
 	</tr>
+</table>
+
+<h2 id="file">File {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+
+The file field type allows you to upload and link to a file.
+
+### Type Info
+
+<table>
+	<tr>
+		<td width="30%">Slug</td>
+		<td>file</td>
+	</tr>
+	<tr>
+		<td>Column Type</td>
+		<td>INT</td>
+	</tr>
+	<tr>
+		<td>Column Storage</td>
+		<td>Stores the file id of a file in the files module.</td>
+	</tr>
+</table>
+
+### Extra Parameters
+
+<table>
+	<tr>
+		<th width="30%">Parameter</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>folder</td>
+		<td>Interfaces with the PyroCMS files module. Create an upload folder in the files module and select it here using the folder&#39;s id.</td>
+	</tr>
+        <tr>
+		<td>allowed_types</td>
+		<td>Allowed types separated by pipe characters. Ex: doc|pdf.</td>
+	</tr>
+</table>
+
+<h2 id="image">Image {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+
+The file field type allows you to upload and link to a file.
+
+### Type Info
+
+<table>
+	<tr>
+		<td width="30%">Slug</td>
+		<td>image</td>
+	</tr>
+	<tr>
+		<td>Column Type</td>
+		<td>INT</td>
+	</tr>
+	<tr>
+		<td>Column Storage</td>
+		<td>The image field type allows you to upload and resize an image.</td>
+	</tr>
+</table>
+
+### Extra Parameters
+
+<table>
+	<tr>
+		<th width="30%">Parameter</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>folder</td>
+		<td>Interfaces with the PyroCMS files module. Create an upload folder in the files module and select it here using the folder&#39;s id.</td>
+	</tr>
+        <tr>
+		<td>resize_width</td>
+		<td>Number of pixels to resize the image to width-wise. Can be left blank.</td>
+	</tr>
+        <tr>
+		<td>resize_height</td>
+		<td>Number of pixels to resize the image to height-wise. If left blank while the Resize Height field is filled, this will be calculated based on the dimensions of the image.</td>
+	</tr>
+        <tr>
+		<td>allowed_types</td>
+		<td>Allowed types separated by pipe characters. Ex: jpg|gif|png.</td>
+	</tr>
+</table>
+
+<h2 id="integer">Integer {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+
+The file field type allows you store an Integer value.
+
+### Type Info
+
+<table>
+	<tr>
+		<td width="30%">Slug</td>
+		<td>integer</td>
+	</tr>
+	<tr>
+		<td>Column Type</td>
+		<td>INT</td>
+	</tr>
+	<tr>
+		<td>Column Storage</td>
+		<td>Stores an Integer.</td>
+	</tr>
+        <tr>
+		<td>Validation</td>
+		<td>Checks to make sure it is an Integer.</td>
+	</tr>
+        
+</table>
+
+### Extra Parameters
+
+<table>
+	<tr>
+		<th width="30%">Parameter</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>max_length</td>
+		<td>Maximum characters of the integer.</td>
+	</tr>
+        <tr>
+		<td>default_value</td>
+		<td>Specify the value that will be used if none is provide.</td>
+	</tr>
+</table>
+
+<h2 id="pyro_lang">Pyro Lang {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+
+Shows a drop down of languages to choose from. You can filter them by available languages for the current theme.
+
+### Type Info
+
+<table>
+	<tr>
+		<td width="30%">Slug</td>
+		<td>pyro_lang</td>
+	</tr>
+	<tr>
+		<td>Column Type</td>
+		<td>VARCHAR</td>
+	</tr>
+	<tr>
+		<td>Column Storage</td>
+		<td>Stores a language selection.</td>
+	</tr>
+        
+</table>
+
+### Extra Parameters
+
+<table>
+	<tr>
+		<th width="30%">Parameter</th>
+                <th>Value</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>filter_theme</td>
+		<td>'yes' or 'no'</td>
+                <td>Whether or not to filter language list by available languages for a theme.</td>
+	</tr>
+</table>
+
+<h2 id="relationship">Relationship {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+
+The relationship field type allows you to link streams together by allowing you to choose an entry from another stream as an input, and have access to all the data from the connected entry on the front end.
+
+### Type Info
+
+<table>
+	<tr>
+		<td width="30%">Slug</td>
+		<td>relationship</td>
+	</tr>
+	<tr>
+		<td>Column Type</td>
+		<td>INT</td>
+	</tr>
+	<tr>
+		<td>Column Storage</td>
+		<td>Stores relationship between streams</td>
+	</tr>
+        
+</table>
+
+### Extra Parameters
+
+<table>
+	<tr>
+		<th width="30%">Parameter</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>choose_stream</td>
+                <td>The stream to pull the relationship entry from.</td>
+	</tr>
+</table>
+
+<h2 id="slug">Slug {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+
+The slug field allows you to automatically generate a slug from another text field.
+
+### Type Info
+
+<table>
+	<tr>
+		<td width="30%">Slug</td>
+		<td>slug</td>
+	</tr>
+	<tr>
+		<td>Column Type</td>
+		<td>VARCHAR</td>
+	</tr>
+	<tr>
+		<td>Column Storage</td>
+		<td>Stores a slug</td>
+	</tr>
+        
+</table>
+
+### Extra Parameters
+
+<table>
+	<tr>
+		<th width="30%">Parameter</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>space_type</td>
+                <td>Allows you to choose the character that replaces whitespace.</td>
+	</tr>
+        <tr>
+		<td>slug_field</td>
+                <td>The field that we should create a slug for.</td>
+	</tr>
+</table>
+
+<h2 id="us_state">US State {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+
+The state field type creates a dropdown list of US states to choose from.
+
+### Type Info
+
+<table>
+	<tr>
+		<td width="30%">Slug</td>
+		<td>state</td>
+	</tr>
+	<tr>
+		<td>Column Type</td>
+		<td>VARCHAR</td>
+	</tr>
+	<tr>
+		<td>Column Storage</td>
+		<td>Stores value from state dropdown.</td>
+	</tr>
+        
+</table>
+
+### Extra Parameters
+
+<table>
+	<tr>
+		<th width="30%">Parameter</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>state_display</td>
+		<td>Allows you to choose between showing the full state name (ex: Florida) or the abbreviated version (ex: FL).</td>
+	</tr>
+</table>
+
+<h2 id="text">Text {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+
+The simplest type of field, the text field allows you to enter in simple text data.
+
+### Type Info
+
+<table>
+	<tr>
+		<td width="30%">Slug</td>
+		<td>text</td>
+	</tr>
+	<tr>
+		<td>Column Type</td>
+		<td>VARCHAR</td>
+	</tr>
+	<tr>
+		<td>Column Storage</td>
+		<td>Stores a string of text.</td>
+	</tr>
+        
+</table>
+
+### Extra Parameters
+
+<table>
+	<tr>
+		<th width="30%">Parameter</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>max_length</td>
+		<td>Maximum length of the input. Defaults to 255 if blank.</td>
+	</tr>
+        <tr>
+		<td>default_value</td>
+		<td>Specify the value that will be used if none is provide.</td>
+	</tr>
+</table>
+
+<h2 id="textarea">Textarea {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+
+The textarea field type allows you to enter in large blocks of text.
+
+### Type Info
+
+<table>
+	<tr>
+		<td width="30%">Slug</td>
+		<td>textarea</td>
+	</tr>
+	<tr>
+		<td>Column Type</td>
+		<td>LONGTEXT</td>
+	</tr>
+	<tr>
+		<td>Column Storage</td>
+		<td>Stores a large body text.</td>
+	</tr>
+        
+</table>
+
+### Extra Parameters
+
+<table>
+	<tr>
+		<th width="30%">Parameter</th>
+		<th>Description</th>
+	</tr>
+        <tr>
+		<td>default_value</td>
+		<td>Specify the value that will be used if none is provide.</td>
+	</tr>
+</table>
+
+<h2 id="url">URL {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+
+The URL field type allows you to enter a URL for a website.
+
+### Type Info
+
+<table>
+	<tr>
+		<td width="30%">Slug</td>
+		<td>url</td>
+	</tr>
+	<tr>
+		<td>Column Type</td>
+		<td>VARCHAR</td>
+	</tr>
+	<tr>
+		<td>Column Storage</td>
+		<td>Stores a url.</td>
+	</tr>
+        <tr>
+		<td>Validation</td>
+		<td>Checks if URL is in a valid format EX: http://example.com.</td>
+	</tr>
+        
+</table>
+
+<h2 id="user">User {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+
+The user field type allows you to choose and return data for a user.
+
+### Type Info
+
+<table>
+	<tr>
+		<td width="30%">Slug</td>
+		<td>user</td>
+	</tr>
+	<tr>
+		<td>Column Type</td>
+		<td>INT</td>
+	</tr>
+	<tr>
+		<td>Column Storage</td>
+		<td>Stores the id of a user.</td>
+	</tr>
+        
+</table>
+
+### Extra Parameters
+
+<table>
+	<tr>
+		<th width="30%">Parameter</th>
+		<th>Description</th>
+	</tr>
+        <tr>
+		<td>restrict_group</td>
+		<td>Allows restriction of the choice of user to a group.</td>
+	</tr>
+</table>
+
+<h2 id="wysiwyg">WYSIWYG {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+
+The WYSIWYG field creates a PyroCMS WYSIWYG text editor.
+
+### Type Info
+
+<table>
+	<tr>
+		<td width="30%">Slug</td>
+		<td>wysiwyg</td>
+	</tr>
+	<tr>
+		<td>Column Type</td>
+		<td>LONGTEXT</td>
+	</tr>
+	<tr>
+		<td>Column Storage</td>
+		<td>Stores content from the WYSIWYG editor.</td>
+	</tr>
+        
+</table>
+
+### Extra Parameters
+
+<table>
+	<tr>
+		<th width="30%">Parameter</th>
+                <th>Default</th>
+		<th>Description</th>
+	</tr>
+        
+        <tr>
+		<td>editor_type</td>
+                <td>Advanced</td>
+		<td>You can choose between a simple or advanced editor.</td>
+	</tr>
+</table>
+
+<h2 id="year">Year {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+
+The Year field type creates a dropdown of years for you.
+
+### Type Info
+
+<table>
+	<tr>
+		<td width="30%">Slug</td>
+		<td>year</td>
+	</tr>
+	<tr>
+		<td>Column Type</td>
+		<td>CHAR</td>
+	</tr>
+        <tr>
+		<td>Column Constraint</td>
+		<td>4</td>
+	</tr>
+	<tr>
+		<td>Column Storage</td>
+		<td>Stores the year as a 4 digit integer.</td>
+	</tr>
+        <tr>
+		<td>Validation</td>
+		<td>Checks if is an Integer.</td>
+	</tr>
+        
+</table>
+
+### Extra Parameters
+
+<table>
+	<tr>
+		<th width="30%">Parameter</th>
+		<th>Description</th>
+	</tr>
+        
+        <tr>
+		<td>start_year</td>
+		<td>Specifies the year the dropdown should start with.</td>
+	</tr>
+       <tr>
+		<td>end_year</td>
+		<td>Specifies the year the dropdown should stop at.</td>
+	</tr> 
 </table>

@@ -4,6 +4,7 @@ The entries driver is used to get entries (database table rows) from a stream.
 
 You can call the entries driver like this:
 
+	$this->load->driver('Streams');
 	$this->streams->entries->function();
 
 ## get_entries(<var>$params, $pagination\_config = array()</var>)
@@ -166,7 +167,7 @@ The get_entries() function will return an array with several values:
 	</tr>
 </table>
 
-## get\_entry(<var>$entry\_id, $stream\_slug, $namespace\_slug, $format = TRUE</var>)
+## get\_entry(<var>$entry\_id, $stream\_slug, $namespace\_slug, $format = true</var>)
 
 The **get_entry()** function allows you to get a single entry. If you'd like to bypass the streams formatting, you can set the fourth parameter to FALSE.
 
