@@ -14,7 +14,7 @@ Each module can contain the following directories:
 * css
 * img
 
-If a module will need to have a front-end (something that displays to the user) then it should contain at least one controller, and that controller should ba named after the module.
+If a module will need to have a front-end (something that displays to the user) then it should contain at least one controller, and that controller should be named after the module.
 
 	addons/<site-ref>/modules/blog/controllers/blog.php
 
