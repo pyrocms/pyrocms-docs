@@ -411,7 +411,7 @@ The relationship field type allows you to link streams together by allowing you 
 	</tr>
 	<tr>
 		<td>choose_stream</td>
-                <td>The stream to pull the relationship entry from.</td>
+                <td>The stream ID to pull the relationship entry from. (Caution : This is not the Stream Slug )</td>
 	</tr>
 </table>
 
