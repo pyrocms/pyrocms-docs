@@ -1,17 +1,14 @@
-# Upgrading Within 2.0
+# Upgrading v2.0.x to v2.1.x
 
-PyroCMS is in heavy active development, meaning there are frequently {{ link uri="/general/about/changelog" title="new versions" }} with bug fixes and new features. 
-You can follow the [blog](http://www.pyrocms.com/blog) and our [Twitter feed](http://www.twitter.com/pyrocms) to be notified of new versions.
-
-Upgrading PyroCMS is quick and easy. Just follow the steps below:
+Any version of the 2.0 branch can be upgraded to any version of the 2.1 branch by following these instructions.
 
 ## Download the latest copy of PyroCMS
 
-You can download the latest version of PyroCMS 2.x [here](https://github.com/pyrocms/pyrocms/zipball/v2.0.3).
+You can download the latest version of PyroCMS 2.1.x [here](https://github.com/pyrocms/pyrocms/zipball/2.1/master).
 
 If you are using git, you can get the latest copy by running:
 
-     git pull git://github.com/pyrocms/pyrocms.git tag v2.0.3
+     git pull git://github.com/pyrocms/pyrocms.git 2.1/master.
 
 ## Backup Your Add-ons and database.php
 
@@ -29,13 +26,23 @@ Replace the system and addons folders with their new version, and then add your 
 
 This is not usually the case, but occasionally there will be changes to the root index.php file, so make sure you have the latest one.
 
-### Make sure the following folders are writable:
+### Make sure the following folders are writable
 
+These folders need to be writable (chmod 777) or "Writable by Everyone", and may have had their permissions reset when you uploaded 
+them to your server. Make sure they are still writable.
+
+* assets/cache
 * system/cms/logs
 * system/cms/cache
 * system/cms/cache/simplepie
 * system/cms/config
 * uploads
+
+## Check blog overloaded views
+
+If you were overloading index.php, category.php and tagged.php for the blog module then you will need to take a look at the new posts.php. 
+This has replaced those similar files with one file, meaning you have less HTML repeition. It has also changed some of the markup, so you 
+may need to fiddle with your CSS a little.
 
 ## Rejoice
 
