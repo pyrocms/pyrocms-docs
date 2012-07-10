@@ -1,4 +1,4 @@
-# Upgrading v2.0.x to v2.1.x
+# Upgrading v2.1.x to v2.2.x
 
 Any version of the 2.1 branch can be upgraded to any version of the 2.2 branch by following these instructions.
 
@@ -8,7 +8,9 @@ You can download the latest version of PyroCMS 2.2 [here](https://github.com/pyr
 
 If you are using git, you can get the latest copy by running:
 
-     git pull git://github.com/pyrocms/pyrocms.git 2.2/master.
+     git pull git://github.com/pyrocms/pyrocms.git 2.2/master
+
+Incidentally, if you are using Git to upgrade this is probably the last step you need to make - unless you have custom addons.
 
 ## 2.) Backup Your Add-ons and database.php
 
@@ -56,17 +58,17 @@ CodeIgniter has been updated to v3.0 so you will need to take a look at the chan
 In your modules, if you have been checking for an exact match to FALSE, you will need to change it to this:
 
 	// Old
-	$this->input->post() !== FALSE
+	$this->input->post('something') !== FALSE
 
 	// New
-	$this->input->post() !== NULL
+	$this->input->post('something') !== NULL
 
 If your modules refer to either of the follow two hooks then you will need to change your code to use {{ link uri="modules-and-tags" title="Events" }} instead.
 
 	$this->hooks->call_hook('post_user_login');
 	$this->hooks->call_hook('post_user_activation');
 
-If you were using the MySQL driver, or MySQLi and your modules use $this->dbforge->drop_table() on tables that may or may not exist, you 
+If you were using the MySQL or MySQLi drivers and your modules use $this->dbforge->drop_table() on tables that may or may not exist, you 
 will need to change the code like so:
 
 	// from
