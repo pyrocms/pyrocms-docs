@@ -130,6 +130,18 @@ Here is a full list of parameters and what they do:
 		<td></td>
 		<td>Allows you to disable fields and their formatting. You can specify multiple fields by separating them with a pipe character (|). This is a useful if you want to bypass the extra work that streams does to format fields that you aren't using.</td> 
 	</tr> 
+	<tr> 
+		<td>paginate</td>
+		<td>string</td>
+		<td>'yes' or 'no' (default is 'no')</td>
+		<td>Allows you to enable pagination (generate a string with page navigation links). Pagination feature is tied to the "pag_segment" option bellow</td> 
+	</tr>
+	<tr> 
+		<td>pag_segment</td>
+		<td>int</td>
+		<td>2</td>
+		<td>Indicate which uri segment the CI pagination helper have to look into, to get the target page index. For instance, in the "http://my.app.com/controler/method/page_index", the pag_segment should be 3 ( 1 refers to 'controler', and 2 refers to 'method'</td> 
+	</tr>
 	</tbody> 
 </table>
 
@@ -158,7 +170,7 @@ The get_entries() function will return an array with several values:
 	<tr> 
 		<td>pagination</td>
 		<td>string</td>
-		<td>The pagination code if you are using paginaton</td>
+		<td>The pagination code if you are using paginaton (need to set 'paginate' and 'pag_segment' options)</td>
 	</tr> 
 	<tr> 
 		<td>total</td>
