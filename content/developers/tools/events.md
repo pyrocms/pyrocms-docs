@@ -278,6 +278,10 @@ PyroCMS includes the following event triggers:
 <td>This is triggered immediately after a user successfully logs in via domain.com/users/login</td>
 </tr>
 <tr>
+<td class="one_third">Events::trigger('<b>post_admin_login</b>')</td>
+<td>This is triggered immediately after a user successfully logs in via domain.com/admin/login</td>
+</tr>
+<tr>
 <td class="one_third">Events::trigger('<b>post_user_register</b>', $id)</td>
 <td>This is triggered immediately after a user registers. The newly created user id is passed along.</td>
 </tr>
