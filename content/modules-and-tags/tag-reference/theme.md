@@ -288,7 +288,7 @@ Displays a language string from the current language for the theme of you choosi
 			<td width="100">lang</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>The language file that you wish to load. The file should store under ** /themes/[theme folder]/languages/[language code]/[language file]. ** </td>
+			<td>The language file that you wish to load. The file should store under **/themes/[theme folder]/languages/[language code]/[language file]**. </td>
 		</tr>
 		<tr>
 			<td width="100">default</td>
