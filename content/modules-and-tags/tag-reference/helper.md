@@ -324,5 +324,5 @@ This is the current list:
  * ucfirst
  * ucwords
  * word\_censor
- * word\_limit
+ * word\_limiter
  * wordwrap
