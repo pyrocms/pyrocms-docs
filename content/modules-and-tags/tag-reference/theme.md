@@ -301,5 +301,5 @@ Displays a language string from the current language for the theme of you choosi
 
 **Example (Displaying a line "theme_title" from language "theme" file):**
 
-	{{ noparse }}{{ theme:lang lang="theme" line="theme_title" default="pyroCMS" }}{{ /noparse }}
+	{{ noparse }}{{ theme:lang lang="theme" line="theme_title" default="PyroCMS" }}{{ /noparse }}
 
