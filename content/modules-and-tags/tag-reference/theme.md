@@ -264,3 +264,42 @@ Sets or retrieves a variable for the theme of your choosing. Variables can be se
 
 	{{ noparse }}{{ theme:variables name="day_or_night" }}{{ /noparse }}
 	{{ noparse }}day{{ /noparse }}
+
+#### &#123;&#123; theme:lang &#125;&#125; ####
+
+Displays a language string from the current language for the theme of you choosing. Language files are typically stored in the theme folder.
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">line</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>The array key of the language string that you wish to display.</td>
+		</tr>
+		<tr>
+			<td width="100">lang</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>The language file that you wish to load. The file should store under /themes/[theme folder]/languages/[language code]/[language file]. </td>
+		</tr>
+		<tr>
+			<td width="100">default</td>
+			<td width="100">None</td>
+			<td width="100">No</td>
+			<td>The default value will be displayed when the language line returns FALSE.</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example (Displaying a line "theme_title" from language "theme" file):**
+
+	{{ noparse }}{{ theme:lang lang="theme" line="theme_title" default="PyroCMS" }}{{ /noparse }}
+
