@@ -86,7 +86,7 @@ This is the Session plugin which can be found in <def>system/pyrocms/plugins/ses
 	
 In the above code, please note a new important items:
 
-* The class name is **Plugin_** followed by the plugin name in all lowercase.
+* The class name is **Plugin_** followed by the plugin name (lowercase with the first letter in uppercase).
 * The plugin class extend the class **Plugin**.
 * Each tag function corresponds directly to a class function.
 * The data of each function is returned, not echoed.
