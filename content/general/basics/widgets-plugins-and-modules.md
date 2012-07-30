@@ -36,7 +36,7 @@ Plugins can also use two tags to loop through data:
 
 	{{ noparse }}{{ blog:posts limit="5" order-by="title" }}
      &lt;h2>&lt;a href="{{ url }}">{{ title }}&lt;/a>&lt;/h2>
-{{ /blog:post }}{{ /noparse }}
+{{ /blog:posts }}{{ /noparse }}
 
 _For more information on PyroCMS tags and how to use them, see the {{ link uri="modules-and-tags" title="tag reference" }}._
 
