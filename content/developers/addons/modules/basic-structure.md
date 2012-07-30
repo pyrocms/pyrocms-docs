@@ -181,13 +181,17 @@ Admin controllers have a few different properties to them. It will automatically
 
 	class Admin extends Admin_Controller {
 	
+		protected $section = "item"; //This must match the name in the 'sections' field in details.php
+	
 		function index()
 		{
-			$data['message'] = "Hello logged in admin guy!";
+			$message = "Hello logged in admin guy!";			
 	
 			// Loads from addons/modules/blog/views/admin/view_name.php
-			$this->template->build('admin/view_name', $data);
+			$this->template
+					->set('message' , $message)
+					->build('admin/view_name');
 		 }
 	}
 
-This page can be accessed via "http://example.com/admin/&lt;module-name&gt;".
+This page can be accessed via "http://example.com/admin/<module-name>".
