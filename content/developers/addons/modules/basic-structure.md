@@ -51,12 +51,12 @@ Here is the basic structure for the details.php file:
 				'backend' => TRUE,
 				'menu' => 'content', // You can also place modules in their top level menu. For example try: 'menu' => 'Sample',
 				'sections' => array(
-					'items' => array(
-						'name' 	=> 'sample.items', // These are translated from your language file
+					'items' => array( //"items" will be the same in the Admin controller as protected $section filed
+						'name' 	=> 'sample:items', // These are translated from your language file
 						'uri' 	=> 'admin/sample',
 							'shortcuts' => array(
 								'create' => array(
-									'name' 	=> 'sample.create',
+									'name' 	=> 'sample:create',
 									'uri' 	=> 'admin/sample/create',
 									'class' => 'add'
 									)
@@ -91,10 +91,10 @@ Here is the basic structure for the details.php file:
 				'slug' => 'sample_setting',
 				'title' => 'Sample Setting',
 				'description' => 'A Yes or No option for the Sample module',
-				'`default`' => '1',
-				'`value`' => '1',
+				'default' => '1',
+				'value' => '1',
 				'type' => 'select',
-				'`options`' => '1=Yes|0=No',
+				'options' => '1=Yes|0=No',
 				'is_required' => 1,
 				'is_gui' => 1,
 				'module' => 'sample'
@@ -140,7 +140,9 @@ Here is the basic structure for the details.php file:
 		{
 			// Return a string containing help info
 			return "Here you can enter HTML with paragrpah tags or whatever you like";
-		
+				
+			// or
+			
 			// You could include a file and return it here.
 			return $this->load->view('help', NULL, TRUE); // loads modules/sample/views/help.php
 		}
@@ -164,10 +166,12 @@ In normal CodeIgniter there is only one controller class. In PyroCMS there are f
 		
 		function index()
 		{
-			$data['message'] = "Hello World!";
+			$message = "Hello World!";
 	
 			// Loads from addons/<site-ref>/modules/blog/views/view_name.php
-			$this->template->build('view_name', $data);
+			$this->template
+					->set('message' , $message)
+					->build('view_name');
 		 }
 	}
 
