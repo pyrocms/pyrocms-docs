@@ -8,6 +8,10 @@ to:
 
 	addons/<site-ref>/themes/<theme-name>/views/modules/blog/posts.php
 
+If you wanted to overload an admin view you would do it like so:
+
+    addons/<site-ref>/themes/<theme-name>/views/admin/modules/blog/admin/form.php
+
 Now you can edit that view however you like and upgrade PyroCMS knowing your customized views are safe.</p>
 
 ## Syntax in overloaded views
