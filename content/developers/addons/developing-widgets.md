@@ -6,9 +6,10 @@ Widgets are quite similar to <a href="/docs/glossary#plugins">Plugins</a> in the
 
 ##Where do i put my widgets?
 
-Widgets can be stored directly in two places
+Widgets can be stored directly in three places
 
-* the /addons/shared_addons/widgets/*&lt;widget-name&gt;* folder 
+* the /addons/&lt;site-ref&gt;/widgets/*&lt;widget-name&gt;* folder
+* or the /addons/shared_addons/widgets/*&lt;widget-name&gt;* folder
 * or inside a module folder for example: /addons/modules/*&lt;module-name&gt;/widgets/&lt;widget-name&gt;*
 
 ## What are the main components of a widget
