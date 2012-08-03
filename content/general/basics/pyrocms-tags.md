@@ -50,6 +50,16 @@ If the first segment is empty, the tag will return "home".
 
 <div class="tip"><strong>Tip:</strong> Some parameters are required and some are optional. Make sure to check the {{ link uri="/modules-and-tags/tag-reference/" title="tag reference" }} to make sure you are passing all of the right parameters, and if there are any optional ones that will give you added functionality you need.</div>
 
+You may also use the output from other tags as attribute values in your tags. For example if you wanted the url segment to default to the slug of the currently viewed page you could do this:
+
+    {{ noparse }}{{ url:segments segment="1" default=page:slug }}{{ /noparse }}
+
+Here is a fictitious example showing the proper use of quotes and braces when the tag used as the attribute value has an attribute itself.
+
+    {{ noparse }}{{ url:segments segment="1" default={foo:bar value="baz"} }}{{ /noparse }}
+
+<div class="tip"><strong>Tip:</strong> Omit quotes and braces when using tags as attribute values. The only exception is when the tag you are using as the attribute value has its own attributes.</div>
+
 <div id="pairs"></div>
 
 ## Tag Pairs

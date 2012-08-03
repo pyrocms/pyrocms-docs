@@ -1,3 +1,59 @@
+# Page Tags
+
+The _page_ tag displays page variables.
+
+## page:id
+
+Displays the unique id for the page
+
+## page:slug
+
+Displays the page's slug. "home" for example
+
+## page:title
+
+The page title visible in the admin panel. "Home" for the default home page.
+
+## page:uri
+
+The uri that the page is accessible at. For child pages of "home" this would be "home/child-slug"
+
+## page:parent_id
+
+The unique page id of this page's parent
+
+## page:layout_id
+
+Displays the id of the Page Layout that this page is assigned to
+
+## page:rss_enabled
+
+Displays a 1 if this page is displayed as an RSS feed. (Child pages are treated as entries).
+
+## page:comments_enabled
+
+Displays a 1 if commenting is turned on for this page.
+
+## page:status
+
+Will either be "live" or "draft". In draft mode only admins may view the page.
+
+## page:created_on
+
+The epoch time when the page was created. Wrap this with the date helper to format it for humans: {{ helper:date timestamp=page:created_on }}
+
+## page:updated_on
+
+This is the same as {{ noparse }}{{ page:created_on }}{{ /noparse }} except that it displays the epoch time when the page was updated.
+
+## page:is_home
+
+Displays a 1 if the page is set as the default (home) page. There can only be one page with this set.
+
+## page:strict_uri
+
+Displays a 1 if the URI must match exactly. If set to 0 child segments will be ignored if the child pages do not exist. For example "site.com/home/child" will resolve to "home" if "child" doesn't exist.
+
 # Pages Tags
 
 The _pages_ tag displays page info.

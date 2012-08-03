@@ -150,6 +150,22 @@ This tag displays a contact form so that visitors can email you without seeing y
                 a different page after a successful send.
             </td>
 		</tr>
+		<tr>
+			<td width="100">
+				auto-reply
+			</td>
+			<td width="100">
+				None
+			</td>
+			<td width="100">
+				No
+			</td>
+			<td>
+				If you provide a valid email template slug here it will be used to send 
+				an automatic reply email to the user that submitted the form. The same data is available
+				in the auto-reply template as in the regular contact template.
+			</td>
+		</tr>
     </tbody>
 </table>
 
