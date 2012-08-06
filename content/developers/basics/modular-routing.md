@@ -1,11 +1,11 @@
 # Modular Routing
 
-Routing is a powerful tool and allows developers to create a custom URL which does not have to directly match the modules/[controller/]method/parameter pattern of standard modules. Route configuration files can be placed into each module to help route URL's within a module, but PyroCMS only knows to use a routes.php from a module if the module name is the first URI segment.
+Routing is a powerful tool and allows developers to create a custom URL which does not have to directly match the modules/[controller]/method/parameter pattern of standard modules. Route configuration files can be placed into each module to help route URL's within a module, but PyroCMS only knows to use a routes.php from a module if the module name is the first URI segment.
 
 For example:
 
 	/artists/top-10
-	
+
 This URL will tell PyroCMS to load /addons/modules/artists/config/routes.php.
 
 	/top-10-artists

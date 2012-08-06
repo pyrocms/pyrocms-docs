@@ -67,7 +67,7 @@ Please take this opportunity to read through the code below and make note of the
 		    	'rules'   => 'required'
 		    )
 	    );
-    
+
 	    /**
 	     * the $options param is passed by the core Widget class.  If you have
 	     * stored options in the database,  you must pass the paramater to access
@@ -80,7 +80,7 @@ Please take this opportunity to read through the code below and make note of the
 	    		//return an array of data that will be parsed by views/display.php
                 return array('output' => '');
 	        }
-        
+
             // Store the feed items
 		    return array('output' => $options['html']);
 	    }
@@ -109,5 +109,5 @@ Not much to be said here other than the view files should be partial views only.
 All you need to do for this to work is open up a theme layout or page layout and enter:
 
     {{ noparse }}
-{{ pyro:widgets:area slug="sidebar" }}
+{{ widgets:area slug="sidebar" }}
     {{ /noparse }}

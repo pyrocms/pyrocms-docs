@@ -29,7 +29,7 @@ Used for front-end controllers, the Public\_Controller class will run the follow
 * Calls the public_controller event
 * Checks to see if the site is disabled, and puts up the site disabled setting in the mean time
 * Loads the site theme and sets the theme paths
-* Sets up the APPPATH_URI and BASE_URI javascript variabeles
+* Sets up the APPPATH\_URI and BASE\_URI javascript variables
 * Sets a canonical URL link in the header metadata
 * Sets RSS blog link in the header if the blog module exists
 * Loads variables from the variable module
@@ -40,6 +40,6 @@ Used for front-end controllers, the Public\_Controller class will run the follow
 Used for all admin controllers. Will do the following:
 
 * Checks to see if the user has control panel access
-* Sets request to https: if desired
+* Sets request to HTTPS if desired
 * Sets the admin theme and loads the necessary paths
 * Sets the template enable_parser option to false. Set this back to true to use PyroCMS tags in your admin views.
