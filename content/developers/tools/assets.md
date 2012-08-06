@@ -39,7 +39,7 @@ can pass this as the second argument:
 
 	Asset::js('myfile.js', 'myfile.min.js');
 
-Some folks like css and js tags to be together. 
+Some folks like css and js tags to be together.
 
 **Asset::render()** is a shortcut which calls **Asset::render_css()** and then **Asset::render_js()**.
 
@@ -67,11 +67,11 @@ A group can be defined in the config file, or on-the-fly. They can be enabled an
 
 CSS and JS have their own group namespaces, so feel free to overlap.
 
-Specific groups can be rendered using eg 
-	
+Specific groups can be rendered using eg
+
 	Asset::render_js('group_name')
-	
-If no group name is passed, **all** groups will be rendered.  
+
+If no group name is passed, **all** groups will be rendered.
 
 
 <div class="tip"><strong>Note:</strong> When a group is rendered, it is disabled. See the "Extra attributes" section for an application of this behaviour.</div>
@@ -99,15 +99,15 @@ You can also add groups on-the-fly using **Asset::add\_group($group\_type, $grou
 This method is provided merely for convenience when adding lots of files to a group at once.
 You don't have to create a group before adding files to it - the group will be created if it doesn't exist.
 
-You can change any of these options on-the-fly using 
+You can change any of these options on-the-fly using
 
 	Asset::set_group_option($type, $group, $key, $value)
-	
+
 Or the CSS- and JS- specific versions
 
 	Asset::set_js_option($group, $key, $value)
 	Asset::set_css_option($group, $key, $value)
-	
+
 **$group** has some special values: an empty string is a shortcut to the 'global' group (to which files are added if a group is not specified), and '\*' is a shortcut to all groups.
 
 
@@ -115,7 +115,7 @@ Multiple group names can also be specified, using an array.
 
 Examples:
 
-	
+
 	// Add a dep to the my_plugin group
 	Asset::set_js_option('my_plugin', 'deps', 'jquery');
 
@@ -124,7 +124,7 @@ Examples:
 
 	// Turn off minification for all groups, regardless of per-group settings, for the current page:
 	Asset::set_js_option('*', 'min', false);
-	
+
 
 When you call **Asset::render()** (or the js- and css-specific variants), the order that groups are rendered is determined by the order in which they were created, with groups present in the config file appearing first.
 
@@ -150,7 +150,7 @@ However, this approach was undesirable, as it means that if you had the director
 			css/
 			js/
 				index.js
-		  img/
+		    img/
 
 Asset brings decent namespacing to the rescue!
 For the above example, you can specify the following in your config file:
@@ -194,7 +194,7 @@ The "core" path can be restored by calling **Asset::set\_path()** with no argume
 You can also namespace the files listed in the config file's 'groups' section, in the same manner.
 Note that these are loaded before the namespace is changed from 'core', so any files not in the core namespace will have to by explicitely prepended with the namespace name.
 
-In addition, you can override the config options **js\_path**, **css\_path** and **img_path** on a per-path basis. In this case, the element of the 
+In addition, you can override the config options **js\_path**, **css\_path** and **img_path** on a per-path basis. In this case, the element of the
 **paths** config array takes the following form,
 where each of **js\_path**, **css\_path** and **img\_path** are optional. If they are not specified, the defaults will be used.
 
@@ -216,7 +216,7 @@ Asset only requires that the path is defined by the time the file is rendered.
 Globbing
 --------
 
-As well as filenames, you can specify [glob patterns](http://php.net/glob). This will act exactly the same as if each file which the glob matches had been added individually.  
+As well as filenames, you can specify [glob patterns](http://php.net/glob). This will act exactly the same as if each file which the glob matches had been added individually.
 For example:
 
 
@@ -277,9 +277,9 @@ Clearing the cache
 ------------------
 Since cache files are not automatically removed (Asset has no way of knowing whether a cache file might be needed again), a few methods have been provided to remove cache files.
 
-**Asset::clear\_cache()** will clear all cache files, while **Asset::clear\_js\_cache()** and **Asset::clear\_css\_cache()** will remove just JS and CSS files respectively.  
+**Asset::clear\_cache()** will clear all cache files, while **Asset::clear\_js\_cache()** and **Asset::clear\_css\_cache()** will remove just JS and CSS files respectively.
 All of the above functions optionally accept an argument allowing you to only delete cache files last modified before a certain time. This time is specified as a
-[strtotime](http://php.net/strtotime)-formatted string, for example "2 hours ago", "last Tuesday", or "20110609".  
+[strtotime](http://php.net/strtotime)-formatted string, for example "2 hours ago", "last Tuesday", or "20110609".
 For example:
 
 	Asset::clear_js_cache('2 hours ago');
