@@ -2,7 +2,13 @@
 
 The **/addons** directory is the main location for all custom code and is simply a CodeIgniter **"Application Package"**. The main purpose of this folder is to store all third-party or custom modules, widgets and plugins but it can also be used to share custom config, libraries, helpers and language files between your addons.
 
-Below is a full list of folders you can put in the addons directory:
+Multiple sites are available in PyroCMS Professional, so addons are divided between PyroCMS sites, and can therefore be stored in one of the following locations:
+
+* addons/shared\_addons - These are available to _all_ sites
+* addons/default - Available only to the default site
+* addons/*&lt;site-name&gt; - Available to your custom site
+
+Below is a full list of folders you can put in your addons directory:
 
 * config/
 * helpers/
