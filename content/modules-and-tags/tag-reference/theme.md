@@ -33,13 +33,13 @@ Displays an option for the current theme. To read more about this tag and its us
 **Example:**
 
 	{{ noparse }}&#123;&#123; if theme:options:layout == 'full-width' &#125;&#125;{{ /noparse }}
-			
+
 		{{ noparse }}&lt;div class="full-width"&gt;{{ /noparse }}
-				
+
 			{{ noparse }}{{ template:body }}{{ /noparse }}
-			
+
 		{{ noparse }}&lt;/div&gt;{{ /noparse }}
-		
+
 	{{ noparse }}{{ endif }}{{ /noparse }}
 
 #### {{ noparse }} {{ theme:partial }} {{ /noparse }} ####
@@ -105,13 +105,19 @@ Generates a &lt;link&gt; to a css file in the current theme.
 			<td width="100">No</td>
 			<td>The media attribute.</td>
 		</tr>
+        <tr>
+            <td width="100">rel</td>
+            <td width="100">stylesheet</td>
+            <td width="100">No</td>
+            <td>The rel attribute.</td>
+        </tr>
 	</tbody>
 </table>
 
 **Example:**
-	
+
 	{{ noparse }}&#123;&#123; theme:css file="style.css" &#125;&#125;{{ /noparse }}
-	
+
 	{{ noparse }}&lt;link href="themes/default/css/style.css" type="text/css" rel="stylesheet" /&gt;{{ /noparse }}
 
 #### {{ noparse }}{{ theme:image }}{{ /noparse }} ####
@@ -143,7 +149,7 @@ Generates an &lt;img&gt; tag for an file in the current theme.
 </table>
 
 **Example:**
-	
+
 	{{ noparse }}&#123;&#123; theme:image file="fun.jpg" alt="Fun!" &#125;&#125;{{ /noparse }}
 
 	{{ noparse }}&lt;img href="themes/default/img/fun.jpg" alt="Fun!" /&gt;{{ /noparse }}
@@ -171,9 +177,9 @@ Generates a &lt;js&gt; script link for a javascript file in the current theme.
 </table>
 
 **Example:**
-	
+
 	{{ noparse }}&#123;&#123; theme:js file="extra.js" &#125;&#125;{{ /noparse }}
-	
+
 	{{ noparse }}&lt;script type="text/javascript" src="themes/default/js/extra.js"&gt;{{ /noparse }}
 
 #### {{ noparse}}{{ theme:favicon }}{{ /noparse }} ####
@@ -223,7 +229,7 @@ Generates a &lt;link&gt; tag for a favicon file in the current theme.
 </table>
 
 **Example:**
-	
+
 	{{ noparse }}&#123;&#123; theme:favicon file="favicon.png" &#125;&#125;{{ /noparse }}
 
 	{{ noparse }}&lt;link href="/system/pyrocms/themes/default/img/favicon.png" rel="shortcut icon" type="imagem/x-icon"&gt;{{ /noparse }}
