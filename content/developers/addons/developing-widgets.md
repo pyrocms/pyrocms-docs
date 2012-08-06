@@ -8,8 +8,8 @@ Widgets are quite similar to <a href="/docs/glossary#plugins">Plugins</a> in the
 
 Widgets can be stored directly in three places
 
-* the /addons/widgets folder 
-* the /addons/widgets/*&lt;widget-name&gt;* 
+* the /addons/&lt;site-ref&gt;/widgets/*&lt;widget-name&gt;* folder
+* or the /addons/shared_addons/widgets/*&lt;widget-name&gt;* folder
 * or inside a module folder for example: /addons/modules/*&lt;module-name&gt;/widgets/&lt;widget-name&gt;*
 
 ## What are the main components of a widget
@@ -90,7 +90,7 @@ Please take this opportunity to read through the code below and make note of the
 	     * data returned from this method will be available to views/form.php
 	     */
 	    public function form()
-	    { 
+	    {
 	        $stuff = $this->db->get_stuff();
             return array('stuff' => $stuff);
 	    }
@@ -98,7 +98,7 @@ Please take this opportunity to read through the code below and make note of the
 
 If you have made it this far and have read the comments in the above code that should pretty much get you on the right path to creating your first widget. However I would like to point out one thing before moving on.
 
-The widget class name should be in the following format: "**Widget_Awesome_sauce**" and must extend the "**Widgets**" core class.
+The widget class name should be in the following format: "**Widget\_Awesome\_sauce**" and must extend the "**Widgets**" core class.
 
 ### The view files
 
