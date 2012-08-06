@@ -3,12 +3,12 @@
 One of the central PyroCMS functionality concepts is tags. If you are familiar with PyroCMS you have definitely seem them before. Here is an example of a simple tag that returns the current URL:
 
 	{{ noparse }}{{ url:current }}{{ /noparse }}
-	
+
 The code behind tags like these is called a plugin. Plugins are special PHP files that have the ability to be called via PyroCMS tags, and can do things like grab tag parameters. They are simple to write and make incorporating complex functionality into PyroCMS layouts clean and organized.
 
 ## Modular vs Standalone Plugins
 
-Although they are identical in structure, a plugin can either be standalone file, or be a <def>plugin.php</def> file within a larger module. 
+Although they are identical in structure, a plugin can either be standalone file, or be a <def>plugin.php</def> file within a larger module.
 
 A plugin inside a module would be something that compliments a custom module you have built, while a standalone plugin would be something general like a Google Maps plugin or a way to list out Tweets in your own syntax. A standalone plugin does not need a larger module structure; it can be used on its own.
 
@@ -16,7 +16,7 @@ A plugin inside a module would be something that compliments a custom module you
 
 This is the Session plugin which can be found in <def>system/pyrocms/plugins/session.php</def>.
 
-	&lt;?php defined('BASEPATH') or exit('No direct script access allowed');
+	<?php defined('BASEPATH') or exit('No direct script access allowed');
 	/**
 	 * Session Plugin
 	 *
@@ -28,7 +28,7 @@ This is the Session plugin which can be found in <def>system/pyrocms/plugins/ses
 	 *
 	 */
 	class Plugin_Session extends Plugin
-	{ 
+	{
 		/**
 		 * Data
 		 *
@@ -41,20 +41,20 @@ This is the Session plugin which can be found in <def>system/pyrocms/plugins/ses
 		 * @return	array
 		 */
 		function data()
-		{ 
+		{
 			$name = $this->attribute('name');
 			$value = $this->attribute('value');
-	
+
 			// Mo vaue? Just getting
 			if ($value !== NULL)
 			{
 				$this->session->set_userdata($name, $value);
 				return;
 			 }
-	
+
 			return $this->session->userdata($name);
 		}
-	
+
 		/**
 		 * Flash
 		 *
@@ -70,27 +70,27 @@ This is the Session plugin which can be found in <def>system/pyrocms/plugins/ses
 		{
 			$name = $this->attribute('name');
 			$value = $this->attribute('value');
-	
+
 			// No value? Just getting
 			if ($value !== NULL)
 			{
 				$this->session->set_flashdata($name, $value);
 				return;
 			 }
-	
+
 			return $this->session->flashdata($name);
 		}
 	}
 
 	/* End of file theme.php */
-	
+
 In the above code, please note a new important items:
 
 * The class name is **Plugin_** followed by the plugin name (lowercase with the first letter in uppercase).
 * The plugin class extend the class **Plugin**.
 * Each tag function corresponds directly to a class function.
 * The data of each function is returned, not echoed.
-	
+
 ## Getting Plugin Tag Attributes
 
 What makes tags really powerful is they can take attributes that give you the freedom to modify the tag output based on input data. Here is an example:
@@ -104,14 +104,14 @@ In the code above, we can access the name parameter within the data function lik
 In case no attribute is set, you can specify a default value:
 
 	$this->attribute('name', 'a default value');
-	
+
 If no value has been specified, $this->attribute will use the default value.
 
 ## Tag Pairs
 
 Tags are not always just one line that returns a simple string. Tags can also be pairs, meaning they have an opening and closing tag and content between them.
 
-Plugins have some features built into them in order to easily handle tag pairs. For example, here is the blog:posts tag: 
+Plugins have some features built into them in order to easily handle tag pairs. For example, here is the blog:posts tag:
 
     {{ noparse }}
 {{ blog:posts limit="5" order-by="title" }}
@@ -154,10 +154,10 @@ It is possible to even send variables that are associative arrays and these can 
 You can also get and use the full content between the tags in a plugin by calling this in your plugin file:
 
 	$this->content();
-	
+
 The tag pair content can be modified before parsing it by calling up the Lex parser itself and returning a string:
 
 	$parser = new Lex_Parser();
 	$parser->scope_glue(':');
-	
+
 	return $parser->parse($this->content(), $data = array(), array($this->parser, 'parser_callback'));
