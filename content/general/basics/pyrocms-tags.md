@@ -108,6 +108,8 @@ You can use operators to compare values in an if statement. These used to compar
 
 <div class="tip"><strong>Note:</strong> PyroCMS function tags can be used in conditionals, but must be wrapped in single curly braces if they have one or more parameter, as in the above example.</div>
 
+<div class="tip"><strong>Note:</strong> When using function tags wrapped in curly braces in conditionals, the space after the opening curly brace and before the closing curly brace must be omitted. The tag will not render properly otherwise. Ex: <strong> {{ noparse }}{url:segments segment="2"}{{ /noparse }}</strong>.</div>
+
 Here are the available conditional operators:
 
 <table>
