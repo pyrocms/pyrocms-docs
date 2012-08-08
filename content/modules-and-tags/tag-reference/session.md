@@ -63,7 +63,7 @@ Flash data is data that is only available for the next page load, then it is des
 
 #### Displaying data
 
-	{{ noparse }}{{ session:data name="color_preference" }}{{ /noparse }}
+	{{ noparse }}{{ session:flash name="color_preference" }}{{ /noparse }}
 
 Returns:
 
