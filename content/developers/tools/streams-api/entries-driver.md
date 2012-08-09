@@ -204,3 +204,23 @@ $namespace = string
 $skips = fiel slugs to skip
 
 $extra = extra datat to add in
+
+## update\_entry(<var>$entry\_id, $entry\_data, $stream\, $namespace,$skips=array(), $extra = array()</var>)
+
+Allows you to update an entry in the stream. 
+
+$entry_id = int
+
+$entry_data  = array()
+ex : 
+	$data=array(
+		"category-name"=>"test"
+	);
+
+$stream = int,slug,or object
+
+$namespace = string
+
+$skips = fiel slugs to skip
+
+$extra = extra datat to add in
