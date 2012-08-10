@@ -5,67 +5,60 @@
 ### Improvements
 
 * Made Page Chunks use sections and id + classes. Before page chunks were getting a bit div happy and that made me sad. Now each chunk is a section, with id="{{ noparse }}{{ slug }}{{ /noparse }}" and a new box has been created for classes. This will allow much more flexible content, with more semantic meaning.
+* Improved user registration. User registration was confusing as it either sent activation emails or let users register freely. Now it either sends an activation email or it waits for an admin to activate (like it said it was doing before but actually didn't). Additionally when creating users from the admin panel you can set them as Inactive, Active, or Send Activation Email and let them activate. You can also send the activation email later when editing a user
 * Added basic logic for domain aliasing to the core.
 * Removed some deprecated methods and tag attributes
-* Following up on the deprecation of Settings::item().
-* Following up on deprecation of Settings::set_item(). Some code formatting and docblock fixes in theme_m.php.
+* Followed up on the deprecation of Settings::item().
+* Folloed up on deprecation of Settings::set\_item(). Some code formatting and docblock fixes in theme\_m.php.
 * Switched Keywords in blog to an array. No more Keywords::get_links() as it was stupid, now just using Keywords::get() and a loop.
-* added a preview hash field to blogs table and generate a random hash for preview link
+* Added a preview hash field to blogs table and generate a random hash for preview link
 * Added Keywords field type to streams_core
-* Adding some missing public function declarations into the Streams Fields driver.
-* Adding parser driver to the Streams API
-* Adding missing cycle param variables to the streams API entries driver
-* Adding the namespace variable to parameter functions in Streams Core.
-* Adding Streams Core plugin with field function
-* Adding assignment_exists function to the fields model in streams core.
-* Adding a migration to add a yes/no stream is hidden option.
-* Making field setup event arguments unnecessary.
-* Making the run field events skip argument optional in fields library.
-* Adding in running of stream events in users modules.
+* Added missing cycle param variables to the streams API entries driver
+* Added the namespace variable to parameter functions in Streams Core.
+* Added Streams Core plugin with field function
+* Added assignment_exists function to the fields model in streams core.
 * User defined templates not shown in modal
 * If your site name ended with 'admin', CSRF protection was enabled on every page, because the regexp found it. Now it only matches '/admin/' at the end, so it works as intended.
 * Changed Google Analytic password field to be a password type.
 * Don't try to validate a contact form just because the page is post. By checking for the specific contact form button name it can only run if THAT form was submitted.
 * Only link to users profile in comments if enable_profies is enabled.
-* Refinement to the Streams Core pagination.
+* Refined the Streams Core pagination.
 * Trigger post\_admin\_login event after login via admin controller
 * Updated Akismet to contain our user agent.
 * PHP 5.4 fixes.
-* Litteral \n's were showing in the comment notification.
-* Updated REST_Controller.
+* Stopped literal \n's from showing in the comment notification.
+* Updated REST_Controller to latest version.
 * Added events to the admin files controller
 * Added the ID to both folder and file details pane in Files manager
-* Boom. Fixes #1537. User registration was confusing as it either sent activation emails or let users register freely. Now it either sends an activation email or it waits for an admin to activate (like it said it was doing before but actually didn't). Additionally when creating users from the admin panel you can set them as Inactive, Active, or Send Activation Email and let them activate. You can also send the activation email later when editing a user
 * Added a config option to Files for encrypting file names on upload
-* Rel attribute supported for theme:css
-* Adding 'insert_data' into stream\_post\_insert\_entry event.
-* Removing the requirement for the website field in the comments module.
-* Making a note that $fields in row\_m->get\_rows is not needed.
+* Added rel attribute support for theme:css
+* Added 'insert_data' into stream\_post\_insert\_entry event.
+* Removed the requirement for the website field in the comments module.
 
 ### Bug Fixes
 
-* Fixes #1685. Assets will now be cleared before the 404 page is shown. Cleared up the terminology and docs around the show_404 method
-* Fixes #1650. MySQL port was saved to the config file as 3306 regardless of installer value.
+* Fixed #1685. Assets will now be cleared before the 404 page is shown. Cleared up the terminology and docs around the show_404 method
+* Fixed #1650. MySQL port was saved to the config file as 3306 regardless of installer value.
 * Fixed #1521. Files was incorrectly maintaining ratio on all uploads and returning the original image dimensions
-* Fixes a bug with base_url. Affects https logins
-* Fixes #1626. Moving files from remote storage to local via third-party API calls was broken
+* Fixed a bug with base_url. Affects https logins
+* Fixed #1626. Moving files from remote storage to local via third-party API calls was broken
 * Fixed form validation in MY\_Model::insert\_many()
-* Fixes an issue that made it impossible to use EU regions in Amazon S3. If some of you are running the bleeding edge here you will need to make sure migration 96 gets ran.
+* Fixed an issue that made it impossible to use EU regions in Amazon S3.
 * Fixed layout of the editor switcher on Pages
 * Fixes #1661. Removed query when reset pass was submitted with an empty form. Also fixes another small issue with resets
 * Fixes #1524. Uploading two different file types via third-party code would result in one file being rejected as "file type not allowed" due to the allowed types only being set when the library was first loaded
 * Fixes #1646 and #1665. Keywords were not working with latin characters. Thanks @stewones
 * Fixed bug for parsing attribute contents with escaped quotes. Orig: https://github.com/happyninjas/lex/commit/ff9aa30554fce47a8bfb6dc7c94143afc2fd8f93
-* Fixes for ReCAPTCHA Support in streams core.
-* Fixes #1511 show_404() was not working properly
+* Fixed ReCAPTCHA Support in streams core.
+* Fixed #1511 show_404() was not working properly
 * Fixed bug where admins were shown their own profile data when editing other user's
-* Fixes #1581. File's mimetype column was too short (at 50 chars) for some ridiculously long mime types
+* Fixed #1581. File's mimetype column was too short (at 50 chars) for some ridiculously long mime types
 * Fixed #1518: This redirect was killing off AJAX POST's when index.php was in the url
 * Fixed a bug with {{ noparse }}{{ files:image_url }}{{ /noparse }}. Also closes #1478
-* Fixing warning with the navigation widget.
+* Fixed warning with the navigation widget.
 * Fixed a bug where problems could be caused when a "name" field was added to Profiles
-* Looks like the old full_name from pre-2.1.0 item was still being used here as it was causing undefined errors. Changed it to pull display_name instead.
-* Fixing an error in streams core where editing the slug of an unassigned field would result in an error.
+* Fixed a bug where full_name was being used in the Users module user list instead of display_name.
+* Fixed an error in streams core where editing the slug of an unassigned field would result in an error.
 
 ## 2.1.2 - June 4, 2012
 
