@@ -1,6 +1,6 @@
-# Upgrading v2.0.x to v2.1.x
+# Upgrading v2.x.x to v2.1.x
 
-Any version of the 2.0 branch can be upgraded to any version of the 2.1 branch by following these instructions.
+Any version of the 2.0 or the 2.1 branch can be upgraded to any version of the 2.1 branch by following these instructions.
 
 ## Download the latest copy of PyroCMS
 
@@ -10,7 +10,11 @@ If you are using git, you can get the latest copy by running:
 
      git pull git://github.com/pyrocms/pyrocms.git 2.1/master.
 
-## Backup Your Add-ons and configuration files
+## Enable all core modules
+
+If you have disabled any core modules from CP > Addons then re-enable them before you do the update so that any migrations that may use a module will be able to run. You can disable the module again when the upgrade is complete.
+
+## Backup your Add-ons and configuration files
 
 We're going to replace the entire system, so you'll need to back up any files you've modified. Most likely, this is just the database.php file, which is stored in system/cms/config/database.php and contains your database connection details. You may also want to compare the main config file in system/cms/config/config.php as the $config['index\_page'] item may have been set to an empty string by the installer to remove "index.php" from the url.  
 
@@ -20,7 +24,7 @@ Additionally, you'll want to back up any addons that you've added to the addons 
 
 ## Replace the addons and system folder
 
-Replace the system and addons folders with their new version, and then add your backed up database.php and addons back in.
+Replace the system and addons folders with their new version, and then add your backed up configuration files and addons back in.
 
 ## Replace index.php with a the new version.
 
