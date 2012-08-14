@@ -10,9 +10,9 @@ If you are using git, you can get the latest copy by running:
 
      git pull git://github.com/pyrocms/pyrocms.git 2.1/master.
 
-## Backup Your Add-ons and database.php
+## Backup Your Add-ons and configuration files
 
-We're going to replace the entire system, so you'll need to back up any files you've modified. Most likely, this is just the database.php file, which is stored in system/cms/config/database.php and contains your database connection details.  
+We're going to replace the entire system, so you'll need to back up any files you've modified. Most likely, this is just the database.php file, which is stored in system/cms/config/database.php and contains your database connection details. You may also want to compare the main config file in system/cms/config/config.php as the $config['index\_page'] item may have been set to an empty string by the installer to remove "index.php" from the url.  
 
 If you are using a GUI, take care you don't miss any "hidden" files like .htaccess when copying.
 
