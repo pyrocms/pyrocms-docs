@@ -82,6 +82,12 @@ This function returns the table string unless **$view_override** is set to true,
 		<td>null</td>
 		<td>An array of buttons for each row. Each button is an array of the label, url, and optionally confirm. See the example below for more information. -entry_id- is replaced with the row's entry id.</td>
 	</tr>
+	<tr> 
+		<td>filters</td>
+		<td>array</td>
+		<td>array()</td>
+		<td>An array of filter inputs to make available for searching entries. Each filter is a field slug with an optional array of dropdown options.</td>
+	</tr>
 	</tbody>
 </table>
 
@@ -99,6 +105,15 @@ This function returns the table string unless **$view_override** is set to true,
 			'url' 		=> 'admin/streams_sample/delete/-entry_id-',
 			'confirm'	=> true
 		)
+	);
+	
+	$extra['filters'] = array(
+		'status' => array(
+			0 		=> 'Disabled',
+			1 		=> 'Enabled'
+		),
+		'name',
+		'description'
 	);
 	
 	$this->streams->cp->entries_table('faqs', 'streams_sample', 15, 'admin/streams_sample/index', true, $extra);
