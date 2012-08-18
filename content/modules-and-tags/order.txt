@@ -9,6 +9,7 @@ navigation
 pages
 session
 settings
+streams
 theme
 url
 user

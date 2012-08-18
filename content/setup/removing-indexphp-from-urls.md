@@ -9,7 +9,7 @@ In CodeIgniter, everything is routed through the index.php file, so your URL mig
 
 Obviously, we want to remove that ugly index.php, and you can do so with an .htaccess file, and Apache's mod_rewrite.
 
-To remove the index.php, create a file at the root of your PyroCMS site called **.htaccess**. You can [find out more about .htaccess](http://httpd.apache.org/docs/current/howto/htaccess.html), but for our purposes here we just want to use it to hide index.php in our URLs.
+To remove the index.php, create a file at the root of your PyroCMS site called **.htaccess**. You can [find out more about .htaccess here](http://httpd.apache.org/docs/current/howto/htaccess.html), but for our purposes here we just want to use it to hide index.php in our URLs.
 
 Not every web server is the same, but something along these lines should work for your purposes:
 

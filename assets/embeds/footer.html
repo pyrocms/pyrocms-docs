@@ -4,9 +4,9 @@
 		</div>
 	</section>
 	<!-- /content -->
-	
+
 	<!-- footer -->
-	<footer>
+	{{#<footer>
 		<div class="wrapper">
 			<div class="one_quarter">
 				<ul>
@@ -22,14 +22,38 @@
 				</ul>	
 			</div>
 		</div>
-	</footer>
+	</footer>#}}
 	<!-- /footer -->
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/libs/jquery.js"><\/script>')</script>
+	<script>
 
-	{{ asset:js file="plugins.js" }}
-	{{ asset:js file="script.js" }}
+	SyntaxHighlighter.all();
+
+    // fix sub nav on scroll
+    var $win = $(window)
+      , $nav = $('.subnav')
+	  , navHeight = $('.navbar').first().height()
+      , navTop = $('.subnav').length && $('.subnav').offset().top - navHeight
+      , isFixed = 0
+
+    processScroll()
+
+    $win.on('scroll', processScroll)
+
+    function processScroll() {
+      var i, scrollTop = $win.scrollTop()
+      if (scrollTop >= navTop && !isFixed) {
+        isFixed = 1
+        $nav.addClass('subnav-fixed')
+      } else if (scrollTop <= navTop && isFixed) {
+        isFixed = 0
+        $nav.removeClass('subnav-fixed')
+      }
+    }
+
+
+	</script>
+
 
 </body>
 </html>

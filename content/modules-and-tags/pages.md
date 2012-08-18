@@ -1,10 +1,26 @@
-# Page Tags
+# Pages
 
-The _page_ tag displays page variables.
+<div class="subnav">
+	<ul class="nav nav-pills">
+		<li><a href="#overview">Overview</a></li>
+		<li><a href="#tags">Current Page Tags</a></li>
+		<li><a href="#tags">Pages Tags</a></li>
+	</ul>
+</div>
 
-## page:id
+<h2 id="overview">Overview</h2>
+
+The Pages module is where all of your 
+
+<h2 id="tags">Current Page Tags</h2>
+
+The _page_ plugin allows you to access information about the current page. This is different from the _pages_ plugin which allows you to access information about pages in general.
+
+### page:id
 
 Displays the unique id for the page
+
+	{{ noparse }}{{ page:id }}{{ /noparse }}
 
 ## page:slug
 

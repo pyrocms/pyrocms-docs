@@ -1,40 +1,118 @@
-<!doctype html>
-
-<!--[if lt IE 7]> 
-	<html class="nojs ms lt_ie7" lang="en"> 
-<![endif]-->
-
-<!--[if IE 7]>    
-	<html class="nojs ms ie7" lang="en"> 
-<![endif]-->
-
-<!--[if IE 8]>    
-	<html class="nojs ms ie8" lang="en"> 
-<![endif]-->
-
-<!--[if gt IE 8]> 
-	<html class="nojs ms" lang="en"> 
-<![endif]-->
-
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+	<title>{{ variables:get_var name="title" }} | {{ site_title }}</title>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width">
-	<meta name="description" content="PyroCMS Documentation">
 	<meta name="author" content="PyroCMS Dev Team">
-	
+
 	<base href="{{ base_url }}" /> 
 
-  	<title>{{ variables:get_var name="title" }} | {{ site_title }}</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
 
-  	{{ asset:css file="style.css" }}
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-  	<script src="assets/js/libs/modernizr.js"></script>
-</head>
+	{{ asset:css file="bootstrap.css" }}
+	{{ asset:css file="shCore.css" }}
+	{{ asset:css file="shCoreMidnight.css" }}
+	
+	{{ asset:js file="bootstrap.min.js" }}
+	{{ asset:js file="shCore.js" }}
+	{{ asset:js file="shBrushPhp.js" }}
+	{{ asset:js file="shBrushLex.js" }}
 
-<body>
+	<style>body {padding-top: 60px;}</style>
+
+<script>
+  (function() {
+    var cx = '011560597292813989536:zrkugzueves';
+    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+  </head>
+
+  <body>
+
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+
+        <a class="brand" href="#">PyroCMS Docs</a>
+        <div class="nav-collapse">
+          <ul class="nav">
+
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+				{{ nav:auto start="about" }}
+				</ul>
+			</li>
+
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+				{{ nav:auto start="setup" }}
+				</ul>
+			</li>
+
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Concepts <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+				{{ nav:auto start="concepts" }}
+				</ul>
+			</li>
+
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules &amp; Tags <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+				{{ nav:auto start="modules-and-tags" }}
+				</ul>
+			</li>
+
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Developers <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="">Basics</a></li>
+					<li><a href="">Add-on Development</a></li>
+					<li><a href="">Developer Tools</a></li>
+					<li><a href="">Contributing to PyroCMS</a></li>
+				</ul>
+			</li>
+
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="">PyroCMS Pro</a></li>
+				</ul>
+			</li>
+
+          </ul>
+          <ul class="nav pull-right">
+
+          	{{#<gcse:searchbox-only></gcse:searchbox-only>#}}
+
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div>
+    </div><!-- /navbar-inner -->
+  </div><!-- /navbar -->
+
+    <div class="container">
+
+
+
+
+{{#
+
+
 	
 	<!-- header -->
 	<header>
@@ -123,3 +201,6 @@
 
 		<!-- main -->
 		<div id="main">
+
+
+			#}}

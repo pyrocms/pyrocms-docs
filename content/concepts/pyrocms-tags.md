@@ -4,10 +4,14 @@ One of the unique features of PyroCMS is Tags, powered by the [Lex Parser](https
 
 The following guide will teach you the basics of tags and how to use them in your layouts.
 
-* {{ link uri="/general/basics/pyrocms-tags/#basic" title="Basic Tags" }}
-* {{ link uri="/general/basics/pyrocms-tags/#attributes" title="Tag Attributes" }}
-* {{ link uri="/general/basics/pyrocms-tags/#pairs" title="Tag Pairs" }}
-* {{ link uri="/general/basics/pyrocms-tags/#conditionals" title="Tag Conditionals" }}
+<div class="subnav">
+    <ul class="nav nav-pills">
+        <li><a href="#basic">Basic Tags</a></li>
+        <li><a href="#attributes">Tag Attributes</a></li>
+        <li><a href="#pairs">Tag Pairs</a></li>
+        <li><a href="#conditionals">Tag Conditionals</a></li>
+    </ul>
+</div>
 
 <div id="basic"></div>
 
