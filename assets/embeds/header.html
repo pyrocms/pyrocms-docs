@@ -48,56 +48,10 @@
         <a class="brand" href="#">PyroCMS Docs</a>
         <div class="nav-collapse">
           <ul class="nav">
-
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-				{{ nav:auto start="about" }}
-				</ul>
-			</li>
-
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-				{{ nav:auto start="setup" }}
-				</ul>
-			</li>
-
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Concepts <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-				{{ nav:auto start="concepts" }}
-				</ul>
-			</li>
-
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules &amp; Tags <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-				{{ nav:auto start="modules-and-tags" }}
-				</ul>
-			</li>
-
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Developers <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="">Basics</a></li>
-					<li><a href="">Add-on Development</a></li>
-					<li><a href="">Developer Tools</a></li>
-					<li><a href="">Contributing to PyroCMS</a></li>
-				</ul>
-			</li>
-
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="">PyroCMS Pro</a></li>
-				</ul>
-			</li>
-
+          	<li><a href="">Table of Contents</a></li>
           </ul>
           <ul class="nav pull-right">
 
-          	{{#<gcse:searchbox-only></gcse:searchbox-only>#}}
 
           </ul>
         </div><!-- /.nav-collapse -->
@@ -105,8 +59,36 @@
     </div><!-- /navbar-inner -->
   </div><!-- /navbar -->
 
+ <div id="search">
+
+ 	<div class="container">
+
+ 		<div class="row">
+
+ 		<div class="span12">
+
+
+	 			<h2>Search the Docs:</h2>
+
+ 			<div id="search_area">
+
+	 			<gcse:searchbox></gcse:searchbox>
+				<gcse:searchresults></gcse:searchresults> 
+
+			</div><!--#search_area-->
+
+ 		</div><!--.span12-->
+
+ 		</div><!--.row-->
+
+ 	</div><!--.container-->
+
+ </div><!--#search-->
+
     <div class="container">
 
+
+          	
 
 
 
