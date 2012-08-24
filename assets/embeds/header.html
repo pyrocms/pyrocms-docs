@@ -49,11 +49,8 @@
         <div class="nav-collapse">
           <ul class="nav">
           	<li><a href="">Table of Contents</a></li>
-          </ul>
-          <ul class="nav pull-right">
-
-
-          </ul>
+           	<li><a id="toggle_search_link">Search</a></li>
+         </ul>
         </div><!-- /.nav-collapse -->
       </div>
     </div><!-- /navbar-inner -->
@@ -67,15 +64,20 @@
 
  		<div class="span12">
 
+ 			<div id="search_toggle" style="display: none;">
 
-	 			<h2>Search the Docs:</h2>
+		 		<h2>Search the Docs:</h2>
 
- 			<div id="search_area">
+	 			<div id="search_area">
 
-	 			<gcse:searchbox></gcse:searchbox>
-				<gcse:searchresults></gcse:searchresults> 
+		 			<gcse:searchbox></gcse:searchbox>
+					<gcse:searchresults></gcse:searchresults> 
 
-			</div><!--#search_area-->
+				</div><!--#search_area-->
+
+			</div><!--#search_toggle-->
+
+			<p class="breadcrumbs">{{ breadcrumbs:crumbs }}</p>
 
  		</div><!--.span12-->
 
@@ -86,103 +88,3 @@
  </div><!--#search-->
 
     <div class="container">
-
-
-          	
-
-
-
-{{#
-
-
-	
-	<!-- header -->
-	<header>
-		<div class="wrapper">
-			<div id="logo">
-				<h1><a href="http://pyrocms.com" title="Home">{{ asset:img file="logo.png" }}</a></h1>
-			</div>
-			<nav id="primary">
-				<ul>
-					<li{{ if segment_1 == 'general' }} class="current"{{ endif }}>{{ link uri="general" title="General Info" }}</li>
-					<li{{ if segment_1 == 'modules-and-tags' }} class="current"{{ endif }}>{{ link uri="modules-and-tags" title="Modules &amp; Tags" }}</li>
-					<li{{ if segment_1 == 'developers' }} class="current"{{ endif }}>{{ link uri="developers" title="Developers" }}</li>
-					<li{{ if segment_1 == 'pyrocms-pro' }} class="current"{{ endif }}>{{ link uri="pyrocms-pro" title="PyroCMS Pro" }}</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<!-- /header -->
-	
-	<!-- content -->
-	<section id="content">
-		<div class="wrapper">
-
-			<!-- doc_menu -->
-			<div id="doc_menu">
-                                <h5>TABLE OF CONTENTS</h5>
-                                {{ if !segment_1 }}
-                                    <ul>
-					<li{{ if segment_1 == 'general' }} class="current"{{ endif }}>{{ link uri="general" title="General Info" }}</li>
-					<li{{ if segment_1 == 'modules-and-tags' }} class="current"{{ endif }}>{{ link uri="modules-and-tags" title="Modules &amp; Tags" }}</li>
-					<li{{ if segment_1 == 'developers' }} class="current"{{ endif }}>{{ link uri="developers" title="Developers" }}</li>
-					<li{{ if segment_1 == 'pyrocms-pro' }} class="current"{{ endif }}>{{ link uri="pyrocms-pro" title="PyroCMS Pro" }}</li>
-				</ul>
-                                {{ endif }}
-				{{ if segment_1 == 'general' }}
-					<p><strong>About PyroCMS</strong></p>
-					{{ nav:auto start='general/about' }}
-
-					<p><strong>Getting Started</strong></p>
-					{{ nav:auto start='general/getting-started' }}
-		
-					<p><strong>Alternate Server Environments</strong></p>
-					{{ nav:auto start='general/getting-started/alternate-server-environments' }}	
-
-					<p><strong>Basics</strong></p>
-					{{ nav:auto start='general/basics' }}
-
-					<p><strong>Theming</strong></p>
-					{{ nav:auto start='general/theming' }}
-				{{ endif }}
-
-				{{ if segment_1 == 'modules-and-tags' }}
-					<p><strong>Tag Reference</strong></p>
-					{{ nav:auto start='modules-and-tags/tag-reference' }}	
-				{{ endif }}
-
-				{{ if segment_1 == 'developers' }}
-					<p><strong>Developer Basics</strong></p>
-					{{ nav:auto start='developers/basics' }}	
-
-					<p><strong>Contributing to PyroCMS</strong></p>
-					{{ nav:auto start='developers/contributing' }}	
-
-					<p><strong>Add-on Development</strong></p>
-					{{ nav:auto start='developers/addons' }}
-		
-					<p><strong>Module Development</strong></p>	
-					{{ nav:auto start='developers/addons/modules' }}
-
-					<p><strong>Developer Tools</strong></p>
-					{{ nav:auto start='developers/tools' }}	
-
-					<p><strong>Streams Core API</strong></p>
-					{{ nav:auto start='developers/tools/streams-api' }}	
-				{{ endif }}
-
-				{{ if segment_1 == 'pyrocms-pro' }}
-					<strong>About</strong>
-					{{ nav:auto start='pyrocms-pro/about' }}	
-
-					<strong>Features</strong>
-					{{ nav:auto start='pyrocms-pro/features' }}	
-				{{ endif }}
-		</div>
-		<!-- /doc_menu -->
-
-		<!-- main -->
-		<div id="main">
-
-
-			#}}

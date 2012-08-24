@@ -4927,3 +4927,14 @@ table th {
   background: #fff;
   border: 1px solid #E6E6E6;
 }
+
+.breadcrumbs {
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+.breadcrumbs a {
+  color: #5B94BA;
+}
+.navbar a {
+  cursor: pointer;
+}
