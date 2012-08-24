@@ -24,6 +24,7 @@
 	{{ asset:js file="shCore.js" }}
 	{{ asset:js file="shBrushPhp.js" }}
 	{{ asset:js file="shBrushLex.js" }}
+  {{ asset:js file="jquery.scrollTo.js" }}
 
 	<style>body {padding-top: 60px;}</style>
 
@@ -39,7 +40,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".subnav" data-offset="100">
 
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">

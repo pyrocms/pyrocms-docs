@@ -134,8 +134,8 @@ textarea {
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 20px;
   color: #333333;
   background-color: #ffffff;
   text-shadow: 1px 1px 1px #fff!important;
@@ -377,27 +377,28 @@ h6 small {
   color: #999999;
 }
 h1 {
-  font-size: 25px;
+  font-size: 30px;
   line-height: 36px;
   margin-bottom: 15px;
-  color: #303030;
+  color: #333;
 }
 h1 small {
   font-size: 18px;
 }
 h2 {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 36px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   margin-top: 10px;
   color: #4A4A4A;
+  border-bottom: 2px solid #D6D6D6;
 }
 h2 small {
   font-size: 18px;
 }
 h3 {
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 16px;
+  line-height: 20px;
   margin-bottom: 10px;
 }
 h3 small {
@@ -4902,7 +4903,7 @@ table th {
 }
 
 .tip {
-  background: #F2F2CE;
+  background: #F7F7EB;
   padding: 15px 10px;
   border-left: 4px solid #DEA112;
   margin-bottom: 10px;
@@ -4937,4 +4938,15 @@ table th {
 }
 .navbar a {
   cursor: pointer;
+}
+
+dfn {
+  padding: 10px;
+  color: #fff;
+  font-family: Courier;
+  background: #CC4704;
+  display: block;
+  text-shadow: none;
+  border-bottom: 2px solid #AB3900;
+  margin-bottom: 15px;
 }
