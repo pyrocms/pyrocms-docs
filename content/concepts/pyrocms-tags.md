@@ -88,7 +88,7 @@ Occasionally, tags will contain arrays of data that you can loop through. You ca
 
 <div id="conditionals"></div>
 
-## Conditional Tags
+## Tag Conditionals
 
 Many times in your layouts you will want to show something under certain conditions. For instance, if a user is logged in or if a url segment has a certain value. PyroCMS tags allow you to do that with an if/else tag syntax.
 
@@ -116,7 +116,7 @@ You can use operators to compare values in an if statement. These used to compar
 
 Here are the available conditional operators:
 
-<table>
+<table class="table">
 <tr>
 <td>==</td>
 <td>Equals. Values equal each other.</td>

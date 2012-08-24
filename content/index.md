@@ -1,6 +1,5 @@
 # Welcome to PyroCMS
 
-
 ## About PyroCMS
 {{ nav:auto start="about" }}
 

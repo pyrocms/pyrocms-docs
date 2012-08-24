@@ -1,6 +1,6 @@
 # Server Requirements
 
-Below are the server requirements for running PyroCMS 2.0. If you aren't sure if you have all of these, PyroCMS will check for them on installation for you.
+Below are the server requirements for running PyroCMS 2.x. If you aren't sure if you have all of these, PyroCMS will check for them on installation for you.
 
 ### a HTTP web-server of some description
 
@@ -22,7 +22,7 @@ This library needs to be installed on your server with PHP compiled to include i
 
 <a href="http://curl.haxx.se/" target="_blank">libcurl 7.10.5 or greater</a> need's to be installed on your server with PHP compiled to include it. Usually your package manager will take care of this for you, if not see instructions <a href="http://curl.haxx.se/libcurl/php/install.html" target="_blank" title="Find out how to make cURL work  with PHP">here</a>.
 
-### Bundled requirements
+### Bundled Requirements
 
 PyroCMS uses these third-party packages to run, but includes them in each release so you do not need to install them yourself:
 
