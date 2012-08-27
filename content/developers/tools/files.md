@@ -123,6 +123,36 @@ file will be uploaded to the cloud with no extra effort on your part.
 	</tbody>
 </table>
 
+#### Array Returned
+
+Files::upload returns the following:
+
+* id
+* folder_id
+* user_id
+* type
+* name
+* path
+* description
+* filename
+* extension
+* mimetype
+* filesize
+* width
+* height
+* date_added
+
+#### Example Usage
+
+	$results = Files::upload($folder_id = 1);
+	
+	if ($results['status']) {
+		$data = $results['data'];
+	} else {
+		$this->session->set_flashdata($results['status'] ? 'success' : 'notice', $results['message']);
+	}
+
+
 ## Available Methods
 
     // create a virtual folder
