@@ -1,0 +1,17 @@
+blog
+contact
+files
+galleries
+global
+helper
+lang
+navigation
+pages
+session
+settings
+streams
+theme
+url
+user
+variables
+widgets

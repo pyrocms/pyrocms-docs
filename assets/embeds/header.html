@@ -1,125 +1,91 @@
-<!doctype html>
-
-<!--[if lt IE 7]> 
-	<html class="nojs ms lt_ie7" lang="en"> 
-<![endif]-->
-
-<!--[if IE 7]>    
-	<html class="nojs ms ie7" lang="en"> 
-<![endif]-->
-
-<!--[if IE 8]>    
-	<html class="nojs ms ie8" lang="en"> 
-<![endif]-->
-
-<!--[if gt IE 8]> 
-	<html class="nojs ms" lang="en"> 
-<![endif]-->
-
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+	<title>{{ variables:get_var name="title" }} | {{ site_title }}</title>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width">
-	<meta name="description" content="PyroCMS Documentation">
 	<meta name="author" content="PyroCMS Dev Team">
-	
+
 	<base href="{{ base_url }}" /> 
 
-  	<title>{{ variables:get_var name="title" }} | {{ site_title }}</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
 
-  	{{ asset:css file="style.css" }}
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-  	<script src="assets/js/libs/modernizr.js"></script>
-</head>
-
-<body>
+	{{ asset:css file="bootstrap.css" }}
+	{{ asset:css file="shCore.css" }}
+	{{ asset:css file="shCoreMidnight.css" }}
 	
-	<!-- header -->
-	<header>
-		<div class="wrapper">
-			<div id="logo">
-				<h1><a href="http://pyrocms.com" title="Home">{{ asset:img file="logo.png" }}</a></h1>
-			</div>
-			<nav id="primary">
-				<ul>
-					<li{{ if segment_1 == 'general' }} class="current"{{ endif }}>{{ link uri="general" title="General Info" }}</li>
-					<li{{ if segment_1 == 'modules-and-tags' }} class="current"{{ endif }}>{{ link uri="modules-and-tags" title="Modules &amp; Tags" }}</li>
-					<li{{ if segment_1 == 'developers' }} class="current"{{ endif }}>{{ link uri="developers" title="Developers" }}</li>
-					<li{{ if segment_1 == 'pyrocms-pro' }} class="current"{{ endif }}>{{ link uri="pyrocms-pro" title="PyroCMS Pro" }}</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<!-- /header -->
-	
-	<!-- content -->
-	<section id="content">
-		<div class="wrapper">
+	{{ asset:js file="bootstrap.min.js" }}
+	{{ asset:js file="shCore.js" }}
+	{{ asset:js file="shBrushPhp.js" }}
+	{{ asset:js file="shBrushLex.js" }}
+  {{ asset:js file="jquery.scrollTo.js" }}
 
-			<!-- doc_menu -->
-			<div id="doc_menu">
-                                <h5>TABLE OF CONTENTS</h5>
-                                {{ if !segment_1 }}
-                                    <ul>
-					<li{{ if segment_1 == 'general' }} class="current"{{ endif }}>{{ link uri="general" title="General Info" }}</li>
-					<li{{ if segment_1 == 'modules-and-tags' }} class="current"{{ endif }}>{{ link uri="modules-and-tags" title="Modules &amp; Tags" }}</li>
-					<li{{ if segment_1 == 'developers' }} class="current"{{ endif }}>{{ link uri="developers" title="Developers" }}</li>
-					<li{{ if segment_1 == 'pyrocms-pro' }} class="current"{{ endif }}>{{ link uri="pyrocms-pro" title="PyroCMS Pro" }}</li>
-				</ul>
-                                {{ endif }}
-				{{ if segment_1 == 'general' }}
-					<p><strong>About PyroCMS</strong></p>
-					{{ nav:auto start='general/about' }}
+	<style>body {padding-top: 60px;}</style>
 
-					<p><strong>Getting Started</strong></p>
-					{{ nav:auto start='general/getting-started' }}
-		
-					<p><strong>Alternate Server Environments</strong></p>
-					{{ nav:auto start='general/getting-started/alternate-server-environments' }}	
+<script>
+  (function() {
+    var cx = '011560597292813989536:zrkugzueves';
+    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
 
-					<p><strong>Basics</strong></p>
-					{{ nav:auto start='general/basics' }}
+  </head>
 
-					<p><strong>Theming</strong></p>
-					{{ nav:auto start='general/theming' }}
-				{{ endif }}
+  <body data-spy="scroll" data-target=".subnav" data-offset="100">
 
-				{{ if segment_1 == 'modules-and-tags' }}
-					<p><strong>Tag Reference</strong></p>
-					{{ nav:auto start='modules-and-tags/tag-reference' }}	
-				{{ endif }}
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
 
-				{{ if segment_1 == 'developers' }}
-					<p><strong>Developer Basics</strong></p>
-					{{ nav:auto start='developers/basics' }}	
+        <a class="brand" href="#">PyroCMS Docs</a>
+        <div class="nav-collapse">
+          <ul class="nav">
+          	<li><a href="">Table of Contents</a></li>
+           	<li><a id="toggle_search_link">Search</a></li>
+         </ul>
+        </div><!-- /.nav-collapse -->
+      </div>
+    </div><!-- /navbar-inner -->
+  </div><!-- /navbar -->
 
-					<p><strong>Contributing to PyroCMS</strong></p>
-					{{ nav:auto start='developers/contributing' }}	
+ <div id="search">
 
-					<p><strong>Add-on Development</strong></p>
-					{{ nav:auto start='developers/addons' }}
-		
-					<p><strong>Module Development</strong></p>	
-					{{ nav:auto start='developers/addons/modules' }}
+ 	<div class="container">
 
-					<p><strong>Developer Tools</strong></p>
-					{{ nav:auto start='developers/tools' }}	
+ 		<div class="row">
 
-					<p><strong>Streams Core API</strong></p>
-					{{ nav:auto start='developers/tools/streams-api' }}	
-				{{ endif }}
+ 		<div class="span12">
 
-				{{ if segment_1 == 'pyrocms-pro' }}
-					<strong>About</strong>
-					{{ nav:auto start='pyrocms-pro/about' }}	
+ 			<div id="search_toggle" style="display: none;">
 
-					<strong>Features</strong>
-					{{ nav:auto start='pyrocms-pro/features' }}	
-				{{ endif }}
-		</div>
-		<!-- /doc_menu -->
+		 		<h2>Search the Docs:</h2>
 
-		<!-- main -->
-		<div id="main">
+	 			<div id="search_area">
+
+		 			<gcse:searchbox></gcse:searchbox>
+					<gcse:searchresults></gcse:searchresults> 
+
+				</div><!--#search_area-->
+
+			</div><!--#search_toggle-->
+
+			<p class="breadcrumbs">{{ breadcrumbs:crumbs }}</p>
+
+ 		</div><!--.span12-->
+
+ 		</div><!--.row-->
+
+ 	</div><!--.container-->
+
+ </div><!--#search-->
+
+    <div class="container">

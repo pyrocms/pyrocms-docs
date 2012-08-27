@@ -26,7 +26,7 @@ A number of constants and properties are made available across PyroCMS.
 			<td width="100">
 				APPPATH</td>
 			<td>
-				system/pyrocms/</td>
+				system/cms/</td>
 			<td>
 				The path to the application folders.</td>
 		</tr>
@@ -34,7 +34,7 @@ A number of constants and properties are made available across PyroCMS.
 			<td width="100">
 				APPPATH_URI</td>
 			<td>
-				/system/pyrocms/</td>
+				system/cms/</td>
 			<td>
 				The path to the application folders but with a leading slash.</td>
 		</tr>
@@ -202,7 +202,7 @@ A number of constants and properties are made available across PyroCMS.
 			<td width="100">
 				APPPATH_URI</td>
 			<td>
-				/system/pyrocms/</td>
+				system/cms/</td>
 			<td>
 				admin and front-end</td>
 			<td>

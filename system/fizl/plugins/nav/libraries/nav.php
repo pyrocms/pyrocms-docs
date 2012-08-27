@@ -200,7 +200,7 @@ class Nav extends Plugin {
 		$this->depth = 0;
 		$this->stack = $segs;
 		
-		$this->html = '';
+		$this->html = null;
 		$this->create_ul($new_map);
 		
 		return $this->html;
@@ -210,7 +210,7 @@ class Nav extends Plugin {
 	{
 		$this->depth++;
 	
-		$this->html .= '<ul class="depth_'.$this->depth.'">'."\n";
+		$this->html .= '<ul class="unstyled depth_'.$this->depth.'">'."\n";
 		
 	    foreach($tree as $key => $item):
 	    
@@ -287,9 +287,7 @@ class Nav extends Plugin {
 	}
 	
 	function order_items($arr)
-	{
-		print_r($arr);
-	
+	{	
 		// Do we have an order txt file?
 		if(!in_array('order.txt', $arr)):
 		

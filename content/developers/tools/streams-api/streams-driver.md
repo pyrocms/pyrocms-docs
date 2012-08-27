@@ -1,6 +1,6 @@
 # Streams API Streams Driver
 
-The streams driver is used to create and manipulate streams. Streams represent tables of data in the database.
+The streams driver is used to create and manipulate streams. Remember, streams represent tables of data in the database, so when you are creating and manipulating streams, you are creating and manipulating database tables.
 
 You can call the streams driver like this:
 
@@ -8,9 +8,9 @@ You can call the streams driver like this:
 	
 ## Preset Fields
 
-When you create a stream, the following fields are created automatically.
+When you create a stream, the following fields are created automatically:
 
-<table>
+<table class="table">
 	<tr>
 		<td width="25%"><strong>id</strong>
 		<td>An auto-incrementing standard primary key ID.</td>
@@ -33,13 +33,15 @@ When you create a stream, the following fields are created automatically.
 	</tr>
 </table>
 
-## add_stream(<var>$stream\_name, $stream\_slug, $namespace, $prefix = null, $about = null</var>)
+## Functions
+
+<dfn>add_stream(<var>$stream\_name, $stream\_slug, $namespace, $prefix = null, $about = null</var>)</dfn>
 
 The **add_stream** function allows you to create a stream. It will create the actual table in the database, as well as the streams metadata in the streams table.
 	
 ### Parameters
 
-<table>
+<table class="table">
 	<tr>
 		<td width="25%"><strong>stream_name</strong>
 		<td>The full name of the stream.</td>
@@ -68,7 +70,7 @@ In this example we add the "FAQ" stream. The module is also called "faqs", our n
 
 	$this->streams->streams->add_stream('FAQ', 'faqs', 'stream_sample', 'faq_', null);
 
-## get_stream(<var>$stream\_slug, $namespace</var>)
+<dfn>get_stream(<var>$stream\_slug, $namespace</var>)</dfn>
 
 Gets data about a stream. It does not retrieve entries, just the stream metadata.
 	
@@ -98,7 +100,7 @@ Returns:
 	
 <div class="tip"><strong>Note:</strong> The view options column is an array of the columns that are shown when listing entries in a table. 'id' and 'created' are the default values.</div>
 
-## get_streams(<var>$namespace</var>)
+<dfn>get_streams(<var>$namespace</var>)</dfn>
 
 Gets basic data about all the streams in a namespace.
 
@@ -129,7 +131,7 @@ Returns:
 	        )
 	)
 
-## update_stream(<var>$stream, $namespace, $data</var>)
+<dfn>update_stream(<var>$stream, $namespace, $data</var>)</dfn>
 
 Allows you to update basic stream metadata. You can pass any stream metadata value and it will handle the necessary changes, so you can give it a new stream slug and it will update the metadata and update the table name. Returns BOOL.
 
@@ -153,7 +155,7 @@ This streams returns true or FALSE, based on whether the streams was successfull
 
 	$this->streams->streams->delete_stream('faqs', 'streams_sample');
 
-## get_assignments(<var>$stream, $namespace</var>)
+<dfn>get_assignments(<var>$stream, $namespace</var>)</dfn>
 
 Gets assignments for a stream. More information forthcoming.
 

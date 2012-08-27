@@ -7,9 +7,9 @@ You can call the fields driver like this:
 	$this->load->driver('Streams');
 	$this->streams->fields->function();
 
-<hr id="add-field">
+## Functions
 
-## add_field(<var>$field</var>)
+<dfn>add_field(<var>$field</var>)</dfn>
 
 Creates a field. The function takes a single array which can have the following data:
 	
