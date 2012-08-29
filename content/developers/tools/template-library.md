@@ -68,7 +68,7 @@ Allows you to set a theme.
 
 #### Example:
 
-	$this->template->set_layout('my_theme');
+	$this->template->set_theme('my_theme');
 	
 <div class="tip"><strong>Note:</strong> As with set_layout, the theme is already set when extending either the Public\_Controller and Admin\_Controller.</div>
 
