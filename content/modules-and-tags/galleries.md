@@ -15,44 +15,29 @@ Display all images from any one gallery.
 <table cellpadding="0" cellspacing="0">
 	<tbody>
 		<tr>
-			<th>
-				Name</th>
-			<th>
-				Default</th>
-			<th>
-				Required</th>
-			<th>
-				Description</th>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
 		</tr>
 		<tr>
-			<td width="100">
-				slug</td>
-			<td width="100">
-				None</td>
-			<td width="100">
-				Yes</td>
-			<td>
-				The gallery to display images from.</td>
+			<td width="100">slug</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>The gallery to display images from.</td>
 		</tr>
 		<tr>
-			<td width="100">
-				limit</td>
-			<td width="100">
-				All</td>
-			<td width="100">
-				No</td>
+			<td width="100">limit</td>
+			<td width="100">All</td>
+			<td width="100">No</td>
 			<td>
 				Limit the number of displayed images.</td>
 		</tr>
 		<tr>
-			<td width="100">
-				offset</td>
-			<td width="100">
-				0</td>
-			<td width="100">
-				No</td>
-			<td>
-				Offset the images when retrieving them with a limit set.</td>
+			<td width="100">offset</td>
+			<td width="100">0</td>
+			<td width="100">No</td>
+			<td>Offset the images when retrieving them with a limit set.</td>
 		</tr>
 	</tbody>
 </table>
@@ -79,26 +64,16 @@ Check to see if a gallery exists.
 <table cellpadding="0" cellspacing="0">
 	<tbody>
 		<tr>
-			<th>
-				Name</th>
-			<th>
-				Default</th>
-			<th>
-				Required</th>
-			<th>
-				Description</th>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
 		</tr>
 		<tr>
-			<td width="100">
-				slug</td>
-			<td width="100">
-				None</td>
-			<td width="100">
-				Yes</td>
-			<td>
-				The gallery to check for.</td>
+			<td width="100">slug</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>The gallery to check for.</td>
 		</tr>
 	</tbody>
 </table>
-<p>
-	&nbsp;</p>
