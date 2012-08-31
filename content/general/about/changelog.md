@@ -1,5 +1,37 @@
 # Changelog
 
+## 2.1.4 - August 31, 2012
+
+### Improvements
+
+* Added Scott to the Team
+* Disabled persistent db connection in the installer as some hosts disallow that.
+* Updated reference to pyrocms.com to use HTTPS
+* Replacing mysql_escape_string with mysql_real_escape_string in installer.
+* Removing unnecessary database calls for the image, file, and relationship field types.
+* Corrected the admin form layout for additional page chunks
+* Added events call when calling build_forms
+* PHP Version check in the installer was always showing as acceptable
+* Redirect after login now works on the admin in addition to the front. Fixes #1778
+* Split category slugs on the pipe character in the blog:posts tag so multiple categories can be selected
+* Removed duplicate pagination view in the blog module
+* Got rid of the <ProgressEvent> has no method 'initProgressEvent' error in the uploader
+
+### Bug Fixes
+
+* Fixing fatal error when duplicating pages.
+* Fixed non-object error on pages display plugin
+* Fixes a typo in the Ion_Auth library that kept user activation emails from sending
+* Fixes #1733. The file insert dialogue was looking for the "files" controller instead of "files_wysiwyg"
+* Fixed #1726. Pagination was missing from blog admin index page
+* Fixes #1718. Duplicated pages were set to "home" and could end up at the wrong level.
+* Fixing naming conflict with streams_m runtime cache.
+* Fixed Lex bug where 0 would be output as an empty string. Read https://www.pyrocms.com/forums/topics/view/19686
+* Fixing NULL variables not parsing correctly in Lex.
+* Fixed issue 1785: IE font bug
+* Fixed filtering in the blog module admin panel. Refactored views to fit
+* Fixed PHP 5.4 E_STRICT issues.
+
 ## 2.1.3 - August 9, 2012
 
 ### Improvements
