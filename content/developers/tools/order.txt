@@ -4,5 +4,6 @@ events
 files
 keywords
 pyrocache | PyroCache
+pyrofilter | PyroFilter
 cp-style-guide | Control Panel GUI
 template-library | Template Library
