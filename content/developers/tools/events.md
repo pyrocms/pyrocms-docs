@@ -244,6 +244,23 @@ PyroCMS includes the following event triggers:
 </tr>
 </table>
 
+### Redirect Triggers
+
+<table>
+<tr>
+<td class="one_third">Events::trigger('<b>redirect_created</b>')</td>
+<td>Fired when a new redirect is created.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>redirect_updated</b>', $id)</td>
+<td>Fired when a redirect is updated.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>redirect_deleted</b>', $ids)</td>
+<td>Fired when redirect(s) are deleted.</td>
+</tr>
+</table>
+
 ### Settings Triggers
 
 <table>
