@@ -1,6 +1,7 @@
 blog
 contact
 files
+format
 galleries
 global
 helper
