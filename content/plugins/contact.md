@@ -1,6 +1,6 @@
-# Contact
+# Contact Plugin
 
-This tag displays a contact form so that visitors can email you without seeing your email address
+The contact plugin consists of a single function that displays a contact form.
 
 	{{ noparse }}{{ contact:form }}{{ /noparse }}
     
@@ -9,14 +9,10 @@ This tag displays a contact form so that visitors can email you without seeing y
 <table cellpadding="0" cellspacing="0">
     <tbody>
         <tr>
-			<th>
-				Name</th>
-			<th>
-				Default</th>
-			<th>
-				Required</th>
-			<th>
-				Description</th>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
 		</tr>
         <tr>
 			<td width="100">

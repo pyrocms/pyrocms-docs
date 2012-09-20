@@ -12,15 +12,17 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
-	{{ asset:css file="bootstrap.css" }}
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+  {{ asset:css file="normalize.css" }}
+	{{ asset:css file="main.css" }}
 	{{ asset:css file="shCore.css" }}
 	{{ asset:css file="shCoreMidnight.css" }}
 	
-	{{ asset:js file="bootstrap.min.js" }}
 	{{ asset:js file="shCore.js" }}
 	{{ asset:js file="shBrushPhp.js" }}
 	{{ asset:js file="shBrushLex.js" }}
@@ -40,24 +42,24 @@
 
   </head>
 
-  <body data-spy="scroll" data-target=".subnav" data-offset="100">
+  <body>
 
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
+    <div id="container">
 
-        <a class="brand" href="#">PyroCMS Docs</a>
-        <div class="nav-collapse">
+        <h1>PyroCMS Documentation</h1>
+
           <ul class="nav">
           	<li><a href="">Table of Contents</a></li>
            	<li><a id="toggle_search_link">Search</a></li>
          </ul>
-        </div><!-- /.nav-collapse -->
-      </div>
-    </div><!-- /navbar-inner -->
-  </div><!-- /navbar -->
 
- <div id="search">
+         <div id="box">
+
+          <!--<p class="breadcrumbs">{{ breadcrumbs:crumbs }}</p>-->
+
+
+
+{{# <!--<div id="search">
 
  	<div class="container">
 
@@ -78,7 +80,7 @@
 
 			</div><!--#search_toggle-->
 
-			<p class="breadcrumbs">{{ breadcrumbs:crumbs }}</p>
+			
 
  		</div><!--.span12-->
 
@@ -88,4 +90,55 @@
 
  </div><!--#search-->
 
-    <div class="container">
+#}}
+
+<div id="menu">
+
+<p><strong>{{ link uri="about" title="About PyroCMS" }}</strong></p>
+{{ if segment_1 == 'about'}}
+  {{ nav:auto start="about" }}
+{{ endif }}
+
+<p><strong>{{ link uri="setup" title="Installing &amp; Upgrading" }}</strong></p>
+{{ if segment_1 == 'setup'}}
+  {{ nav:auto start="setup" }}
+{{ endif }}
+
+<p><strong>{{ link uri="concepts" title="Important Concepts" }}</strong></p>
+{{ if segment_1 == 'concepts'}}
+  {{ nav:auto start="concepts" }}
+{{ endif }}
+
+<p><strong>{{ link uri="modules" title="Core Modules" }}</strong></p>
+{{ if segment_1 == 'modules' }}
+  {{ nav:auto start="modules-and-tags" }}
+{{ endif }}
+
+<p><strong>{{ link uri="plugins" title="Core Plugins" }}</strong></p>
+{{ if segment_1 == 'plugins' }}
+  {{ nav:auto start="plugins" }}
+{{ endif }}
+
+<p><strong>{{ link uri="plugins" title="Core Widgets" }}</strong></p>
+{{ if segment_1 == 'widgets' }}
+  {{ nav:auto start="widgets" }}
+{{ endif }}
+
+<p><strong>{{ link uri="field-types" title="Core Field Types" }}</strong></p>
+{{ if segment_1 == 'field-types' }}
+  {{ nav:auto start="field-types" }}
+{{ endif }}
+
+<p><strong>{{ link uri="developers" title="Developer Docs" }}</strong></p>
+{{ if segment_1 == 'developers' }}
+  {{ nav:auto start="developers" }}
+{{ endif }}
+
+<p><strong>{{ link uri="pro" title="PyroCMS Pro" }}</strong></p>
+{{ if segment_1 == 'pro' }}
+  {{ nav:auto start="pro" }}
+{{ endif }}
+
+</div><!--#menu-->
+
+<div id="content">
