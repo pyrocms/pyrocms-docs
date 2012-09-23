@@ -17,15 +17,21 @@ The following guide will teach you the basics of tags and how to use them in you
 
 ## Basic Tags
 
-Let's start with a very simple example, a tag that returns one of our site settings:
+At their very basic form, tags are simply a variable:
 
-    {{ noparse }}{{ settings:site_name }}{{ /noparse }}
+    {{ noparse }}{{ my_var }}{{ /noparse }}
+
+When you put that in your markup, it will be replaced by some value. Pretty simple!
 
 <div class="tip"><strong>Note:</strong> The white-space inside the curly braces is optional, but does help with aesthetics and readability.</div>
 
-This tag has some basic parts: two curly braces on either site, and two text strings separated by a colon. The first string, **settings** in this case, tells the tag what plugin to reference, and then the second string, **site_name** in this case, tells the tag what function or variable to call.
+Now let's take the example of a common concept in PyroCMS, a tag with two words separated by a colon:
 
-So if we put the above tag in our layout, and our {{ link uri="/modules-and-tags/tag-reference/settings" title="site_name variable" }} was set to "Bill's Bagels", then it would return:
+    {{ noparse }}{{ settings:site_name }}{{ /noparse }}
+
+This tag has some basic parts: two curly braces on either site, and two text strings separated by a colon. This format tells PyroCMS that we want to access a plugin and a function or variable of that plugin. The first string, **settings** in this case, tells the tag what plugin to reference, and then the second string, **site_name** in this case, tells the tag what function or variable to call.
+
+So if we put the above tag in our layout, and our {{ link uri="plugins/settings" title="site_name variable" }} was set to "Bill's Bagels", then it would return:
 
      Bill's Bagels
 
@@ -42,7 +48,7 @@ What makes tags really powerful is they can take attributes that give you the fr
 
      {{ noparse }}{{ url:segments segment="1" }}{{ /noparse }}
 
-In the above example, we are calling the {{ link title="url plugin" uri="/modules-and-tags/tag-reference/url" }} which has a **segments** function. This is all well and good, but we can also pass the tag parameters in order to modify the output. In this case, we are telling the tag to get the first segment. So if your URL was _http://www.example.com/bills/bagels_, this tag would be replaced with:
+In the above example, we are calling the {{ link title="url plugin" uri="/modules-and-tags/tag-reference/url" }} which has a **segments** function. This is all well and good, but we can also pass the tag parameters in order to modify the output. In this case, we are telling the tag to get the first segment. So if your URL was _http://www.example.com/bills/bagels_, this tag would return:
 
      bills
 
@@ -52,13 +58,13 @@ You can have multiple parameters as well. So, for example, the **segments** func
 
 If the first segment is empty, the tag will return "home".
 
-<div class="tip"><strong>Tip:</strong> Some parameters are required and some are optional. Make sure to check the {{ link uri="/modules-and-tags/tag-reference/" title="tag reference" }} to make sure you are passing all of the right parameters, and if there are any optional ones that will give you added functionality you need.</div>
+<div class="tip"><strong>Tip:</strong> Some parameters are required and some are optional. Make sure to check the {{ link uri="plugins" title="plugins section" }} to make sure you are passing all of the right parameters, and if there are any optional ones that will give you added functionality you need.</div>
 
 You may also use the output from other tags as attribute values in your tags. For example if you wanted the url segment to default to the slug of the currently viewed page you could do this:
 
     {{ noparse }}{{ url:segments segment="1" default=page:slug }}{{ /noparse }}
 
-Here is a fictitious example showing the proper use of quotes and braces when the tag used as the attribute value has an attribute itself.
+Here is an example showing the proper use of quotes and braces when the tag used as the attribute value has an attribute itself.
 
     {{ noparse }}{{ url:segments segment="1" default={foo:bar value="baz"} }}{{ /noparse }}
 
@@ -74,13 +80,13 @@ Another powerful feature of PyroCMS tags is the ability to use data between tags
      &lt;h2>{{ title }}&lt;/h2>
 {{ /blog:posts }}{{ /noparse }}
 
-As you'll notice, we have an opening and closing tag here. In this case, the {{ link uri="/modules-and-tags/tag-reference/blog" title="blog" }} **posts** function will search the blog for posts matching the parameters we've provided, reprinting the HTML in between the tags for each one and substituing any further tags with data from that particular post - in this case the title.
+As you'll notice, we have an opening and closing tag here. In this case, the {{ link uri="modules/blog" title="blog" }} **posts** function will search the blog for posts matching the parameters we've provided, reprinting the HTML in between the tags for each one and substituing any further tags with data from that particular post - in this case the title.
 
 Tag pairs don't necessarily loop through content, however. Take the example of a tag that surrounds a block of text and restricts the output of that text to a certain number of words. In this case the text between the tags is simply acting as another parameter - albeit a larger and more flexible one.
 
 ### Variable Loops
 
-Occasionally, tags will contain arrays of data that you can loop through. You can do so using a similar tag pair syntax:
+Occasionally, single tags can act as arrays of data that you can loop through. You can do so using a similar tag pair syntax:
 
     {{ noparse }}{{ images }}
      &lt;img src="{{ url }}" />
@@ -165,6 +171,8 @@ You can have multiple conditionals for some more advanced conditional statements
     &lt;p>Looks like a foo.&lt;/p>
 {{ elseif variables:custom_var == 'bar' }}
     &lt;p>Looks like a bar.&lt;/p>
+{{ else }}
+    &lt;p>Not really sure what's going on here.&lt;/p>
 {{ endif }}{{ /noparse }}
 
 ### Logical Operators

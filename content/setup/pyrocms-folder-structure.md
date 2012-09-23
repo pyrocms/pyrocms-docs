@@ -1,6 +1,6 @@
 # PyroCMS Folder Structure
 
-PyroCMS only has four root-level folders with its default install, so it's important to know what each does.
+PyroCMS only has three root-level folders with its default install (once you delete the installer folder), so it's important to know what each does.
 
 ## /addons/
 
@@ -17,7 +17,7 @@ Since PyroCMS Pro is multi-site enabled, even single install of PyroCMS get its 
 
 ## /assets/
 
-To optimise site performance. {{ link uri="/developers/tools/assets" title="More about how this works" }}.
+This is where your cached assets (JS, CSS, etc) are stored so they are web accessible. 
 
 ## /system/
 
@@ -25,7 +25,7 @@ The system folder contains two main things: a copy of CodeIgniter (the PHP frame
 
 ### /system/cms/config/database.php
 
-When PyroCMS installs, it will create this file for you with your MySQL login data. However, if you want to change this data or add another {{ link uri="general/getting-started/environments" title="environment" }}, you'll need to edit this file.
+When PyroCMS installs, it will create this file for you with your MySQL credentials. However, if you want to change this data or add another {{ link uri="general/getting-started/environments" title="environment" }}, you'll need to edit this file.
 
 ### /system/cms/config/config.php
 

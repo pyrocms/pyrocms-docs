@@ -1,4 +1,4 @@
-# Organization
+# Organizing Your Site
 
 One of the most important functions of a CMS is to provide an organizational structure for designers, developers, and site builders to create their sites in a modular and flexible way. In this section, we'll talk about how you can structure your site using PyroCMS.
 
@@ -10,7 +10,7 @@ For an example, let's take a simple site for a barbershop. This is going to be a
 
 That's it, pretty straightfoward.
 
-We can start by looking at the page designs. They are pretty awful, but we have a basic idea of what we need to get up on the site.
+We can start by looking at the page layouts. They are pretty basic, but we'll get an idea of what we need to get up on the site.
 
 {{ asset:img file="docs/barbershop-pages.jpeg" alt="Example Pages" class="doc_image" }}
 
@@ -25,7 +25,7 @@ Below we'll get into what each one does, and then pull them all together for our
 
 ## Theme Tools
 
-Your design starts with your theme. A theme is where your basic layouts and assets (CSS, JS) go. (For a more in-depth discussion of themes and their structure, see the [themes](http://www.pyrocms.com/docs/2.0/theming-pyrocms/create-a-custom-theme) guide.). The two organizational tools available to your theme are **Theme Layouts** and **Theme Partials**.
+Your design starts with your theme. A theme is where your basic layouts and assets (CSS, JS) go. (For a more in-depth discussion of themes and their structure, see the {{ link title="themes" uri="theming" }} guide.). The two organizational tools available to your theme are **Theme Layouts** and **Theme Partials**.
 
 ### Theme Layouts
 
@@ -37,7 +37,7 @@ Partials are pieces of code that you use over and over again that you'd like to 
 
 	{{ noparse }}{{ theme:partial name="header" }}{{ /noparse }}
 
-You can have as many theme partials as you'd like, although they are not necessary. They are handy to separate out parts of your site's code.
+You can have as many theme partials as you'd like, although they are not necessary. They are handy to separate out parts of your site's code to keep things uncluttered.
 
 ## Page Tools
 

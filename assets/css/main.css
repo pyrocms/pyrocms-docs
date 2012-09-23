@@ -103,6 +103,12 @@ p, ul li, ol li {
     color: #3B3B3B;
 }
 
+.tip {
+    font-size: 13px;
+    color: #3B3B3B;
+    font-style: italic;
+    margin-bottom: 15px;
+}
 
 #container {
     width: 860px;
@@ -160,6 +166,9 @@ a {
     padding: 15px 15px 15px 25px;
     height: 100%!important;
     border-left: 1px dashed #E4EAF0;
+}
+#content img {
+    max-width: 100%;
 }
 
 table {
