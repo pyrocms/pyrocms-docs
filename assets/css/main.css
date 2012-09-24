@@ -97,6 +97,7 @@ textarea {
 body {
     background: #fafafa;
    font-family: 'Source Sans Pro', sans-serif;
+   padding: 0!important;
 }
 p, ul li, ol li {
     font-size: 13px;
@@ -112,7 +113,7 @@ p, ul li, ol li {
 
 #container {
     width: 860px;
-    margin: 0 auto;
+    margin: 0 auto 20px auto!important;
 }
 
 a {
