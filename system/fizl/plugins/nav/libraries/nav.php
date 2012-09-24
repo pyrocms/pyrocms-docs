@@ -138,7 +138,7 @@ class Nav extends Plugin {
 		
 		$this->start = $start;
 						
-		$map = directory_map(FCPATH.$this->CI->vars['site_folder'].'/'.$start);
+		$map = directory_map(FCPATH.$this->CI->vars['site_folder'].'/'.$start, 1);
 		
 		if(!$map) return;
 		
