@@ -141,29 +141,36 @@ a {
 
 #menu {
     float: left;
-    width: 18%;
-    padding: 15px 0px 15px 15px;
+    width: 180px;
 }
 
 #menu ul {
     list-style-type: none;
     margin-left: 2px;
-    padding-left: 2px;
-    width: 200px;
+    padding-left: 10px;
+    width: 180px;
 }
 
 #menu a {
     text-decoration: none;
+    color: #0F87D1;
 }
 
 #menu p a {
     color: #363636;
-    font-weight: bold;;
+    font-weight: bold;
+    padding-left: 15px;
+    display: block;
+    width: 180px;
+}
+
+#menu ul li > a {
+    display: block;
 }
 
 #content {
     float: right;
-    width: 67%;
+    width: 620px;
     padding: 15px 15px 15px 25px;
     height: 100%!important;
     border-left: 1px dashed #E4EAF0;
