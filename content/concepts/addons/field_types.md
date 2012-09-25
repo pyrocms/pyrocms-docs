@@ -6,7 +6,7 @@ An example of a very simple field type is the Text field type. It allows you to 
 
 ## Installing Field Types
 
-Plugins have no installation procedure. Just upload them to _addons/shared\_addons/field\_types_ or _addons/[site-ref]/pfield\_types_ and they are ready for use!
+Plugins have no installation procedure. Just upload them to _addons/shared\_addons/field\_types_ or _addons/[site-ref]/field\_types_ and they are ready for use!
 
 ## System-Wide
 
