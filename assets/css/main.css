@@ -155,12 +155,13 @@ a {
 
 #menu a {
     text-decoration: none;
-    color: #0F87D1;
+    color: #858585;
 }
 
 #menu p a {
     color: #363636;
     font-weight: bold;
+    font-family: "Helvetica", Arial, sans-serif;
     padding-left: 15px;
     display: block;
     width: 180px;
@@ -206,10 +207,11 @@ code, pre {
     font-size: 12px;
     background: #fcfcfc;
     border-bottom: 1px solid #E4EAF0;
+    font-family: "Helvetica", Arial, sans-serif;
 }
 .breadcrumbs a {
     text-decoration: none;
-    color: #0F87D1;
+    color: #888;
 }
 
 /* ==========================================================================
