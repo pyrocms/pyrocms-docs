@@ -1,19 +1,19 @@
 # The Files Module
 
-* [Uploading Files]()
-* [Working with Uploaded Files]()
-* [Renaming Files]()
-* [Deleting Files]()
-* [Viewing Editing File Metadata]()
-* [Using Cloud Files]()
-* [Searching Files]()
-* [File Layout Tags]()
+* {{ docs:id_link title="Uploading Files" }}
+* {{ docs:id_link title="Working with Uploaded Files" }}
+* {{ docs:id_link title="Renaming Files" }}
+* {{ docs:id_link title="Deleting Files" }}
+* {{ docs:id_link title="Viewing Editing File Metadata" }}
+* {{ docs:id_link title="Using Cloud Files" }}
+* {{ docs:id_link title="Searching Files" }}
+* {{ docs:id_link title="File Layout Tags" }}
 
 The files module is where all of your PyroCMS files are located. When you add an image to a blog post, for instance, the upload box that comes up feeds directly into the files module, and you can upload to one of the folders you've created via the files module.
 
 The files module has built in support for cloud file providers [Amazon S3](http://aws.amazon.com/s3/) and [Rackspace Cloud Files](http://www.rackspace.com/cloud/public/files/).
 
-## Uploading Files
+{{ docs:header }}Uploading Files{{ /docs:header }}
 
 Once you get into the files module, you'll need to create a folder to start uploading to. These are not really physical folders, but a virtual folders in the database.
 
@@ -43,13 +43,13 @@ You can select a height and/or width to resize the image to (if your upload is a
 
 All your uploaded files will be stored in your _/uploads/[site\_ref]/_ folder. Any folders created in the files module are virtual, so all files are uploaded to a single directory within a site\_ref.
 
-## Working with Uploaded Files
+{{ docs:header }}Working with Uploaded Files{{ /docs:header }}
 
 Once you have uploaded files, you can right click them and get a context menu that has a number of options:
 
 {{ asset:img file="docs/files\_module\_file\_options.png" alt="File Context Menu" class="doc_image" }}
 
-## Renaming Files
+{{ docs:header }}Renaming Files{{ /docs:header }}
 
 Renaming files works the same way folder renaming does. Select **Rename** and the file name will turn blue. Just type in your new file name and hit Enter or Return to save the changes.
 
@@ -57,11 +57,11 @@ Renaming files works the same way folder renaming does. Select **Rename** and th
 
 Note that the name of the file is different than the file name. You are not really editing the actual file name, just the name of the file on the back end. You can rename it to whatever you'd like, and the file name will remain the same.
 
-## Deleting Files
+{{ docs:header }}Deleting Files{{ /docs:header }}
 
 To delete a file, choose **Delete** from the file context menu.
 
-## Viewing Editing File Metadata
+{{ docs:header }}Viewing Editing File Metadata{{ /docs:header }}
 
 Aside from the file name, PyroCMS stores several pieces of data about each file, including a description of the file that you can edit. To see the file metadata, choose **Details** from the file context menu.
 
@@ -118,7 +118,7 @@ The following metadata is shown for each file:
 
 If you want to use these variables in your layouts, you can use the {{ link title="files plugin" uri="plugins/files" }} to access them.
 
-## Using Cloud Files
+{{ docs:header }}Using Cloud Files{{ /docs:header }}
 
 Cloud files are files that are not stored on the local server filesystem, but are instead stored and accessed on a separte service. The files modules currently supports the following cloud file systems:
 
@@ -157,12 +157,11 @@ If cloud providers are enabled you will be able to set the location of the folde
 
 If you are storing files with a cloud provider you may want to use the Synchronize function. This allows you to "refresh" your database of files to keep it up to date with the remote storage location. For example if you have another service that dumps files into a folder on Amazon that you want to display in your weekly blog post you can simply go to your folder that is linked to that bucket and click Synchronize. This will pull down all the available information from Amazon and store it in the database as if the file was uploaded via the Files interface. The files are now available to be inserted into page content, your blog post, or etc. If files have been deleted from the remote bucket since your last Synchronize they will now be removed from the database also.
 
-## Searching Files
+{{ docs:header }}Searching Files{{ /docs:header }}
 
 You may search all of your files and folders by typing a search term in the right column and then hitting Enter. The first 5 folder matches and the first 5 file matches will be returned. When you click on an item its containing folder will be displayed and the items that match your search will be highlighted. Items are searched using the folder name, file name, extension, location, and remote container name.
 
-
-## File Layout Tags
+{{ docs:header }}File Layout Tags{{ /docs:header }}
 
 You can access files tags from the {{ link uri="plugins/files" title="files plugin" }}.
 
