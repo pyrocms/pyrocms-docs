@@ -1,358 +1,76 @@
 # Pages
 
-<div class="subnav">
-	<ul class="nav nav-pills">
-		<li><a href="#overview">Overview</a></li>
-		<li><a href="#tags">Current Page Tags</a></li>
-		<li><a href="#tags">Pages Tags</a></li>
-	</ul>
-</div>
+The pages module is a simple but powerful way to manage static content on your site. Page layouts can be managed and widgets embedded without ever editing the template files.
 
-<h2 id="overview">Overview</h2>
+## The Page Tree
 
-The Pages module is where all of your 
+The page tree is a visual, heirarchical overview of all the pages on your site. Note that these do not include module URIs (see {{ link title="PyroCMS URLs" uri="concepts/pyrocms-urls" }} for an overview of how URLs work in PyroCMS).
 
-<h2 id="tags">Current Page Tags</h2>
+### Re-Ordering Pages
 
-The _page_ plugin allows you to access information about the current page. This is different from the _pages_ plugin which allows you to access information about pages in general.
+Page re-ordering is achieved via simple drag and drop. You can drag/drop individual pages or entire sections (by dragging the parent page). There will be a shadow to show you where your page drag will end up.
 
-### page:id
+### Modifying Pages
 
-Displays the unique id for the page
+To modify a page, click it in the page tree. A data summary panel will show, with options for modifying the page:
 
-	{{ noparse }}{{ page:id }}{{ /noparse }}
-
-## page:slug
-
-Displays the page's slug. "home" for example
-
-## page:title
-
-The page title visible in the admin panel. "Home" for the default home page.
-
-## page:uri
-
-The uri that the page is accessible at. For child pages of "home" this would be "home/child-slug"
-
-## page:parent_id
-
-The unique page id of this page's parent
-
-## page:layout_id
-
-Displays the id of the Page Layout that this page is assigned to
-
-## page:rss_enabled
-
-Displays a 1 if this page is displayed as an RSS feed. (Child pages are treated as entries).
-
-## page:comments_enabled
-
-Displays a 1 if commenting is turned on for this page.
-
-## page:status
-
-Will either be "live" or "draft". In draft mode only admins may view the page.
-
-## page:created_on
-
-The epoch time when the page was created. Wrap this with the date helper to format it for humans: {{ helper:date timestamp=page:created_on }}
-
-## page:updated_on
-
-This is the same as {{ noparse }}{{ page:created_on }}{{ /noparse }} except that it displays the epoch time when the page was updated.
-
-## page:is_home
-
-Displays a 1 if the page is set as the default (home) page. There can only be one page with this set.
-
-## page:strict_uri
-
-Displays a 1 if the URI must match exactly. If set to 0 child segments will be ignored if the child pages do not exist. For example "site.com/home/child" will resolve to "home" if "child" doesn't exist.
-
-# Pages Tags
-
-The _pages_ tag displays page info.
-
-## pages:url
-
-	{{ noparse }}{{ pages:url }}{{ /noparse }}
-	
-Gets a page's URL based on its ID.
-
-### Attributes
-
-<table cellpadding="0" cellspacing="0">
-	<tbody>
-		<tr>
-			<th>Name</th>
-			<th>Default</th>
-			<th>Required</th>
-			<th>Description</th>
-		</tr>
-		<tr>
-			<td width="100">id</td>
-			<td width="100">None</td>
-			<td width="100">Yes</td>
-			<td>The page id of the page you want the URL for.</td>
-		</tr>
-	</tbody>
+<table>
+	<tr>
+		<th width="30%">Option</th>
+		<th>Notes</th>
+	</tr>
+	<tr>
+		<td>Add Child</td>
+		<td>Adds a child page to the current page.</td>
+	</tr>
+	<tr>
+		<td>Duplicate</td>
+		<td>Duplicates a page <em>and all child pages</em>.</td>
+	</tr>
+	<tr>
+		<td>Edit</td>
+		<td>Edit a page.</td>
+	</tr>
+	<tr>
+		<td>Delete</td>
+		<td>Delete a page and its child pages.</td>
+	</tr>
 </table>
 
-### Example
+## Default Pages
 
-	{{ noparse }}{{ pages:url id="4" }}​{{ /noparse }}
+You'll notice 
 
-Returns:
+## Adding a New Page
 
-	http://www.example.com/about
-	
-## pages:children	
-	
-	{{ noparse }}{{ pages:children }}{{ /noparse }}
+To add a new page, click **Add Page**. You'll get a multi-tabbed form with a lot of options. The following sections go over each tab.
 
-Tag pair that loops through the children of a parent page.
+### Page Content
 
-### Attributes
+This is the basic info about your page - title, content, etc.
 
-<table cellpadding="0" cellspacing="0">
-	<tbody>
-		<tr>
-			<th>Name</th>
-			<th>Default</th>
-			<th>Required</th>
-			<th>Description</th>
-		</tr>
-		<tr>
-			<td width="100">id</td>
-			<td width="100">None</td>
-			<td width="100">Yes</td>
-			<td>Page ID of parent page whose children you want.</td>
-		</tr>
-		<tr>
-			<td width="100">limit</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
-			<td>Number of pages to return.</td>
-		</tr>
-	</tbody>
-</table>
+### Meta Data
 
-### Example
+The meta title is generally used as the title in search results and is believed to carry significant weight in page rank.
+Meta keywords are words that describe your site content and are for the benefit of search engines only.
 
-	{{ noparse }}{{ pages:children id="1" limit="2" }}
-	&lt;h2>{{ title }}&lt;/h2>
-	{{ body }}
-{{ /pages:children }}{{ /noparse }}
+The meta description is a short description of this page and may be used as the search snippet if the search engine deems it relevant to the search.
 
-Returns:
+### Design
 
-	<h2>Child One</h2>
-	Body Content One
-		
-	<h2>Child Two</h2>
-	Body Content Two
-	
-## pages:display
+The design tab allows you to select a custom page layout and optionally apply different css styles to it on this page only. Refer to the Page Layouts section below for instructions on how to best use Page Layouts.
 
-	{{ noparse }}{{ pages:display }}{{ /noparse }}
+### Script
 
-Display a page inside other content. Can be used as a single tag to output the page body only, or tag pair for ultimate control. 
+You may place javascript here that you would like appended to the &lt;head&gt; of the page.
 
-### Attributes
+### Options
 
-<table cellpadding="0" cellspacing="0">
-	<tbody>
-		<tr>
-			<th>Name</th>
-			<th>Default</th>
-			<th>Required</th>
-			<th>Description</th>
-		</tr>
-		<tr>
-			<td width="100">id</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
-			<td>ID of the page you want to display.</td>
-		</tr>
-		<tr>
-			<td width="100">slug</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
-			<td>Slug of the page you want to display.</td>
-		</tr>
-	</tbody>
-</table>
+Allows you to turn on comments and an rss feed for this page. You can also restrict a page to specific logged in user groups by setting the Access field. If the RSS feed is enabled a visitor can subscribe to this page and they will receive each child page in their rss reader.
 
-### Examples
+The "Require an exact uri match" field is a clever little tool that allows you to pass parameters in the url. By default PyroCMS looks for a page with the slug of "acme-widgets" that is the child of "products" when you visit http://localhost:8888/pyrocms/versions/2.1_develop/index.php/products/acme-widgets. By checking this box in the Products page you are telling PyroCMS that it is now okay if there isn't a page named Acme Widgets. It will now load Products and 'acme-widgets' will just be a parameter. This makes it easy to pass parameters to embedded tags. An example using the Streams add-on to display the 'acme-widgets' stream on the Products page:
 
-	{{ noparse }}{{ pages:display slug="home" }}
-	&lt;h2>{{ title }}&lt;/h2>
-	{{ body }}
-{{ /pages:display }}{{ /noparse }}
+### Page Layouts
 
-Returns:
+Page layouts allows you to control the layout of the page without modifying the theme files. You can also select theme layout files when creating Page Layouts. You can embed tags into the page layout instead of placing them in every page. For example: If you have a twitter feed widget that you want to display at the bottom of every page you can just place the widget tag in the page layout:
 
-	<h2>Page Title</h2>
-	<p>Page Body</p>
-
-## pages:chunk
-
-	{{ noparse }}{{ pages:chunk }}{{ /noparse }}
-
-A tag that allows any one page chunk to be displayed anywhere on the site, even inside another page's content.
-
-### Attributes
-
-<table cellpadding="0" cellspacing="0">
-	<tbody>
-		<tr>
-			<th>Name</th>
-			<th>Default</th>
-			<th>Required</th>
-			<th>Description</th>
-		</tr>
-		<tr>
-			<td width="100">id</td>
-			<td width="100">None</td>
-			<td width="100">Yes</td>
-			<td>ID of the page that the chunk belongs to.</td>
-		</tr>
-		<tr>
-			<td width="100">name</td>
-			<td width="100">None</td>
-			<td width="100">Yes</td>
-			<td>The name of the page chunk that you want to display.</td>
-		</tr>
-	</tbody>
-</table>
-
-### Example
-
-	{{ noparse }}{{ pages:chunk id="1" name="default" }}{{ /noparse }}
-
-Returns:
-
-	<p>Welcome to our homepage. We have not quite finished setting up our website yet, but please add us to your bookmarks and come back soon.</p>
-
-## pages:is
-
-	{{ noparse }}{{ pages:is }}{{ /noparse }}
-
-A tag that confirms if a page is a direct child of another page, or is a descendent of another page.
-
-### Attributes
-
-<table cellpadding="0" cellspacing="0">
-	<tbody>
-		<tr>
-			<th>Name</th>
-			<th>Default</th>
-			<th>Required</th>
-			<th>Description</th>
-		</tr>
-		<tr>
-			<td width="100">child</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
-			<td>ID or Slug of the page whose relation you want to check.</td>
-		</tr>
-		<tr>
-			<td width="100">children</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
-			<td>Children separated by a comma.</td>
-		</tr>
-		<tr>
-			<td width="100">parent</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
-			<td>ID or Slug of the page to check if it is a parent of child.</td>
-		</tr>
-		<tr>
-			<td width="100">descendent</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
-			<td>ID or Slug of the page to check if it is a descendent of child.</td>
-		</tr>
-	</tbody>
-</table>
-
-### Example A
-
-	{{ noparse }}{{ if {pages:is child="ingredients" parent="cookbook"} == true }}
-	&lt;p>Click here to see table of contents cookbook&lt;/p>
-{{ endif }}{{ /noparse }}
-
-Returns:
-
-	<p>Click here to see table of contents cookbook</p>
-	
-### Example B
-	
-	{{ noparse }}{{ if {pages:is child="terms-and-conditions" parent="information"} == true }}
-&lt;body class="terms information">
-{{ else }}
-&lt;body class="">
-{{ endif }}{{ /noparse }}
-
-Returns:
-
-	<body class="terms information">
-
-## pages:page_tree
-
-	{{ noparse }}{{ pages:page_tree }}{{ /noparse }}
-	
-A tag that displays a tree of pages starting from the id specified.
-
-### Attributes
-
-<table cellpadding="0" cellspacing="0">
-	<tbody>
-		<tr>
-			<th>Name</th>
-			<th>Default</th>
-			<th>Required</th>
-			<th>Description</th>
-		</tr>
-		<tr>
-			<td width="100">start-id</td>
-			<td width="100">None</td>
-			<td width="100">Yes</td>
-			<td>ID of the page you want to display children for.</td>
-		</tr>
-		<tr>
-			<td width="100">disable-levels</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
-			<td>A list of page slugs to skip separated by the pipe character. Example: secret|super-secret|nuclear-codes</td>
-		</tr>
-		<tr>
-			<td width="100">order-by</td>
-			<td width="100">title</td>
-			<td width="100">No</td>
-			<td>Database column to order pages by.</td>
-		</tr>
-		<tr>
-			<td width="100">order-dir</td>
-			<td width="100">asc</td>
-			<td width="100">No</td>
-			<td>Direction to sort the pages.</td>
-		</tr>
-	</tbody>
-</table>
-
-### Examples
-
-	{{ noparse }}{{ pages:page_tree start-id="20" }}{{ /noparse }}
-	
-Returns:
-
-	<ul>
-	     <li><a href="http://example.com/page">Page Name</a>
-	          <ul>
-	               <li><a href="http://example.com/page/child">Child Name</a></li>
-	          </ul>
-	     </li>
-	</ul>
