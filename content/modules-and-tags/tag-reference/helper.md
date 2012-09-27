@@ -289,7 +289,7 @@ The functions that can be used are defined in system/cms/config/parser.php
 
 This is the current list:
 
- * character\_limit
+ * character\_limiter
  * count
  * count\_chars
  * empty
