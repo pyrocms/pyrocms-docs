@@ -98,6 +98,8 @@ Occasionally, single tags can act as arrays of data that you can loop through. Y
 
 Many times in your layouts you will want to show something under certain conditions. For instance, if a user is logged in or if a url segment has a certain value. PyroCMS tags allow you to do that with an if/else tag syntax.
 
+<div class="tip"><strong>Undefined Variables:</strong> Undefined variables in Conditionals are evaluated to be **null**.  This allows you to do things like **{{ noparse }}{{ if foo }}{{ /noparse }}** to check if a variable exists.</div>
+
 ### Basic Conditionals
 
 Here is a simple example of a conditional tag statement:
@@ -157,11 +159,41 @@ Here are the available conditional operators:
 </tr>
 </table>
 
-You can also use the **!** logical operator:
+You can also use the **!** or the **not** logical operator:
 
     {{ noparse }}{{ if !user:logged_in }}
     &lt;p>You are not logged in.&lt;/p>
 {{ endif }}{{ /noparse }}
+
+    {{ noparse }}{{ if not user:logged_in }}
+    &lt;p>You are not logged in.&lt;/p>
+{{ endif }}{{ /noparse }}
+
+<div class="tip"><strong>Note:</strong> **!** and **not** are interchangeable.  The only requirement is that  **not** must have a space on both sides.</div>
+
+#### Checking if a Variable Exists
+
+To check if a variable exists in a conditional, you use the `exists` keyword.
+
+**Examples**
+
+    {{ noparse }}{{ if exists foo }}
+        Foo Exists
+{{ elseif not exists foo }}
+        Foo Does Not Exist
+{{ endif }}{{ /noparse }}
+
+You can also combine it with other conditions:
+
+    {{ noparse }}{{ if exists foo and foo !== 'bar' }}
+        Something here
+{{ endif }}{{ /noparse }}
+
+The expression `exists foo` evaluates to either `true` or `false`.  Therefore something like this works as well:
+
+    {{ noparse }}{{ if exists foo == false }}
+{{ endif }}{{ /noparse }}
+
 
 ### Multiple Conditionals
 
@@ -172,7 +204,7 @@ You can have multiple conditionals for some more advanced conditional statements
 {{ elseif variables:custom_var == 'bar' }}
     &lt;p>Looks like a bar.&lt;/p>
 {{ else }}
-    &lt;p>Not really sure what's going on here.&lt;/p>
+    &lt;p>Neither foo nor bar.&lt;/p>
 {{ endif }}{{ /noparse }}
 
 ### Logical Operators
