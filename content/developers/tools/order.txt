@@ -6,3 +6,4 @@ keywords
 pyrocache | PyroCache
 cp-style-guide | Control Panel GUI
 template-library | Template Library
+streams-api
