@@ -4,18 +4,13 @@ One of the unique features of PyroCMS is Tags, powered by the [Lex Parser](https
 
 The following guide will teach you the basics of tags and how to use them in your layouts.
 
-<div class="subnav">
-    <ul class="nav nav-pills">
-        <li><a href="#basic">Basic Tags</a></li>
-        <li><a href="#attributes">Tag Attributes</a></li>
-        <li><a href="#pairs">Tag Pairs</a></li>
-        <li><a href="#conditionals">Tag Conditionals</a></li>
-    </ul>
-</div>
+* {{ docs:id_link title="Basic Tags" }}
+* {{ docs:id_link title="Comments" }}
+* {{ docs:id_link title="Tag Attributes" }}
+* {{ docs:id_link title="Tag Pairs" }}
+* {{ docs:id_link title="Tag Conditionals" }}
 
-<div id="basic"></div>
-
-## Basic Tags
+{{ docs:header }}Basic Tags{{ /docs:header }}
 
 At their very basic form, tags are simply a variable:
 
@@ -35,14 +30,14 @@ So if we put the above tag in our layout, and our {{ link uri="plugins/settings"
 
      Bill's Bagels
 
-## Comments
+{{ docs:header }}Comments{{ /docs:header }}
 
 If you'd like to comment out section of code or content, you can wrap them inside **&#123;&#123;#** and **#&#125;&#125;**. Ex: **&#123;&#123;# This is a comment #&#125;&#125;**. 
 This has the advantage over conventional [HTML comment tags](http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.2.4) that it won't be visible to users viewing your website's source code.
 
 <div id="attributes"></div>
 
-## Tag Attributes
+{{ docs:header }}Tag Attributes{{ /docs:header }}
 
 What makes tags really powerful is they can take attributes that give you the freedom to modify the tag output based on input data. Here is an example:
 
@@ -72,7 +67,7 @@ Here is an example showing the proper use of quotes and braces when the tag used
 
 <div id="pairs"></div>
 
-## Tag Pairs
+{{ docs:header }}Tag Pairs{{ /docs:header }}
 
 Another powerful feature of PyroCMS tags is the ability to use data between tags. Take this example of a blog posts tag:
 
@@ -94,7 +89,7 @@ Occasionally, single tags can act as arrays of data that you can loop through. Y
 
 <div id="conditionals"></div>
 
-## Tag Conditionals
+{{ docs:header }}Tag Conditionals{{ /docs:header }}
 
 Many times in your layouts you will want to show something under certain conditions. For instance, if a user is logged in or if a url segment has a certain value. PyroCMS tags allow you to do that with an if/else tag syntax.
 
@@ -125,6 +120,10 @@ You can use operators to compare values in an if statement. These used to compar
 Here are the available conditional operators:
 
 <table class="table">
+    <tr>
+        <th width="20%">Operator</th>
+        <th>Notes</th>
+    </tr>
 <tr>
 <td>==</td>
 <td>Equals. Values equal each other.</td>
@@ -194,7 +193,6 @@ The expression `exists foo` evaluates to either `true` or `false`.  Therefore so
     {{ noparse }}{{ if exists foo == false }}
 {{ endif }}{{ /noparse }}
 
-
 ### Multiple Conditionals
 
 You can have multiple conditionals for some more advanced conditional statements:
@@ -217,7 +215,5 @@ You can also use logical operators like so:
 
 The logical operators available are:
 
-<table>
-<tr><td>and / &&</td></tr>
-<tr><td>or / ||</td></tr>
-</table>
+* and / &amp;&amp;
+* or / ||
