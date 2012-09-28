@@ -220,6 +220,19 @@ PyroCMS includes the following event triggers:
 <td class="one_third">Events::trigger('<b>page_ordered</b>', array($order, $root_pages))</td>
 <td>Fired when pages have been reordered.</td>
 </tr>
+<tr>
+<td class="one_third">Events::trigger('<b>page_layout_created</b>', $id)</td>
+<td>Fired when a page layout has been created.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>page_layout_updated</b>', $id)</td>
+<td>Fired when a page layout has been updated.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>page_layout_deleted</b>', $deleted_ids)</td>
+<td>Fired when a page layout(s) have been deleted.</td>
+</tr>
+
 </table>
 
 ### Permissions Triggers
@@ -228,6 +241,23 @@ PyroCMS includes the following event triggers:
 <tr>
 <td class="one_third">Events::trigger('<b>permissions_saved</b>', array($group_id, $modules, $roles))</td>
 <td>Fired when permissions have been saved.</td>
+</tr>
+</table>
+
+### Redirect Triggers
+
+<table>
+<tr>
+<td class="one_third">Events::trigger('<b>redirect_created</b>')</td>
+<td>Fired when a new redirect is created.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>redirect_updated</b>', $id)</td>
+<td>Fired when a redirect is updated.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>redirect_deleted</b>', $ids)</td>
+<td>Fired when redirect(s) are deleted.</td>
 </tr>
 </table>
 
