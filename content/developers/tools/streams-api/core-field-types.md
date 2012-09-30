@@ -229,7 +229,7 @@ The file field type allows you to upload and link to a file.
 	</tr>
 	<tr>
 		<td>Column Type</td>
-		<td>INT</td>
+		<td>file</td>
 	</tr>
 	<tr>
 		<td>Column Storage</td>
@@ -267,7 +267,7 @@ The file field type allows you to upload and link to a file.
 	</tr>
 	<tr>
 		<td>Column Type</td>
-		<td>INT</td>
+		<td>image</td>
 	</tr>
 	<tr>
 		<td>Column Storage</td>
