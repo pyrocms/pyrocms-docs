@@ -1,19 +1,17 @@
 # Contact Plugin
 
-<ul>
-	<li><a href="">Setting Up Fields</a></li>
-	<li><a href="">Available Field Types</a></li>
-	<li><a href="">Available Field Validation Rules</a></li>
-	<li><a href="">Creating an Email Template</a></li>
-	<li><a href="">Form Attributes</a></li>
-	<li><a href="">Examples</a></li>
-</ul>
+* {{ docs:id_link title="Setting Up Fields" }}
+* {{ docs:id_link title="Available Field Types" }}
+* {{ docs:id_link title="Available Field Validation Rules" }}
+* {{ docs:id_link title="Creating an Email Template" }}
+* {{ docs:id_link title="Form Attributes" }}
+* {{ docs:id_link title="Examples" }}
 
 The contact plugin allows you to easily customize and display a form that sends an email upon submission. You can create text, textarea, file, hidden, and dropdown fields in your form, and customize the email content.
 
 	{{ noparse }}{{ contact:form }}{{ /noparse }}
 
-## Setting Up Fields
+{{ docs:header }}Setting Up Fields{{ /docs:header }}
 
 You can customize which fields you want by creating a parameter with the desired name of your field, followed by some data about that field. Each piece of data is separated by a pipe character (|). Along with some special values, you can specify form validation rules (available validation rules are listed below).
 
@@ -25,7 +23,7 @@ You can now display this input field with a variable:
 
 	{{ noparse }}{{ name }}{{ /noparse }}
 
-## Available Field Types
+{{ docs:header }}Available Field Types{{ /docs:header }}
 
 The following field types are available to be used with the contact form. (Not to be confused with Streams field types, which are separate and for use with streams, not the contact form).
 
@@ -69,7 +67,7 @@ If you want to specify keys, you can:
 
 	subject="dropdown|required|support=Support Request|complimet=Compliment"
 
-## Available Field Validation Rules
+{{ docs:header }}Available Field Validation Rules{{ /docs:header }}
 
 The following rules are available, and are reproduced here from the CodeIgniter validation rules.
 
@@ -197,7 +195,7 @@ The following rules are available, and are reproduced here from the CodeIgniter 
 
 </table>
 
-## Creating an Email Template
+{{ docs:header }}Creating an Email Template{{ /docs:header }}
 
 If you would like to send an email using a template, you can do so by editing the default contact template or creating your own. To see how to create your own email templates, please see the documentation on the <a href="">email template module</a>.
 
@@ -254,7 +252,7 @@ We also have access to all of the fields we put in the contact form in the email
 	{{ name }},
 	{{ email }}
     
-## Form Attributes
+{{ docs:header }}Form Attributes{{ /docs:header }}
 
 The following attributes can be used to customize your form. None of these attributes are required.
 
@@ -377,7 +375,7 @@ The following attributes can be used to customize your form. None of these attri
     </tbody>
 </table>
 
-## Examples
+{{ docs:header }}Examples{{ /docs:header }}
 
     {{ noparse }}{{ contact:form
     name = &quot;text|required&quot;
