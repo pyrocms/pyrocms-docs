@@ -1,18 +1,12 @@
-# Variables
+# Variables Plugin
 
-The _variables_ module you to create variables that are accessible throughout your PyroCMS code. They are a good way to set small bits of text that you or other admins may want to change later. For instance, you can create a variable for the site's official Twitter handle. If it ever changes, it can be easily changable via the variables module. 
+The _variables_ plugin allows you to display variables created in the {{ link uri="modules/variables" title="variables module" }}.
 
-## Creating Variables
-
-To create a new variable, go into the Admin Panel, and select *Variables* from the *Content* menu.
-
-## Using Variables in Templates
+You can use a variable in your layouts like this:
 
 	{{ noparse }}{{ variables:variable_slug }}{{ /noparse }}
 
-Returns the value of your custom variable. Replace variable with the name you assigned it in the Control Panel.
-
-## Example
+### Example
 
 If you create a variable called _twitter\_handle_, you can display it in your site like this:
 
@@ -20,6 +14,4 @@ If you create a variable called _twitter\_handle_, you can display it in your si
 
 You can also check the value using an if statement:
 
-	{{ noarpse }}{{ if twitter_handle }}We are on Twitter!{{ endif }}
-
-<div class="tip">For more information on PyroCMS tags, please visit the <a href="">PyroCMS tags</a> documentation page.</div>
+	{{ noparse }}{{ if twitter_handle }}We are on Twitter!{{ /noparse }}

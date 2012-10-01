@@ -1,6 +1,6 @@
-# Lang Tags
+# Lang Plugin
 
-The _lang_ tag allows access to the language settings for the current logged in user. If no user is logged in, the default site language is used.
+The _lang_ plugin allows access to the language settings for the current logged in user. If no user is logged in, the default site language is used.
 
 ## lang:name
 
@@ -30,7 +30,7 @@ Returns the language code of the current language.
 
 ### Example Output:
 
-	en
+en
 	
 ## lang:direction
 

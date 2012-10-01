@@ -1,8 +1,6 @@
-# Widgets
+# Widgets Plugin
 
-The _widgets_ tag displays widgets data as defined in the Content &gt; Widgets section of the control panel.
-
-## Tags
+The _widgets_ plugin displays widgets data as defined in the **Content &gt; Widgets** section of the control panel.
 
 ## widgets:area
 

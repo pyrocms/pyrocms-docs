@@ -1,4 +1,4 @@
-# URL Tags
+# URL Plugin
 
 The url plugin gives you access to url data and logic.
 

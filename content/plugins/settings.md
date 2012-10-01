@@ -1,10 +1,14 @@
-# Settings Tags
+# Settings Plugin
 
-The _settings_ tag allows access to site settings.
+The _settings_ plugin allows access to site settings.
 
-	{{ noparse }}{{ settings:<em>setting</em> }}{{ /noparse }}
+	{{ noparse }}{{ settings:setting }}{{ /noparse }}
 	
 Returns a setting value. Most are simply text strings edited via the settings tab in PyroCMS. Some, however, are boolean and use 1 for true and 0 for false.
+
+For example, if you want to retrieve the mail_protocol protocol setting value, you can use:
+
+	{{ noparse }}{{ settings:mail_protocol }}{{ /noparse }}
 
 ## Available Settings
 

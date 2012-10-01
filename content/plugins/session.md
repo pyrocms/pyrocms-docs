@@ -1,4 +1,4 @@
-# Session Tags
+# Session Plugin
 
 The _session_ plugin gives you the ability to set and read session data.
 
@@ -37,11 +37,11 @@ If you supply a *value*, it will set the session data and display nothing, other
 
 ### Examples
 
-#### Setting data
+Setting data:
 
 	{{ noparse }}{{ session:data name="color_preference" value="red" }}{{ /noparse }}
 
-#### Displaying data
+Displaying data:
 
 	{{ noparse }}{{ session:data name="color_preference" }}{{ /noparse }}
 
@@ -57,11 +57,11 @@ Flash data is data that is only available for the next page load, then it is des
 
 ### Examples
 
-#### Setting data
+Setting data:
 
 	{{ noparse }}{{ session:flash name="color_preference" value="blue" }}{{ /noparse }}
 
-#### Displaying data
+Displaying data:
 
 	{{ noparse }}{{ session:flash name="color_preference" }}{{ /noparse }}
 
@@ -114,7 +114,7 @@ Each has a different meaning and by default will appear with a class name associ
 
 ### Examples
 
-#### Standard Output
+Standard output:
 
 	{{ noparse }}{{ session:messages }}{{ /noparse }}
 
@@ -122,7 +122,7 @@ Returns:
 
 	<div class="error">There was an error.</div>
 
-#### Custom Classes
+With custom classes:
 
 	{{ noparse }}{{ session:messages success="my_success_class" }}{{ /noparse }}
 

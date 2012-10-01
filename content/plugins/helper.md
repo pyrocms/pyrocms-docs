@@ -1,7 +1,6 @@
-# Helper Tags
+# Helper Plugin
 
 The _helper_ plugin handles useful little things like formatting, language strings, and counting.
-
 
 ## helper:lang
 
@@ -30,14 +29,11 @@ Displays a language string from the current language.
 
 ### Example
 
-#### Displaying data
-
 	{{ noparse }}{{ helper:lang line="global:control-panel" }}{{ /noparse }}
 
-Returns:
+Returns (if the current language is English):
 
-	"Control Panel" (If the current language is English)
-
+	"Control Panel"
 
 ## helper:config
 
@@ -68,10 +64,9 @@ Displays a configuration item.
 
 	{{ noparse }}{{ helper:config item="default_language" }}{{ /noparse }}
 
-Returns:
+Returns (if the default language is English):
 
-	"en" (If the default language is English)
-
+	"en"
 
 ## helper:date
 
@@ -93,7 +88,7 @@ Displays a date in the format defined in Control Panel > Settings or in the form
 			<td width="100">format</td>
 			<td width="100">Set in CP > Settings</td>
 			<td width="100">No</td>
-			<td>The date using php format.</td>
+			<td>The date using [php date formatting](http://php.net/manual/en/function.date.php).</td>
 		</tr>
 		<tr>
 			<td width="100">timestamp</td>

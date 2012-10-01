@@ -1,6 +1,6 @@
-# Navigation Tags
+# Navigation Plugin
 
-The _navigation_ tag creates lists of navigation links based on navigation groups defined in CP &gt; Design &gt; Navigation.
+The _navigation_ plugin creates lists of navigation links based on navigation groups defined in **CP &gt; Design &gt; Navigation**.
 
 ## navigation:links
 
@@ -23,6 +23,12 @@ Creates a list of links for a group.
 			<td width="100">None</td>
 			<td width="100">Yes</td>
 			<td>The navigation group the tag should use.</td>
+		</tr>
+		<tr>
+			<td>group_segment</td>
+			<td>None</td>
+			<td>No</td>
+			<td>If your navigation name is in the URI, you can specify the numeric URI segement here, and it will pull the value from the URI.</td>
 		</tr>
 		<tr>
 			<td>list-tag</td>
@@ -82,7 +88,7 @@ Creates a list of links for a group.
 			<td>indent</td>
 			<td>None</td>
 			<td>No</td>
-			<td>tab or space. Character used to indent the output of source code.</td>
+			<td>'tab' or 'space'. Character used to indent the output of source code.</td>
 		</tr>
 		<tr>
 			<td>link-class</td>

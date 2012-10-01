@@ -1,6 +1,6 @@
-# User Tags
+# User Plugin
 
-The <em>user</em> plugin gives you access to user data and logic.
+The _user_ plugin gives you access to user data and logic.
 
 ## user:logged_in
 
@@ -43,11 +43,11 @@ Identical to the previous function, but instead checks to see if a user is NOT l
 
 The user plugin also gives you access to various user variables using the following syntax:
 
-	{{ noparse }}{{ user:<em>variable</em> }}{{ /noparse }}
+	{{ noparse }}{{ user:variable }}{{ /noparse }}
 
 These calls default to the current logged in user, but you may also specify a user's ID with the optional <em>user_id</em> parameter:
 
-	{{ noparse }}{{ user:<em>variable</em> user_id="4" }}{{ /noparse }}
+	{{ noparse }}{{ user:variable user_id="4" }}{{ /noparse }}
 
 If you are using custom stream fields that return multiple records, you can access the values within as a tag pair:
 
@@ -139,6 +139,10 @@ The profile tag also takes an optional user_id value.
 In the event you want to just show all user profile data in a list, you can do so with this function. Each piece of user data can be accessed via the following variables:
 
 <table>
+		<tr>
+			<th width="20%">Variable</th>
+			<th>Notes</th>
+		</tr>
 	<tr>
 		<td>value</td>
 		<td>Field value. For user profile fields that return multiple values, this will be the alternate canonical display that field types can and should provide.</td>

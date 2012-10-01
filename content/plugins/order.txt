@@ -1,6 +1,7 @@
 asset
 blog
 contact
+current-page
 files
 galleries
 global
