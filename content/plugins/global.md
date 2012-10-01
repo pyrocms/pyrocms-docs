@@ -1,6 +1,6 @@
-# Global
+# Global Plugin
 
-The _global_ plugin gives you access to most constants and global variables listed in [Constants & Globals](http://docs.pyrocms.com/2.1/manual/developers/tools/constants-and-globals)
+The _global_ plugin gives you access to most constants and global variables listed in {{ link title="Constants & Globals" uri="developers/tools/constants-and-globals" }}.
 
 The global plugin's slug is **global**, so it can be used like so:
 
@@ -17,7 +17,7 @@ just like you would the rest of the tag.
 
 Outputs:
 
-    {{ noparse }}{{ addons/default/ }}{{ /noparse }}
+    addons/default/
 
 
 ### Global Variables
@@ -30,4 +30,4 @@ All global variables that are a string can be accessed with this plugin also.
 
 Outputs:
 
-    {{ noparse }}{{ blog }}{{ /noparse }}
+    blog
