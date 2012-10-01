@@ -69,6 +69,7 @@ This example would create a list of thumbnails 200px wide by 150px tall:
 
 	Available Variables:
 	{{ id }}
+	{{ file_id }}
 	{{ folder_id }}
 	{{ user_id }}
 	{{ type }}
@@ -118,7 +119,7 @@ Returns:
 
 ## files:folder_exists
 
-	{{ noparse }}{{ files:folder_exists }}{{ /noparse }}
+	{{ noparse }}{{ files:folder_exists slug="sample_folder" }}{{ /noparse }}
 
 Check if the specified folder really does exist. Returns boolean
 
@@ -143,7 +144,7 @@ Check if the specified folder really does exist. Returns boolean
 
 ## files:exists
 
-	{{ noparse }}{{ files:exists }}{{ /noparse }}
+	{{ noparse }}{{ files:exists id="45" }}{{ /noparse }}
 
 Check if the specified file really does exist. Returns boolean
 
@@ -168,7 +169,7 @@ Check if the specified file really does exist. Returns boolean
 
 ## files:path
 
-	{{ noparse }}{{ files:path }}{{ /noparse }}
+	{{ noparse }}{{ files:path id="45" }}{{ /noparse }}
 
 Returns the filesystem path to the file.
 
@@ -193,7 +194,7 @@ Returns the filesystem path to the file.
 
 ## files:url
 
-	{{ noparse }}{{ files:url }}{{ /noparse }}
+	{{ noparse }}{{ files:url id="45" }}{{ /noparse }}
 
 Returns the url to the file.
 
@@ -218,7 +219,7 @@ Returns the url to the file.
 
 ## files:image_path
 
-	{{ noparse }}{{ files:image_path }}{{ /noparse }}
+	{{ noparse }}{{ files:image_path id="45" }}{{ /noparse }}
 
 Returns the filesystem path to the image.
 
@@ -243,7 +244,7 @@ Returns the filesystem path to the image.
 
 ## files:image_url
 
-	{{ noparse }}{{ files:image_url }}{{ /noparse }}
+	{{ noparse }}{{ files:image_url id="45" }}{{ /noparse }}
 
 Returns the url to the image.
 
@@ -268,7 +269,7 @@ Returns the url to the image.
 
 ## files:image
 
-	{{ noparse }}{{ files:image }}{{ /noparse }}
+	{{ noparse }}{{ files:image id="45" width="100" height="100" mode="fill" }}{{ /noparse }}
 
 Returns an image tag for the specified image.
 
