@@ -1,10 +1,13 @@
 # Custom Theme Basics
 
-PyroCMS supports themes which allow you to easily change the look and feel of your web-site. The way it works is with a master <a href="http://pyrocms.com/docs/glossary#theme-layouts">layout</a> file and multiple <a href="http://pyrocms.com/docs/glossary#theme-partials">partials</a> that share presentation logic between different layouts.
+PyroCMS supports themes which allow you to easily change the look and feel of your web-site. The way it works is with a master {{ link title="layout" uri="theming/theme-layouts" }} file and multiple {{ link title="partials" uri="theming/theme-partials" }} that share presentation logic between different layouts.
 
 ## Creating a theme
 
-Like modules, themes are stored in three places: <dfn>addons/shared_addons/themes (for themes available to all sites) &amp;</dfn><dfn> addons/&lt;site-name&gt;/themes (for themes available to only one specific site),&nbsp;</dfn><dfn> system/pyrocms/themes (for default themes).</dfn>
+Your themes can be stored in one of two places:
+
+	addons/shared_addons/themes (for themes available to all sites)
+	addons/[site-name]/themes (for themes available to only one specific site)
 
 When creating your first theme it's a good idea to look at the default theme and see how it works. You might like to copy it and tweak it to create your own. The default theme is a &quot;core theme&quot; so it is located in <dfn>system/pyrocms/themes/default</dfn>. Copy that to <dfn>addons/</dfn><dfn>shared_addons/</dfn><dfn>themes/custom</dfn> or whatever name you like. Whenever you rename a theme folder you must rename the class name in theme.php to match the folder name.
 
@@ -26,7 +29,7 @@ Each theme has it&#39;s own information. Author, version, web-site, etc. This fi
 
 or
 
-     addons/<site-ref>/themes/my-theme-name/theme.php
+     addons/[site-ref]/themes/my-theme-name/theme.php
 
 No real PHP experience is required to edit this file, just remember to change the last part of &quot;Theme\_Custom&quot; to match your folder. It must always start with &quot;Theme\_&quot; and then have the folder name with the first letter capitalized. As mentioned below in the Theme Options section the &quot;public $options&quot; array is optional. If you do not want to add options, simply remove that section.
 

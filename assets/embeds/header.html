@@ -16,8 +16,6 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-
   {{ asset:css file="normalize.css" }}
 	{{ asset:css file="main.css" }}
 	{{ asset:css file="shCore.css" }}
@@ -99,6 +97,11 @@
 <p><strong>{{ link uri="concepts" title="Important Concepts" }}</strong></p>
 {{ if segment_1 == 'concepts'}}
   {{ nav:auto start="concepts" }}
+{{ endif }}
+
+<p><strong>{{ link uri="theming" title="Theming Guide" }}</strong></p>
+{{ if segment_1 == 'theming'}}
+  {{ nav:auto start="theming" }}
 {{ endif }}
 
 <p><strong>{{ link uri="modules" title="Core Modules" }}</strong></p>
