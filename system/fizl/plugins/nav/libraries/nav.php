@@ -137,7 +137,6 @@ class Nav extends Plugin {
 
 			$order = directory_map(FCPATH.$this->CI->vars['site_folder'].'/'.implode('/', $this->segs), 1);
 
-
 			$ord = array();
 
 			foreach($order as $o)
@@ -211,7 +210,7 @@ class Nav extends Plugin {
 				
 		$this->CI->load->helper('directory');
 								
-		$map = directory_map(FCPATH.$this->CI->vars['site_folder'].'/'.implode('/', $this->segs), 2);
+		$map = directory_map(FCPATH.$this->CI->vars['site_folder'].'/'.implode('/', $this->segs), 3);
 		
 		if(!$map) return;
 
