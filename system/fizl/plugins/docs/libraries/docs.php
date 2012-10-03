@@ -22,7 +22,7 @@ class Docs extends Plugin {
 	{
 		$title = ($this->tag_content) ? $this->tag_content : $this->get_param('title');
 
-		return '<h2 id="'.url_title($title, 'dash', true).'">'.$title.'</h2>';
+		return '<h2 id="'.url_title($title, 'dash', true).'">'.$title.' <a href="'.current_url().'#top">^</a></h2>';
 	}
 
 }
