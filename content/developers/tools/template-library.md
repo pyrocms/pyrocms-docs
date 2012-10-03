@@ -8,23 +8,17 @@ The template library powers all out the output on the PyroCMS public and admin p
 
 Sets the title of the page. You can send as many title parameters as you'd like, although the first one is required. Your titles will be imploded with the title string separator.
 
-#### Example:
-
 	$this->template->title('The Current Page');
 
 ### build(<var>$view, [$data]</var>)
 
 The build function is what builds the output for the browser in PyroCMS and is used in lieu of simply loading a view. It will take the theme data, layout, and build those elements automatically, so your view file only needs to contain the actual page content. 
 
-#### Example:
-
 	$this->template->build('form', $this->data);
 
 ### set(<var>$var_name, $var_value</var>)
 
 Sets data that can be used in your views. You can provide two strings or an array.
-
-#### Example:
 
 Two strings of data:
 
@@ -38,23 +32,17 @@ Array of data:
 
 Adds a string to the start of the auto-generated metadata output.
 
-#### Example:
-
 	$this->template->prepend_metadata('<script src="/js/jquery.js"></script>');
 	
 ### append_metadata(<var>$string</var>)
 
 Adds a string to the end of the auto-generated metadata output.
 
-#### Example:
-
 	$this->template->append_metadata('<script src="/js/jquery.flot.js"></script>');
 	
 ### set\_layout(<var>$layout\_name</var>)
 
 Allows you to set a layout from your **your_theme/views/layouts** folder.
-
-#### Example:
 
 	// This will use your_theme/views/layouts/two_col.html
 	// as the page layout.
@@ -66,8 +54,6 @@ Allows you to set a layout from your **your_theme/views/layouts** folder.
 
 Allows you to set a theme.
 
-#### Example:
-
 	$this->template->set_theme('my_theme');
 	
 <div class="tip"><strong>Note:</strong> As with set_layout, the theme is already set when extending either the Public\_Controller and Admin\_Controller.</div>
@@ -76,15 +62,11 @@ Allows you to set a theme.
 
 This allows you to enable the PyroCMS Lex tag parser. When the tag parser is off, PyroCMS tags will not work in your views.
 
-#### Example
-
 	$this->template->enable_parser(true);
 
 ### enable_minify(<var>bool</var>)
 
 Enables/disables the minification of assets added via the template library.
-
-#### Example
 
 	$this->template->enable_minify(true);
 
