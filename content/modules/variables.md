@@ -22,4 +22,3 @@ You can also check the value using an if statement:
 
 	{{ noarpse }}{{ if twitter_handle }}We are on Twitter!{{ endif }}
 
-<div class="tip">For more information on PyroCMS tags, please visit the <a href="">PyroCMS tags</a> documentation page.</div>

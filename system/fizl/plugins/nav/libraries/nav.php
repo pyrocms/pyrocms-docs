@@ -94,7 +94,7 @@ class Nav extends Plugin {
 			
 			endif;
 			
-			// Creat link
+			// Create link
 			$html .= 'level_'.$tmp_level.'"><a href="';
 						
 			if(strpos($pieces[0], 'http://')!==FALSE or strpos($pieces[0], 'https://')!==FALSE):
@@ -189,6 +189,14 @@ class Nav extends Plugin {
 		$html .= '</ul>';	
 				
 		return $html;
+	}
+
+	function is_current($segs)
+	{
+		if (implode('/', $segs) == $this->CI->uri->uri_string())
+		{
+			
+		}
 	}
 
 	/**

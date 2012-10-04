@@ -142,12 +142,14 @@ a {
 #menu {
     float: left;
     width: 180px;
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
 #menu ul {
     list-style-type: none;
     margin-left: 2px;
-    padding-left: 10px;
+    padding-left: 14px;
     width: 180px;
     margin-bottom: 2px;
     margin-top: 0!important;
