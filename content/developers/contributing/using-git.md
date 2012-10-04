@@ -14,7 +14,7 @@ You will be set up with a new repository which is a copy of ours. That means you
 
 	git clone git@github.com:yourusername/pyrocms.git -b 2.1/develop
 
-Now you can edit away on the source code and everything is tracked. When you commit your work *please* commit carefully and do not send use your config.php or database.php files in the changes.
+Now you can edit away on the source code and everything is tracked. When you commit your work *please* commit carefully and do not send us your config.php or database.php files in the changes.
 
 ## Making a Pull Request
 
