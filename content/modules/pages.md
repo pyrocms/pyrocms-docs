@@ -62,7 +62,7 @@ You'll notice that on a default install of PyroCMS there are some pages already 
 	</tr>
 	<tr>
 		<td>Home</td>
-		<td>Every site needs a home page! The home page is like any other page, it just has **Is default (home) page?** selected under the **Options** tab.</td>
+		<td>Every site needs a home page! The home page is like any other page, it just has <strong>Is default (home) page?</strong> selected under the <strong>Options</strong> tab.</td>
 	</tr>
 	<tr>
 		<td>Page Missing</td>

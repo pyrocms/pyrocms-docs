@@ -191,7 +191,7 @@ If you have a client you just want to have edit entries, and not have any contro
 
 {{ docs:header }}Displaying Your PyroStreams Data{{ /docs:header }}
 
-Once you have your data structures set up, you'll want to display it in some form in your page layouts and templates. To do that, you can use the {{ link title="PyroStreams plugin" uri="plugin/streams" }}.
+Once you have your data structures set up, you'll want to display it in some form in your page layouts and templates. To do that, you can use the {{ link title="PyroStreams plugin" uri="plugins/streams" }}.
 
 {{ docs:header }}Resources{{ /docs:header }}
 

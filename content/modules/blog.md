@@ -124,15 +124,15 @@ The blog module will also add an application/rss+xml link tag to the header of a
 
 {{ docs:header }}Customizing the Blog{{ /docs:header }}
 
-The blog can be customized via {{ link title="view overloading" uri="" }} in your theme. There you can adapt the code to suit your display needs.
+The blog can be customized via {{ link title="view overloading" uri="theming/overloading-module-views" }} in your theme. There you can adapt the code to suit your display needs.
 
 {{ docs:header }}Blog Widgets{{ /docs:header }}
 
 The blog module has a lot of handy widgets. A common practice is to create a blog widget area to show on the left/right hand side of the blog indexes.
 
-* {{ link title="Blog Archive Widget" uri="" }}
-* {{ link title="Blog Categories Widget" uri="" }}
-* {{ link title="Latest Blog Posts Widget" uri="" }}
+* {{ link title="Blog Archive Widget" uri="widgets/blog-archive" }}
+* {{ link title="Blog Categories Widget" uri="widgets/blog-categories" }}
+* {{ link title="Latest Blog Posts Widget" uri="widgets/blog-latest-posts" }}
 
 {{ docs:header }}Blog Tags{{ /docs:header }}
 

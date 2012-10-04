@@ -37,7 +37,7 @@ You can either drag multiple files into the dotted area to upload them, or click
 
 {{ asset:img file="docs/files\_module\_uploading.png" alt="Folder Upload Menu" class="doc_image" }}
 
-You can select a height and/or width to resize the image to (if your upload is an image), and if your resized image should stay the same ration. You can upload individual files by clicking the green array button, or remove a file from the upload queue wih the red icon. To upload all of the files in your queue, just select **Upload**.
+You can select a height and/or width to resize the image to (if your upload is an image), and if your resized image should stay the same ratio. You can upload individual files by clicking the green array button, or remove a file from the upload queue wih the red icon. To upload all of the files in your queue, just select **Upload**.
 
 ### Where are my files stored?
 
@@ -112,7 +112,7 @@ The following metadata is shown for each file:
 	</tr>
 	<tr>
 		<td>Description</td>
-		<td>The description that you give the file. Click **Save** to save the description when you modify it.</td>
+		<td>The description that you give the file. Click <strong>Save</strong> to save the description when you modify it.</td>
 	</tr>
 </table>
 

@@ -14,7 +14,7 @@ You can search and filter them using the filter tools. Typing into the text box 
 
 {{ docs:header }}Creating a New User{{ /docs:header }}
 
-To register a new user on your site, click on **+ Add User** and fill out the user form. At the very least, you need to provide an email address, username, password, display name, and whatever fields you have set to required. The display name is what will be used when the system needs to display the proper name of the user.
+To register a new user on your site, click on **+ Add User** and fill out the user form. At the very least, you need to provide an email address, username, password, display name, and whatever profile fields you have set to required. The display name is what will be used when the system needs to display the proper name of the user.
 
 {{ asset:img file="docs/users/add\_user.png" alt="Add New User" class="doc_image" }}
 
