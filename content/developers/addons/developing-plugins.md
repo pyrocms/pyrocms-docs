@@ -45,13 +45,14 @@ This is the Session plugin which can be found in <def>system/pyrocms/plugins/ses
 			$name = $this->attribute('name');
 			$value = $this->attribute('value');
 
-			// Mo vaue? Just getting
-			if ($value !== NULL)
+			// If we have a value, let's set it.
+			if ($value)
 			{
 				$this->session->set_userdata($name, $value);
 				return;
 			 }
 
+			// Otherwise, we need to retrieve the value.
 			return $this->session->userdata($name);
 		}
 
@@ -71,20 +72,21 @@ This is the Session plugin which can be found in <def>system/pyrocms/plugins/ses
 			$name = $this->attribute('name');
 			$value = $this->attribute('value');
 
-			// No value? Just getting
-			if ($value !== NULL)
+			// If we have a value, let's set it.
+			if ($value)
 			{
 				$this->session->set_flashdata($name, $value);
 				return;
 			 }
 
+			// Otherwise, we need to retrieve the value.
 			return $this->session->flashdata($name);
 		}
 	}
 
 	/* End of file theme.php */
 
-In the above code, please note a new important items:
+In the above code, please note a few important items:
 
 * The class name is **Plugin_** followed by the plugin name (lowercase with the first letter in uppercase).
 * The plugin class extend the class **Plugin**.
@@ -117,10 +119,10 @@ Plugins have some features built into them in order to easily handle tag pairs. 
 {{ blog:posts limit="5" order-by="title" }}
     &lt;h2>{{ title }}</h2>
     &lt;p>Written by: &lt;a href="/users/profile/{{ author_id }}">{{ author_name }}&lt;/a>&lt;/p>
-{{ /blog:posts  }}
+{{ /blog:posts }}
     {{ /noparse }}
 
-The top tag takes parameters, and there is a bottom closing tag. Inside the tag, there are variables that we need to replace with data, returning just a string will not do it.
+The top tag takes parameters, and there is a bottom closing tag. Inside the tag, there are variables that we need to replace with multiple sets of data.
 
 In cases like these, we can return an associative array data structure from our plugin function, and the variables will be replaced with the data we send. In this case, we can return an array of blog entries to this tag from the plugin file will cause the tag parser to loop through each array node (each blog post in our case) and replace the variables between the opening and closing tags with the variables you have defined.
 
@@ -139,15 +141,39 @@ Here is an example of what we could return:
 		)
 	);
 
-You woud want to query the database to get the right blog posts, but that is the general idea.
-
 It is possible to even send variables that are associative arrays and these can be looped through in within the tags:
 
-	{{ noparse }}
-{{ categories }}
-	{{ category_name }}
-{{ /categories}}
-    {{ /noparse }}
+	return array(
+		array(
+			'title'			=> 'First Blog Post',
+			'author_id'		=> 1,
+			'author_name'	=> 'Phil Sturgeon',
+			'categories'	=> array(
+						array('category_name' => 'PyroCMS'),
+						array('category_name' => 'Phil Sturgeon')
+					)
+		),
+		array(
+			'title'			=> 'Second Blog Post',
+			'author_id'		=> 2,
+			'author_name'	=> 'Jerel Unruh',
+			'categories'	=> array(
+						array('category_name' => 'PyroCMS'),
+						array('category_name' => 'Jerel Unruh')
+					)
+		)
+	);
+
+You can use the extra categories array we have added here like this:
+
+    {{ noparse }}
+{{ blog:posts limit="5" order-by="title" }}
+    &lt;h2>{{ title }}</h2>
+    &lt;p>Written by: &lt;a href="/users/profile/{{ author_id }}">{{ author_name }}&lt;/a>&lt;/p>
+	{{ categories }}
+		{{ category_name }}
+	{{ /categories}}
+{{ /blog:posts }}{{ /noparse }}
 
 ### Tag Pair Raw Content
 
@@ -155,7 +181,7 @@ You can also get and use the full content between the tags in a plugin by callin
 
 	$this->content();
 
-The tag pair content can be modified before parsing it by calling up the Lex parser itself and returning a string:
+If you want to parse the content between your tags with the Lex parser, the tag pair content can be modified before parsing by running it through a parser instance:
 
 	$parser = new Lex_Parser();
 	$parser->scope_glue(':');

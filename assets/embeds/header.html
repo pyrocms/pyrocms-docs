@@ -1,125 +1,109 @@
-<!doctype html>
-
-<!--[if lt IE 7]> 
-	<html class="nojs ms lt_ie7" lang="en"> 
-<![endif]-->
-
-<!--[if IE 7]>    
-	<html class="nojs ms ie7" lang="en"> 
-<![endif]-->
-
-<!--[if IE 8]>    
-	<html class="nojs ms ie8" lang="en"> 
-<![endif]-->
-
-<!--[if gt IE 8]> 
-	<html class="nojs ms" lang="en"> 
-<![endif]-->
-
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+	<title>{{ variables:get_var name="title" }} | {{ site_title }}</title>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width">
-	<meta name="description" content="PyroCMS Documentation">
 	<meta name="author" content="PyroCMS Dev Team">
-	
+
 	<base href="{{ base_url }}" /> 
 
-  	<title>{{ variables:get_var name="title" }} | {{ site_title }}</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
 
-  	{{ asset:css file="style.css" }}
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
-  	<script src="assets/js/libs/modernizr.js"></script>
-</head>
-
-<body>
+  {{ asset:css file="normalize.css" }}
+	{{ asset:css file="main.css" }}
+	{{ asset:css file="shCore.css" }}
+	{{ asset:css file="shCoreMidnight.css" }}
 	
-	<!-- header -->
-	<header>
-		<div class="wrapper">
-			<div id="logo">
-				<h1><a href="http://pyrocms.com" title="Home">{{ asset:img file="logo.png" }}</a></h1>
-			</div>
-			<nav id="primary">
-				<ul>
-					<li{{ if segment_1 == 'general' }} class="current"{{ endif }}>{{ link uri="general" title="General Info" }}</li>
-					<li{{ if segment_1 == 'modules-and-tags' }} class="current"{{ endif }}>{{ link uri="modules-and-tags" title="Modules &amp; Tags" }}</li>
-					<li{{ if segment_1 == 'developers' }} class="current"{{ endif }}>{{ link uri="developers" title="Developers" }}</li>
-					<li{{ if segment_1 == 'pyrocms-pro' }} class="current"{{ endif }}>{{ link uri="pyrocms-pro" title="PyroCMS Pro" }}</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<!-- /header -->
-	
-	<!-- content -->
-	<section id="content">
-		<div class="wrapper">
+	{{ asset:js file="shCore.js" }}
+	{{ asset:js file="shBrushPhp.js" }}
+	{{ asset:js file="shBrushLex.js" }}
+  {{ asset:js file="jquery.scrollTo.js" }}
 
-			<!-- doc_menu -->
-			<div id="doc_menu">
-                                <h5>TABLE OF CONTENTS</h5>
-                                {{ if !segment_1 }}
-                                    <ul>
-					<li{{ if segment_1 == 'general' }} class="current"{{ endif }}>{{ link uri="general" title="General Info" }}</li>
-					<li{{ if segment_1 == 'modules-and-tags' }} class="current"{{ endif }}>{{ link uri="modules-and-tags" title="Modules &amp; Tags" }}</li>
-					<li{{ if segment_1 == 'developers' }} class="current"{{ endif }}>{{ link uri="developers" title="Developers" }}</li>
-					<li{{ if segment_1 == 'pyrocms-pro' }} class="current"{{ endif }}>{{ link uri="pyrocms-pro" title="PyroCMS Pro" }}</li>
-				</ul>
-                                {{ endif }}
-				{{ if segment_1 == 'general' }}
-					<p><strong>About PyroCMS</strong></p>
-					{{ nav:auto start='general/about' }}
+	<style>body {padding-top: 60px;}</style>
 
-					<p><strong>Getting Started</strong></p>
-					{{ nav:auto start='general/getting-started' }}
-		
-					<p><strong>Alternate Server Environments</strong></p>
-					{{ nav:auto start='general/getting-started/alternate-server-environments' }}	
+<script>
+  (function() {
+    var cx = '011560597292813989536:zrkugzueves';
+    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
 
-					<p><strong>Basics</strong></p>
-					{{ nav:auto start='general/basics' }}
+  </head>
 
-					<p><strong>Theming</strong></p>
-					{{ nav:auto start='general/theming' }}
-				{{ endif }}
+  <body>
 
-				{{ if segment_1 == 'modules-and-tags' }}
-					<p><strong>Tag Reference</strong></p>
-					{{ nav:auto start='modules-and-tags/tag-reference' }}	
-				{{ endif }}
+    <div id="container">
 
-				{{ if segment_1 == 'developers' }}
-					<p><strong>Developer Basics</strong></p>
-					{{ nav:auto start='developers/basics' }}	
+        <h3><a href=""><img src="assets/img/logo.png" /></a></h3>
 
-					<p><strong>Contributing to PyroCMS</strong></p>
-					{{ nav:auto start='developers/contributing' }}	
+         <div id="box">
 
-					<p><strong>Add-on Development</strong></p>
-					{{ nav:auto start='developers/addons' }}
-		
-					<p><strong>Module Development</strong></p>	
-					{{ nav:auto start='developers/addons/modules' }}
+          <div class="breadcrumbs"><strong>PyroCMS 2.1</strong> | {{ breadcrumbs:crumbs }}</div>
 
-					<p><strong>Developer Tools</strong></p>
-					{{ nav:auto start='developers/tools' }}	
+<div id="menu">
 
-					<p><strong>Streams Core API</strong></p>
-					{{ nav:auto start='developers/tools/streams-api' }}	
-				{{ endif }}
+<p><strong>{{ link uri="about" title="About PyroCMS" }}</strong></p>
+{{ if segment_1 == 'about'}}
+  {{ nav:auto start="about" }}
+{{ endif }}
 
-				{{ if segment_1 == 'pyrocms-pro' }}
-					<strong>About</strong>
-					{{ nav:auto start='pyrocms-pro/about' }}	
+<p><strong>{{ link uri="setup" title="Installing &amp; Upgrading" }}</strong></p>
+{{ if segment_1 == 'setup'}}
+  {{ nav:auto start="setup" }}
+{{ endif }}
 
-					<strong>Features</strong>
-					{{ nav:auto start='pyrocms-pro/features' }}	
-				{{ endif }}
-		</div>
-		<!-- /doc_menu -->
+<p><strong>{{ link uri="concepts" title="Important Concepts" }}</strong></p>
+{{ if segment_1 == 'concepts'}}
+  {{ nav:auto start="concepts" }}
+{{ endif }}
 
-		<!-- main -->
-		<div id="main">
+<p><strong>{{ link uri="theming" title="Theming Guide" }}</strong></p>
+{{ if segment_1 == 'theming'}}
+  {{ nav:auto start="theming" }}
+{{ endif }}
+
+<p><strong>{{ link uri="modules" title="Core Modules" }}</strong></p>
+{{ if segment_1 == 'modules' }}
+  {{ nav:auto start="modules" }}
+{{ endif }}
+
+<p><strong>{{ link uri="plugins" title="Core Plugins" }}</strong></p>
+{{ if segment_1 == 'plugins' }}
+  {{ nav:auto start="plugins" }}
+{{ endif }}
+
+<p><strong>{{ link uri="widgets" title="Core Widgets" }}</strong></p>
+{{ if segment_1 == 'widgets' }}
+  {{ nav:auto start="widgets" }}
+{{ endif }}
+
+<p><strong>{{ link uri="field-types" title="Core Field Types" }}</strong></p>
+{{ if segment_1 == 'field-types' }}
+  {{ nav:auto start="field-types" }}
+{{ endif }}
+
+<p><strong>{{ link uri="developers" title="Developer Docs" }}</strong></p>
+{{ if segment_1 == 'developers' }}
+  {{ nav:auto start="developers" }}
+{{ endif }}
+
+<p><strong>{{ link uri="pro" title="PyroCMS Pro" }}</strong></p>
+{{ if segment_1 == 'pro' }}
+  {{ nav:auto start="pro" }}
+{{ endif }}
+
+<p><strong>{{ link uri="search" title="Search the Docs" }}</a></strong></p>
+
+</div><!--#menu-->
+
+<div id="content">

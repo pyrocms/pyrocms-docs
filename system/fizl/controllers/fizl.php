@@ -25,6 +25,30 @@ class Fizl extends CI_Controller {
 	 */
 	public function _remap()
 	{
+		// -------------------------------------
+		// Redirects
+		// -------------------------------------
+		// You can put your redirects in
+		// assets/redirects.php
+		// -------------------------------------
+
+		$uri = implode('/', $this->uri->segment_array());
+
+		if (file_exists(FCPATH.'assets/redirects.php') and $uri)
+		{
+			@include(FCPATH.'assets/redirects.php');
+
+			if (isset($redirects) and is_array($redirects) and array_key_exists($uri, $redirects))
+			{
+				$this->load->helper('url');
+				redirect($redirects[$uri], 301);
+			}
+		}
+
+		// -------------------------------------
+		// Loads
+		// -------------------------------------
+
 		$this->load->library('Plugin');
 		$this->load->library('Parse');
 		

@@ -4,12 +4,12 @@ Widgets are quite similar to <a href="/docs/glossary#plugins">Plugins</a> in the
 
 <a href="/docs/glossary#widget-areas">Widget Areas</a> can be defined (header, sidebar, blog page footers, etc) then Widget Instances can be added in them. Available Widgets currently include HTML blocks, Twitter Feeds, RSS Feeds, Google Maps and Social Bookmarks. More will be included over time, and you can make your own very easily.
 
-##Where do i put my widgets?
+## Where do I put my widgets?
 
 Widgets can be stored directly in three places
 
 * the /addons/&lt;site-ref&gt;/widgets/*&lt;widget-name&gt;* folder
-* or the /addons/shared_addons/widgets/*&lt;widget-name&gt;* folder
+* or the /addons/shared\_addons/widgets/*&lt;widget-name&gt;* folder
 * or inside a module folder for example: /addons/modules/*&lt;module-name&gt;/widgets/&lt;widget-name&gt;*
 
 ## What are the main components of a widget

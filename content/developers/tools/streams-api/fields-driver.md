@@ -1,15 +1,15 @@
 # Streams API Fields Driver
 
-The fields driver is used to create and manipulate fields.
+The fields driver is used to create and manipulate fields. Fields are instances of field types that contain the name/slug of the field and values for their preferences. 
 
 You can call the fields driver like this:
 
 	$this->load->driver('Streams');
 	$this->streams->fields->function();
 
-<hr id="add-field">
+The following functions are available in the Streams API fields driver:
 
-## add_field(<var>$field</var>)
+## add\_field(<var>$field</var>)
 
 Creates a field. The function takes a single array which can have the following data:
 	
@@ -26,7 +26,7 @@ Creates a field. The function takes a single array which can have the following 
 	</tr>
 	<tr>
 		<td><strong>namespace</strong>
-		<td>A namespace for your field. This should be the namespace of the module or where .</td>
+		<td>A namespace for your field. This should be the namespace of the stream or streams you plan to assign this field to.</td>
 	</tr>
 	<tr>
 		<td><strong>type</strong>
@@ -47,7 +47,7 @@ Creates a field. The function takes a single array which can have the following 
 	$field = array(
 		'name'			=> 'Question',
 		'slug'			=> 'question',
-		'namespace'		=> 'streams_sample',
+		'namespace'		=> 'faq',
 		'type'			=> 'text',
 		'extra'			=> array('max_length' => 200),
 		'assign'		=> 'faqs',
@@ -68,7 +68,7 @@ Allows you to add an array of fields in the same format of add_field() above.
 		array(
 			'name'			=> 'Question',
 			'slug'			=> 'question',
-			'namespace'		=> 'streams_sample',
+			'namespace'		=> 'faq',
 			'type'			=> 'text',
 			'extra'			=> array('max_length' => 200),
 			'assign'		=> 'faqs',
@@ -79,7 +79,7 @@ Allows you to add an array of fields in the same format of add_field() above.
 		array(
 			'name'			=> 'Answer',
 			'slug'			=> 'answer',
-			'namespace'		=> 'streams_sample',
+			'namespace'		=> 'faq',
 			'type'			=> 'textarea',
 			'assign'		=> 'faqs',
 			'required'		=> true
@@ -113,9 +113,9 @@ Assigns a field to a stream. These must both be in the same namespace. The last 
 
 ### Example
 
-	$this->streams->fields->assign_field('streams_sample', 'faqs', 'question', array('required' => true));
+	$this->streams->fields->assign_field('faq', 'faqs', 'question', array('required' => true));
 	
-<div class="tip"><strong>Note:</strong> If you use the assign option when adding a field, you do not need to assign it.</div>
+<div class="tip"><strong>Note:</strong> If you use the assign option when adding a field, you do not need to assign it again using this function.</div>
 
 ## deassign\_field(<var>$namespace, $stream\_slug, $field\_slug</var>)
 
@@ -123,23 +123,23 @@ Deassigns a field from a stream. This will not only remove the assignment, but a
 
 ### Example:
 
-	$this->streams->fields->deassign_field('streams_sample', 'faqs', 'question');
+	$this->streams->fields->deassign_field('faq', 'faqs', 'question');
 
 ## delete\_field(<var>$field\_slug, $namespace</var>)
 
-Deletes a field and the field assignment.
+Deletes a field and all field assignments for the field.
 
 ### Example:
 
-	$this->streams->fields->delete_field('question', 'streams_sample');
+	$this->streams->fields->delete_field('question', 'faq');
 	
 ## get\_field\_assignments(<var>$field\_slug, $namespace</var>)
 
-Get the assignments for a give field.
+Get the assignments for a given field.
 
 ### Example:
 
-	$this->streams->fields->get_field_assignments('question', 'streams_sample');
+	$this->streams->fields->get_field_assignments('question', 'faq');
 
 Returns:
 
@@ -150,8 +150,8 @@ Returns:
 	            [id] => 10
 	            [stream_name] => FAQs
 	            [stream_slug] => faqs
-	            [stream_namespace] => streams_sample
-	            [stream_prefix] => sample_
+	            [stream_namespace] => faq
+	            [stream_prefix] => faq_
 	            [about] => 
 	            [view_options] => 
 	            [title_column] => question

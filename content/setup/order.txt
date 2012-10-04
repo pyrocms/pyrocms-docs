@@ -1,0 +1,6 @@
+server-requirements
+installation
+upgrade-guides
+removing-indexphp-from-urls | Removing index.php from URLs
+environments
+pyrocms-folder-structure | PyroCMS Folder Structure

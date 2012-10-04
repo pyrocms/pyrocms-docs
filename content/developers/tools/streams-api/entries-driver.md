@@ -1,6 +1,6 @@
 # Streams API Entries Driver
 
-The entries driver is used to get entries (database table rows) from a stream.
+The entries driver is used to get entries from a stream. Entries are the rows in your stream.
 
 You can call the entries driver like this:
 
@@ -17,7 +17,7 @@ The params array contains all of the data to affect what data you get back from 
 
 	$params = array(
 			'stream' 		=> 'faqs',
-			'namespace'		=> 'streams_sample'
+			'namespace'		=> 'faq'
 	);
 	
 	$entries = $this->streams->entries->get_entries($params);
@@ -187,40 +187,43 @@ The **get_entry()** function allows you to get a single entry. If you'd like to 
 
 Allows you to delete an entry.
 
-## insert\_entry(<var>$entry\_data, $stream\, $namespace,$skips=array(), $extra = array()</var>)
+## insert\_entry(<var>$entry\_data, $stream\_slug, $namespace\_slug, $skips = array(), $extra = array()</var>)
 
-Allows you to add an entry in the stream. 
+Allows you to add an entry in a stream.
 
-$entry_data  = array()
-ex : 
-	$data=array(
-		"category-name"=>"test"
-	);
+### $entry\_data
 
-$stream = int,slug,or object
+The **entry\_data** parameter is an array of values for each field. This data is not run through any field validation (for required, unique, etc). Keep in mind that many field types have a **pre\_save** function that formats data before it gets to the database columns.
 
-$namespace = string
+### $skips
 
-$skips = fiel slugs to skip
+The **$skips** parameter is an array of field slugs that you would like streams to ignore. These fields will not be processed to included in the entry.
 
-$extra = extra datat to add in
+### $extra
+
+The **$extra** parameter is an associative array of data to be added to the database by bypassing any field formatting. For instance, if you have a field that you added to your streams table without using a field and field type, you could include that data there, and the insert\_entry function would simply add it to the data to be inserted.
+
+### Example
+
+	$entry_data = array(
+			'question' 	=> 'Why is the sky blue?',
+			'answer'	=> 'Because of science.'
+		);
+	$this->streams->entries->insert_entry($entry_data, 'faqs', 'faq');
+
+In this example, we have extra data.
+
+	$entry_data = array(
+			'question' 	=> 'Why is the sky blue?',
+			'answer'	=> 'Because of science.'
+		);
+	$this->streams->entries->insert_entry($entry_data, 'faqs', 'faq', array(), array('not_added_by_streams' => 'extra value'));
 
 ## update\_entry(<var>$entry\_id, $entry\_data, $stream\, $namespace,$skips=array(), $extra = array()</var>)
 
-Allows you to update an entry in the stream. 
+Allows you to update an entry in the stream. Identical to insert\_stream, except the first parameter is the id of the entry you want to update.
 
-$entry_id = int
-
-$entry_data  = array()
-ex : 
-	$data=array(
-		"category-name"=>"test"
-	);
-
-$stream = int,slug,or object
-
-$namespace = string
-
-$skips = fiel slugs to skip
-
-$extra = extra datat to add in
+	$entry_data = array(
+			'answer'	=> 'Because of magic.'
+		);
+	$this->streams->entries->insert_entry(2, $entry_data, 'faqs', 'faq');

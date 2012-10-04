@@ -42,4 +42,4 @@ You can also return an array or a string with the following methods:
 	Keywords::get_array($hash);
 	Keywords::get_string($hash);
 
-For more on usage search for "Keywords" in the [API Documentation](/2.1/api).
+For more on usage see the [API Documentation: Keywords](/2.1/api/classes/Keywords.html).

@@ -1,35 +1,73 @@
-			</div>
+			</div><!--#content-->
 			<!-- /main -->
 			
-		</div>
-	</section>
-	<!-- /content -->
 	
-	<!-- footer -->
-	<footer>
-		<div class="wrapper">
-			<div class="one_quarter">
-				<ul>
-					<li>&copy;2010 - {{ current_year }} PyroCMS</li>
-				</ul>	
-			</div>
+  </div><!--#box-->
 
-			<div class="one_quarter">
-				<ul>
-					<li><a href="http://www.pyrocms.com">PyroCMS.com</a></li>
-					<li><a href="https://github.com/pyrocms/pyrocms">PyroCMS on GitHub</a></li>
-					<li><a href="https://github.com/pyrocms/pyrocms-docs">PyroCMS Docs on GitHub</a></li>
-				</ul>	
-			</div>
-		</div>
-	</footer>
+	<!-- footer -->
+	<div id="footer">
+				
+    <p>Find an issue? <a href="https://github.com/pyrocms/pyrocms-docs">Report it on the PyroCMS docs GitHub repo</a></li>
+     <p>&copy;2010 - {{ current_year }} PyroCMS</p>
+
+	</div>
 	<!-- /footer -->
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/libs/jquery.js"><\/script>')</script>
+	<script>
 
-	{{ asset:js file="plugins.js" }}
-	{{ asset:js file="script.js" }}
+  	$('[href^=#]').click(function (e) {
+      e.preventDefault()
+    })
+
+    $('.subnav a').click(function(){
+    	$.scrollTo($(this).attr('href'), 100, {offset: {top: -150, left: 0}});
+    });
+
+   // $('.subnav').scrollspy();
+
+	SyntaxHighlighter.all();
+
+
+    // fix sub nav on scroll
+    var $win = $(window)
+      , $nav = $('.subnav')
+      , $nav_sub = $('.subnav .nav')
+	  , navHeight = $('.navbar').first().height()
+      , navTop = $('.subnav').length && $('.subnav').offset().top - navHeight
+      , isFixed = 0
+
+    processScroll();
+
+    $win.on('scroll', processScroll);
+
+    function processScroll()
+    {
+      var i, scrollTop = $win.scrollTop()
+      if (scrollTop >= navTop && !isFixed)
+      {
+        isFixed = 1;
+        $nav.addClass('subnav-fixed');
+        $nav_sub
+        		.wrap('<div class="container" />')
+        		.wrap('<div class="row" />');
+
+      } else if (scrollTop <= navTop && isFixed) {
+        isFixed = 0;
+        $nav.removeClass('subnav-fixed');
+        $nav_sub
+        		.unwrap('<div class="container" />')
+        		.unwrap('<div class="row" />');
+      }
+    }
+
+    $('#toggle_search_link').click(function() {
+
+    	$('#search_toggle').slideToggle('fast');
+
+    });
+
+	</script>
+
 
 </body>
 </html>

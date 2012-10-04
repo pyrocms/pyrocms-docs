@@ -1,23 +1,13 @@
-# Welcome to PyroCMS
+# Welcome to the PyroCMS Docs
 
-<div class="intro">
-<p class="flarge muted">If you are new to PyroCMS, we recommend starting with the Getting Started docs in order to get PyroCMS up and running, and then taking a look through the Basics to get the core concepts down.</p>
-</div>
+If you're looking for information on how to use PyroCMS, you've come to the right place!
 
-<h3>General Info</h3>
-<p class="flarge muted">In the {{ link uri="general" title="General Info" }} section, you can find documentation on installing and using PyroCMS, including using and building themes.</p>
+If you are new to PyroCMS, a good place to start would be the {{ link title="Important Concepts" uri="concepts" }} section, which outlines the core concepts that PyroCMS operates on that you'll need to know going forwards.
 
-<hr>
+If you are a developer, head on over to our {{ link title="developer docs" uri="developers" }}, where you'll find information on how to extend the functionality of PyroCSM.
 
-<h3>Modules &amp; Tags</h3>
-<p class="flarge muted">In the {{ link uri="modules-and-tags" title="Modules &amp; Tags" }} section, you can find reference of tag functions, as well as documentation for modules.</p>
+If you are a designer, check out the {{ link title="theming guide" uri="theming" }}, which outlines the process of creating a theme for PyroCMS.
 
-<hr>
+If you need help, check out the [PyroCMS support index](https://www.pyrocms.com/support), which outlines ways you can get support for PyroCMS.
 
-<h3>Developers</h3>
-<p class="flarge muted">In the {{ link uri="developers" title="Developers" }} section, you can find documentation for developing PyroCMS addons, as well as a guide to contributing to PyroCMS.</p>
-
-<hr>
-
-<h3>PyroCMS Pro</h3>
-<p class="flarge muted">In the {{ link uri="pyrocms-pro" title="PyroCMS Pro" }} section, you can find documentation specifically for the Pro version of PyroCMS.</p>
+If you spot an issue in the documentation, or if you want to add something, you can fork and change the docs at the [PyroCMS docs GitHub repo](https://github.com/pyrocms/pyrocms-docs).

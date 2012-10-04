@@ -1,7 +1,0 @@
-the-control-panel
-organization
-pyrocms-tags | PyroCMS Tags
-pyrocms-urls | PyroCMS URLs
-themes
-widgets-plugins-and-modules | Widgets, Plugins, and Modules
-add-ons | Add Ons

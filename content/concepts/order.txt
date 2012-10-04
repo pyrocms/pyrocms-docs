@@ -1,0 +1,7 @@
+the-control-panel
+organization | Organizing Your Site
+pyrocms-tags | PyroCMS Tags
+pyrocms-urls | PyroCMS URLs
+themes
+streams | Streams
+addons | Add Ons
