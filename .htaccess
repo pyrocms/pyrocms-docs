@@ -1,0 +1,13 @@
+RewriteEngine on
+
+# Don't try to rewrite images, css, etc
+RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpg|gif)$ $1.$3 [L]
+
+# Send request via index.php (again, not if its a real file or folder)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Don't try if its an uploaded asset
+RewriteCond $1 !^(assets/)
+
+RewriteRule ^(.*)$ index.php/$1 [L]
