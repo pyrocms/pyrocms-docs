@@ -1,4 +1,4 @@
-addons
 basics
-contributing
+addons
 tools
+contributing

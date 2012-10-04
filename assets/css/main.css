@@ -207,10 +207,22 @@ code, pre {
     font-size: 12px;
     background: #fcfcfc;
     border-bottom: 1px solid #E4EAF0;
+    color: #888;
     font-family: "Helvetica", Arial, sans-serif;
 }
 .breadcrumbs a {
     text-decoration: none;
+    color: #888;
+}
+.breadcrumbs strong {
+    color: #888;
+}
+
+#footer p {
+    font-size: 11px;
+    color: #888;
+}
+#footer p a {
     color: #888;
 }
 
