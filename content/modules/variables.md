@@ -4,21 +4,14 @@ The _variables_ module you to create variables that are accessible throughout yo
 
 ## Creating Variables
 
-To create a new variable, go into the Admin Panel, and select *Variables* from the *Content* menu.
+To create a new variable, go into the Admin Panel, and select *Variables* from the *Content* menu. Click **+ Add Variables** and create a slug and a value for your variable. The slug is what you'll use to refer to the variable in your layouts.
+
+{{ asset:img file="docs/variables/vars.png" alt="Variables" class="doc_image" }}
+
+Once variables are created, you can edit them inline by clicking **Edit**.
+
+{{ asset:img file="docs/variables/var\_editing.png" alt="Editing a Variable" class="doc_image" }}
 
 ## Using Variables in Templates
 
-	{{ noparse }}{{ variables:variable_slug }}{{ /noparse }}
-
-Returns the value of your custom variable. Replace variable with the name you assigned it in the Control Panel.
-
-## Example
-
-If you create a variable called _twitter\_handle_, you can display it in your site like this:
-
-	{{ noparse }}Follow us on Twitter at @{{ variables:twitter_handle }}!{{ /noparse }}
-
-You can also check the value using an if statement:
-
-	{{ noarpse }}{{ if twitter_handle }}We are on Twitter!{{ endif }}
-
+To see how to use variables in layouts, see the {{ link title="variables plugin docs" uri="plugins/variables" }}.

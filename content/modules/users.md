@@ -1,160 +1,65 @@
-# User Tags
+# Users Module
 
-The <em>user</em> plugin gives you access to user data and logic.
+* {{ docs:id_link title="Creating a New User" }}
+* {{ docs:id_link title="Managing User Groups and Permissions" }}
+* {{ docs:id_link title="Customizing Profile Fields" }}
+* {{ docs:id_link title="User Module URLs" }}
+* {{ docs:id_link title="Using User Data in Layouts" }}
 
-## user:logged_in
+The users module is where you manage your sites users. To start, go to **Users &rarr; Manage Users**. You'll see a paginated list of your current users.
 
-	{{ noparse }}{{ user:logged_in }}{{ /noparse }}
+{{ asset:img file="docs/users/users.png" alt="List of Users" class="doc_image" }}
 
-Checks if a user is logged in or not. Can be used as a tag pair to limit display of certain code to logged in users, or a single tag that returns TRUE or FALSE depending on whether the user is logged in.
+You can search and filter them using the filter tools. Typing into the text box will search names and usernames of users. The results are populated via AJAX.
 
-### Attributes
+{{ docs:header }}Creating a New User{{ /docs:header }}
 
-<table cellpadding="0" cellspacing="0">
-	<tbody>
-		<tr>
-			<th>Name</th>
-			<th>Default</th>
-			<th>Required</th>
-			<th>Description</th>
-		</tr>
-		<tr>
-			<td width="100">group</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
-			<td>Group slug. Check if a user is not only logged in, but also a member of the specified group.</td>
-		</tr>
-	</tbody>
-</table>
+To register a new user on your site, click on **+ Add User** and fill out the user form. At the very least, you need to provide an email address, username, password, display name, and whatever fields you have set to required. The display name is what will be used when the system needs to display the proper name of the user.
 
-### Example
+{{ asset:img file="docs/users/add\_user.png" alt="Add New User" class="doc_image" }}
 
-	{{ noparse }}{{ if user:logged_in }}
-	&lt;p&gt;This is just for logged in users.&lt;/p&gt;
-{{ endif }}{{ /noparse }}
+{{ docs:header }}Managing User Groups and Permissions{{ /docs:header }}
 
-## user:not\_logged\_in
+By default, PyroCMS comes with two user groups:
 
-	{{ noparse }}{{ user:not_logged_in }}{{ /noparse }}
+* **Administrators** - These are admins of your site and have access to everything on the back end.
+* **Users** - These are basic users of your site and only have access to the front end.
 
-Identical to the previous function, but instead checks to see if a user is NOT logged in. Also takes the _group_ parameter. Must be used in a tag pair.</p>
+These two groups cannot be deleted, however you can add additional groups by going to **Users &rarr; Groups** and clicking on **+ Add Group**. You'll be asked to simply name your group and give it a slug.
 
-## Single User Profile Variables
+{{ asset:img file="docs/users/add\_group.png" alt="Add New User Group" class="doc_image" }}
 
-The user plugin also gives you access to various user variables using the following syntax:
+Once you have created a new group, you can go to **Users &rarr; Permissions** and click on **Edit Permissions** for the group you just created. On the edit permissions page, you'll see a lot of permissions options. Here you can exclude users from having access to particular modules, as well as give them granular permissions in modules that support them.
 
-	{{ noparse }}{{ user:<em>variable</em> }}{{ /noparse }}
+{{ asset:img file="docs/users/permissions.png" alt="User Permissions" class="doc_image" }}
 
-These calls default to the current logged in user, but you may also specify a user's ID with the optional <em>user_id</em> parameter:
+<div class="tip"><strong>Note:</strong> You can edit permissions for the default User group if you'd like to.</div>
 
-	{{ noparse }}{{ user:<em>variable</em> user_id="4" }}{{ /noparse }}
+{{ docs:header }}Customizing Profile Fields{{ /docs:header }}
 
-If you are using custom stream fields that return multiple records, you can access the values within as a tag pair:
+PyroCMS comes with a preset slate of user fields, but these can be easily changed. To manage your user profile fields, go to **Users &rarr; Manage Users** and click on the **Profile Fields** section menu.
 
-	{{ noparse }}{{ user:country }}{{ name }} {{ /user:country }}{{ /noparse }}
+{{ asset:img file="docs/users/menu.png" alt="Profile Fields Section Menu" class="doc_image" }}
 
-Below is a table of variables that are hard-coded into the system and always available.
+There you'll see a list of all the profiles fields. Simply delete, edit, and add as necessary. Profile fields run off of {{ linke title="streams field types" uri="" }} so you can use any core field types or third party field types you've installed.
 
-<table cellpadding="0" cellspacing="0">
-	<tbody>
-		<tr>
-			<th>Variable</th>
-			<th>Notes</th>
-		</tr>
-		<tr>
-			<td width="200">id</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">group_id</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">ip_address</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">active</td>
-			<td>1 or 0.</td>
-		</tr>
-		<tr>
-			<td width="200">activation_code</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">created_on</td>
-			<td>Unix epoch format.</td>
-		</tr>
-		<tr>
-			<td width="200">last_login</td>
-			<td>Unix epoch format.</td>
-		</tr>
-		<tr>
-			<td width="200">username</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">display_name</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">forgotten_password_code</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">remember_code</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td width="200">group</td>
-			<td>Group slug.</td>
-		</tr>
-		<tr>
-			<td width="200">group_description</td>
-			<td>Group name.</td>
-		</tr>
-	</tbody>
-</table>
+{{ asset:img file="docs/users/fields.png" alt="Profile Fields" class="doc_image" }}
 
-## user:profile
+To make a profile field show up on the register page, simply make it required when you create a new field. 
 
-Aside from accessing user profile fields individually, you can also access them using the profile function. Inside the tag pair, you can access any of the user profile variables, including your custom fields.
+{{ asset:img file="docs/users/new\_field.png" alt="New Profile Field form" class="doc_image" }}
 
-	{{ noparse }}{{ user:profile }}
+{{ docs:header }}User Module URLs{{ /docs:header }}
 
-	{{ display_name }}
+The Users module uses the following public URLs:
 
-	{{ custom_field }}
+	/register // Register page if you have user registration turned on)
+	/user/{user_id} // User public profile page
+	/my-profile // User's own public profile page
+	/edit-profile // Page for a user to edit their own profile
 
-	{{ custom_field:sub_value }}
+To customize these pages, see {{ link title="module view overloading" uri="theming/overloading-module-views" }}.
 
-{{ /user:profile }}{{ /noparse }}
+{{ docs:header }}Using User Data in Layouts{{ /docs:header }}
 
-The profile tag also takes an optional user_id value.
-
-	{{ noparse }}{{ user:profile user_id="4" }}{{ /noparse }}
-
-## user:profile\_fields
-
-In the event you want to just show all user profile data in a list, you can do so with this function. Each piece of user data can be accessed via the following variables:
-
-<table>
-	<tr>
-		<td>value</td>
-		<td>Field value. For user profile fields that return multiple values, this will be the alternate canonical display that field types can and should provide.</td>
-	</tr>
-	<tr>
-		<td>name</td>
-		<td>Field name.</td>
-	</tr>
-	<tr>
-		<td>slug</td>
-		<td>Field slug.</td>
-	</tr>
-</table>
-
-	{{ noparse }}{{ user:profile_fields }}
-
-	&lt;p>&lt;strong>{{ name }}: {{ value }}&lt;/strong>&lt;/p>
-
-{{ /user:profile_fields }}{{ /noparse }}
+To see how to use settings values in layouts, see the {{ link title="user plugin docs" uri="plugins/user" }}.

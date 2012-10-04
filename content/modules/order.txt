@@ -1,11 +1,13 @@
 blog
+email-templates
 files
 navigation
 pages
 session
 settings
+sitemap
 streams
 theme
-user
+users
 variables
 widgets
