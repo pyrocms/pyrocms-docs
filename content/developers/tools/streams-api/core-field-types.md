@@ -2,7 +2,7 @@
 
 # Core Field Types
 
-PyroCMS comes with a variety of field types in the Streams Core module that you can count on being available in PyroCMS 2.2 and above for your module.
+PyroCMS comes with a variety of field types in the Streams Core module that you can count on being available in PyroCMS 2.1 and above for your module.
 
 Additionally, you can develop your own field types and add them to the addons folders inside a "field_type" folder. The Streams Type library will automatically look for them there.
 

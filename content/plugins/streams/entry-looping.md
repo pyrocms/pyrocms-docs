@@ -8,6 +8,7 @@
 * {{ docs:id_link title="Nested Variables" }}
 * {{ docs:id_link title="Pagination" }}
 * {{ docs:id_link title="Controlling the Pagination Markup" }}
+* {{ docs:id_link title="Separating Results into Sets" }}
 
 {{ docs:header }}The Loop Cycle{{ /docs:header }}
 
@@ -181,7 +182,7 @@ The following are basic parameters that restrict or modify the returned data in 
   <tr> 
     <td>where</td> 
     <td>&nbsp;</td> 
-    <td>Allows you to restrict results. See <a href="">The Where Parameter</a> for more information.</td> 
+    <td>Allows you to restrict results. See {{ link title="The Where Parameter" uri="plugins/streams/entry-looping#the-where-parameter" }} for more information.</td> 
   </tr> 
   <tr> 
    <td> 
@@ -216,7 +217,7 @@ The following are basic parameters that restrict or modify the returned data in 
    <td>partial</td> 
    <td></td> 
    <td> 
-    Allows separation of results into separate segments. See <a href="pyrostreams/docs/showing-data/looping#sets">Separating Results into Sets</a> for more information.</td> 
+    Allows separation of results into separate segments. See {{ link title="Separating Results into Sets" uri="plugins/streams/entry-looping#separating-results-into-sets" }} for more information.</td> 
   </tr> 
  </tbody> 
 </table> 
@@ -354,7 +355,7 @@ In PyroStreams 2.1.4, the where parameter can specify one parameter using the fo
  
 <div class="tip"><strong>Note:</strong> Turning on pagination will automatically set the limit to 25. You can override this by setting a limit parameter.</div>
   
-## Controlling the Pagination Markup
+{{ docs:header }}Controlling the Pagination Markup{{ /docs:header }}
  
 <p>You can control the markup of the pagination with the following parameters. These are taken directly from the CodeIgniter <a href="http://codeigniter.com/user_guide/libraries/pagination.html">pagination markup parameters</a>.</p>
 

@@ -61,13 +61,13 @@ The following functions are available for data formatting and saving and make up
    <td>The current value of the input. Left blank if there is no value.</td> 
   </tr> 
   <tr> 
-   <td>custom</td> 
+   <td>custom</td>
    <td>Contains an associative array of the custom parameter values for your field. IE: max_length.</td> 
   </tr> 
 </tbody> 
 </table>
 
-Exmaple:
+Example:
 
     public function form_output($data)
     {
@@ -215,11 +215,11 @@ Example:
  
 ### event
  
-<p>This function is called before any other field function is called, allowing you to do things like add metadata to the admin pages, for example. This is where you can put the {{ link uri="" title="CSS/JS" }} functions:</p>
+<p>This function is called before any other field function is called, allowing you to do things like add metadata to the admin pages, for example. This is where you can put the {{# TODO: link to correct page #}}{{ link uri="" title="CSS/JS" }} functions:</p>
 
     public function event($field)
     {
-        this->CI->type->add_css('datetime', 'datepicker.css');
+        $this->CI->type->add_css('datetime', 'datepicker.css');
     }
 
 {{ docs:header }}Alternative Formatting{{ /docs:header }}
@@ -308,7 +308,7 @@ Called right before a field is added to a stream.
 
 Identical to **field_assignment_construct** only called right before a field assignment is removed.
 
-h3. entry_destruct(<span>$entry, $field, $stream</span>)
+### entry_destruct(<span>$entry, $field, $stream</span>)
 
 Called right before an entry is deleted.
 
@@ -339,5 +339,5 @@ Called right before an entry is deleted.
 </tbody> 
 </table>
 
-<p class="tip">Wondering where <strong>entry_construct</strong> is? You can use **pre_save** for that.</p> 
+<p class="tip">Wondering where <strong>entry_construct</strong> is? You can use <strong>pre_save</strong> for that.</p> 
 

@@ -4,7 +4,7 @@ Many add-ons need more than just functionality you can access via PyroCMS tags. 
 
 Modules are the largest type of PyroCMS add-on. They have a place in the control panel menu (usually), have control panel controls, their own widgets, and their own plugins.
 
-For instance, the Pages module contains the control panel area that allows you to create and organize pages, and also the {{ link title="pages plugin" uri="/modules-and-tags/tag-reference/pages" }}, which allows you to do things like display a page tree with PyroCMS tags.
+For instance, the Pages module contains the control panel area that allows you to create and organize pages, and also the {{ link title="pages plugin" uri="plugins/pages" }}, which allows you to do things like display a page tree with PyroCMS tags.
 
 What makes PyroCMS modules unique is the fact that they can have public-facing pages as well.
 

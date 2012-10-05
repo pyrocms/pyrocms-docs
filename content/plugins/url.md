@@ -55,7 +55,7 @@ Returns:
 
 	http://www.example.com/contact
 
-<div class="tip"><strong>Note:</strong> The site URL includes index.php if you are not using mod_rewrite to remove it and you've not changed the <strong>$config['index_page']</strong> variable in <em>/system/cms/config/config.php</em>. For more information, see {{ link title="Removing index.php from URLs" uri="/general/getting-started/removing-indexphp-from-urls" }}.</div>
+<div class="tip"><strong>Note:</strong> The site URL includes index.php if you are not using mod_rewrite to remove it and you've not changed the <strong>$config['index_page']</strong> variable in <em>/system/cms/config/config.php</em>. For more information, see {{ link title="Removing index.php from URLs" uri="setup/removing-indexphp-from-urls" }}.</div>
 
 ## url:base
 

@@ -38,7 +38,8 @@ To get started, create a folder and a file with your chosen slug. For this examp
         $options['value']  = $data['value'];
 
         return form_input($options);
-     } }
+     }
+    }
  
 <p>As you can see, we have a class name of <strong>Field_yourslug</strong>. Inside we have some basic class variables:</p> 
  
@@ -63,7 +64,7 @@ To get started, create a folder and a file with your chosen slug. For this examp
 </tbody> 
 </table> 
  
-<p>Aside from the class variables, one method is necessary - <strong>form_output</strong>. This method is called when building the form and allows you to include logic and customized input for your fields. In this case, we are just returning a basic input. You can find more about this method on the <a href="pyrostreams/docs/field-type-development/methods">Methods</a> page.</p> 
+<p>Aside from the class variables, one method is necessary - <strong>form_output</strong>. This method is called when building the form and allows you to include logic and customized input for your fields. In this case, we are just returning a basic input. You can find more about this method on the {{ link title="Methods" uri="developers/addons/developing-field-types/methods" }} page.</p> 
  
 <p class="note">PyroStreams uses <a href="http://codeigniter.com/user_guide/helpers/form_helper.html">CodeIgniter's Form Helper</a> when creating inputs, and it is available in third party field types as well.</p> 
 
@@ -146,7 +147,7 @@ If you want to use the CodeIgniter super object in your field types, you can acc
 </tbody> 
 </table> 
  
-<h3>Creating Custom Field Parameters</h3> 
+<h3 id="creating-custom-field-parameters">Creating Custom Field Parameters</h3> 
  
 <p>To create custom field parameters, you need to 1.) add them to the <strong>custom_parameters</strong> class variable (detailed above), 2.) specify a parameter name 3.) specify a parameter input.</p> 
  
@@ -185,7 +186,7 @@ Each language item should follow the convention <strong>streams.youslug.lang_slu
 
 ### Custom Parameter Titles
 
-If you are using <a href="pyrostreams/docs/field-type-development/field-parameters">Custom Parameters</a> for your field type, you need to put the names of your fields in this language file. Simply use the slugs of your parameters as the language slugs. They will automatically be used.
+If you are using {{ link title="Custom Parameters" uri="developers/addons/developing-field-types/structure#creating-custom-field-parameters" }} for your field type, you need to put the names of your fields in this language file. Simply use the slugs of your parameters as the language slugs. They will automatically be used.
 
 In your field type:
 
