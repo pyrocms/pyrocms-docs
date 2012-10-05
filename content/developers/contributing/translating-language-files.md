@@ -50,4 +50,4 @@ Open up system/cms/config/languages.php and add your language to the array with 
 
 That should be it! If you get any language related errors when you switch to your new language and want to switch back to English then just add ?lang=en to any URL.
 
-When you have confirmed that it everything looks correct you could consider contributing the language pack changes back to the core of PyroCMS via <a href="/docs/manuals/developers/contributing-changes-to-pyrocms ">forking with Git</a>. This way it can be contributed to the next major version and others will not have to spend time translating PyroCMS themselves.
+When you have confirmed that it everything looks correct you could consider contributing the language pack changes back to the core of PyroCMS via {{ link uri="developers/contributing/using-git" title="forking with Git" }}. This way it can be contributed to the next major version and others will not have to spend time translating PyroCMS themselves.

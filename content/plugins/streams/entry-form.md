@@ -255,7 +255,7 @@ Many fields have CSS or Javascript that needs to be loaded. Depending on your th
 
 <div class="tip"><strong>Note:</strong> You should already have jQuery loaded before the form_assets tag is used.</div>
 
-<h2 id="messages">Overriding Success/Failure Messages</h2>
+{{ docs:header }}Overriding Success/Failure Messages{{ /docs:header }}
 
 Many PyroCMS themes have built-in displays for flash data (that is, data that is only available on the next page refresh, and usually contains a message about the success/failure of the previous action). You can control what these messages say with these two parameters:
 

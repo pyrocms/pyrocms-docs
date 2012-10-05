@@ -43,7 +43,7 @@ What makes tags really powerful is they can take attributes that give you the fr
 
      {{ noparse }}{{ url:segments segment="1" }}{{ /noparse }}
 
-In the above example, we are calling the {{ link title="url plugin" uri="/modules-and-tags/tag-reference/url" }} which has a **segments** function. This is all well and good, but we can also pass the tag parameters in order to modify the output. In this case, we are telling the tag to get the first segment. So if your URL was _http://www.example.com/bills/bagels_, this tag would return:
+In the above example, we are calling the {{ link title="url plugin" uri="plugins/url" }} which has a **segments** function. This is all well and good, but we can also pass the tag parameters in order to modify the output. In this case, we are telling the tag to get the first segment. So if your URL was _http://www.example.com/bills/bagels_, this tag would return:
 
      bills
 

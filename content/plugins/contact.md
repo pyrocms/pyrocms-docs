@@ -197,9 +197,9 @@ The following rules are available, and are reproduced here from the CodeIgniter 
 
 {{ docs:header }}Creating an Email Template{{ /docs:header }}
 
-If you would like to send an email using a template, you can do so by editing the default contact template or creating your own. To see how to create your own email templates, please see the documentation on the <a href="">email template module</a>.
+If you would like to send an email using a template, you can do so by editing the default contact template or creating your own. To see how to create your own email templates, please see the documentation on the {{ link title="email template module" uri="modules/email-templates" }}.
 
-The contact form comes with a basic contact email template already set up, which you can edit in the <a href="">email template module</a> and is set as the default for the *template* form parameter. The following fields are available for use:
+The contact form comes with a basic contact email template already set up, which you can edit in the {{ link title="email template module" uri="modules/email-templates" }} and is set as the default for the *template* form parameter. The following fields are available for use:
 
 <table cellpadding="0" cellspacing="0">
     <tbody>
