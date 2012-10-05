@@ -4,7 +4,7 @@ Many sites require data that is not in a page format. For instance – dates of 
 
 Streams is the underlying system in PyroCMS that allows you to setup those data structures. In Streams, each "list" of data is known as a "stream". So, a list of bands would be a stream. A list of live shows would be a stream.
 
-In those streams, each field is defined by its field type. {{ link title="Field types" uri="" }} can be anything from a plain text field, to a date/time field, to a point on a map. PyroCMS comes with a set of core field types, and you can create your own or download ones from the store.
+In those streams, each field is defined by its field type. {{ link title="Field types" uri="concepts/addons/field_types" }} can be anything from a plain text field, to a date/time field, to a point on a map. PyroCMS comes with a set of core field types, and you can create your own or download ones from the store.
 
 ## Where Streams Can Be Used
 

@@ -1,6 +1,6 @@
 # Field Types
 
-PyroCMS's core data system, {{ link title="Streams" uri="" }}, handles setting up custom data structures, and field types represent the types of data you can add to a stream. They contain all the logic regarding getting data in and out of the database and formatted correctly.
+PyroCMS's core data system, {{ link title="Streams" uri="concepts/streams" }}, handles setting up custom data structures, and field types represent the types of data you can add to a stream. They contain all the logic regarding getting data in and out of the database and formatted correctly.
 
 An example of a very simple field type is the Text field type. It allows you to create a simple text input. There are also field types for date/time, a list of countries, custom select/radio/checkbox inputs, and more.
 
@@ -14,6 +14,6 @@ One unique feature of field types is that they can be used system-wide by any ad
 
 ## Field Type Resources
 
-* {{ link title="Core Field Type Widget Docs" uri="field-types" }}
+* {{ link title="Core Field Type Docs" uri="field-types" }}
 * {{ link title="Developing Field Types - PyroCMS Developer Docs" uri="developers/addons/developing-field-types" }}
 * [Field Types on the PyroCMS Store](https://www.pyrocms.com/store/categories/field_types)
