@@ -48,7 +48,7 @@ We are going to use try\_files instead of the Rewrite Module. You can find out m
 	                add_header Cache-Control "public, must-revalidate, proxy-revalidate";
 	        }
 	 
-	        location ~ .php {
+	        location ~ \.php {
 	                fastcgi_pass   unix:/tmp/domain.sock;
 	                fastcgi_split_path_info ^(.+.php)(.*)$;
 	                fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
