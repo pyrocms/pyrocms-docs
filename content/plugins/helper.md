@@ -72,7 +72,7 @@ Returns (if the default language is English):
 
 	{{ noparse }}{{ helper:date }}{{ /noparse }}
 	
-Displays a date in the format defined in Control Panel > Settings or in the format specified.
+Displays a date in the format defined in **Control Panel &rarr; Settings** or in the format specified.
 
 ### Attributes
 
@@ -86,15 +86,15 @@ Displays a date in the format defined in Control Panel > Settings or in the form
 		</tr>
 		<tr>
 			<td width="100">format</td>
-			<td width="100">Set in CP > Settings</td>
+			<td width="100">Set in <strong>CP &rarr; Settings</strong></td>
 			<td width="100">No</td>
-			<td>The date using [php date formatting](http://php.net/manual/en/function.date.php).</td>
+			<td>The date using <a href="http://php.net/manual/en/function.date.php">php date formatting</a>.</td>
 		</tr>
 		<tr>
 			<td width="100">timestamp</td>
 			<td width="100">Current time</td>
 			<td width="100">No</td>
-			<td>Pass an epoch timestamp to format a date in the past or future.</td>
+			<td>Pass an epoch or MySQL timestamp to format a date in the past or future.</td>
 		</tr>
 	</tbody>
 </table>
