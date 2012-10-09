@@ -88,7 +88,7 @@
 			<td> 
 				current url</td> 
 			<td> 
-				Where to return to when the form action is done. Use -id- to designate the insert id for when using the new mode.</td> 
+				Where to redirect to to when the form action is done. Use -id- to designate the insert id for when using the new mode. This will set a flash success/error message and redirect, so make sure the page you redirect to does not have a redirect itself, otherwise the flash message wil be lost between the two redirects.</td> 
 		</tr> 
 		<tr> 
 			<td>error_start</td> 
