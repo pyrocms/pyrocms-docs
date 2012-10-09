@@ -139,8 +139,7 @@ If this isn't working for you, or you want something a bit more explicit, try th
 <div class="tip"><strong>NOTE:</strong> The arguments for <strong>Asset::add_group</strong> used to be different. Backwards compatibility is maintained (for now), but you are encouraged to more to the new syntax.</div>
 
 
-Paths and namespacing
----------------------
+{{ docs:header }}Paths and namespacing{{ /docs:header }}
 
 The Asset library searches through all of the items in the 'paths' config key until it finds the first matching file.
 However, this approach was undesirable, as it means that if you had the directory structure below, and tried to include 'index.js', the file that was included would be determined by the order of the entries in the paths array.

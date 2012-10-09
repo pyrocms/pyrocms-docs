@@ -64,7 +64,7 @@ This is not a list of all of the new features of Lex, it is simply a guide for u
 
 ### New Tags
 
-_For a comprehensive look at the new PyroCMS tag system, see the [PyroCMS tag guide](/docs/2.0/basics/pyrocms-tags)._
+_For a comprehensive look at the new PyroCMS tag system, see the {{ link title="PyroCMS tag guide" uri="concepts/pyrocms-tags" }}._
 
 The delimiters in Lex are two (2) braces "{{ }}", not one (1) "{ }".  You will need to change all of your tags to use the new style.
 

@@ -8,7 +8,7 @@ The theme plugin's slug is __theme__, so it can be used like so:
 
 ## theme:options
 
-Displays an option for the current theme. To read more about this tag and its usage refer to the {{ link uri="/general/basics/themes" title="theme documentation" }}.</a>
+Displays an option for the current theme. To read more about this tag and its usage refer to the {{ link uri="concepts/themes" title="theme documentation" }}.</a>
 
 **Attributes**
 <table cellpadding="0" cellspacing="0">

@@ -1,8 +1,8 @@
 # Asset Plugin
 
-The _asset_ plugin gives you access to various functions that interact with the [Assets Library](/index.php/developers/tools/assets).
+The _asset_ plugin gives you access to various functions that interact with the {{ link title="Assets Library" uri="developers/tools/assets" }}.
 
-<div class="tip"><strong>NOTE:</strong> Using <em>asset</em> plugin functions will still require proper namespace usage. Please see <a href="/index.php/developers/tools/assets#paths_and_namespacing">Paths and namespacing</a>.</div>
+<div class="tip"><strong>NOTE:</strong> Using <em>asset</em> plugin functions will still require proper namespace usage. Please see {{ link title="Paths and namespacing" uri="developers/tools/assets#paths-and-namespacing" }}.</div>
 
 ## asset:css
 
@@ -486,4 +486,4 @@ Returns:
 	(HTML tags for CSS 'validation' group)
 
 
-<div class="tip"><strong>NOTE:</strong> Once a group is rendered, it cannot be rendered again. Please see <a href="/index.php/developers/tools/assets">Assets Library</a> for more information.</div>
+<div class="tip"><strong>NOTE:</strong> Once a group is rendered, it cannot be rendered again. Please see {{ link title="Assets Library" uri="developers/tools/assets" }} for more information.</div>

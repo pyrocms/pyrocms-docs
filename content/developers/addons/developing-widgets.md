@@ -1,8 +1,8 @@
 # Developing Widgets
 
-Widgets are quite similar to <a href="/docs/glossary#plugins">Plugins</a> in the way they are inserted into content, but they are a little more clever. They allow even your least experienced client or administrator to manage chunks of intelligent content on their site without needing to learn loads of tags, HTML or call you in to help.
+Widgets are quite similar to {{ link title="Plugins" uri="concepts/addons/plugins" }} in the way they are inserted into content, but they are a little more clever. They allow even your least experienced client or administrator to manage chunks of intelligent content on their site without needing to learn loads of tags, HTML or call you in to help.
 
-<a href="/docs/glossary#widget-areas">Widget Areas</a> can be defined (header, sidebar, blog page footers, etc) then Widget Instances can be added in them. Available Widgets currently include HTML blocks, Twitter Feeds, RSS Feeds, Google Maps and Social Bookmarks. More will be included over time, and you can make your own very easily.
+{{ link title="Widget Areas" uri="concepts/addons/widgets" }} can be defined (header, sidebar, blog page footers, etc) then Widget Instances can be added in them. Available Widgets currently include HTML blocks, Twitter Feeds, RSS Feeds, Google Maps and Social Bookmarks. More will be included over time, and you can make your own very easily.
 
 ## Where do I put my widgets?
 
@@ -108,6 +108,4 @@ Not much to be said here other than the view files should be partial views only.
 
 All you need to do for this to work is open up a theme layout or page layout and enter:
 
-    {{ noparse }}
-{{ widgets:area slug="sidebar" }}
-    {{ /noparse }}
+    {{ noparse }}{{ widgets:area slug="sidebar" }}{{ /noparse }}

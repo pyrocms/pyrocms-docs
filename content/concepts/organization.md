@@ -81,7 +81,7 @@ So for this example we'll be creating three **page layouts**:
 
 Two of these are very specific (Home and Hours & Location), but default (which we'll use for the About page) is generic enough to be re-used for new pages down the road - it's only a title and body text after all.
 
-Let's take Hours & Map for our **page layout** example. This will need two columns - the page content in one, and a Google map (using the Google Maps {{ link uri='/general/basics/widgets-plugins-and-modules' title="widget" }}) in the other: 
+Let's take Hours & Map for our **page layout** example. This will need two columns - the page content in one, and a Google map (using the Google Maps {{ link uri="widgets/google-maps" title="widget" }}) in the other: 
 
 {{ asset:img file="docs/barbershop-single.jpeg" alt="Single page" class="doc_image" }}
 
