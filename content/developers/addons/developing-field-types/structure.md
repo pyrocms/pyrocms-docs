@@ -179,8 +179,8 @@ PyroStreams will recognize and load a language file with the same slug as your f
 
 Inside the <strong>email_lang.php</strong> file, you'll need an array like this:
 
-	&lt;?php defined('BASEPATH') or exit('No direct script access allowed');
-	$lang['streams.email.name'] 		= 'Email';
+	<?php defined('BASEPATH') or exit('No direct script access allowed');
+	$lang['streams.email.name'] = 'Email';
 
 Each language item should follow the convention <strong>streams.youslug.lang_slug</strong>. The only one that is required is <strong>streams.youslug.name</strong> which will be used as the name of the field type.
 
@@ -190,12 +190,12 @@ If you are using {{ link title="Custom Parameters" uri="developers/addons/develo
 
 In your field type:
 
-	public $custom_parameters		= array('choice_data', 'choice_type');
+	public $custom_parameters = array('choice_data', 'choice_type');
 
 In your language file:
 
-	$lang['streams.choice.choice_data'] 		= 'Choice Data';
-	$lang['streams.choice.choice_type'] 		= 'Choice Type';
+	$lang['streams.choice.choice_data'] = 'Choice Data';
+	$lang['streams.choice.choice_type'] = 'Choice Type';
 
 {{ docs:header }}Validation{{ /docs:header }}
  
@@ -211,7 +211,7 @@ With these three ways to incorporate validation, you have all the tools you need
 
 Standard field type validation is added as a class variable named **extra_validation**: 
  
-    public $extra_validation   = 'numeric|integer'; 
+    public $extra_validation = 'numeric|integer'; 
  
 Any of [CodeIgniter's Form Validation](http://codeigniter.com/user_guide/libraries/form_validation.html) rules can be used here, separated by a pipe character.
 
@@ -254,7 +254,7 @@ Remember, you can stall access all the $_POST variables, so if you need to grab 
 
 <p>Some field types work with files (such as the image field type). When creating a field type that uses a file, make sure to add a class variable called <strong>input_is_file</strong> and set it to true.</p> 
  
-    public $input_is_file    = true;
+    public $input_is_file = true;
  
 <p>This will make sure things like required fields works correctly, since it needs to check the $\_FILE variable not $\_POST.</p> 
 
