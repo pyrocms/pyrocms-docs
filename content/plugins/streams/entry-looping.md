@@ -60,7 +60,9 @@ PyroStreams comes with a lot of parameters to help you customize what data is be
 
 Instead of specifying a stream with the stream="stream_slug" parameter, you can use it in the place of "cycle". For instance, if you have a stream called dogs, you can loop through them like this:
 
-  {{ noparse }}{{ streams:dogs limit="10" }}{{ /noparse }}
+    {{ noparse }}{{ streams:dogs limit="10" }}
+
+{{ /streams:dogs }}{{ /noparse }}
 
 <h3 id="entries-tags">Omitting the Entries Tags</h3>
 
@@ -198,6 +200,19 @@ The following are basic parameters that restrict or modify the returned data in 
     no</td> 
    <td> 
     Set to 'yes' to limit entries to ones not already displayed on the same page. Ex: An image gallery with a featured image. Use exclude_called="yes" on the rest of the images to not display the currently selected image..</td> 
+  </tr> 
+  <tr> 
+   <td> 
+    include</td> 
+   <td> 
+    &nbsp;</td> 
+   <td>Value to include in a where= clause. Used with <strong>include_by</strong> to filter by a single data point.</td> 
+  </tr> 
+  <tr> 
+   <td> 
+    include_by</td> 
+   <td>id</td> 
+   <td>The field to use when using the <strong>include</strong> parameter. </td> 
   </tr> 
 		<tr> 
 			<td>disable</td> 
