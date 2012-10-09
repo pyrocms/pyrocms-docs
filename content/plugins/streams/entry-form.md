@@ -145,13 +145,13 @@
 			<td> 
 				&#123;&#123;&nbsp;input_slug&nbsp;}}</td> 
 			<td> 
-				The field slug..</td> 
+				The field slug.</td> 
 		</tr> 
 		<tr> 
 			<td> 
 				&#123;&#123;&nbsp;instructions&nbsp;}}</td> 
 			<td> 
-				The field instructions..</td> 
+				The field instructions.</td> 
 		</tr> 
 		<tr> 
 			<td> 
@@ -174,9 +174,19 @@
 	</tbody> 
 </table>
 
+Example:
+
+	{{ noparse }}{{ fields }}
+
+&lt;label for="{{ input_slug }}">{{ title }}&lt;/label>
+{{ if instructions }}&lt;p>{{ instructions }}&lt;/p>{{ endif }}
+&lt;p>{{ input }}&lt;/p>
+
+{{ /fields }}{{ /noparse }}
+
 {{ docs:header }}Showing Individual Fields{{ /docs:header }}
 
-If you want a finer-grain control over your form inputs, you can access various form variables with single tags. For instance, if you had a name field with a slug of 'your_name', you could display the input element by using {{ your_name:input }}.
+If you want a finer-grain control over your form inputs, you can access various form variables with single tags. For instance, if you had a name field with a slug of 'your\_name', you could display the input element by using {{ your\_name:input }}.
 
 The following variables are available for each input:
 
@@ -219,6 +229,15 @@ The following variables are available for each input:
 	</tbody>
 </table>
 
+Example:
+
+	{{ noparse }}{{ title:label }} {{ if title:is_required }}Make sure to fill this in!{{ endif }}
+
+{{ if title:instructions }}&lt;p>{{ title:instructions }}&lt;/p>{{ endif }}
+
+&lt;p>{{ title:input }}&lt;/p>
+{{ /noparse }}
+
 {{ docs:header }}Other Tags{{ /docs:header }}
 
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
@@ -231,7 +250,7 @@ The following variables are available for each input:
 	<tbody> 
 <tr> 
 	<td>&#123;&#123;&nbsp;form_open&nbsp;}}</td> 
-	<td>Creates the opening form tag that submits to the current URL.</td> 
+	<td>Creates the opening form tag that submits to the current URL. It is highly recommended that you use this tag instead of using your own form opening tag, since this tag adds important hidden fields that some field types may rely on.</td> 
 </tr> 
 <tr> 
 	<td>&#123;&#123;&nbsp;form_submit&nbsp;}}</td> 
