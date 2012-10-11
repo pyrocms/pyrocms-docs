@@ -349,7 +349,7 @@ This allows you to easily create a form that users can use to add new fields to 
 
 Easily create a table of fields in a certain namespace.
 
-<div class="tip">Note: This function supports hidding buttons for {{ link title="Locked Fields" uri="/developers/tools/streams-api/locked-fields#content" }}.</div>
+<div class="tip">Note: This function supports hidding buttons for {{ link title="Locked Fields" uri="/developers/tools/streams-api/locked-fields#4_hiding_buttons_for_locked_fields" }}.</div>
 
 ### Parameters
 
