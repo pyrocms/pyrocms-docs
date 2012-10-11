@@ -5,10 +5,8 @@
 
 		auto_heading_anchors : function() {
 
-			var me = this;
-			var content = $('#content');
-			// Select all heading tags
-			var headings = $('h1,h2,h3,h4,h5,h6', content);
+			var me = this,
+				headings = this.get_headings();
 
 			headings.each(function(index) {
     			
@@ -41,6 +39,13 @@
 			    $(this).addClass('hidden');
 			  }
 			);
+
+		},
+
+		// Returns a selection of all heading tags
+		get_headings : function() {
+
+			return $('h1,h2,h3,h4,h5,h6', $('#content'));
 
 		},
 
