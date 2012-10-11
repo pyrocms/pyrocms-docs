@@ -20,8 +20,6 @@
 
 			});
 
-			var anchors = $('a.anchor');
-
 			headings.hover(
 			  function () {
 			    $('a.anchor', this).removeClass('hidden');
