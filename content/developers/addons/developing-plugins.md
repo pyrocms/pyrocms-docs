@@ -8,13 +8,13 @@ The code behind tags like these is called a plugin. Plugins are special PHP file
 
 ## Modular vs Standalone Plugins
 
-Although they are identical in structure, a plugin can either be standalone file, or be a <def>plugin.php</def> file within a larger module.
+Although they are identical in structure, a plugin can either be standalone file, or be a <dfn>plugin.php</dfn> file within a larger module.
 
 A plugin inside a module would be something that compliments a custom module you have built, while a standalone plugin would be something general like a Google Maps plugin or a way to list out Tweets in your own syntax. A standalone plugin does not need a larger module structure; it can be used on its own.
 
 ## Example Plugin
 
-This is the Session plugin which can be found in <def>system/pyrocms/plugins/session.php</def>.
+This is the Session plugin which can be found in <dfn>system/pyrocms/plugins/session.php</dfn>.
 
 	<?php defined('BASEPATH') or exit('No direct script access allowed');
 	/**
@@ -113,14 +113,13 @@ If no value has been specified, $this->attribute will use the default value.
 
 Tags are not always just one line that returns a simple string. Tags can also be pairs, meaning they have an opening and closing tag and content between them.
 
-Plugins have some features built into them in order to easily handle tag pairs. For example, here is the blog:posts tag:
+Plugins have some features built into them in order to easily handle tag pairs. For example, here is the `blog:posts` tag:
 
     {{ noparse }}
 {{ blog:posts limit="5" order-by="title" }}
-    &lt;h2>{{ title }}</h2>
+    &lt;h2>{{ title }}&lt;/h2>
     &lt;p>Written by: &lt;a href="/users/profile/{{ author_id }}">{{ author_name }}&lt;/a>&lt;/p>
-{{ /blog:posts }}
-    {{ /noparse }}
+{{ /blog:posts }}{{ /noparse }}
 
 The top tag takes parameters, and there is a bottom closing tag. Inside the tag, there are variables that we need to replace with multiple sets of data.
 
@@ -168,7 +167,7 @@ You can use the extra categories array we have added here like this:
 
     {{ noparse }}
 {{ blog:posts limit="5" order-by="title" }}
-    &lt;h2>{{ title }}</h2>
+    &lt;h2>{{ title }}&lt;/h2>
     &lt;p>Written by: &lt;a href="/users/profile/{{ author_id }}">{{ author_name }}&lt;/a>&lt;/p>
 	{{ categories }}
 		{{ category_name }}

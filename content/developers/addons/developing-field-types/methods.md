@@ -10,7 +10,7 @@ The following methods can be placed in your field type file and will be run by P
  
 The following functions are available for data formatting and saving and make up the core of what you can do with PyroStreams field types.
 
-### form_output<span>($data, $entry\_id, $field)</span>
+### form\_output<span>($data, $entry\_id, $field)</span>
  
 <p>The only required method. This should return the form output for this field. It takes the following parameters:</p>
 
@@ -24,17 +24,17 @@ The following functions are available for data formatting and saving and make up
  </thead> 
  <tbody> 
   <tr> 
-   <td>$data</td> 
+   <td>data</td> 
    <td>array</td>
    <td>An array of data on the field.</td> 
   </tr> 
   <tr> 
-   <td>$entry_id</td> 
+   <td>entry_id</td> 
    <td>int</td>
-   <td>The current entry id. This is null if not being used in an editing entry context.</td> 
+   <td>The current entry id. This is <code>null</code> if not being used in an editing entry context.</td> 
   </tr> 
   <tr> 
-   <td>$field</td> 
+   <td>field</td> 
    <td>object</td>
    <td>Object of field data.</td> 
   </tr> 
@@ -53,7 +53,7 @@ The following functions are available for data formatting and saving and make up
  </thead> 
  <tbody> 
   <tr> 
-   <td>form_slug</td> 
+   <td>form\_slug</td> 
    <td>The slug of the form input. Usually is used as the "name" attribute.</td> 
   </tr> 
   <tr> 
@@ -80,7 +80,7 @@ Example:
 
 ### pre_output<span>($input, $data)</span> 
  
-<p>When data needs a singular display, you can use this plugin to provide it. For instance, in the encrypt field type, the pre\_output function is used to unencrypt the data before it is displayed. If you use the pre\_output\_plugin function (see below) to return multiple variables to be used in a plugin context, you can use pre\_output to return a canonical display for places where there is no opportunity to choose which variables to display. For instance, in the Date/Time field type, the pre_ouput function formats the date according to the site's date formatting setting.</p> 
+<p>When data needs a singular display, you can use this plugin to provide it. For instance, in the encrypt field type, the `pre_output` function is used to unencrypt the data before it is displayed. If you use the `pre_output_plugin` function (see below) to return multiple variables to be used in a plugin context, you can use `pre_output` to return a canonical display for places where there is no opportunity to choose which variables to display. For instance, in the Date/Time field type, the `pre_ouput` function formats the date according to the site's date formatting setting.</p> 
 
 <p>This plugin takes the following parameters:</p> 
  
@@ -118,13 +118,13 @@ Example:
  
 ### pre\_output\_plugin<span>($input, $params, $row_slug)</span>
  
-<p>Sometimes you need to return multiple pieces of data for a single field. For instance, the image field returns separate variable for the image filename, the full path, the mime type, and more. If you do return an array of variables using pre_output_plugin, they can be accessed like this:</p> 
+<p>Sometimes you need to return multiple pieces of data for a single field. For instance, the image field returns separate variable for the image filename, the full path, the mime type, and more. If you do return an array of variables using `pre_output_plugin`, they can be accessed like this:</p> 
  
     {{ noparse }}{{ field_slug:array_key }}{{ /noparse }} 
  
 <p>This is only really needed on the plugin side, however, as on the back end you just need one string that represents the data point in your table (which is what <strong>pre_output</strong> can be used for).</p> 
  
-<p>The pre\_output\_plugin method takes the following parameters:</p> 
+<p>The `pre_output_plugin` method takes the following parameters:</p> 
  
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
  <thead> 
@@ -142,7 +142,7 @@ Example:
   </tr> 
   <tr> 
    <td>params</td> 
-   <td>An associative array of the custom parameter values for your field. IE: max_length.</td>
+   <td>An associative array of the custom parameter values for your field. IE: max\_length.</td>
   </tr> 
   <tr> 
    <td>field_slug</td> 
@@ -166,7 +166,7 @@ Example:
         }
     }
 
- <p class="tip">You can also return a string with the pre_output_plugin method if you'd like.</p>
+ <p class="tip">You can also return a string with the <code>pre_output_plugin</code> method if you'd like.</p>
 
 <h3>pre_save<span>($input, $field, $stream, $row_id)</span></h3> 
  
@@ -189,17 +189,17 @@ Example:
   <tr> 
    <td>field</td> 
    <td>object</td>
-   <td>An object containing the field slug, field_name, and an associative array of custom mateter values under "field_data". Used like $field->field_slug or $field->field_data['max_length'].</td> 
+   <td>An object containing the field slug, field\_name, and an associative array of custom mateter values under "field\_data". Used like `$field->field_slug` or `$field->field_data['max_length']`.</td> 
   </tr> 
   <tr> 
    <td>stream</td>
    <td>object</td>
-   <td>An object of stream data. IE: $stream->stream_slug.</td> 
+   <td>An object of stream data. IE: `$stream->stream_slug`.</td> 
   </tr> 
   <tr> 
    <td>row_id</td>
    <td>int</td>
-   <td>The id of the current row. Is null if this is a new entry and it hasn't been saved yet.</td> 
+   <td>The id of the current row. Is `null` if this is a new entry and it hasn't been saved yet.</td> 
   </tr> 
 </tbody> 
 </table>
@@ -213,9 +213,9 @@ Example:
         return $this->CI->encrypt->encode($input);
     }
  
-### event
+### event($field)
  
-<p>This function is called before any other field function is called, allowing you to do things like add metadata to the admin pages, for example. This is where you can put the {{# TODO: link to correct page #}}{{ link uri="" title="CSS/JS" }} functions:</p>
+<p>This function is called before any other field function is called, allowing you to do things like add metadata to the admin pages, for example. This is where you can put the {{# TODO: link to correct page #}}{{ link uri="developers/addons/developing-field-types/structure#cssjs-files" title="CSS/JS" }} functions:</p>
 
     public function event($field)
     {
@@ -224,7 +224,7 @@ Example:
 
 {{ docs:header }}Alternative Formatting{{ /docs:header }}
 
-The above functions assume that we want to store a value in the database, but that isn't always the case. For instance, for the multiple relationship field type, we never store anything in the database - all data is stored in a separate binding table. Having an actual column in the database would be unecessary and a waste of space.
+The above functions assume that we want to store a value in the database, but that isn't always the case. For instance, for the multiple relationship field type, we never store anything in the database &ndash; all data is stored in a separate binding table. Having an actual column in the database would be unecessary and a waste of space.
 
 To deal with special cases like this, streams has provisions for alternative functionality that breaks away from the one-to-one data in column model. The following functions override other basic functions to give you flexibility in how you field type works.
 
@@ -236,11 +236,11 @@ If you want to tap into the alt process functionality, you first need to add a c
 
 After that, you are free from having to store values in the database. You can use the constructs/destructs to do whatever actions you'd like. For instance, on the multiple relationship field, there is a separate plugin that is used to display related entries using the binding table create and maintained separately from the normal field processes.
 
-However, you need to have a way to display data from this field on the back end if the user wants to. To display data on the back end, you should use the alt\_pre\_output plugin below:
+However, you need to have a way to display data from this field on the back end if the user wants to. To display data on the back end, you should use the `alt_pre_output` plugin below.
 
 ### alt\_pre\_output(<span>$row\_id, $params, $field\_type, $stream</span>)
 
-The alt\_pre\_output method will be called in lieu of pre\_output on the back end. It allows users to show a canonical data display when viewing entry data on the back end.
+The `alt_pre_output` method will be called in lieu of `pre_output` on the back end. It allows users to show a canonical data display when viewing entry data on the back end.
 
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
  <thead> 
@@ -254,7 +254,7 @@ The alt\_pre\_output method will be called in lieu of pre\_output on the back en
   <tr> 
    <td>row_id</td>
    <td>int</td>
-   <td>The id of the current row. Is null if this is a new entry and it hasn't been saved yet.</td> 
+   <td>The id of the current row. Is <code>null</code> if this is a new entry and it hasn't been saved yet.</td> 
   </tr> 
   <tr> 
    <td>params</td> 
@@ -269,7 +269,7 @@ The alt\_pre\_output method will be called in lieu of pre\_output on the back en
   <tr> 
    <td>stream</td>
    <td>object</td>
-   <td>An object of stream data. IE: $stream->stream_slug.</td> 
+   <td>An object of stream data. IE: <code>$stream->stream_slug</code></td> 
   </tr> 
 </tbody> 
 </table> 
@@ -306,7 +306,7 @@ Called right before a field is added to a stream.
 
 ### field\_assignment\_destruct(<span>$field, $stream</span>)
 
-Identical to **field_assignment_construct** only called right before a field assignment is removed.
+Identical to `field_assignment_construct` only called right before a field assignment is removed.
 
 ### entry_destruct(<span>$entry, $field, $stream</span>)
 
@@ -339,5 +339,5 @@ Called right before an entry is deleted.
 </tbody> 
 </table>
 
-<p class="tip">Wondering where <strong>entry_construct</strong> is? You can use <strong>pre_save</strong> for that.</p> 
+<p class="tip">Wondering where <code>entry_construct</code> is? You can use <code>pre_save</code> for that.</p> 
 

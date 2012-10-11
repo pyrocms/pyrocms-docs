@@ -2,23 +2,23 @@
 
 Widgets are quite similar to {{ link title="Plugins" uri="concepts/addons/plugins" }} in the way they are inserted into content, but they are a little more clever. They allow even your least experienced client or administrator to manage chunks of intelligent content on their site without needing to learn loads of tags, HTML or call you in to help.
 
-{{ link title="Widget Areas" uri="concepts/addons/widgets" }} can be defined (header, sidebar, blog page footers, etc) then Widget Instances can be added in them. Available Widgets currently include HTML blocks, Twitter Feeds, RSS Feeds, Google Maps and Social Bookmarks. More will be included over time, and you can make your own very easily.
+{{ link title="Widget Areas" uri="concepts/addons/widgets" }} can be defined (header, sidebar, blog page footers, etc.) then Widget Instances can be added in them. Available Widgets currently include HTML blocks, Twitter Feeds, RSS Feeds, Google Maps and Social Bookmarks. More will be included over time, and you can make your own very easily.
 
 ## Where do I put my widgets?
 
 Widgets can be stored directly in three places
 
-* the /addons/&lt;site-ref&gt;/widgets/*&lt;widget-name&gt;* folder
-* or the /addons/shared\_addons/widgets/*&lt;widget-name&gt;* folder
-* or inside a module folder for example: /addons/modules/*&lt;module-name&gt;/widgets/&lt;widget-name&gt;*
+* the <dfn>/addons/&lt;site-ref&gt;/widgets/*&lt;widget-name&gt;*</dfn> folder
+* or the <dfn>/addons/shared\_addons/widgets/*&lt;widget-name&gt;*</dfn> folder
+* or inside a module folder for example: <dfn>/addons/modules/*&lt;module-name&gt;/widgets/&lt;widget-name&gt;*</dfn>
 
 ## What are the main components of a widget
 
 The main components of a widget are:
 
-* the widget class.
-* views/form.php &ndash; a view that will be rendered in the widget admin interface.
-* views/display.php &ndash; a view that will be used to render output in the frontend site content.
+* the widget class
+* <dfn>views/form.php</dfn> &ndash; a view that will be rendered in the widget admin interface.
+* <dfn>views/display.php</dfn> &ndash; a view that will be used to render output in the frontend site content.
 
 ## How should a widget be structured?
 
