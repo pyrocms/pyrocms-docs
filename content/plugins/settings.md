@@ -135,10 +135,6 @@ For example, if you want to retrieve the mail_protocol protocol setting value, y
 			<td>Number</td>
 		</tr>
 		<tr>
-			<td>site_slogan</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
 			<td>twitter_consumer_key</td>
 			<td>&nbsp;</td>
 		</tr>
