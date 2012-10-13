@@ -7,7 +7,7 @@
 
 The navigation module allows you to create navigation groups and use them in your layouts.
 
-{{ docs:header }}Navigation Groups{{ /docs:header }}
+## Navigation Groups
 
 All links belong to a **navigation group**. This allows you to create navigation groups like "header" and "footer" so you can organize your links.
 
@@ -15,7 +15,7 @@ PyroCMS comes with some navigation groups by default, but to create a new group,
 
 {{ asset:img file="docs/nav\_module/new\_group.png" alt="File Details" class="doc_image" }} 
 
-{{ docs:header }}Adding a Link to a Group{{ /docs:header }}
+## Adding a Link to a Group
 
 Once your group is created, you can add links to it by clicking **Add Link** in the group header bar.
 
@@ -58,10 +58,10 @@ Once you choose a title for your link, then select the group that you wish for i
 
 The **Class** field allows you to add a css class to a single link.
 
-{{ docs:header }}Ordering Navigation Links{{ /docs:header }}
+## Ordering Navigation Links
 
 The order of your links in the admin panel are reflected on the website front-end. To change the order that they appear simply drag and drop them until they are in the order that you like.
 
-{{ docs:header }}Navigation Tags{{ /docs:header }}
+## Navigation Tags
 
 You can find the tag syntax to display navigation groups and data in your layouts in the {{ link title="navigation plugin docs" uri="plugins/navigation" }}.

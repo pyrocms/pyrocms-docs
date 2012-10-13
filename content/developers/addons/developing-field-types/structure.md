@@ -116,7 +116,7 @@ If you want to use the CodeIgniter super object in your field types, you can acc
 </tbody> 
 </table>
 
-{{ docs:header }}Field Parameters{{ /docs:header }}
+## Field Parameters
 
 <p>Each field can have custom or prefab field parameters. For instance, many fields, such as the text field take advantage of the max_length field parameter. However, you can make them yourself to give your users added functionality.</p> 
  
@@ -164,7 +164,7 @@ If you want to use the CodeIgniter super object in your field types, you can acc
  
 <p>It takes one parameter - a string that is the current value of the custom field parameter.</p> 
 
-{{ docs:header }}Languages in Field Types{{ /docs:header }}
+## Languages in Field Types
 
 As of PyroStreams 2.1, PyroStreams fully supports language files in PyroStreams. The canonical language for PyroStreams is English, so we'll use English in the following examples.
 
@@ -197,7 +197,7 @@ In your language file:
 	$lang['streams.choice.choice_data'] 		= 'Choice Data';
 	$lang['streams.choice.choice_type'] 		= 'Choice Type';
 
-{{ docs:header }}Validation{{ /docs:header }}
+## Validation
  
 Validation takes several forms for PyroCMS field types.
 
@@ -250,7 +250,7 @@ Remember, you can stall access all the $_POST variables, so if you need to grab 
 
     $this->CI->input->post('row_edit_id');
  
-{{ docs:header }}Working With File Uploads{{ /docs:header }}
+## Working With File Uploads
 
 <p>Some field types work with files (such as the image field type). When creating a field type that uses a file, make sure to add a class variable called <strong>input_is_file</strong> and set it to true.</p> 
  
@@ -258,7 +258,7 @@ Remember, you can stall access all the $_POST variables, so if you need to grab 
  
 <p>This will make sure things like required fields works correctly, since it needs to check the $\_FILE variable not $\_POST.</p> 
 
-{{ docs:header }}CSS/JS Files{{ /docs:header }}
+## CSS/JS Files
 
 Often times you need to use additional assets in your field type. This could be a CSS file or a view. PyroStreams is set up to allow you to pull in these files without having to figure out where your field type is in the file system.
 
@@ -276,7 +276,7 @@ If you need to add CSS or Javascript on the back end of PyroCMS, you can put the
 
 The above code will add the example.css and example.js files to the admin area from the email field type.
 
-{{ docs:header }}Using View Files{{ /docs:header }}
+## Using View Files
 
 If you'd like to load a view file from your field type, create a <strong>views</strong> folder in your field type folder and place your view file in there. You can call your view file like this:
 
@@ -284,7 +284,7 @@ If you'd like to load a view file from your field type, create a <strong>views</
 
 After the first parameter, which should be the field type slug, the next three parameters are the same as CodeIgniter's $this->load->view() function.
 
-{{ docs:header }}Field AJAX Functions{{ /docs:header }}
+## Field AJAX Functions
 
 If you need to have your field type access an ajax function, you can create a function in your field type prefixed with <strong>ajax_</strong>.
 

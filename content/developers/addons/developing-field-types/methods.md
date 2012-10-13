@@ -6,7 +6,7 @@ The following methods can be placed in your field type file and will be run by P
 * {{ docs:id_link title="Alternative Formatting" }}
 * {{ docs:id_link title="Constructs/Destructs" }}
 
-{{ docs:header }}Basic Data Formatting{{ /docs:header }}
+## Basic Data Formatting
  
 The following functions are available for data formatting and saving and make up the core of what you can do with PyroStreams field types.
 
@@ -222,7 +222,7 @@ Example:
         $this->CI->type->add_css('datetime', 'datepicker.css');
     }
 
-{{ docs:header }}Alternative Formatting{{ /docs:header }}
+## Alternative Formatting
 
 The above functions assume that we want to store a value in the database, but that isn't always the case. For instance, for the multiple relationship field type, we never store anything in the database - all data is stored in a separate binding table. Having an actual column in the database would be unecessary and a waste of space.
 
@@ -274,7 +274,7 @@ The alt\_pre\_output method will be called in lieu of pre\_output on the back en
 </tbody> 
 </table> 
 
-{{ docs:header }}Constructs/Destructs{{ /docs:header }}
+## Constructs/Destructs
 
 Construct/destruct functions tap into streams functionality when data and field assignments are created and destoryed.
 

@@ -10,7 +10,7 @@ The following guide will teach you the basics of tags and how to use them in you
 * {{ docs:id_link title="Tag Pairs" }}
 * {{ docs:id_link title="Tag Conditionals" }}
 
-{{ docs:header }}Basic Tags{{ /docs:header }}
+# Basic Tags
 
 At their very basic form, tags are simply a variable:
 
@@ -30,14 +30,14 @@ So if we put the above tag in our layout, and our {{ link uri="plugins/settings"
 
      Bill's Bagels
 
-{{ docs:header }}Comments{{ /docs:header }}
+## Comments
 
 If you'd like to comment out section of code or content, you can wrap them inside **&#123;&#123;#** and **#&#125;&#125;**. Ex: **&#123;&#123;# This is a comment #&#125;&#125;**. 
 This has the advantage over conventional [HTML comment tags](http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.2.4) that it won't be visible to users viewing your website's source code.
 
 <div id="attributes"></div>
 
-{{ docs:header }}Tag Attributes{{ /docs:header }}
+## Tag Attributes
 
 What makes tags really powerful is they can take attributes that give you the freedom to modify the tag output based on input data. Here is an example:
 
@@ -67,7 +67,7 @@ Here is an example showing the proper use of quotes and braces when the tag used
 
 <div id="pairs"></div>
 
-{{ docs:header }}Tag Pairs{{ /docs:header }}
+## Tag Pairs
 
 Another powerful feature of PyroCMS tags is the ability to use data between tags. Take this example of a blog posts tag:
 
@@ -89,7 +89,7 @@ Occasionally, single tags can act as arrays of data that you can loop through. Y
 
 <div id="conditionals"></div>
 
-{{ docs:header }}Tag Conditionals{{ /docs:header }}
+## Tag Conditionals
 
 Many times in your layouts you will want to show something under certain conditions. For instance, if a user is logged in or if a url segment has a certain value. PyroCMS tags allow you to do that with an if/else tag syntax.
 

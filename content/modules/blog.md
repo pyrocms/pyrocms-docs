@@ -16,7 +16,7 @@ The blog module allows you to easily setup a blog at www.yoursite.com/blog. It s
 * Blog Keywords
 * Commenting on/off control
 
-{{ docs:header }}Blogging Basics{{ /docs:header }}
+## Blogging Basics
 
 You can find the blog content controls under **Content &rarr; Blog**. This lists all of your posts, their post status, and has an option to publish them right there if they are in draft status.
 
@@ -96,7 +96,7 @@ Under the **Options** tab, the following fields are available:
 	</tr>
 </table>
 
-{{ docs:header }}URLs{{ /docs:header }}
+## URLs
 
 The blog module has its front-facing view at:
 
@@ -114,7 +114,7 @@ Keyword archives can be viewed at:
 
 	/blog/tagged/{tag}
 
-{{ docs:header }}Blog RSS Feed{{ /docs:header }}
+## Blog RSS Feed
 
 You can find you blog rss feed at:
 
@@ -122,11 +122,11 @@ You can find you blog rss feed at:
 
 The blog module will also add an application/rss+xml link tag to the header of all pages of your site if the blog module is enabled.
 
-{{ docs:header }}Customizing the Blog{{ /docs:header }}
+## Customizing the Blog
 
 The blog can be customized via {{ link title="view overloading" uri="theming/overloading-module-views" }} in your theme. There you can adapt the code to suit your display needs.
 
-{{ docs:header }}Blog Widgets{{ /docs:header }}
+## Blog Widgets
 
 The blog module has a lot of handy widgets. A common practice is to create a blog widget area to show on the left/right hand side of the blog indexes.
 
@@ -134,6 +134,6 @@ The blog module has a lot of handy widgets. A common practice is to create a blo
 * {{ link title="Blog Categories Widget" uri="widgets/blog-categories" }}
 * {{ link title="Latest Blog Posts Widget" uri="widgets/blog-latest-posts" }}
 
-{{ docs:header }}Blog Tags{{ /docs:header }}
+## Blog Tags
 
 You can access blog tags from the {{ link uri="plugins/blog" title="blog plugin" }}.
