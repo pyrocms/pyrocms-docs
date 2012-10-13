@@ -1,11 +1,13 @@
 # The Blog Module
 
-* {{ docs:id_link title="Blogging Basics" }}
-* {{ docs:id_link title="URLs" }}
-* {{ docs:id_link title="Blog RSS Feed" }}
-* {{ docs:id_link title="Customizing the Blog" }}
-* {{ docs:id_link title="Blog Widgets" }}
-* {{ docs:id_link title="Blog Tags" }}
+{{docs:anchormenu}}
+	Blogging Basics
+	URLs 
+	Blog RSS Feed
+	Customizing the Blog
+	Blog Widgets
+	Blog Tags
+{{/docs:anchormenu}}
 
 The blog module allows you to easily setup a blog at www.yoursite.com/blog. It supports the following features:
 
