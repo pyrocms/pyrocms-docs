@@ -12,13 +12,13 @@ The users module is where you manage your sites users. To start, go to **Users &
 
 You can search and filter them using the filter tools. Typing into the text box will search names and usernames of users. The results are populated via AJAX.
 
-{{ docs:header }}Creating a New User{{ /docs:header }}
+## Creating a New User
 
 To register a new user on your site, click on **+ Add User** and fill out the user form. At the very least, you need to provide an email address, username, password, display name, and whatever profile fields you have set to required. The display name is what will be used when the system needs to display the proper name of the user.
 
 {{ asset:img file="docs/users/add\_user.png" alt="Add New User" class="doc_image" }}
 
-{{ docs:header }}Managing User Groups and Permissions{{ /docs:header }}
+## Managing User Groups and Permissions
 
 By default, PyroCMS comes with two user groups:
 
@@ -35,7 +35,7 @@ Once you have created a new group, you can go to **Users &rarr; Permissions** an
 
 <div class="tip"><strong>Note:</strong> You can edit permissions for the default User group if you'd like to.</div>
 
-{{ docs:header }}Customizing Profile Fields{{ /docs:header }}
+## Customizing Profile Fields
 
 PyroCMS comes with a preset slate of user fields, but these can be easily changed. To manage your user profile fields, go to **Users &rarr; Manage Users** and click on the **Profile Fields** section menu.
 
@@ -49,7 +49,7 @@ To make a profile field show up on the register page, simply make it required wh
 
 {{ asset:img file="docs/users/new\_field.png" alt="New Profile Field form" class="doc_image" }}
 
-{{ docs:header }}User Module URLs{{ /docs:header }}
+## User Module URLs
 
 The Users module uses the following public URLs:
 
@@ -60,6 +60,6 @@ The Users module uses the following public URLs:
 
 To customize these pages, see {{ link title="module view overloading" uri="theming/overloading-module-views" }}.
 
-{{ docs:header }}Using User Data in Layouts{{ /docs:header }}
+## Using User Data in Layouts
 
 To see how to use settings values in layouts, see the {{ link title="user plugin docs" uri="plugins/user" }}.

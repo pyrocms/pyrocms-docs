@@ -66,6 +66,24 @@
 
     });
 
+    $('h1,h2,h3,h4,h5,h6',$('#content')).hover(
+      function () {
+        $('a.anchor, a.anchor-top', this).removeClass('hidden');
+      }, 
+      function () {
+        $('a.anchor, a.anchor-top', this).addClass('hidden');
+      }
+    );
+
+    $('a.anchor').hover(
+      function () {
+        $(this).removeClass('hidden');
+      }, 
+      function () {
+        $(this).addClass('hidden');
+      }
+    );
+
 	</script>
 
 
