@@ -1,6 +1,6 @@
 # Module Development
 
-Modules are the largest type of add-on for PyroCMS, and the most flexible. With a module you have have:
+Modules are the largest type of add-on for PyroCMS, and the most flexible. With a module you can have:
 
 * Install/Uninstall functions
 * Back end interfaces

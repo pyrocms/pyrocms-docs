@@ -64,7 +64,7 @@ To get started, create a folder and a file with your chosen slug. For this examp
 </tbody> 
 </table> 
  
-<p>Aside from the class variables, one method is necessary - <strong>form_output</strong>. This method is called when building the form and allows you to include logic and customized input for your fields. In this case, we are just returning a basic input. You can find more about this method on the {{ link title="Methods" uri="developers/addons/developing-field-types/methods" }} page.</p> 
+<p>Aside from the class variables, one method is necessary &ndash; <strong>form_output</strong>. This method is called when building the form and allows you to include logic and customized input for your fields. In this case, we are just returning a basic input. You can find more about this method on the {{ link title="Methods" uri="developers/addons/developing-field-types/methods" }} page.</p> 
  
 <p class="note">PyroStreams uses <a href="http://codeigniter.com/user_guide/helpers/form_helper.html">CodeIgniter's Form Helper</a> when creating inputs, and it is available in third party field types as well.</p> 
 
@@ -122,7 +122,7 @@ If you want to use the CodeIgniter super object in your field types, you can acc
  
 <p>Custom fields (preset and ones you make) are activated by putting a class variable into your field type class named <strong>custom_parameters</strong>.</p> 
  
-	public $custom_parameters   = array('max_length', 'my_custom_one'); 
+	public $custom_parameters = array('max_length', 'my_custom_one'); 
  
 <h3>Preset Field Parameters</h3> 
  
@@ -149,20 +149,24 @@ If you want to use the CodeIgniter super object in your field types, you can acc
  
 <h3 id="creating-custom-field-parameters">Creating Custom Field Parameters</h3> 
  
-<p>To create custom field parameters, you need to 1.) add them to the <strong>custom_parameters</strong> class variable (detailed above), 2.) specify a parameter name 3.) specify a parameter input.</p> 
+<p>To create custom field parameters, you need to</p>
+
+1. add them to the <strong>custom_parameters</strong> class variable (detailed above)
+2. specify a parameter name
+3. specify a parameter input.
  
 <p>To specify parameter names, create a class variable called <strong>field_names</strong> that is an associative array:</p> 
  
-	public var $field_names     = array( 'my_custom_one' => 'My Custom One'); 
+	public var $field_names = array('my_custom_one' => 'My Custom One'); 
  
 <p>To specify an input, create a method in your field class with the prefix <strong>param_</strong></p> 
  
 	public function param_my_custom_one($value)
 	{
-		//Return the form input
+	  // Return the form input
 	}
  
-<p>It takes one parameter - a string that is the current value of the custom field parameter.</p> 
+<p>It takes one parameter &ndash; a string that is the current value of the custom field parameter.</p> 
 
 ## Languages in Field Types
 
@@ -179,10 +183,11 @@ PyroStreams will recognize and load a language file with the same slug as your f
 
 Inside the <strong>email_lang.php</strong> file, you'll need an array like this:
 
-	&lt;?php defined('BASEPATH') or exit('No direct script access allowed');
-	$lang['streams.email.name'] 		= 'Email';
+	<?php defined('BASEPATH') or exit('No direct script access allowed');
+	
+	$lang['streams.email.name'] = 'Email';
 
-Each language item should follow the convention <strong>streams.youslug.lang_slug</strong>. The only one that is required is <strong>streams.youslug.name</strong> which will be used as the name of the field type.
+Each language item should follow the convention <strong>streams.yourslug.lang_slug</strong>. The only one that is required is <strong>streams.yourslug.name</strong> which will be used as the name of the field type.
 
 ### Custom Parameter Titles
 
@@ -190,12 +195,12 @@ If you are using {{ link title="Custom Parameters" uri="developers/addons/develo
 
 In your field type:
 
-	public $custom_parameters		= array('choice_data', 'choice_type');
+	public $custom_parameters = array('choice_data', 'choice_type');
 
 In your language file:
 
-	$lang['streams.choice.choice_data'] 		= 'Choice Data';
-	$lang['streams.choice.choice_type'] 		= 'Choice Type';
+	$lang['streams.choice.choice_data'] = 'Choice Data';
+	$lang['streams.choice.choice_type'] = 'Choice Type';
 
 ## Validation
  
@@ -211,7 +216,7 @@ With these three ways to incorporate validation, you have all the tools you need
 
 Standard field type validation is added as a class variable named **extra_validation**: 
  
-    public $extra_validation   = 'numeric|integer'; 
+    public $extra_validation = 'numeric|integer'; 
  
 Any of [CodeIgniter's Form Validation](http://codeigniter.com/user_guide/libraries/form_validation.html) rules can be used here, separated by a pipe character.
 
@@ -219,26 +224,36 @@ Any of [CodeIgniter's Form Validation](http://codeigniter.com/user_guide/librari
 
 Sometimes, the standard validation rules aren't enough for your input, and you need some custom validation logic. To add some custom validation logic, just a public **validate** function to your field type. It takes three parameters:
 
-<table>
-    <tr>
-        <td>$value</td>
-        <td>The value submitted to the form for your field.</td>
-    </tr>
-    <tr>
-        <td>$mode</td>
-        <td>Either 'new' or 'edit', depending on if the form is editing an entry or creating a new one.</td>
-    </tr>
-    <tr>
-        <td>$field</td>
-        <td>The field instance object.</td>
-    </tr>
+<table cellpadding="0" cellspacing="0" class="docs_table"> 
+	<thead> 
+  <tr> 
+   <th width="100"> 
+    Parameter</th> 
+   <th> 
+    Description</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr>
+      <td>value</td>
+      <td>The value submitted to the form for your field.</td>
+  </tr>
+  <tr>
+      <td>mode</td>
+      <td>Either 'new' or 'edit', depending on if the form is editing an entry or creating a new one.</td>
+  </tr>
+  <tr>
+      <td>field</td>
+      <td>The field instance object.</td>
+  </tr>
+ </tbody>
 </table>
 
 If the data fails validation, you can return an error string. A return of **null** or **true** indicates that your validation has passed the test. Here's a simple example: 
 
     public function validate($value, $mode, $field)
     {
-        if ($value != 'the value was want')
+        if ($value != 'the value we want')
         {
             return 'The '.$field->field_name.' field needs to be the value we want!';
         }
@@ -246,7 +261,7 @@ If the data fails validation, you can return an error string. A return of **null
         return true;
     }
 
-Remember, you can stall access all the $_POST variables, so if you need to grab the row ID, you can use the **row_edit_id** from the phone data.
+Remember, you can stall access all the `$_POST` variables, so if you need to grab the row ID, you can use the **row\_edit\_id** from the phone data.
 
     $this->CI->input->post('row_edit_id');
  
@@ -254,9 +269,9 @@ Remember, you can stall access all the $_POST variables, so if you need to grab 
 
 <p>Some field types work with files (such as the image field type). When creating a field type that uses a file, make sure to add a class variable called <strong>input_is_file</strong> and set it to true.</p> 
  
-    public $input_is_file    = true;
+    public $input_is_file = true;
  
-<p>This will make sure things like required fields works correctly, since it needs to check the $\_FILE variable not $\_POST.</p> 
+<p>This will make sure things like required fields works correctly, since it needs to check the `$_FILE` variable, not `$_POST`.</p> 
 
 ## CSS/JS Files
 
@@ -267,14 +282,10 @@ If you need to add CSS or Javascript on the back end of PyroCMS, you can put the
     public function event()
     {
         $this->CI->type->add_css('email', 'example.css'));
-    }
-
-    public function event()
-    {
         $this->CI->type->add_js('email', 'example.js'));
     }
 
-The above code will add the example.css and example.js files to the admin area from the email field type.
+The above code will add the _example.css_ and _example.js_ files to the admin area from the email field type.
 
 ## Using View Files
 
@@ -282,7 +293,7 @@ If you'd like to load a view file from your field type, create a <strong>views</
 
     $this->CI->type->load_view('field_type_slug', 'view_file', $data, true);
 
-After the first parameter, which should be the field type slug, the next three parameters are the same as CodeIgniter's $this->load->view() function.
+After the first parameter, which should be the field type slug, the next three parameters are the same as CodeIgniter's `$this->load->view()` function.
 
 ## Field AJAX Functions
 

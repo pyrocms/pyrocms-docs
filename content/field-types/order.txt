@@ -5,6 +5,7 @@ email
 encrypt
 file
 image
+keywords
 relationship
 slug
 text
