@@ -110,7 +110,7 @@ Here is a full list of parameters and what they do:
 		<td>where</td>
 		<td>string</td>
 		<td></td> 
-	<td>Allows you to specify a where parameter using the following structure: <em>field_slug==value</em>.</td> 
+	<td>Allows you to specify a where parameter using the following structure: <em>field_slug = 'value'</em>.</td> 
 	</tr> 
 	<tr> 
 		<td>exclude</td>
