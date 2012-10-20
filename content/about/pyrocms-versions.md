@@ -14,29 +14,15 @@ If you would like to test out features that are being developed for the next rel
 
 ## Release Types
 
-Aside from the obvious big releases (PyroCMS 2, PyroCMS 3, etc), it's important to know what type of release means based on its release number. Below is a table of the types of releases of PyroCMS and what each means. 
+Aside from the obvious big releases (PyroCMS 2, PyroCMS 3, etc), it's important to know what type of release means based on its release number. Below is a table of the types of releases of PyroCMS and what each means.
 
-<table class="table table-striped">
-	<thead>
-	<tr>
-		<th width="200">Release Type</th>
-		<th>Example</th>
-		<th>Notes</th>
-	</tr>
-	<thead>
-	<tbody>
-	<tr>
-		<td>Feature Release</td>
-		<td><strong>2.1</strong>
-		<td>Any release that has two numbers is a new feature release. These are releases of PyroCMS that typically have new features and may require you to update your site to comply with non backwards compatible syntax chagnes. It is important to read the <a href="">update guide documentation</a> when upgradign to a feature reelase.</td>
-	</tr>
-	<tr>
-		<td>Maintenance Release</td>
-		<td><strong>2.1.3</strong>
-		<td>Any release with a third number (3 in this case) is a release that mostly contains bug fixes and optimization of existing functionality. Although new features are not released on these versions, it is still recommended to upgrade when these versions are released as they can have important fixes.</td>
-	</tr>
-	</tbody>
-</table>
+{{docs:table header="Release Type|Example|Notes"  colwidth="140" class="table table-striped"}}
+
+Feature Release | __2.1__ | Any release that has two numbers is a new feature release. These are releases of PyroCMS that typically have new features and may require you to update your site to comply with non backwards compatible syntax chagnes. It is important to read the <a href="">update guide documentation</a> when upgradign to a feature reelase.
+
+Maintenance Release | __2.1.3__ | Any release with a third number (3 in this case) is a release that mostly contains bug fixes and optimization of existing functionality. Although new features are not released on these versions, it is still recommended to upgrade when these versions are released as they can have important fixes.
+
+{{/docs:table}}
 
 ### Note on Beta Stability
 
