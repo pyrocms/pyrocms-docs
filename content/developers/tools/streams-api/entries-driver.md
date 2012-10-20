@@ -226,4 +226,4 @@ Allows you to update an entry in the stream. Identical to insert\_stream, except
 	$entry_data = array(
 			'answer'	=> 'Because of magic.'
 		);
-	$this->streams->entries->insert_entry(2, $entry_data, 'faqs', 'faq');
+	$this->streams->entries->update_entry(2, $entry_data, 'faqs', 'faq');
