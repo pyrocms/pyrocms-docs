@@ -42,6 +42,16 @@ Display all blog posts or blog posts by category.
 			<td>
 				The maximum number of posts to display.</td>
 		</tr>
+                <tr>
+			<td width="100">
+				offset</td>
+			<td width="100">
+				0</td>
+			<td width="100">
+				No</td>
+			<td>
+				The offset of posts to display. ie. limit="10" offset="10" will return posts 11-20</td>
+		</tr>
 		<tr>
 			<td width="100">
 				order-by</td>
@@ -67,8 +77,9 @@ Display all blog posts or blog posts by category.
 
 ### Example</strong>
 
-	{{ noparse }}{{ blog:posts limit=&quot;5&quot; order-by=&quot;title&quot; order-dir=&quot;desc&quot; category=&quot;pyrocms&quot; }}
+	{{ noparse }}{{ blog:posts limit=&quot;5&quot; offset=&quot;5&quot; order-by=&quot;title&quot; order-dir=&quot;desc&quot; category=&quot;pyrocms&quot; }}
 	&lt;h2&gt;{{ title }}&lt;/h2&gt;
 	&lt;p&gt;{{ intro }} &lt;a href=&quot;{{ url }}&quot; title=&quot;Read more about: {{ title }}&quot;&gt;Read more&lt;/a&gt;&lt;/p&gt;
 	&lt;p&gt;Written by: &lt;a href=&quot;/users/profile/{{ author_id }}&quot;&gt;{{ author_name }}&lt;/a&gt;&lt;/p&gt;
+	This post is number {{ count }}. 
 {{ /blog:posts }}{{ /noparse }}
