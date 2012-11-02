@@ -1,5 +1,38 @@
 # Changelog
 
+## 2.1.5 - November 1, 2012
+
+### New Features and Improvements:
+
+- Added offset parameter and count variable to the blog plugin.
+- Changed default input for textbox field type a text box input instead of a text input.
+- Added default value options for the following field types: year, country, US state, and country.
+- Updated the image and file field types to work with cloud files (as set in the Files module).
+- Added a Save/Save & Exit to page layouts.
+- Added a ability to have multiple entry and delete forms on the same page with Streams.
+- Updated the Twitter regex for more accurate link formatting.
+
+### Bug Fixes
+
+- Fixed issue #1513, where sorting for Streams would not work for non-admin users given permission to access the streams module on the back end.
+- Fixed issue with permission interface where access to the module without any special permissions could not be granted.
+- Fixed issue where analytics graph would not be resized based on browser size.
+- Fixed issue where alternative process field types would not work with user fields.
+- Fixed an issue where buttons stayed bound to the click event in the file description modal.
+- Added a system cron that can clean the user sessions table.
+- Fixing typo that blocked access to character\_limiter helper function.
+- Fixing wrong function calls in assets plugin.
+- Fixed bug where unsafe stream slugs could pass validation.
+- Various small bug fixes, including PHP 5.4 fixes.
+
+
+### Developers
+
+- Added a is\_logged\_in() function to the user helper. Returns bool.
+- Added column display and entry sorting to the Streams API CP Driver.
+- Added a redirect override to the form builder function in Streams.
+- Fixed error where pre\_save was not being run for field types when there was no $\_POST data for it.
+
 ## 2.1.4 - August 31, 2012
 
 ### Improvements
