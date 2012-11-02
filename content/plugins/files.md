@@ -1,4 +1,4 @@
-# Files Tags
+# Files Plugin
 
 The _files_ plugin allows users to list files inside a folder, display paths to images, create download links, and display resized images
 

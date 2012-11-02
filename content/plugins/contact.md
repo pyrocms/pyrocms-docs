@@ -11,7 +11,7 @@ The contact plugin allows you to easily customize and display a form that sends 
 
 	{{ noparse }}{{ contact:form }}{{ /noparse }}
 
-{{ docs:header }}Setting Up Fields{{ /docs:header }}
+## Setting Up Fields
 
 You can customize which fields you want by creating a parameter with the desired name of your field, followed by some data about that field. Each piece of data is separated by a pipe character (|). Along with some special values, you can specify form validation rules (available validation rules are listed below).
 
@@ -23,7 +23,7 @@ You can now display this input field with a variable:
 
 	{{ noparse }}{{ name }}{{ /noparse }}
 
-{{ docs:header }}Available Field Types{{ /docs:header }}
+## Available Field Types
 
 The following field types are available to be used with the contact form. (Not to be confused with Streams field types, which are separate and for use with streams, not the contact form).
 
@@ -67,7 +67,7 @@ If you want to specify keys, you can:
 
 	subject="dropdown|required|support=Support Request|complimet=Compliment"
 
-{{ docs:header }}Available Field Validation Rules{{ /docs:header }}
+## Available Field Validation Rules
 
 The following rules are available, and are reproduced here from the CodeIgniter validation rules.
 
@@ -195,11 +195,11 @@ The following rules are available, and are reproduced here from the CodeIgniter 
 
 </table>
 
-{{ docs:header }}Creating an Email Template{{ /docs:header }}
+## Creating an Email Template
 
-If you would like to send an email using a template, you can do so by editing the default contact template or creating your own. To see how to create your own email templates, please see the documentation on the <a href="">email template module</a>.
+If you would like to send an email using a template, you can do so by editing the default contact template or creating your own. To see how to create your own email templates, please see the documentation on the {{ link title="email template module" uri="modules/email-templates" }}.
 
-The contact form comes with a basic contact email template already set up, which you can edit in the <a href="">email template module</a> and is set as the default for the *template* form parameter. The following fields are available for use:
+The contact form comes with a basic contact email template already set up, which you can edit in the {{ link title="email template module" uri="modules/email-templates" }} and is set as the default for the *template* form parameter. The following fields are available for use:
 
 <table cellpadding="0" cellspacing="0">
     <tbody>
@@ -252,7 +252,7 @@ We also have access to all of the fields we put in the contact form in the email
 	{{ name }},
 	{{ email }}
     
-{{ docs:header }}Form Attributes{{ /docs:header }}
+## Form Attributes
 
 The following attributes can be used to customize your form. None of these attributes are required.
 
@@ -375,7 +375,7 @@ The following attributes can be used to customize your form. None of these attri
     </tbody>
 </table>
 
-{{ docs:header }}Examples{{ /docs:header }}
+## Examples
 
     {{ noparse }}{{ contact:form
     name = &quot;text|required&quot;

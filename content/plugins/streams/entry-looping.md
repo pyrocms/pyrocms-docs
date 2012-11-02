@@ -8,8 +8,9 @@
 * {{ docs:id_link title="Nested Variables" }}
 * {{ docs:id_link title="Pagination" }}
 * {{ docs:id_link title="Controlling the Pagination Markup" }}
+* {{ docs:id_link title="Separating Results into Sets" }}
 
-{{ docs:header }}The Loop Cycle{{ /docs:header }}
+## The Loop Cycle
 
 The most basic and common way of interacting with PyroStreams data is looping through it using the <em>cycle</em> plugin function. For example:
  
@@ -60,7 +61,9 @@ PyroStreams comes with a lot of parameters to help you customize what data is be
 
 Instead of specifying a stream with the stream="stream_slug" parameter, you can use it in the place of "cycle". For instance, if you have a stream called dogs, you can loop through them like this:
 
-  {{ noparse }}{{ streams:dogs limit="10" }}{{ /noparse }}
+    {{ noparse }}{{ streams:dogs limit="10" }}
+
+{{ /streams:dogs }}{{ /noparse }}
 
 <h3 id="entries-tags">Omitting the Entries Tags</h3>
 
@@ -72,7 +75,7 @@ Since PyroStreams 2.1.3, if you are not using the {{&nbsp;total&nbsp;}} or {{&nb
 
 {{ /streams:cycle }}{{ /noparse }}
 
-{{ docs:header }}Parameters{{ /docs:header }}
+## Parameters
 
 The following are basic parameters that restrict or modify the returned data in some way.
 
@@ -181,7 +184,7 @@ The following are basic parameters that restrict or modify the returned data in 
   <tr> 
     <td>where</td> 
     <td>&nbsp;</td> 
-    <td>Allows you to restrict results. See <a href="">The Where Parameter</a> for more information.</td> 
+    <td>Allows you to restrict results. See {{ link title="The Where Parameter" uri="plugins/streams/entry-looping#the-where-parameter" }} for more information.</td> 
   </tr> 
   <tr> 
    <td> 
@@ -198,6 +201,19 @@ The following are basic parameters that restrict or modify the returned data in 
     no</td> 
    <td> 
     Set to 'yes' to limit entries to ones not already displayed on the same page. Ex: An image gallery with a featured image. Use exclude_called="yes" on the rest of the images to not display the currently selected image..</td> 
+  </tr> 
+  <tr> 
+   <td> 
+    include</td> 
+   <td> 
+    &nbsp;</td> 
+   <td>Value to include in a where= clause. Used with <strong>include_by</strong> to filter by a single data point.</td> 
+  </tr> 
+  <tr> 
+   <td> 
+    include_by</td> 
+   <td>id</td> 
+   <td>The field to use when using the <strong>include</strong> parameter. </td> 
   </tr> 
 		<tr> 
 			<td>disable</td> 
@@ -216,12 +232,12 @@ The following are basic parameters that restrict or modify the returned data in 
    <td>partial</td> 
    <td></td> 
    <td> 
-    Allows separation of results into separate segments. See <a href="pyrostreams/docs/showing-data/looping#sets">Separating Results into Sets</a> for more information.</td> 
+    Allows separation of results into separate segments. See {{ link title="Separating Results into Sets" uri="plugins/streams/entry-looping#separating-results-into-sets" }} for more information.</td> 
   </tr> 
  </tbody> 
 </table> 
 
-{{ docs:header }}The Where Parameter{{ /docs:header }}
+## The Where Parameter
 
 If you need to restrict your results, a handy way to do that is with the where parameter.
 
@@ -245,7 +261,7 @@ In PyroStreams 2.1.4, the where parameter can specify one parameter using the fo
 
 <div class="tip"><strong>Note:</strong> The where clause is directly mapped to the where clause in MySQL, so you are limited in the values that you can restrict by. For instance, if you have a Choice dropdown field with a key and value, the key is stored in the database. So, if you want to restrict by that field, you need to restrict by the choice key and not the value.</div>
 
-{{ docs:header }}Extra Loop Variables{{ /docs:header }}
+## Extra Loop Variables
 
 <p>Aside from the field tags that are returned when you loop through entries, you can also access some automatically generated tags.</p>
 
@@ -272,7 +288,7 @@ In PyroStreams 2.1.4, the where parameter can specify one parameter using the fo
  </tbody>
 </table>
 
-{{ docs:header }}Restrict by User{{ /docs:header }}
+## Restrict by User
 
 <p>PyroStreams gives you the option of restricting a to a specific user. Each stream automatically tracks which user created an entry using the <strong>created_by</strong> field that is automatically added. Turning on user restricting means that only the entries created by the specified user will be returned.</p>
 
@@ -302,7 +318,7 @@ In PyroStreams 2.1.4, the where parameter can specify one parameter using the fo
 
 <div class="tip"><strong>Note:</strong> If no user is logged in or the user id/username is invalid, user restricting is subsequently turned off.</div>
  
-{{ docs:header }}Nested Variables{{ /docs:header }}
+## Nested Variables
  
 <p>Some variables return an array of values, such as a variable from a related field. Each of these values can be accessed with a colon between the field name and the sub variable you want to access.</p>
 
@@ -318,7 +334,7 @@ In PyroStreams 2.1.4, the where parameter can specify one parameter using the fo
  
      {{ noparse }}{{ band:email:email_link }}{{ /noparse }}
 
-{{ docs:header }}Pagination{{ /docs:header }}
+## Pagination
  
 <p>Very often you'll want to paginate large data sets. PyroStreams allows you to do this quickly and easily. The following parameters are used in the <strong>cycle</strong> function for creating pagination.</p> 
  
@@ -460,7 +476,7 @@ In PyroStreams 2.1.4, the where parameter can specify one parameter using the fo
 </tbody> 
 </table>
 
-{{ docs:header }}Separating Results into Sets{{ /docs:header }}
+## Separating Results into Sets
 
 Sometimes you don't want to show all of your stream entry results at the same time. The most common use case for this is separating results into equal columns.
 

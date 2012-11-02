@@ -13,7 +13,7 @@
 * {{ docs:id_link title="Email Notifications" }}
 * {{ docs:id_link title="CSRF" }}
 
-{{ docs:header }}The Entry Form{{ /docs:header }}
+## The Entry Form
  
 <p>PyroStreams allows you to display a create or edit form using the PyroCMS tag system. Forms are generated using the following format:</p>
 
@@ -40,7 +40,7 @@
 
 {{ /streams:form }}{{ /noparse }}
 
-{{ docs:header }}Form Parameters{{ /docs:header }}
+## Form Parameters
 
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
 	<thead> 
@@ -88,7 +88,7 @@
 			<td> 
 				current url</td> 
 			<td> 
-				Where to return to when the form action is done. Use -id- to designate the insert id for when using the new mode.</td> 
+				Where to redirect to to when the form action is done. Use -id- to designate the insert id for when using the new mode. This will set a flash success/error message and redirect, so make sure the page you redirect to does not have a redirect itself, otherwise the flash message wil be lost between the two redirects.</td> 
 		</tr> 
 		<tr> 
 			<td>error_start</td> 
@@ -123,7 +123,7 @@
 	</tbody> 
 </table>
 
-{{ docs:header }}Fields Tag Pair{{ /docs:header }}
+## Fields Tag Pair
 
 <p>The <strong>fields</strong> tag pair loops through each input row and makes data available via variables that allows you to mark up your form in any way you&#39;d like using the following tags:</p> 
 
@@ -145,13 +145,13 @@
 			<td> 
 				&#123;&#123;&nbsp;input_slug&nbsp;}}</td> 
 			<td> 
-				The field slug..</td> 
+				The field slug.</td> 
 		</tr> 
 		<tr> 
 			<td> 
 				&#123;&#123;&nbsp;instructions&nbsp;}}</td> 
 			<td> 
-				The field instructions..</td> 
+				The field instructions.</td> 
 		</tr> 
 		<tr> 
 			<td> 
@@ -174,9 +174,19 @@
 	</tbody> 
 </table>
 
-{{ docs:header }}Showing Individual Fields{{ /docs:header }}
+Example:
 
-If you want a finer-grain control over your form inputs, you can access various form variables with single tags. For instance, if you had a name field with a slug of 'your_name', you could display the input element by using {{ your_name:input }}.
+	{{ noparse }}{{ fields }}
+
+&lt;label for="{{ input_slug }}">{{ title }}&lt;/label>
+{{ if instructions }}&lt;p>{{ instructions }}&lt;/p>{{ endif }}
+&lt;p>{{ input }}&lt;/p>
+
+{{ /fields }}{{ /noparse }}
+
+## Showing Individual Fields
+
+If you want a finer-grain control over your form inputs, you can access various form variables with single tags. For instance, if you had a name field with a slug of 'your\_name', you could display the input element by using {{ your\_name:input }}.
 
 The following variables are available for each input:
 
@@ -219,7 +229,16 @@ The following variables are available for each input:
 	</tbody>
 </table>
 
-{{ docs:header }}Other Tags{{ /docs:header }}
+Example:
+
+	{{ noparse }}{{ title:label }} {{ if title:is_required }}Make sure to fill this in!{{ endif }}
+
+{{ if title:instructions }}&lt;p>{{ title:instructions }}&lt;/p>{{ endif }}
+
+&lt;p>{{ title:input }}&lt;/p>
+{{ /noparse }}
+
+## Other Tags
 
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
 	<thead> 
@@ -231,7 +250,7 @@ The following variables are available for each input:
 	<tbody> 
 <tr> 
 	<td>&#123;&#123;&nbsp;form_open&nbsp;}}</td> 
-	<td>Creates the opening form tag that submits to the current URL.</td> 
+	<td>Creates the opening form tag that submits to the current URL. It is highly recommended that you use this tag instead of using your own form opening tag, since this tag adds important hidden fields that some field types may rely on.</td> 
 </tr> 
 <tr> 
 	<td>&#123;&#123;&nbsp;form_submit&nbsp;}}</td> 
@@ -247,7 +266,7 @@ The following variables are available for each input:
 </tr>
 </table>
 
-{{ docs:header }}Form Assets{{ /docs:header }}
+## Form Assets
 
 Many fields have CSS or Javascript that needs to be loaded. Depending on your theme, the assets may not be automatically added to your page, breaking some fields. In this case, you can add them manually with the **form_assets** function. Just place this below your form tags:
 
@@ -255,7 +274,7 @@ Many fields have CSS or Javascript that needs to be loaded. Depending on your th
 
 <div class="tip"><strong>Note:</strong> You should already have jQuery loaded before the form_assets tag is used.</div>
 
-<h2 id="messages">Overriding Success/Failure Messages</h2>
+## Overriding Success/Failure Messages
 
 Many PyroCMS themes have built-in displays for flash data (that is, data that is only available on the next page refresh, and usually contains a message about the success/failure of the previous action). You can control what these messages say with these two parameters:
 
@@ -281,7 +300,7 @@ Many PyroCMS themes have built-in displays for flash data (that is, data that is
 	</tbody>
 </table>
 
-{{ docs:header }}Using reCAPTCHA{{ /docs:header }}
+## Using reCAPTCHA
 
 reCAPTCHA is a simple and high quality CAPTCHA tool, and PyroStreams makes it easy to implement. To start, get your public and private keys from <a href="http://www.google.com/recaptcha">reCAPTCHA</a>. Then, add those keys into the reCAPTCHA config file, located in <strong>streams/config/recaptcha.php</strong>.
 
@@ -295,7 +314,7 @@ This is the actual reCAPTCHA box. It takes a parameter of <strong>theme</strong>
 
 This displays the reCAPTCHA error. If obeys the form&#39;s error parameters so it will fit in with the rest of your form.
 
-{{ docs:header }}Email Notifications{{ /docs:header }}
+## Email Notifications
 
 When an entry form is submitted and processed successfully, you can set the form to send an email.
 
@@ -357,7 +376,7 @@ When you put it all together, you entry tag may look like this:
 
 	{{ noparse }}{{ streams:form stream="messages" mode="new" notify_a="admin@example.com|email_field" notify_template_a="new_feedback" notify_from_a="noreply@example.com|Example" }}{{ /noparse }}
 
-{{ docs:header }}CSRF{{ /docs:header }}
+## CSRF
 
 If you need to use CSRF, the necessary hidden elements will be added when you use the form_open tag that is available in the form function.
 

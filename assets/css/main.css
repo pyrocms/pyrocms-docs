@@ -329,6 +329,33 @@ code, pre {
     *zoom: 1;
 }
 
+h1 a.anchor, 
+h2 a.anchor,
+h3 a.anchor,
+h4 a.anchor,
+h5 a.anchor,
+h6 a.anchor {
+    background: url(../img/anchor.png) no-repeat left center;
+    position: absolute;
+    margin-left: -22px;
+    height: 18px;
+    width: 22px;
+    display: block;
+    text-decoration: none;
+}
+h1 a.anchor {
+    margin-top: 8px; 
+}
+h2 a.anchor {
+    margin-top: 4px; 
+}
+
+.anchor-top {
+    float: right;
+    font-size: 16px;
+    padding: 0 15px;
+}
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    Theses examples override the primary ('mobile first') styles.

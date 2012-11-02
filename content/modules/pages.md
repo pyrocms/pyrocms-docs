@@ -10,17 +10,17 @@
 
 The pages module is a simple but powerful way to manage static content on your site. Page layouts can be managed and widgets embedded without ever editing the template files.
 
-{{ docs:header }}The Page Tree{{ /docs:header }}
+## The Page Tree
 
 The page tree is a visual, heirarchical overview of all the pages on your site. Note that these do not include module URIs (see {{ link title="PyroCMS URLs" uri="concepts/pyrocms-urls" }} for an overview of how URLs work in PyroCMS).
 
-{{ docs:header }}Re-Ordering Pages{{ /docs:header }}
+## Re-Ordering Pages
 
 Page re-ordering is achieved via simple drag and drop. You can drag/drop individual pages or entire sections (by dragging the parent page). There will be a shadow to show you where your page drag will end up.
 
 {{ asset:img file="docs/pages/dragdrop.png" alt="Drag and Drop Pages" class="doc_image" }}
 
-{{ docs:header }}Modifying Pages{{ /docs:header }}
+## Modifying Pages
 
 To modify a page, click it in the page tree. A data summary panel will show, with options for modifying the page.
 
@@ -51,7 +51,7 @@ The following options are available:
 	</tr>
 </table>
 
-{{ docs:header }}Default Pages{{ /docs:header }}
+## Default Pages
 
 You'll notice that on a default install of PyroCMS there are some pages already there in the tree:
 
@@ -62,7 +62,7 @@ You'll notice that on a default install of PyroCMS there are some pages already 
 	</tr>
 	<tr>
 		<td>Home</td>
-		<td>Every site needs a home page! The home page is like any other page, it just has **Is default (home) page?** selected under the **Options** tab.</td>
+		<td>Every site needs a home page! The home page is like any other page, it just has <strong>Is default (home) page?</strong> selected under the <strong>Options</strong> tab.</td>
 	</tr>
 	<tr>
 		<td>Page Missing</td>
@@ -74,7 +74,7 @@ You'll notice that on a default install of PyroCMS there are some pages already 
 	</tr>
 </table>
 
-{{ docs:header }}Adding a New Page{{ /docs:header }}
+## Adding a New Page
 
 To add a new page, click **Add Page**. You'll get a multi-tabbed form with a lot of options. The following sections go over each tab.
 
@@ -194,7 +194,7 @@ You may place javascript here that you would like appended to the &lt;head&gt; o
 	</tr>
 </table>
 
-{{ docs:header }}Page Layouts{{ /docs:header }}
+## Page Layouts
 
 Page layouts allows you to control the layout of the page without modifying the theme files. You can also select theme layout files when creating Page Layouts. You can embed tags into the page layout instead of placing them in every page.
 

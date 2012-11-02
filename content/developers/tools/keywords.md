@@ -8,7 +8,7 @@ Simply add a **char(32)** field to your database. This stored the MD5 string tha
 
 <script src="https://gist.github.com/1777448.js?file=gistfile1.aw"></script>
 
-In the above example, <kdb>Keywords::process('foo, bar, baz')</kdb> takes a comma separated string of keywords and converts them into a MD5 string, which is a unique hash for the combination of keywords being used.
+In the above example, `Keywords::process('foo, bar, baz')` takes a comma separated string of keywords and converts them into a MD5 string, which is a unique hash for the combination of keywords being used.
 
 ## Schema
 
@@ -33,13 +33,25 @@ They will then be linked in "default\_keywords\_applied" with the keyword hash a
 	
 ## Displaying Keywords
 
+{{# TODO: Add back in when PR submitted.
 In your public controller you can use the following to build a list of keyword links in a string.
 
 	Keywords::get_links($hash, 'blog/tagged')
 	
-You can also return an array or a string with the following methods:
+#}}
+You can return an array or a string of the keywords with the following methods:
 
-	Keywords::get_array($hash);
-	Keywords::get_string($hash);
+	Keywords::get_array($hash);	// returns in format:
+	
+	Array (
+	  [0] => keyword_1,
+	  [1] => keyword_2,
+	  [2] => keyword_3
+	)
+	
+	
+	Keywords::get_string($hash); // returns as concatinated string
+	
+	"keyword_1, keyword_2, keyword_3"
 
 For more on usage see the [API Documentation: Keywords](/2.1/api/classes/Keywords.html).

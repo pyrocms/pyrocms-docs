@@ -46,7 +46,7 @@ The date/time field type stores date and time information. You can choose to jus
   
 ## Formatting Date/Time Output
  
-The date/time field type can be formatted one of two ways. The first and most common way is by formatting it with the date helper. The formatting follows <a href="http://php.net/manual/en/function.date.php">PHP's date formatting guidelines</a>.
+The date/time field type can be formatted with the date function, using the {{ link title="helper plugin" uri="plugins/helper" }}. The formatting follows <a href="http://php.net/manual/en/function.date.php">PHP's date formatting guidelines</a>. Simply pass the date/time value as the **timestamp** paramter.
 
 Example:
 

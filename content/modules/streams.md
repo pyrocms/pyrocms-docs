@@ -12,11 +12,11 @@ Many sites require data that is not in a page format. For instance – dates of 
 
 In PyroStreams, each "list" of data is known as a "stream". So, a list of bands would be a stream. A list of live shows would be a stream. PyroStreams gives you the tools to create and manage those streams on the back end, and then gives you the tools to display that data on your website easily via PyroCMS page templates.
 
-{{ docs:header }}Where to Get Streams{{ /docs:header }}
+## Where to Get Streams
 
 The Streams module is part of [PyroCMS Pro](https://www.pyrocms.com/store/details/pyrocms_professional) and is also available as a [standalone module](https://www.pyrocms.com/store/details/pyrostreams). Streams Core and the Streams API is available in the Community version of PyroCMS. For a primer on the different parts of streams, see the {{ link title="streams concept page" uri="concepts/streams" }}.
 
-{{ docs:header }}Creating a Stream{{ /docs:header }}
+## Creating a Stream
 
 To create a new stream, click **New Stream**. You'll be prompted to fill in four pieces of information.
 
@@ -47,7 +47,7 @@ To create a new stream, click **New Stream**. You'll be prompted to fill in four
 
 Namespaces are the streams concept that allow modules the freedom to use slugs for fields and stream without worrying about conflicts. Modules that use streams as their data structure will have a unique namespace. The streams module uses **streams** as its namespace.
 
-{{ docs:header }}Creating Fields{{ /docs:header }}
+## Creating Fields
 
 In PyroStreams, fields are like columns in a spreadsheet. Only in PyroStreams, there are specific types of data for you to choose from that dictate how that data in the column is edited and displayed. You may need a plain text field (you can use the text field type for that), or a list of US States (you can use the US State field type for that).
 
@@ -59,13 +59,13 @@ To create a field, go to the "Fields" section at the top of the page. There you'
 
 You'll need to give your field a name and a slug, as well as choose what type of field you want to create. Based on the field type, extra parameters might appear that allow you to customize the field's behavior or display.
 
-{{ docs:header }}Sharing Fields{{ /docs:header }}
+## Sharing Fields
 
 You’ll notice that fields are not specifically linked to their stream right away. This is because PyroStreams is built to allow you to share fields between streams. Instead of having to create a "Name" field over and over again, you can create one and assign it to more and one field.
 
 This comes in handy for creating relationship fields. You can create a field, for instance, called "Band" that is a relationship link to the bands stream, and then use that in several streams to link to a band.
 
-{{ docs:header }}Assigning Fields{{ /docs:header }}
+## Assigning Fields
 
 Once you've created a stream and a field, you can now assign fields to a stream.
 
@@ -99,7 +99,7 @@ You can also choose some extra settings for this instance of your field. You can
 	</tr>
 </table>
 
-{{ docs:header }}Default Columns{{ /docs:header }}
+## Default Columns
 
 Each stream comes with some default columns that are always created and populated. You don't need to create these, and they are always available.
 
@@ -141,11 +141,11 @@ Each stream comes with some default columns that are always created and populate
 
 These fields can be used and displayed in templates and are automatically populated and dealt with behind the scenes, so you never have to create these.
 
-{{ docs:header }}Ordering Fields{{ /docs:header }}
+## Ordering Fields
 
 To edit the order in which your assigned fields appear, you can just drap and drop them when viewing them on the **Stream Field Asssignments** page.
 
-{{ docs:header }}Entry Ordering{{ /docs:header }}
+## Entry Ordering
 
 PyroStreams comes with two types of ordering built-in: **manual** and **automatic**. These two ordering modes affect how information is ordered on the back end when you look through it, as well as how it is ordered when you loop through it in your layouts.
 
@@ -168,7 +168,7 @@ Ordering is set to automatic by default once you have a title column. You can ch
 	</tr>
 </table>
 
-{{ docs:header }}PyroStreams Permissions{{ /docs:header }}
+## PyroStreams Permissions
 
 PyroStreams comes with two extra permission settings:
 
@@ -189,11 +189,11 @@ PyroStreams comes with two extra permission settings:
 
 If you have a client you just want to have edit entries, and not have any control over the structure of those entries, you can just give them permission to access the module, without the permission to admin streams or fields. This way they can manage data without the risk of them accidentally deleting a stream or field.
 
-{{ docs:header }}Displaying Your PyroStreams Data{{ /docs:header }}
+## Displaying Your PyroStreams Data
 
-Once you have your data structures set up, you'll want to display it in some form in your page layouts and templates. To do that, you can use the {{ link title="PyroStreams plugin" uri="plugin/streams" }}.
+Once you have your data structures set up, you'll want to display it in some form in your page layouts and templates. To do that, you can use the {{ link title="PyroStreams plugin" uri="plugins/streams" }}.
 
-{{ docs:header }}Resources{{ /docs:header }}
+## Resources
 
 * {{ link uri="developers/tools/streams-api" title="Streams API Docs" }}
 * {{ link uri="developers/addons/developing-field-types" title="Developing Field Type Docs" }}
