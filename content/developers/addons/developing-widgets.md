@@ -94,6 +94,17 @@ Please take this opportunity to read through the code below and make note of the
 	        $stuff = $this->db->get_stuff();
             return array('stuff' => $stuff);
 	    }
+
+        /**
+	     * save() is used to alter submited data before their insertion in database
+	     */
+	    public function save($options)
+	    {
+		   if(isset($options['foo']) && !isset($options['bar']){
+		       $options['bar'] = $options['foo'];
+		   }
+		   return $options;
+	    }
     }
 
 If you have made it this far and have read the comments in the above code that should pretty much get you on the right path to creating your first widget. However I would like to point out one thing before moving on.
