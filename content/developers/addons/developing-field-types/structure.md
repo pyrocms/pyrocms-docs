@@ -155,9 +155,13 @@ If you want to use the CodeIgniter super object in your field types, you can acc
 2. specify a parameter name
 3. specify a parameter input.
  
-<p>To specify parameter names, create a class variable called <strong>field_names</strong> that is an associative array:</p> 
- 
-	public var $field_names = array('my_custom_one' => 'My Custom One'); 
+To specify the label name of the parameter, just add a new language key in the format of:
+
+    $lang['streams.{your_field_type_slug}.{your_param_slug}'] = 'Label';
+
+So if you have a parameter default_setting for your Setting field type, your language variable would look like this:
+
+    $lang['streams.setting.default_setting'] = 'Default Setting';
  
 <p>To specify an input, create a method in your field class with the prefix <strong>param_</strong></p> 
  
@@ -166,7 +170,19 @@ If you want to use the CodeIgniter super object in your field types, you can acc
 	  // Return the form input
 	}
  
-<p>It takes one parameter &ndash; a string that is the current value of the custom field parameter.</p> 
+<p>It takes one parameter &ndash; a string that is the current value of the custom field parameter.</p>
+
+### Adding Instructions to Your Field Parameter
+
+If you want to take it one step further, you can return an array (instead of a string) of the input and the instructions for that input:
+
+    public function param_choice_data($value = null)
+    {
+      return array(
+          'input'     => form_textarea('choice_data', $value),
+          'instructions'  => $this->CI->lang->line('streams.choice.instructions')
+        );
+    }
 
 ## Languages in Field Types
 
