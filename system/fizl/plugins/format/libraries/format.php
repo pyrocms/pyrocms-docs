@@ -54,7 +54,7 @@ class Format extends Plugin {
 
 		require_once('simple_html_dom.php');
 		
-		$html_dom = str_get_html($html);
+		$html_dom = str_get_html($html, false, false, DEFAULT_TARGET_CHARSET, false);
 		
 		// Get elements. Similar to using jQuery selectors
 		$headings = $html_dom->find('h1,h2,h3,h4,h5,h6');
