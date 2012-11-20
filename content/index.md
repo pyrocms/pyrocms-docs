@@ -4,7 +4,7 @@ If you're looking for information on how to use PyroCMS, you've come to the righ
 
 If you are new to PyroCMS, a good place to start would be the {{ link title="Important Concepts" uri="concepts" }} section, which outlines the core concepts that PyroCMS operates on that you'll need to know going forwards.
 
-If you are a developer, head on over to our {{ link title="developer docs" uri="developers" }}, where you'll find information on how to extend the functionality of PyroCSM.
+If you are a developer, head on over to our {{ link title="developer docs" uri="developers" }}, where you'll find information on how to extend the functionality of PyroCMS.
 
 If you are a designer, check out the {{ link title="theming guide" uri="theming" }}, which outlines the process of creating a theme for PyroCMS.
 
