@@ -1,5 +1,70 @@
 # Changelog
 
+## 2.1.5 - November 1, 2012
+
+### New Features and Improvements:
+
+- Added offset parameter and count variable to the blog plugin.
+- Changed default input for textbox field type a text box input instead of a text input.
+- Added default value options for the following field types: year, country, US state, and country.
+- Updated the image and file field types to work with cloud files (as set in the Files module).
+- Added a Save/Save & Exit to page layouts.
+- Added a ability to have multiple entry and delete forms on the same page with Streams.
+- Updated the Twitter regex for more accurate link formatting.
+
+### Bug Fixes
+
+- Fixed issue #1513, where sorting for Streams would not work for non-admin users given permission to access the streams module on the back end.
+- Fixed issue with permission interface where access to the module without any special permissions could not be granted.
+- Fixed issue where analytics graph would not be resized based on browser size.
+- Fixed issue where alternative process field types would not work with user fields.
+- Fixed an issue where buttons stayed bound to the click event in the file description modal.
+- Added a system cron that can clean the user sessions table.
+- Fixing typo that blocked access to character\_limiter helper function.
+- Fixing wrong function calls in assets plugin.
+- Fixed bug where unsafe stream slugs could pass validation.
+- Various small bug fixes, including PHP 5.4 fixes.
+
+
+### Developers
+
+- Added a is\_logged\_in() function to the user helper. Returns bool.
+- Added column display and entry sorting to the Streams API CP Driver.
+- Added a redirect override to the form builder function in Streams.
+- Fixed error where pre\_save was not being run for field types when there was no $\_POST data for it.
+
+## 2.1.4 - August 31, 2012
+
+### Improvements
+
+* Added Scott to the Team
+* Disabled persistent db connection in the installer as some hosts disallow that.
+* Updated reference to pyrocms.com to use HTTPS
+* Replacing mysql\_escape\_string with mysql\_real\_escape\_string in installer.
+* Removing unnecessary database calls for the image, file, and relationship field types.
+* Corrected the admin form layout for additional page chunks
+* Added events call when calling build\_forms
+* PHP Version check in the installer was always showing as acceptable
+* Redirect after login now works on the admin in addition to the front. Fixes #1778
+* Split category slugs on the pipe character in the blog:posts tag so multiple categories can be selected
+* Removed duplicate pagination view in the blog module
+* Got rid of the <ProgressEvent> has no method 'initProgressEvent' error in the uploader
+
+### Bug Fixes
+
+* Fixing fatal error when duplicating pages.
+* Fixed non-object error on pages display plugin
+* Fixes a typo in the Ion\_Auth library that kept user activation emails from sending
+* Fixes #1733. The file insert dialogue was looking for the "files" controller instead of "files\_wysiwyg"
+* Fixed #1726. Pagination was missing from blog admin index page
+* Fixes #1718. Duplicated pages were set to "home" and could end up at the wrong level.
+* Fixing naming conflict with streams\_m runtime cache.
+* Fixed Lex bug where 0 would be output as an empty string. Read https://www.pyrocms.com/forums/topics/view/19686
+* Fixing NULL variables not parsing correctly in Lex.
+* Fixed issue 1785: IE font bug
+* Fixed filtering in the blog module admin panel. Refactored views to fit
+* Fixed PHP 5.4 E\_STRICT issues.
+
 ## 2.1.3 - August 9, 2012
 
 ### Improvements
@@ -10,37 +75,37 @@
 * Removed some deprecated methods and tag attributes
 * Followed up on the deprecation of Settings::item().
 * Folloed up on deprecation of Settings::set\_item(). Some code formatting and docblock fixes in theme\_m.php.
-* Switched Keywords in blog to an array. No more Keywords::get_links() as it was stupid, now just using Keywords::get() and a loop.
+* Switched Keywords in blog to an array. No more Keywords::get\_links() as it was stupid, now just using Keywords::get() and a loop.
 * Added a preview hash field to blogs table and generate a random hash for preview link
-* Added Keywords field type to streams_core
+* Added Keywords field type to streams\_core
 * Added missing cycle param variables to the streams API entries driver
 * Added the namespace variable to parameter functions in Streams Core.
 * Added Streams Core plugin with field function
-* Added assignment_exists function to the fields model in streams core.
+* Added assignment\_exists function to the fields model in streams core.
 * User defined templates not shown in modal
 * If your site name ended with 'admin', CSRF protection was enabled on every page, because the regexp found it. Now it only matches '/admin/' at the end, so it works as intended.
 * Changed Google Analytic password field to be a password type.
 * Don't try to validate a contact form just because the page is post. By checking for the specific contact form button name it can only run if THAT form was submitted.
-* Only link to users profile in comments if enable_profies is enabled.
+* Only link to users profile in comments if enable\_profiles is enabled.
 * Refined the Streams Core pagination.
 * Trigger post\_admin\_login event after login via admin controller
 * Updated Akismet to contain our user agent.
 * PHP 5.4 fixes.
 * Stopped literal \n's from showing in the comment notification.
-* Updated REST_Controller to latest version.
+* Updated REST\_Controller to latest version.
 * Added events to the admin files controller
 * Added the ID to both folder and file details pane in Files manager
 * Added a config option to Files for encrypting file names on upload
 * Added rel attribute support for theme:css
-* Added 'insert_data' into stream\_post\_insert\_entry event.
+* Added 'insert\_data' into stream\_post\_insert\_entry event.
 * Removed the requirement for the website field in the comments module.
 
 ### Bug Fixes
 
-* Fixed #1685. Assets will now be cleared before the 404 page is shown. Cleared up the terminology and docs around the show_404 method
+* Fixed #1685. Assets will now be cleared before the 404 page is shown. Cleared up the terminology and docs around the show\_404 method
 * Fixed #1650. MySQL port was saved to the config file as 3306 regardless of installer value.
 * Fixed #1521. Files was incorrectly maintaining ratio on all uploads and returning the original image dimensions
-* Fixed a bug with base_url. Affects https logins
+* Fixed a bug with base\_url. Affects https logins
 * Fixed #1626. Moving files from remote storage to local via third-party API calls was broken
 * Fixed form validation in MY\_Model::insert\_many()
 * Fixed an issue that made it impossible to use EU regions in Amazon S3.
@@ -50,14 +115,14 @@
 * Fixes #1646 and #1665. Keywords were not working with latin characters. Thanks @stewones
 * Fixed bug for parsing attribute contents with escaped quotes. Orig: https://github.com/happyninjas/lex/commit/ff9aa30554fce47a8bfb6dc7c94143afc2fd8f93
 * Fixed ReCAPTCHA Support in streams core.
-* Fixed #1511 show_404() was not working properly
+* Fixed #1511 show\_404() was not working properly
 * Fixed bug where admins were shown their own profile data when editing other user's
 * Fixed #1581. File's mimetype column was too short (at 50 chars) for some ridiculously long mime types
 * Fixed #1518: This redirect was killing off AJAX POST's when index.php was in the url
-* Fixed a bug with {{ noparse }}{{ files:image_url }}{{ /noparse }}. Also closes #1478
+* Fixed a bug with {{ noparse }}{{ files:image\_url }}{{ /noparse }}. Also closes #1478
 * Fixed warning with the navigation widget.
 * Fixed a bug where problems could be caused when a "name" field was added to Profiles
-* Fixed a bug where full_name was being used in the Users module user list instead of display_name.
+* Fixed a bug where full\_name was being used in the Users module user list instead of display\_name.
 * Fixed an error in streams core where editing the slug of an unassigned field would result in an error.
 
 ## 2.1.2 - June 4, 2012
@@ -65,7 +130,7 @@
 ### Security Patches
 
 * Fixed minor XSS issue in blog categories module
-* Patched a XSS hole where redirect_to could contain a malicious URL
+* Patched a XSS hole where redirect\_to could contain a malicious URL
 
 ### Bug Fixes
 
@@ -111,17 +176,17 @@
 * Upgraded Curl library to Curl Spark v1.2.1.
 * Added a post count plugin for the blog
 * Started adding a feature to make CKEditor configurable via the Control Panel
-* Added a tag: {{ noparse }}{{ helper:config item="default_language" }}{{ /noparse }}
+* Added a tag: {{ noparse }}{{ helper:config item="default\_language" }}{{ /noparse }}
 * Added TwitterOAuth and OAuth library. This should really only be a temporary measure until a worker Twitter library with a nice abstract interface matching Facebook and other providers is developed. There's talk of it happening from a few people, but for now we have this. Be careful about building modules around it.
 * Disable user registration from settings
 * Implemented Asset minification and combination for the Control Panel. 
 * Added the asset cache folder. Dont forget to chmod.
-* Use display_name instead of first + last on profile
+* Use display\_name instead of first + last on profile
 * Added Slovenian translation
 * Added 42 triggers, passed ids or data where applicable
-* Adding some more greek characters in the foreign_chars.php Added the greek characters in the Javascript Regexp test string so that they can be caught in it and the slug creation can be triggered.
+* Adding some more greek characters in the foreign\_chars.php Added the greek characters in the Javascript Regexp test string so that they can be caught in it and the slug creation can be triggered.
 * Removed Google CDN jQuery from themes and Control Panel, not a good default.
-* Added Module::install_tables() so that every table installation logic can be handled more centrally.
+* Added Module::install\_tables() so that every table installation logic can be handled more centrally.
 * Allow admins to see profiler if they set ?debug=1 on any page.
 * Converted modules to install using CodeIgniters DBForge. 
 * Added download counter to Files.
@@ -152,14 +217,14 @@
 * Updates admin user edit form to multipart. Closes #1319
 * Fixed item placement when dragging widget instances in a long list. Closes #1308
 * Removed unused pyro.lang.delete as it was causing IE to pitch a fit
-* Removed iPad from the mobile array of the user_agent config file. It will now load the full version of a site as our documentation states it will.
+* Removed iPad from the mobile array of the user\_agent config file. It will now load the full version of a site as our documentation states it will.
 
 ## 2.0.4 - June 04, 2012
 
 ### Security Patches
 
 * Fixed minor XSS issue in blog categories module
-* Patched a XSS hole where redirect_to could contain a malicious URL
+* Patched a XSS hole where redirect\_to could contain a malicious URL
 
 ### Improvements
 
@@ -169,7 +234,7 @@
 
 ### Improvements
 
-* Added inner_tag attribute to the navigation plugin
+* Added inner\_tag attribute to the navigation plugin
 * Added a padding div to the page chunk
 * Reduce unnecessary DB queries
 * correct the wording in sl language
@@ -183,11 +248,11 @@
 * Fixed incorrect salt object
 * Update Spanish translations
 * Update German translations
-* Fix typo in users/language/german/user_lang.php
+* Fix typo in users/language/german/user\_lang.php
 * Update UTF8 strings and files to UTF8 without BOM
 * Fixed incorrect profile edit message and a bug when an admin edited another user's profile
 * Teach ckeditor to handle the template vars url:base and url:site in img src
-* Change SITE_URL to {{ noparse }}{{ site:url }}{{ /noparse }} when inserting files and images into ckeditor
+* Change SITE\_URL to {{ noparse }}{{ site:url }}{{ /noparse }} when inserting files and images into ckeditor
 * Updated PyroStreams to 2.1.3.
 * Add ID to field generated by the contact module
 * Rescued an Italian translation pull request
@@ -213,7 +278,7 @@
 ### Improvements
 
 * Improved IE8 compatibility.
-* Use display_name instead of first + last on profile
+* Use display\_name instead of first + last on profile
 * Updated Dutch language
 
 ### Bug Fixes

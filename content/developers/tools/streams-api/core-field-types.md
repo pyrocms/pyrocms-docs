@@ -2,32 +2,32 @@
 
 # Core Field Types
 
-PyroCMS comes with a variety of field types in the Streams Core module that you can count on being available in PyroCMS 2.2 and above for your module.
+PyroCMS comes with a variety of field types in the Streams Core module that you can count on being available in PyroCMS 2.1 and above for your module.
 
 Additionally, you can develop your own field types and add them to the addons folders inside a "field_type" folder. The Streams Type library will automatically look for them there.
 
 Below is a reference of all the core PyroCMS field types.
 
-* {{ link uri="developers/tools/streams-api/core-field-types#choice" title="Choice" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#country" title="Country" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#datetime" title="Date/Time" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#email" title="Email" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#encrypt" title="Encrypt" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#file" title="File" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#image" title="Image" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#integer" title="Integer" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#pyro_lang" title="Pyro Lang" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#relationship" title="Relationship" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#slug" title="Slug" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#us_state" title="US State" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#text" title="Text" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#textarea" title="Textarea" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#url" title="URL" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#user" title="User" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#wysiwyg" title="WYSIWYG" }}
-* {{ link uri="developers/tools/streams-api/core-field-types#year" title="Year" }}
+* {{ docs:id_link title="Choice" }}
+* {{ docs:id_link title="Country" }}
+* {{ docs:id_link title="Date/Time" }}
+* {{ docs:id_link title="Email" }}
+* {{ docs:id_link title="Encrypt" }}
+* {{ docs:id_link title="File" }}
+* {{ docs:id_link title="Image" }}
+* {{ docs:id_link title="Integer" }}
+* {{ docs:id_link title="Pyro Lang" }}
+* {{ docs:id_link title="Relationship" }}
+* {{ docs:id_link title="Slug" }}
+* {{ docs:id_link title="US State" }}
+* {{ docs:id_link title="Text" }}
+* {{ docs:id_link title="Textarea" }}
+* {{ docs:id_link title="URL" }}
+* {{ docs:id_link title="User" }}
+* {{ docs:id_link title="WYSIWYG" }}
+* {{ docs:id_link title="Year" }}
 
-<h2 id="choice">Choice {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## Choice
 
 The choice field type allows you to make drop downs, radio buttons, or check boxes.
 
@@ -69,7 +69,7 @@ The choice field type allows you to make drop downs, radio buttons, or check box
 	</tr>
 </table>
 
-<h2 id="country">Country {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## Country
 
 The country field type creates a dropdown list of countries to choose from.
 
@@ -90,7 +90,7 @@ The country field type creates a dropdown list of countries to choose from.
 	</tr>
 </table>
 
-<h2 id="datetime">Date/Time {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## Date/Time
 
 The date/time field type stores date and time information. You can choose to just store the date, or store the date and time.
 
@@ -156,7 +156,7 @@ If you set this as the end_date, the user would be able to select a date up unti
 
 	-18Y
 
-<h2 id="email">Email {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## Email
 
 The email field type is similar to the text field, but adds validation for a valid email address and uses the HTML5 email input type that optimizes email input for mobile devices.
 
@@ -180,7 +180,7 @@ The email field type is similar to the text field, but adds validation for a val
 		<td>Checks to make sure it is a valid email address.</td>
 	</tr></table>
 
-<h2 id="encrypt">Encrypt {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## Encrypt
 
 The encrypt field type stores a string as encrypted data in the database and decrypts it for output. Uses the CodeIgniter encryption library to encrypt the date and decrypt it before output.
 
@@ -216,7 +216,7 @@ The encrypt field type stores a string as encrypted data in the database and dec
 	</tr>
 </table>
 
-<h2 id="file">File {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## File
 
 The file field type allows you to upload and link to a file.
 
@@ -254,7 +254,7 @@ The file field type allows you to upload and link to a file.
 	</tr>
 </table>
 
-<h2 id="image">Image {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## Image
 
 The file field type allows you to upload and link to a file.
 
@@ -300,7 +300,7 @@ The file field type allows you to upload and link to a file.
 	</tr>
 </table>
 
-<h2 id="integer">Integer {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## Integer
 
 The file field type allows you store an Integer value.
 
@@ -343,7 +343,7 @@ The file field type allows you store an Integer value.
 	</tr>
 </table>
 
-<h2 id="pyro_lang">Pyro Lang {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## Pyro Lang
 
 Shows a drop down of languages to choose from. You can filter them by available languages for the current theme.
 
@@ -380,7 +380,7 @@ Shows a drop down of languages to choose from. You can filter them by available 
 	</tr>
 </table>
 
-<h2 id="relationship">Relationship {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## Relationship
 
 The relationship field type allows you to link streams together by allowing you to choose an entry from another stream as an input, and have access to all the data from the connected entry on the front end.
 
@@ -415,7 +415,7 @@ The relationship field type allows you to link streams together by allowing you 
 	</tr>
 </table>
 
-<h2 id="slug">Slug {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## Slug
 
 The slug field allows you to automatically generate a slug from another text field.
 
@@ -454,7 +454,7 @@ The slug field allows you to automatically generate a slug from another text fie
 	</tr>
 </table>
 
-<h2 id="us_state">US State {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## US State
 
 The state field type creates a dropdown list of US states to choose from.
 
@@ -489,7 +489,7 @@ The state field type creates a dropdown list of US states to choose from.
 	</tr>
 </table>
 
-<h2 id="text">Text {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## Text
 
 The simplest type of field, the text field allows you to enter in simple text data.
 
@@ -528,7 +528,7 @@ The simplest type of field, the text field allows you to enter in simple text da
 	</tr>
 </table>
 
-<h2 id="textarea">Textarea {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## Textarea
 
 The textarea field type allows you to enter in large blocks of text.
 
@@ -563,7 +563,7 @@ The textarea field type allows you to enter in large blocks of text.
 	</tr>
 </table>
 
-<h2 id="url">URL {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## URL
 
 The URL field type allows you to enter a URL for a website.
 
@@ -589,7 +589,7 @@ The URL field type allows you to enter a URL for a website.
         
 </table>
 
-<h2 id="user">User {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## User
 
 The user field type allows you to choose and return data for a user.
 
@@ -624,7 +624,7 @@ The user field type allows you to choose and return data for a user.
 	</tr>
 </table>
 
-<h2 id="wysiwyg">WYSIWYG {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## WYSIWYG
 
 The WYSIWYG field creates a PyroCMS WYSIWYG text editor.
 
@@ -662,7 +662,7 @@ The WYSIWYG field creates a PyroCMS WYSIWYG text editor.
 	</tr>
 </table>
 
-<h2 id="year">Year {{ link uri="developers/tools/streams-api/core-field-types#top" title="^" }}</h2>
+## Year
 
 The Year field type creates a dropdown of years for you.
 

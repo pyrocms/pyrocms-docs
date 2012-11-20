@@ -44,10 +44,10 @@
   vertical-align: baseline !important;
   width: auto !important;
   box-sizing: content-box !important;
-  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+  font-family: Courier, monospace !important;
   font-weight: normal !important;
   font-style: normal !important;
-  font-size: 1em !important;
+  font-size: 12px !important;
   min-height: inherit !important;
   min-height: auto !important;
 }
@@ -58,7 +58,7 @@
   margin: 1em 0 1em 0 !important;
   position: relative !important;
   overflow: auto !important;
-  font-size: 1em !important;
+  font-size: 12px !important;
 }
 .syntaxhighlighter.source {
   overflow: hidden !important;
@@ -228,16 +228,16 @@
 
 .syntaxhighlighter {
   text-shadow: none!important;
-  background-color: #333 !important;
+  background-color: #fcfcfc !important;
 }
 .syntaxhighlighter .line.alt1 {
-  background-color: #333 !important;
+  background-color: #fcfcfc !important;
 }
 .syntaxhighlighter .line.alt2 {
-  background-color: #333 !important;
+  background-color: #fcfcfc !important;
 }
 .syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
-  background-color: #333 !important;
+  background-color: #fcfcfc !important;
 }
 .syntaxhighlighter .line.highlighted.number {
   color: #38566f !important;
@@ -249,7 +249,7 @@
   color: #afafaf !important;
 }
 .syntaxhighlighter .gutter .line {
-  border-right: 3px solid #435a5f !important;
+  border-right: 2px solid #94C0F2 !important;
 }
 .syntaxhighlighter .gutter .line.highlighted {
   color: #0f192a !important;
@@ -283,13 +283,13 @@
   color: #8aa6c1 !important;
 }
 .syntaxhighlighter .plain, .syntaxhighlighter .plain a {
-  color: #fff !important;
+  color: #4F4F4F !important;
 }
 .syntaxhighlighter .comments, .syntaxhighlighter .comments a {
   color: #A8A8A8 !important;
 }
 .syntaxhighlighter .string, .syntaxhighlighter .string a {
-  color: #B3C116 !important;
+  color: #558A07 !important;
 }
 .syntaxhighlighter .keyword {
   color: #F26D6D !important;

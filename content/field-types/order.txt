@@ -1,0 +1,15 @@
+choice
+country
+datetime
+email
+encrypt
+file
+image
+keywords
+relationship
+slug
+text
+textarea
+us_state
+user
+wysiwyg

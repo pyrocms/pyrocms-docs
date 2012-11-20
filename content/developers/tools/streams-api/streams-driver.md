@@ -6,7 +6,7 @@ You can call the streams driver like this:
 
 	$this->streams->streams->function();
 	
-## Preset Fields
+### Preset Fields
 
 When you create a stream, the following fields are created automatically:
 
@@ -33,9 +33,7 @@ When you create a stream, the following fields are created automatically:
 	</tr>
 </table>
 
-## Functions
-
-<dfn>add_stream(<var>$stream\_name, $stream\_slug, $namespace, $prefix = null, $about = null</var>)</dfn>
+## add_stream(<var>$stream\_name, $stream\_slug, $namespace, $prefix = null, $about = null</var>)
 
 The **add_stream** function allows you to create a stream. It will create the actual table in the database, as well as the streams metadata in the streams table.
 	
@@ -68,15 +66,15 @@ The **add_stream** function allows you to create a stream. It will create the ac
 
 In this example we add the "FAQ" stream. The module is also called "faqs", our namespace is called "faq". We are providing the "faq_" prefix, so our table will be created a **default\_faq\_faqs** (sitename, prefix and slug concatenated). Without specifying any prefix, it would be **default\_faqs** (sitename and slug concatenated).
 
-	$this->streams->streams->add_stream('FAQ', 'faqs', 'stream_sample', 'faq_', null);
+	$this->streams->streams->add_stream('FAQ', 'faqs', 'faq', 'faq_', null);
 
-<dfn>get_stream(<var>$stream\_slug, $namespace</var>)</dfn>
+## get_stream(<var>$stream\_slug, $namespace</var>)
 
 Gets data about a stream. It does not retrieve entries, just the stream metadata.
 	
 ### Example:
 
-	$this->streams->streams->get_stream('faqs', 'streams_sample');
+	$this->streams->streams->get_stream('faqs', 'faq');
 
 Returns:
 	
@@ -85,8 +83,8 @@ Returns:
 	    [id] => 18
 	    [stream_name] => FAQs
 	    [stream_slug] => faqs
-	    [stream_namespace] => streams_sample
-	    [stream_prefix] => sample_
+	    [stream_namespace] => faq
+	    [stream_prefix] => faq_
 	    [about] => 
 	    [view_options] => Array
 	        (
@@ -100,13 +98,13 @@ Returns:
 	
 <div class="tip"><strong>Note:</strong> The view options column is an array of the columns that are shown when listing entries in a table. 'id' and 'created' are the default values.</div>
 
-<dfn>get_streams(<var>$namespace</var>)</dfn>
+## get_streams(<var>$namespace</var>)
 
 Gets basic data about all the streams in a namespace.
 
 ### Example:
 
-	$this->streams->streams->get_streams('streams_sample');
+	$this->streams->streams->get_streams('faq');
 	
 Returns:
 
@@ -117,8 +115,8 @@ Returns:
 	            [id] => 18
 	            [stream_name] => FAQs
 	            [stream_slug] => faqs
-	            [stream_namespace] => streams_sample
-	            [stream_prefix] => sample_
+	            [stream_namespace] => faq
+	            [stream_prefix] => faq_
 	            [about] => 
 	            [view_options] => Array
 	                (
@@ -131,9 +129,9 @@ Returns:
 	        )
 	)
 
-<dfn>update_stream(<var>$stream, $namespace, $data</var>)</dfn>
+## update_stream(<var>$stream, $namespace, $data</var>)
 
-Allows you to update basic stream metadata. You can pass any stream metadata value and it will handle the necessary changes, so you can give it a new stream slug and it will update the metadata and update the table name. Returns BOOL.
+Allows you to update basic stream metadata. You can pass any stream metadata value and it will handle the necessary changes, so you can give it a new stream slug and it will update the metadata and update the table name. Returns boolean.
 
 ### Example:
 
@@ -149,19 +147,19 @@ Allows you to update basic stream metadata. You can pass any stream metadata val
 
 Deletes a stream. This will delete all the entries associated with this stream as well, as well as run all of the field destruct functions for fields assigned to this stream.
 
-This streams returns true or FALSE, based on whether the streams was successfully deleted.
+This streams returns true or false, based on whether the streams was successfully deleted.
 		
 ### Example:
 
 	$this->streams->streams->delete_stream('faqs', 'streams_sample');
 
-<dfn>get_assignments(<var>$stream, $namespace</var>)</dfn>
+## get_assignments(<var>$stream, $namespace</var>)
 
-Gets assignments for a stream. More information forthcoming.
+Gets assignments for a stream.
 
 ### Example:
 
-	$this->streams->streams->get_assignments('faqs', 'streams_sample');
+	$this->streams->streams->get_assignments('faqs', 'faq');
 	
 Returns:
 
@@ -172,8 +170,8 @@ Returns:
 	            [id] => 10
 	            [stream_name] => FAQs
 	            [stream_slug] => faqs
-	            [stream_namespace] => streams_sample
-	            [stream_prefix] => sample_
+	            [stream_namespace] => faq
+	            [stream_prefix] => faq_
 	            [about] => 
 	            [title_column] => question
 	            [sorting] => title
@@ -193,8 +191,8 @@ Returns:
 	            [id] => 11
 	            [stream_name] => FAQs
 	            [stream_slug] => faqs
-	            [stream_namespace] => streams_sample
-	            [stream_prefix] => sample_
+	            [stream_namespace] => faq
+	            [stream_prefix] => faq_
 	            [about] => 
 	            [title_column] => question
 	            [sorting] => title

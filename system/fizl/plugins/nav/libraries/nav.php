@@ -14,6 +14,9 @@
 class Nav extends Plugin {
 
 	public $level;
+	public $depth = 1;
+	public $segs = array();
+	public $seg_depth = 1;
 
 	/**
 	 * Parse the nav list
@@ -91,7 +94,7 @@ class Nav extends Plugin {
 			
 			endif;
 			
-			// Creat link
+			// Create link
 			$html .= 'level_'.$tmp_level.'"><a href="';
 						
 			if(strpos($pieces[0], 'http://')!==FALSE or strpos($pieces[0], 'https://')!==FALSE):
@@ -117,6 +120,85 @@ class Nav extends Plugin {
 		return $html .= "</li>\n</ul>";
 	}
 
+	function run_level($map)
+	{
+		$html = null;
+
+		// See if we have an order.txt
+		if(in_array('order.txt', $map)):
+
+			// get the order
+			$this->CI->load->helper('file');
+			$order = trim(read_file(FCPATH.$this->CI->vars['site_folder'].'/'.implode('/', $this->segs).'/order.txt'));
+			
+			// chop it up
+			$ord = explode("\n", $order);
+		else:
+
+			$order = directory_map(FCPATH.$this->CI->vars['site_folder'].'/'.implode('/', $this->segs), 1);
+
+			$ord = array();
+
+			foreach($order as $o)
+			{
+				$ord[] = str_replace('.md', '', $o);
+			}
+
+		endif;
+
+		$html .= '<ul class="unstyled depth_'.$this->depth.'">'."\n";
+		
+		foreach($ord as $order_string):
+					
+			$pieces = explode('|', $order_string);
+			
+			if(count($pieces) == 2)
+			{
+				$file = trim($pieces[0]);
+				$name = trim($pieces[1]);
+			}
+			else
+			{
+				$file = $order_string;
+				$name = $this->guess_name($file);
+			}
+
+			if (in_array($file.'.md', $map))
+			{
+				$html .= '<li><a href="'.site_url(implode('/', $this->segs).'/'.$file).'">'.$name. '</a></li>';
+			}
+			elseif (array_key_exists($file, $map))
+			{
+				$html .= '<li><a href="'.site_url(implode('/', $this->segs).'/'.$file).'">'.$name.'</a>';
+
+				$this->depth++;
+				$this->seg_depth++;
+				$this->segs[] = $file;
+
+				$html .= $this->run_level($map[$file]);
+
+				$this->depth--;
+				$this->seg_depth--;
+				array_pop($this->segs);
+
+				$html .= '</li>';
+			}
+
+		endforeach;
+
+		$html .= '</ul>';	
+				
+		return $html;
+	}
+
+	function is_current($segs)
+	{
+		if (implode('/', $segs) == $this->CI->uri->uri_string())
+		{
+			
+		}
+	}
+
 	/**
 	 * Attempts to create a nav from
 	 * the directory tree.
@@ -131,79 +213,16 @@ class Nav extends Plugin {
 		// We need a start
 		if(!$start) return;
 		
-		$segs = explode('/', $start);
-		$first = $segs[0];
+		$this->segs = explode('/', $start);
+		$this->seg_depth = count($this->segs)+1;
 				
 		$this->CI->load->helper('directory');
-		
-		$this->start = $start;
-						
-		$map = directory_map(FCPATH.$this->CI->vars['site_folder'].'/'.$start);
+								
+		$map = directory_map(FCPATH.$this->CI->vars['site_folder'].'/'.implode('/', $this->segs), 3);
 		
 		if(!$map) return;
-		
-		// See if we have an order.txt
-		if(in_array('order.txt', $map)):
-		
-			// get the order
-			$this->CI->load->helper('file');
-			$order = trim(read_file(FCPATH.$this->CI->vars['site_folder'].'/'.$this->start.'/order.txt'));
-			
-			// chop it up
-			$ord = explode("\n", $order);
-			
-			// Go through and create a new array
-			$new_map = array();
-			
-			foreach($ord as $order_string):
-			
-				$name = NULL;
-			
-				$pieces = explode('|', $order_string);
-				
-				if(count($pieces) == 2)
-				{
-					$file = trim($pieces[0]);
-					$name = trim($pieces[1]);
-				}
-				else
-				{
-					$file = $order_string;
-				}
-			
-				// Go through, see if the old map value
-				// was an array, and if so pass it through
-				if(isset($map[$file]))
-				{
-					$new_map[$file] = $map[$file];
-				}	
-				else
-				{
-					if (is_null($name))
-					{
-						$new_map[] = $file;
-					}
-					else
-					{
-						$new_map[$name] = $file;
-					}
-				}
-			
-			endforeach;
-			
-		else:
-		
-			$new_map = $map;
-					
-		endif;
-		
-		$this->depth = 0;
-		$this->stack = $segs;
-		
-		$this->html = null;
-		$this->create_ul($new_map);
-		
-		return $this->html;
+
+		return $this->run_level($map);
 	}
 
 	function create_ul($tree)

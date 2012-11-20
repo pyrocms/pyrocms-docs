@@ -8,7 +8,7 @@ when "live".
 
 ## The ENVIRONMENT Constant
 
-By default, PyroCMS comes with the environment constant set to 'development'. At the top of index.php, you will see::
+By default, PyroCMS comes with the environment constant set to 'development'. Near the top of index.php, you will see::
 
 	define('PYRO_DEVELOPMENT', 'development');
 	define('PYRO_STAGING', 'staging');

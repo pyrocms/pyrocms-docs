@@ -34,7 +34,6 @@ PyroCMS includes the following event triggers:
 </table>
 
 ### Blog Triggers
-
 <table>
 <tr>
 <td class="one_third">Events::trigger('<b>post_created</b>', $id)</td>
@@ -57,8 +56,16 @@ PyroCMS includes the following event triggers:
 <td>Fired when one or more categories have been deleted.</td>
 </tr>
 <tr>
+	<td class="one_third">Events::trigger('<b>blog_category_created</b>', $id)</td>
+	<td>Fired when a blog category has been created.</td>
+</tr>
+<tr>
 <td class="one_third">Events::trigger('<b>blog_category_updated</b>', $id)</td>
 <td>Fired when a blog category has been updated.</td>
+</tr>
+<tr>
+<td class="one_third">Events::trigger('<b>blog_category_deleted</b>', $deleted_ids)</td>
+<td>Fired when one or more categories have been deleted.</td>
 </tr>
 </table>
 
@@ -67,7 +74,7 @@ PyroCMS includes the following event triggers:
 <table>
 <tr>
 <td class="one_third">Events::trigger('<b>email</b>', $data, 'array')</td>
-<td>This is used to send an email. The second parameter is the data to send along, third parameter is the type of response you expect. The sending is done by an event registered in system/cms/modules/templates/events.php but can be triggered from anywhere in the application.</td>
+<td>This is used to send an email. The second parameter is the data to send along and the Email Template to use, third parameter is the type of response you expect. The sending is done by an event registered in system/cms/modules/templates/events.php but can be triggered from anywhere in the application.</td>
 </tr>
 </table>
 
@@ -232,7 +239,6 @@ PyroCMS includes the following event triggers:
 <td class="one_third">Events::trigger('<b>page_layout_deleted</b>', $deleted_ids)</td>
 <td>Fired when a page layout(s) have been deleted.</td>
 </tr>
-
 </table>
 
 ### Permissions Triggers

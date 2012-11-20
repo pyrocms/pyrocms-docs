@@ -6,11 +6,11 @@ PyroCMS is written intended to be styled mainly by CSS, but as designers you wan
 
 to:
 
-	addons/<site-ref>/themes/<theme-name>/views/modules/blog/posts.php
+	addons/[site-ref]/themes/<theme-name>/views/modules/blog/posts.php
 
 If you wanted to overload an admin view you would do it like so:
 
-    addons/<site-ref>/themes/<theme-name>/views/admin/modules/blog/admin/form.php
+    addons/[site-ref]/themes/<theme-name>/views/admin/modules/blog/admin/form.php
 
 Now you can edit that view however you like and upgrade PyroCMS knowing your customized views are safe.</p>
 
@@ -18,4 +18,4 @@ Now you can edit that view however you like and upgrade PyroCMS knowing your cus
 
 You can still use PHP in these overloaded views. This means you can just copy whatever is there exactly and change it. In later versions we may be removing this as there is always the possibility that themes can contain malicious PHP if downloaded from a third-party site, but we will likely make this a setting.
 
-Either way, you can use {{ link uri="/general/basics/pyrocms-tags" title="Tag syntax" }} and this is most likely the safest, but can be more complicated for converting.
+Either way, you can use {{ link uri="concepts/pyrocms-tags" title="Tag syntax" }} and this is most likely the safest, but can be more complicated for converting.

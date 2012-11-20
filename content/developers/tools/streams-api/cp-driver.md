@@ -11,7 +11,7 @@ You can call the entries driver like this:
 
 ## entries\_table(<var>$stream\_slug, $namespace\_slug, $pagination = null, $pagination\_uri = null, $view\_override = false, $extra = array()</var>)
 
-Allows you to more painlessly create a table of entries on the back end, including pagination.
+Allows you to create a table of entries on the back end, including pagination.
 
 This function returns the table string unless **$view_override** is set to true, in which case this function will take care of loading the template view for the form.
 
@@ -93,16 +93,16 @@ This function returns the table string unless **$view_override** is set to true,
 
 ### Example:
 	
-	$extra['title'] = 'Streams Sample';
+	$extra['title'] = 'FAQs';
 	
 	$extra['buttons'] = array(
 		array(
 			'label' 	=> lang('global:edit'),
-			'url' 		=> 'admin/streams_sample/edit/-entry_id-'
+			'url' 		=> 'admin/faq/edit/-entry_id-'
 		),
 		array(
 			'label'		=> lang('global:delete'),
-			'url' 		=> 'admin/streams_sample/delete/-entry_id-',
+			'url' 		=> 'admin/faq/delete/-entry_id-',
 			'confirm'	=> true
 		)
 	);
@@ -116,7 +116,7 @@ This function returns the table string unless **$view_override** is set to true,
 		'description'
 	);
 	
-	$this->streams->cp->entries_table('faqs', 'streams_sample', 15, 'admin/streams_sample/index', true, $extra);
+	$this->streams->cp->entries_table('faqs', 'faq', 15, 'admin/faq/index', true, $extra);
 
 <hr id="entry-form"/>
 

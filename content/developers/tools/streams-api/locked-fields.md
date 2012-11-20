@@ -4,9 +4,7 @@ If your module uses the Streams API there is a chance that it will have field de
 
 All fields have a "locked" bool parameter. This allows you to build your own field dependency logic.
 
-<hr>
-
-### Adding and "locking" Fields
+## Adding and "locking" Fields
 
 The <b>Fields Driver's {{ link title="add\_field()" uri="/developers/tools/streams-api/fields-driver#add-field" }}</b> function allows to set the "locked" parameter to TRUE.
 
@@ -27,9 +25,7 @@ The <b>Fields Driver's {{ link title="add\_field()" uri="/developers/tools/strea
 
 	$this->streams->fields->add_field($field);
 
-<hr>
-
-### Automatically delete fields + assignments in a smart way
+## Automatically delete fields + assignments in a smart way
 
 The <b>CP Driver's {{ link title="teardown\_assignment\_field()" uri="/developers/tools/streams-api/cp-driver#teardown-assignment-field" }}</b> function performs the following checks before deleting a field.
 
@@ -38,9 +34,7 @@ The <b>CP Driver's {{ link title="teardown\_assignment\_field()" uri="/developer
 * If the field is assigned to only one stream, it deletes the assigment + field combo.
 * If **force_delete** is set to **true**, it deletes the assigment + field combo, regardless of previous checks.
 
-<hr>
-
-### Hiding buttons for locked fields
+## Hiding buttons for locked fields
 
 When using the <b>CP Driver's {{ link title="fields\_table()" uri="/developers/tools/streams-api/cp-driver#fields-table" }} or {{ link title="assignments\_table()" uri="/developers/tools/streams-api/cp-driver#assignments-table" }}</b> functions, you might want to hide buttons for locked fields. A practical use case would be when you want to hide the <b>Delete</b> button. With the example bellow, the edit button is displayed for all fields and the delete button is hidden from the assignments table for fields that are locked.
 

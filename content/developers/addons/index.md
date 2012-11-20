@@ -1,1 +1,3 @@
-Add-on Development
+# Add-on Development
+
+{{ nav:auto start="developers/addons" }}

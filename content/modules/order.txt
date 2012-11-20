@@ -1,0 +1,13 @@
+blog
+email-templates
+files
+navigation
+pages
+session
+settings
+sitemap
+streams
+theme
+users
+variables
+widgets

@@ -42,13 +42,13 @@ We are going to use try\_files instead of the Rewrite Module. You can find out m
 	 
 	        fastcgi_intercept_errors off;
 	 
-	        location ~* .(?:ico|css|js|gif|jpe?g|png)$ {
+	        location ~* \.(?:ico|gif|jpe?g|png)$ {
 	                expires max;
 	                add_header Pragma public;
 	                add_header Cache-Control "public, must-revalidate, proxy-revalidate";
 	        }
 	 
-	        location ~ .php {
+	        location ~ \.php {
 	                fastcgi_pass   unix:/tmp/domain.sock;
 	                fastcgi_split_path_info ^(.+.php)(.*)$;
 	                fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;

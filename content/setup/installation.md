@@ -1,6 +1,6 @@
 # Installation
 
-The first step in getting up and running with PyroCMS is downloading a copy of the latest version and installing it on your development server. 
+The first step in getting up and running with PyroCMS is downloading a copy of the latest version and installing it on your development server.
 
 ## Downloading PyroCMS Manually
 
@@ -15,7 +15,7 @@ are using the correct branch - the {{ link title="PyroCMS versions guide" uri="/
 
 After you've got the files in the right place, load up PyroCMS in your browser and the installer should appear. This video below will take you through the process and it's only a few minutes long.
 
-<iframe src="http://player.vimeo.com/video/33693492?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933" width="700" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>  
+<iframe src="http://player.vimeo.com/video/33693492?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933" width="570" height="350" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>  
   
 The installer will guide you through the steps necessary to install PyroCMS, including checking your server for the required software. Check out the 
 {{ link title="server requirements" uri="/general/getting-started/server-requirements" }} page for a detailed list of what you'll need.
@@ -44,3 +44,7 @@ This isn't completely necessary, but once you have installed PyroCMS, you can op
     }
 
 This does not affect PyroCMS functionality (unless you do not have a database.php file), but it removes an unnecessary file check.
+
+### Start Using PyroCMS
+
+Once you've run through the installation steps, it's time to get started building with Pyro! To get started, it's important to make sure you've gone over the important {{ link uri="concepts" title="core concepts" }}.

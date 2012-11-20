@@ -1,28 +1,16 @@
-			</div>
+			</div><!--#content-->
 			<!-- /main -->
 			
-		</div>
-	</section>
-	<!-- /content -->
+	
+  </div><!--#box-->
 
 	<!-- footer -->
-	{{#<footer>
-		<div class="wrapper">
-			<div class="one_quarter">
-				<ul>
-					<li>&copy;2010 - {{ current_year }} PyroCMS</li>
-				</ul>	
-			</div>
+	<div id="footer">
+				
+    <p>Find an issue? <a href="https://github.com/pyrocms/pyrocms-docs">Report it on the PyroCMS docs GitHub repo</a></li>
+     <p>&copy;2010 - {{ current_year }} PyroCMS</p>
 
-			<div class="one_quarter">
-				<ul>
-					<li><a href="http://www.pyrocms.com">PyroCMS.com</a></li>
-					<li><a href="https://github.com/pyrocms/pyrocms">PyroCMS on GitHub</a></li>
-					<li><a href="https://github.com/pyrocms/pyrocms-docs">PyroCMS Docs on GitHub</a></li>
-				</ul>	
-			</div>
-		</div>
-	</footer>#}}
+	</div>
 	<!-- /footer -->
 
 	<script>
@@ -35,7 +23,7 @@
     	$.scrollTo($(this).attr('href'), 100, {offset: {top: -150, left: 0}});
     });
 
-    $('.subnav').scrollspy();
+   // $('.subnav').scrollspy();
 
 	SyntaxHighlighter.all();
 
@@ -77,6 +65,24 @@
     	$('#search_toggle').slideToggle('fast');
 
     });
+
+    $('h1,h2,h3,h4,h5,h6',$('#content')).hover(
+      function () {
+        $('a.anchor, a.anchor-top', this).removeClass('hidden');
+      }, 
+      function () {
+        $('a.anchor, a.anchor-top', this).addClass('hidden');
+      }
+    );
+
+    $('a.anchor').hover(
+      function () {
+        $(this).removeClass('hidden');
+      }, 
+      function () {
+        $(this).addClass('hidden');
+      }
+    );
 
 	</script>
 
