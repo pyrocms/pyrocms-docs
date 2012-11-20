@@ -12,7 +12,7 @@ Go to out [GitHub Repository](http://github.com/pyrocms/pyrocms/) and click "For
 
 You will be set up with a new repository which is a copy of ours. That means you can work on your copy of our repository without us needing to give you access to anything. You can use the following command to get a copy on your computer in your current directory. Best to put this into htdocs (or somewhere you have a server/domains's document root set).
 
-	git clone git@github.com:yourusername/pyrocms.git -b 2.1/develop
+	git clone git@github.com:yourusername/pyrocms.git -b {{ variables:get_var name="pyrocms_version" }}/develop
 
 Now you can edit away on the source code and everything is tracked. When you commit your work *please* commit carefully and do not send us your config.php or database.php files in the changes.
 
@@ -25,8 +25,8 @@ To make a pull request, see the [GitHub pull request guide](https://help.github.
 Even if you have a copy of our repository then you are basically taking a snapshot of our repository as it is at the time. If we push new commits you will miss out entirely unless you add us as another remote (this works for either workflow).
 
 	git remote add pyrocms git://github.com/pyrocms/pyrocms.git
-	git pull pyrocms 2.1/develop
-	git push origin 2.1/develop
+	git pull pyrocms {{ variables:get_var name="pyrocms_version" }}/develop
+	git push origin {{ variables:get_var name="pyrocms_version" }}/develop
 
 That will take any new commits from the main PyroCMS repository and push them to your own repository.
 
