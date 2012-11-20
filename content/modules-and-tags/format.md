@@ -50,3 +50,20 @@ Returns:
 	<p><em>Format</em> allows you to send your content through the <strong>Textile</strong> processor.</p>
 	
 	<p>Find out more about <strong>Textile</strong> formatting on their website <a href="http://www.textism.com/tools/textile/">http://www.textism.com/tools/textile/</a></p>
+	
+	
+## format:url_title
+
+	{{ noparse }}{{ format:url_title string="Some Long Post Title" separator="dash" lowercase="true" }}{{ /noparse }}
+	
+A shortcut to the [CodeIgniter URL Helper](http://codeigniter.com/user_guide/helpers/url_helper.html) `url_title($string, $separator, $lowercase)` function.
+
+### Example
+
+#### Title to URL Safe conversion
+
+	{{ noparse }}{{ format:url_title string="Some Long Post Title" separator="dash" lowercase="true" }}{{ /noparse }}
+
+Returns:
+
+	"some-long-post-title"
