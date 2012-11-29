@@ -75,7 +75,7 @@ Display all blog posts or blog posts by category.
 	</tbody>
 </table>
 
-### Example</strong>
+### Example
 
 	{{ noparse }}{{ blog:posts limit=&quot;5&quot; offset=&quot;5&quot; order-by=&quot;title&quot; order-dir=&quot;desc&quot; category=&quot;pyrocms&quot; }}
 	&lt;h2&gt;{{ title }}&lt;/h2&gt;
