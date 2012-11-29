@@ -69,7 +69,7 @@ Returns:
 
 	'http://www.example.com/'
 
-## {{ noparse }}url:segments{{ /noparse }}
+## url:segments
 
 Displays a specific URL segment.
 
@@ -106,7 +106,7 @@ If the url is __http://www.example.com/products__, the tag above will return:
 
 	products
 
-## {{ noparse }}url:anchor{{ /noparse }}</h5>
+## url:anchor
 
 Generates an anchor tag (a link) with an absolute URL (domain name and path) from URI segments. Essentially a wrapper for built in `anchor()` function found in the url helper.
 
