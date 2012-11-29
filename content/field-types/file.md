@@ -25,10 +25,9 @@ The file field type allows you to upload and link to a file.
 </tbody> 
 </table> 
  
-<h3> 
- Output</h3> 
-<p> 
- The image field type outputs the following nested variables.</p> 
+### Output
+
+The image field type outputs the following nested variables. 
  
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
  <thead> 
