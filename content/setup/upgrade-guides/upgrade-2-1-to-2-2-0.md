@@ -1,10 +1,10 @@
-# Upgrading v2.1.x to v2.2.x
+# Upgrading v2.1.x to v2.2.0
 
-Any version of the 2.1 branch can be upgraded to any version of the 2.2 branch by following these instructions.
+Any version of 2.1.x can be upgraded to 2.2.0 by following these instructions.
 
-## 1.) Download the latest copy of PyroCMS
+## 1.) Download PyroCMS v2.2.0
 
-You can download the latest version of PyroCMS 2.2 [here](https://github.com/pyrocms/pyrocms/zipball/2.2/master).
+You can download PyroCMS v2.2.0 [from GitHub](https://github.com/pyrocms/pyrocms/zipball/v2.2.0).
 
 If you are using git, you can get the latest copy by running:
 
@@ -82,4 +82,5 @@ will need to change the code like so:
 Done! You are now running the latest, shiniest version of PyroCMS!
 
 This upgrade was bigger than usual - especially for people with custom addons - but it's because we added a lot of awesome stuff.
+
 Remember, if you use Git this is WAY quicker. All database changes are handled automatically (by 'migrations') the next time you load up the control panel. 

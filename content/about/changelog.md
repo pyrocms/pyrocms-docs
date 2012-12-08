@@ -1,5 +1,72 @@
 # Changelog
 
+## 2.2.0 - December 10, 2012
+
+### Features
+
+- Modular Search allows you to search content from the frontend via a new "/search" page.
+- Control Panel search adds a bar to the header to help you find and edit content.
+- New "Grid" Field Type.
+- Report Comments as spam to Akismet.
+- Maintain a "comment blacklist" to stop spammers from using the same email.
+- Blog comments can be configured to expier after X amount of time.
+- New Admin Menu System lets module developers control the main menu.
+- Improved the reset password system to use email OR username, not require both.
+- Link to /user/johnsmith instead of /user/1.
+- Added {{ blog:categories }} and {{ blog:tags }} to generate a list of available categories and a list of tags.
+- Upgraded to latest CodeIgniter 3.0.
+- Updating jQuery to 1.8.3.
+- Upgrading to Ckeditor 3.6.4.
+- Added jQuery miniColors option to Theme Options.
+- Translated to Brazilian.
+- Translated to Simplified Chinese.
+
+### Improvements
+
+- Increased extension length from 5 to 10 because of 'pages' and 'numbers' valid file extensions.
+- Adding the ability to control the cancel button on the Streams API field form.
+- Updating the users module to use the new configurable cancel button.
+- Patched output library for new improved minificaiton.
+- Adding an OpenGraph `"og"` option to the Template metadata.
+- Adding Facebook OG Data to the blog.
+- Only link to users profile in comments if enable_profies is enabled.
+- Make contact form check for a specific `$_POST` name (to match its own submit button) to avoid other posts - triggering validation.
+- Added a password strength indicator to the installer password. 
+- Encrypt uploaded file names by default to close issue
+- Allow blog category slugs to be entered manually.
+- Added `{{ asset:render_js }}` and `{{ asset:render_css }}` to Assets Plugin.
+- Added Format Plugin.
+- Adding optional entry re-ordering in Streams API.
+- Added file_min to asset:js
+- Adding DB space for IPv6 in PyroCMS tables.
+- Added Uhoh by Dan Horrigan for Improved errors.
+- Stop the user plugin accessing password or salt data.
+- Improved support for .docx/.xlsx/.pptx.
+- Added "filter by tags" to the file plugin.
+- Moved "Control Panel" to the end of the meta title
+- Show / Hide Dashboard items if modules disabled.
+- Close connections when work is done in upload().
+- Added ability to set file 'alt' attribute on image upload.
+- Changed Ion Auth profile update to not require setting the display name (when not set, it uses the existing - profile data).
+- Variables admin panel list ordered by name.
+- Adding in support for making single admin menu items the top link.
+- Creating a plugins add-on section.
+- Allow mailto link in navigation.
+- Date can now be added after 12:00 pm and before 1:00 am in a datetime field type
+
+### Developers
+
+- Added the CodeIgniter unit tests, which will sit alongside our own tests soon.
+- Redirects Events added.
+- Removing the `MY_Controller::$data` property. If you use `$this->data`, then just use `$data` instead.
+- Removed deprecated `standard_date()` usage in Blog RSS controller.
+- Allowing limit/offset to be set for the get_streams API function.
+- Adding `get_stream_metadata` function to the Streams API.
+- Fix multiple form support using Streams Plugin
+- Updates for E_STRICT and E_DEPRECATED errors (meaning PHP 5.4 support is greatly improved).
+- Set iPad as a "full-browser" device. If you like it as mobile, move it back in system/cms/config/user_agents.php.
+- Support minify function in default theme.
+
 ## 2.1.5 - November 1, 2012
 
 ### New Features and Improvements:
