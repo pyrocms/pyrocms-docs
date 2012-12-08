@@ -369,6 +369,18 @@ In PyroStreams 2.1.4, the where parameter can specify one parameter using the fo
 </table> 
  
 <div class="tip"><strong>Note:</strong> Turning on pagination will automatically set the limit to 25. You can override this by setting a limit parameter.</div>
+
+### Pagination URI Segments
+
+Pagination works by adding a page number onto the end of the URI of your page. So if you have a URI like this:
+
+    /products/list
+
+Pagination will add a number like this:
+
+     /products/list/10
+
+For this reason, you need to go into the page that you have streams pagination on, and uncheck <strong>Require an exact URI match?</strong> under the <strong>Options</strong> tab. This means that when accessing a page like /products/list/10, it will not look for a page with a slug of '10' under 'lists', but will ignore that segment.
   
 ## Controlling the Pagination Markup
  
@@ -475,6 +487,22 @@ In PyroStreams 2.1.4, the where parameter can specify one parameter using the fo
 	</tr>
 </tbody> 
 </table>
+
+### Pagination Example
+
+    {{ noparse }}{{ streams:cycle stream="bands" limit="5" paginate="yes" pag_segment="2" limit="10" }}
+
+    <p>{{ total }} entries returned.</p>
+
+    {{ entries }}
+
+    <h2>{{ name }}</h2>
+
+    {{ /entries }}
+
+    {{ pagination }}
+
+{{ /streams:cycle }}{{ /noparse }}
 
 ## Separating Results into Sets
 
