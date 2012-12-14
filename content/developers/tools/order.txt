@@ -2,6 +2,7 @@ constants-and-globals | Constants and Globals
 assets
 events
 files
+helpers
 keywords
 pyrocache | PyroCache
 pyrofilter | PyroFilter
