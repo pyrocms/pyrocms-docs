@@ -76,6 +76,48 @@ will need to change the code like so:
 	// to
 	$this->dbforge->drop_table('sometable', true);
 	
+The `display_comments()` helper method has been removed. Normally we try to deprecate things nicely, but this just had to go. Instead of calling just that method, now you have more control over wether or not to show the existing comments and the form itself seperately. Here is an example of the blog module:
+
+	<?php if (Settings::get('enable_comments')): ?>
+
+		<div id="comments">
+			
+			<div id="existing-comments">
+				
+				<h4><?php echo lang('comments:title') ?></h4>
+
+				<?php echo $this->comments->display() ?>
+
+			</div>
+
+			<?php if ($form_display): ?>
+
+				<?php echo $this->comments->form() ?>
+
+			<?php else: ?>
+
+				<?php echo sprintf(lang('blog:disabled_after'), strtolower(lang('global:duration:'.str_replace(' ', '-', $post->comments_enabled)))) ?>
+
+			<?php endif ?>
+
+		</div>
+
+	<?php endif ?>
+
+Notice the two class methods, instead of the one function call. 
+
+Instead of loading the helper in your controller, load it like so:
+
+	$this->load->library('comments/comments', array(
+		'entry_id' 		=> $post->id,
+		'entry_title' 	=> $post->title,
+		'module' 		=> 'blog',
+		'singular' 		=> 'blog:post',
+		'plural' 		=> 'blog:posts',
+	));
+
+This entry_title, singular and plural logic matches the Keywords structure, where you pass a language item 
+or just an arbitrary string like "Chicken" to help identify multiple types of data within the same module.
 
 ## Rejoice
 
