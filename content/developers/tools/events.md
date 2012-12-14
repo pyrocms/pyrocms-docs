@@ -36,31 +36,31 @@ PyroCMS includes the following event triggers:
 ### Blog Triggers
 <table>
 <tr>
-<td class="one_third">Events::trigger('<b>post_created</b>', $id)</td>
+<td class="one_third">Events::trigger('<b>post\_created</b>', $id)</td>
 <td>Fired when a blog post is saved for the first time.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>post_updated</b>', $id)</td>
+<td class="one_third">Events::trigger('<b>post\_updated</b>', $id)</td>
 <td>Fired when a blog post re-saved.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>post_published</b>', $id)</td>
+<td class="one_third">Events::trigger('<b>post\_published</b>', $id)</td>
 <td>Fired when a blog post has been published.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>post_deleted</b>', $deleted_ids)</td>
+<td class="one_third">Events::trigger('<b>post\_deleted</b>', $deleted\_ids)</td>
 <td>Fired when a one or more blog posts have been deleted.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>blog_category_created</b>', $id)</td>
+<td class="one_third">Events::trigger('<b>blog\_category\_created</b>', $id)</td>
 <td>Fired when a blog category has been created.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>blog_category_updated</b>', $id)</td>
+<td class="one_third">Events::trigger('<b>blog\_category\_updated</b>', $id)</td>
 <td>Fired when a blog category has been updated.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>blog_category_deleted</b>', $deleted_ids)</td>
+<td class="one_third">Events::trigger('<b>blog\_category\_deleted</b>', $deleted\_ids)</td>
 <td>Fired when one or more categories have been deleted.</td>
 </tr>
 </table>
