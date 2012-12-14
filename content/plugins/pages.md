@@ -33,7 +33,7 @@ Gets a page's URL based on its ID.
 
 Returns:
 
-	http://www.example.com/about
+	'http://www.example.com/about'
 	
 ## pages:children	
 	
@@ -174,33 +174,33 @@ A tag that confirms if a page is a direct child of another page, or is a descend
 <table cellpadding="0" cellspacing="0">
 	<tbody>
 		<tr>
-			<th>Name</th>
-			<th>Default</th>
-			<th>Required</th>
+			<th width="100">Name</th>
+			<th width="80">Default</th>
+			<th width="80">Required</th>
 			<th>Description</th>
 		</tr>
 		<tr>
-			<td width="100">child</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
+			<td>child</td>
+			<td>None</td>
+			<td>No</td>
 			<td>ID or Slug of the page whose relation you want to check.</td>
 		</tr>
 		<tr>
-			<td width="100">children</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
+			<td>children</td>
+			<td>None</td>
+			<td>No</td>
 			<td>Children separated by a comma.</td>
 		</tr>
 		<tr>
-			<td width="100">parent</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
+			<td>parent</td>
+			<td>None</td>
+			<td>No</td>
 			<td>ID or Slug of the page to check if it is a parent of child.</td>
 		</tr>
 		<tr>
-			<td width="100">descendent</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
+			<td>descendent</td>
+			<td>None</td>
+			<td>No</td>
 			<td>ID or Slug of the page to check if it is a descendent of child.</td>
 		</tr>
 	</tbody>

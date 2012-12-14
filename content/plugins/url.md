@@ -1,6 +1,6 @@
 # URL Plugin
 
-The url plugin gives you access to url data and logic.
+The url plugin gives you access to URL data and logic.
 
 ## url:current
 
@@ -12,7 +12,7 @@ Displays the full current URL.
 
 Returns:
 
-	http://www.example.com/current/uri/
+	'http://www.example.com/current/uri/'
 
 ## url:site
 
@@ -32,7 +32,7 @@ Displays the full site URL. Use this to generate links within your site - supply
 			<td width="100">uri</td>
 			<td width="100">None</td>
 			<td width="100">No</td>
-			<td>URI segments passed to the site_url function.</td>
+			<td>URI segments passed to the <code>site_url</code> function.</td>
 		</tr>
 	</tbody>
 </table>
@@ -45,7 +45,7 @@ With no URI specified:
 
 Returns:
 
-	http://www.example.com
+	'http://www.example.com'
 
 With a URI specified:
 
@@ -53,9 +53,9 @@ With a URI specified:
 
 Returns:
 
-	http://www.example.com/contact
+	'http://www.example.com/contact'
 
-<div class="tip"><strong>Note:</strong> The site URL includes index.php if you are not using mod_rewrite to remove it and you've not changed the <strong>$config['index_page']</strong> variable in <em>/system/cms/config/config.php</em>. For more information, see {{ link title="Removing index.php from URLs" uri="setup/removing-indexphp-from-urls" }}.</div>
+<div class="tip"><strong>Note:</strong> The site URL includes index.php if you are not using mod_rewrite to remove it and you've not changed the <strong>$config['index_page']</strong> variable in <dfn>/system/cms/config/config.php</dfn>. For more information, see {{ link title="Removing index.php from URLs" uri="setup/removing-indexphp-from-urls" }}.</div>
 
 ## url:base
 
@@ -67,7 +67,7 @@ Displays the full site base URL regardless of mod_rewrite settings.
 
 Returns:
 
-	http://www.example.com/
+	'http://www.example.com/'
 
 ## {{ noparse }}url:segments{{ /noparse }}
 
@@ -78,32 +78,21 @@ Displays a specific URL segment.
 <table cellpadding="0" cellspacing="0">
 	<tbody>
 		<tr>
-			<th>
-				Name</th>
-			<th>
-				Default</th>
-			<th>
-				Required</th>
-			<th>
-				Description</th>
+			<th width="100">Name</th>
+			<th width="100">Default</th>
+			<th width="100">Required</th>
+			<th>Description</th>
 		</tr>
 		<tr>
-			<td width="100">
-				segment</td>
-			<td width="100">
-				None</td>
-			<td width="100">
-				Yes</td>
-			<td>
-				Number of segment (left to right, first segment is 1).</td>
+			<td>segment</td>
+			<td>None</td>
+			<td>Yes</td>
+			<td>Number of segment (left to right, first segment is 1).</td>
 		</tr>
 		<tr>
-			<td width="100">
-				default</td>
-			<td width="100">
-				None</td>
-			<td width="100">
-				No</td>
+			<td>default</td>
+			<td>None</td>
+			<td>No</td>
 			<td>Default value if selected segment does not exist/is not in use.</td>
 		</tr>
 	</tbody>
@@ -113,61 +102,41 @@ Displays a specific URL segment.
 
 	{{ noparse }}{{ url:segments segment=&quot;1&quot; default=&quot;home&quot; }}{{ /noparse }}
 
-If the url is:
-
-	http://www.example.com/products
-	
-The tag above will return:
+If the url is __http://www.example.com/products__, the tag above will return:
 
 	products
 
 ## {{ noparse }}url:anchor{{ /noparse }}</h5>
 
-Generates an anchor tag (a link) with an absolute URL (domain name and path) from URI segments. Essentially a wrapper for built in anchor() function found in the url helper.
+Generates an anchor tag (a link) with an absolute URL (domain name and path) from URI segments. Essentially a wrapper for built in `anchor()` function found in the url helper.
 
 ### Attributes
 
 <table cellpadding="0" cellspacing="0">
 	<tbody>
 		<tr>
-			<th>
-				Name</th>
-			<th>
-				Default</th>
-			<th>
-				Required</th>
-			<th>
-				Description</th>
+			<th width="100">Name</th>
+			<th width="100">Default</th>
+			<th width="100">Required</th>
+			<th>Description</th>
 		</tr>
 		<tr>
-			<td width="100">
-				segments</td>
-			<td width="100">
-				None</td>
-			<td width="100">
-				Yes</td>
-			<td>
-				Segments passed to the anchor function.</td>
+			<td>segments</td>
+			<td>None</td>
+			<td>Yes</td>
+			<td>Segments passed to the anchor function.</td>
 		</tr>
 		<tr>
-			<td width="100">
-				title</td>
-			<td width="100">
-				None</td>
-			<td width="100">
-				No</td>
-			<td>
-				Text displayed between &lt;a href&gt;&lt;/a&gt; tags. If omitted, URL is duplicated.</td>
+			<td>title</td>
+			<td>None</td>
+			<td>No</td>
+			<td>Text displayed between <code>&lt;a&gt;&lt;/a&gt;</code> tags. If omitted, URL is duplicated.</td>
 		</tr>
 		<tr>
-			<td width="100">
-				class</td>
-			<td width="100">
-				None</td>
-			<td width="100">
-				No</td>
-			<td>
-				Optional CSS class.</td>
+			<td>class</td>
+			<td>None</td>
+			<td>No</td>
+			<td>Optional CSS class.</td>
 		</tr>
 	</tbody>
 </table>

@@ -46,7 +46,7 @@ Creates a list of files within the specified folder.
 			<td>fetch</td>
 			<td>None</td>
 			<td>No</td>
-			<td>Return the files in the subfolders specified. Separate multiple folders with the pipe character: "blog|pages"</td>
+			<td>Return the files in the subfolders specified. Separate multiple folders with the pipe character: <code>blog|pages</code></td>
 		</tr>
 		<tr>
 			<td>order-by</td>
@@ -121,7 +121,7 @@ Returns:
 
 	{{ noparse }}{{ files:folder_exists slug="sample_folder" }}{{ /noparse }}
 
-Check if the specified folder really does exist. Returns boolean
+Check if the specified folder really does exist. Returns boolean.
 
 ### Attributes
 
@@ -146,7 +146,7 @@ Check if the specified folder really does exist. Returns boolean
 
 	{{ noparse }}{{ files:exists id="45" }}{{ /noparse }}
 
-Check if the specified file really does exist. Returns boolean
+Check if the specified file really does exist. Returns boolean.
 
 ### Attributes
 
@@ -162,7 +162,7 @@ Check if the specified file really does exist. Returns boolean
 			<td width="100">id</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>Required. The file id to check for. Returns boolean</td>
+			<td>The file id to check for</td>
 		</tr>
 	</tbody>
 </table>
@@ -187,7 +187,7 @@ Returns the filesystem path to the file.
 			<td width="100">id</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>Required. The file id that you want the path for.</td>
+			<td>The file id that you want the path for</td>
 		</tr>
 	</tbody>
 </table>
@@ -212,7 +212,7 @@ Returns the url to the file.
 			<td width="100">id</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>Required. The file id that you want the url for.</td>
+			<td>The file id that you want the URL for</td>
 		</tr>
 	</tbody>
 </table>
@@ -262,7 +262,7 @@ Returns the url to the image.
 			<td width="100">id</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>Required. The file id of the image.</td>
+			<td>The file id of the image</td>
 		</tr>
 	</tbody>
 </table>
@@ -287,7 +287,7 @@ Returns an image tag for the specified image.
 			<td width="100">id</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>Required. The file id of the image.</td>
+			<td>The file id of the image</td>
 		</tr>
 		<tr>
 			<td>width</td>
@@ -305,7 +305,7 @@ Returns an image tag for the specified image.
 			<td>size</td>
 			<td>None</td>
 			<td>No</td>
-			<td>For images specify the desired width/height. Shorthand for the width and height attributes above. size="200/150"</td>
+			<td>For images specify the desired width/height. Shorthand for the width and height attributes above. <code>size="200/150"</code></td>
 		</tr>
 		<tr>
 			<td>mode</td>

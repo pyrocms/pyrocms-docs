@@ -22,7 +22,7 @@ Displays all widgets in a widget area.</p>
 			<td width="100">slug</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>Slug for the widget area as defined in CP &gt; Content &gt; Widgets</td>
+			<td>Slug for the widget area as defined in <strong>CP &gt; Content &gt; Widgets</strong></td>
 		</tr>
 	</tbody>
 </table>
@@ -42,16 +42,16 @@ Displays a specific widget instance.
 <table cellpadding="0" cellspacing="0">
 	<tbody>
 		<tr>
-			<th>Name</th>
-			<th>Default</th>
-			<th>Required</th>
+			<th width="100">Name</th>
+			<th width="100">Default</th>
+			<th width="100">Required</th>
 			<th>Description</th>
 		</tr>
 		<tr>
-			<td width="100">id</td>
-			<td width="100">None</td>
-			<td width="100">Yes</td>
-			<td>ID of the widget instance given to you after installing a widget in CP &gt; Content &gt; Widgets.</td>
+			<td>id</td>
+			<td>None</td>
+			<td>Yes</td>
+			<td>ID of the widget instance given to you after installing a widget in <strong>CP &gt; Content &gt; Widgets</strong>.</td>
 		</tr>
 	</tbody>
 </table>
