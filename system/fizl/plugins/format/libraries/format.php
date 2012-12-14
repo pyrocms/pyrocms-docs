@@ -72,7 +72,7 @@ class Format extends Plugin {
 			// If there is more of the same, make the slug unique by adding the count
 			$make_unique = count($instances) > 1 ? '-'.count($instances) : '';
 
-			$slug = url_title($h->plaintext, 'dash', true).$make_unique;
+			$slug = anchor_format($h->plaintext.$make_unique, 'dash', true);
 			
 			// Add the slug to id to keep compatibility with docs plugin {{ docs:id_link title="Example" }}
 			$h->id = $slug;
@@ -81,9 +81,9 @@ class Format extends Plugin {
 			$link_top = $key > 0 ? '<a class="anchor-top hidden" href="'.current_url().'#top">&uarr;</a>' : '';
 
 			// Set the anchor link for all headings after the first
-			$link_anchor = $key > 0 ? '<a name="'.$slug.'"class="anchor hidden" href="'.current_url().'#'.$slug.'"></a>' : '';
+			$link_anchor = $key > 0 ? '<a name="'.$slug.'" class="anchor hidden" href="'.current_url().'#'.$slug.'"></a>' : '';
 			
-			// Add everythig together and overwrite the innertext property
+			// Add everything together and overwrite the innertext property
 			$h->innertext = $link_anchor.$h->innertext.$link_top;
 		
 		}
