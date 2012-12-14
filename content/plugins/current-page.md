@@ -58,13 +58,14 @@ Will either be "live" or "draft". In draft mode only admins may view the page.
 
 ## page:created_on
 
-The epoch time when the page was created. Wrap this with the date helper to format it for humans: {{ helper:date timestamp=page:created_on }}
+The epoch time when the page was created. Wrap this with the date helper to format it for humans:  
+<code>{{noparse}}{{ helper:date timestamp=page:created_on }}{{/noparse}}</code>
 
 	{{ noparse }}{{ page:created_on }}{{ /noparse }}
 
 ## page:updated_on
 
-This is the same as {{ noparse }}{{ page:created_on }}{{ /noparse }} except that it displays the epoch time when the page was updated.
+This is the same as `{{ noparse }}{{ page:created_on }}{{ /noparse }}` except that it displays the epoch time when the page was updated.
 
 	{{ noparse }}{{ page:updated_on }}{{ /noparse }}
 

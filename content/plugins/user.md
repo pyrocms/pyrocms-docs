@@ -6,22 +6,22 @@ The _user_ plugin gives you access to user data and logic.
 
 	{{ noparse }}{{ user:logged_in }}{{ /noparse }}
 
-Checks if a user is logged in or not. Can be used as a tag pair to limit display of certain code to logged in users, or a single tag that returns TRUE or FALSE depending on whether the user is logged in.
+Checks if a user is logged in or not. Can be used as a tag pair to limit display of certain code to logged in users, or a single tag that returns `true` or `false` depending on whether the user is logged in.
 
 ### Attributes
 
 <table cellpadding="0" cellspacing="0">
 	<tbody>
 		<tr>
-			<th>Name</th>
-			<th>Default</th>
-			<th>Required</th>
+			<th width="100">Name</th>
+			<th width="100">Default</th>
+			<th width="100">Required</th>
 			<th>Description</th>
 		</tr>
 		<tr>
-			<td width="100">group</td>
-			<td width="100">None</td>
-			<td width="100">No</td>
+			<td>group</td>
+			<td>None</td>
+			<td>No</td>
 			<td>Group slug. Check if a user is not only logged in, but also a member of the specified group.</td>
 		</tr>
 	</tbody>
@@ -37,7 +37,7 @@ Checks if a user is logged in or not. Can be used as a tag pair to limit display
 
 	{{ noparse }}{{ user:not_logged_in }}{{ /noparse }}
 
-Identical to the previous function, but instead checks to see if a user is NOT logged in. Also takes the _group_ parameter. Must be used in a tag pair.</p>
+Identical to the previous function, but instead checks to see if a user is NOT logged in. Also takes the _group_ parameter. Must be used in a tag pair.
 
 ## Single User Profile Variables
 
@@ -51,7 +51,7 @@ These calls default to the current logged in user, but you may also specify a us
 
 If you are using custom stream fields that return multiple records, you can access the values within as a tag pair:
 
-	{{ noparse }}{{ user:country }}{{ name }} {{ /user:country }}{{ /noparse }}
+	{{ noparse }}{{ user:country }}{{ name }}{{ /user:country }}{{ /noparse }}
 
 Below is a table of variables that are hard-coded into the system and always available.
 

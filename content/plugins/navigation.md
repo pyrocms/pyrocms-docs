@@ -13,28 +13,28 @@ Creates a list of links for a group.
 <table cellpadding="0" cellspacing="0">
 	<tbody>
 		<tr>
-			<th>Name</th>
-			<th>Default</th>
-			<th>Required</th>
+			<th width="100">Name</th>
+			<th width="100">Default</th>
+			<th width="80">Required</th>
 			<th>Description</th>
 		</tr>
 		<tr>
-			<td width="100">group</td>
-			<td width="100">None</td>
-			<td width="100">Yes</td>
+			<td>group</td>
+			<td>None</td>
+			<td>Yes</td>
 			<td>The navigation group the tag should use.</td>
 		</tr>
 		<tr>
 			<td>group_segment</td>
 			<td>None</td>
 			<td>No</td>
-			<td>If your navigation name is in the URI, you can specify the numeric URI segement here, and it will pull the value from the URI.</td>
+			<td>If your navigation name is in the URI, you can specify the numeric URI segment here, and it will pull the value from the URI.</td>
 		</tr>
 		<tr>
 			<td>list-tag</td>
 			<td>ul</td>
 			<td>No</td>
-			<td>Choose between ol and ul lists. The value of this is wrapped in brackets on either end.</td>
+			<td>Choose between <code>ol</code> and <code>ul</code> lists. The value of this is wrapped in brackets on either end.</td>
 		</tr>
 		<tr>
 			<td>tag</td>
@@ -52,7 +52,7 @@ Creates a list of links for a group.
 			<td>more-class</td>
 			<td>has_children</td>
 			<td>No</td>
-			<td>The class applied to a parent li when it contains a ul or ol.</td>
+			<td>The class applied to a parent <code>li</code> when it contains a <code>ul</code> or <code>ol</code>.</td>
 		</tr>
 		<tr>
 			<td>first-class</td>
@@ -82,7 +82,7 @@ Creates a list of links for a group.
 			<td>items-only</td>
 			<td>true</td>
 			<td>No</td>
-			<td>true or false. Set if the output source code should be wrapped with an optional list-tag.</td>
+			<td><code>true</code> or <code>false</code>. Set if the output source code should be wrapped with an optional <em>list-tag</em>.</td>
 		</tr>
 		<tr>
 			<td>indent</td>
@@ -100,7 +100,7 @@ Creates a list of links for a group.
 			<td>wrap</td>
 			<td>None</td>
 			<td>No</td>
-			<td>Html that that you wish to wrap the link title in. Most likely a span element</td>
+			<td>HTML that that you wish to wrap the link title in. Most likely a <code>span</code> element</td>
 		</tr>
 		<tr>
 			<td>top</td>
@@ -113,7 +113,7 @@ Creates a list of links for a group.
 
 ### Single Tag Usage
 
-You can use the basic single-tag approach to output a chunk of HTML by itself. This will apply the class names to the <kdb>&lt;li&gt;</kdb> tags (default) and use the <kdb>&lt;a&gt;</kdb> tags (default) to wrap the anchors.</p>
+You can use the basic single-tag approach to output a chunk of HTML by itself. This will apply the class names to the `<li>` tags (default) and use the `<a>` tags (default) to wrap the anchors.</p>
 
 	{{ noparse }}{{ navigation:links group="header" }}{{ /noparse }}
 	
@@ -218,7 +218,7 @@ The following variables are available to you in the tag pair:
 
 ### Advanced Options
 
-You can use a combination of params to output a chunk of HTML that shows a short paragraph of navigation, using `<p>` as list\_tag to wrap all items by disabling items_only and using the tag `<span>` to wrap each anchor link.
+You can use a combination of params to output a chunk of HTML that shows a short paragraph of navigation, using `<p>` as _list\_tag_ to wrap all items by disabling _items\_only_ and using the tag `<span>` to wrap each anchor link.
 
 	{{ noparse }}{{ navigation:links group="header" tag="span" class="active" separator="|" list-tag="p" items-only="false" }}{{ /noparse }}
 	

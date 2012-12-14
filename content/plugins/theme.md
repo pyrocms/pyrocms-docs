@@ -68,7 +68,7 @@ Loads partial from the current theme.
 
 ## theme:css
 
-Generates a &lt;link&gt; to a css file in the current theme.
+Generates a `<link>` to a css file in the current theme.
 
 **Attributes**
 <table cellpadding="0" cellspacing="0">
@@ -103,12 +103,12 @@ Generates a &lt;link&gt; to a css file in the current theme.
 			<td width="100">No</td>
 			<td>The media attribute.</td>
 		</tr>
-        <tr>
-            <td width="100">rel</td>
-            <td width="100">stylesheet</td>
-            <td width="100">No</td>
-            <td>The rel attribute.</td>
-        </tr>
+		<tr>
+			<td width="100">rel</td>
+			<td width="100">stylesheet</td>
+			<td width="100">No</td>
+			<td>The rel attribute.</td>
+		</tr>
 	</tbody>
 </table>
 
@@ -122,7 +122,7 @@ Returns:
 
 ## theme:image
 
-Generates an &lt;img&gt; tag for an file in the current theme.
+Generates an `<img>` tag for an file in the current theme.
 
 **Attributes**
 <table cellpadding="0" cellspacing="0">
@@ -158,7 +158,7 @@ Returns:
 
 ## theme:js
 
-Generates a &lt;js&gt; script link for a javascript file in the current theme.
+Generates a `<script>` link for a javascript file in the current theme.
 
 **Attributes**
 <table cellpadding="0" cellspacing="0">
@@ -184,11 +184,11 @@ Generates a &lt;js&gt; script link for a javascript file in the current theme.
 
 Returns:
 
-	{{ noparse }}&lt;script type="text/javascript" src="themes/default/js/extra.js"&gt;{{ /noparse }}
+	{{ noparse }}&lt;script type="text/javascript" src="themes/default/js/extra.js"&gt;&lt;/script&gt;{{ /noparse }}
 
 ## theme:favicon
 
-Generates a &lt;link&gt; tag for a favicon file in the current theme.
+Generates a `<link>` tag for a favicon file in the current theme.
 
 **Attributes**
 <table cellpadding="0" cellspacing="0">
@@ -303,13 +303,13 @@ Displays a language string from the current language for the theme of you choosi
 			<td width="100">lang</td>
 			<td width="100">None</td>
 			<td width="100">Yes</td>
-			<td>The language file that you wish to load. The file should store under /themes/[theme folder]/languages/[language code]/[language file]. </td>
+			<td>The language file that you wish to load. The file should store under <dfn>/themes/[theme folder]/languages/[language code]/[language file]</dfn></td>
 		</tr>
 		<tr>
 			<td width="100">default</td>
 			<td width="100">None</td>
 			<td width="100">No</td>
-			<td>The default value will be displayed when the language line returns FALSE.</td>
+			<td>The default value will be displayed when the language line returns <code>false</code>.</td>
 		</tr>
 	</tbody>
 </table>
