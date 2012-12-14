@@ -10,8 +10,8 @@ You can use a variable in your layouts like this:
 
 If you create a variable called _twitter\_handle_, you can display it in your site like this:
 
-	{{ noparse }}Follow us on Twitter at @{{ variables:twitter_handle }}!{{ /noparse }}
+	{{ noparse }}Follow us on Twitter at @{{ variables:twitter_handle }}{{ /noparse }}
 
 You can also check the value using an if statement:
 
-	{{ noparse }}{{ if twitter_handle }}We are on Twitter!{{ /noparse }}
+	{{ noparse }}{{ if variables:twitter_handle }}We are on Twitter!{{ endif }}{{ /noparse }}

@@ -19,9 +19,9 @@ Displays a language string from the current language.
 			<th>Description</th>
 		</tr>
 		<tr>
-			<td width="100">line</td>
-			<td width="100">None</td>
-			<td width="100">Yes</td>
+			<td width="80">line</td>
+			<td width="80">None</td>
+			<td width="80">Yes</td>
 			<td>The array key of the language string that you wish to display.</td>
 		</tr>
 	</tbody>
@@ -157,7 +157,7 @@ Displays an avatar linked to the provided email address at gravatar.com
 			<td width="100">url-only</td>
 			<td width="100">false</td>
 			<td width="100">No</td>
-			<td>Fetch the url only or a complete image tag.</td>
+			<td>Fetch the URL only or a complete image tag.</td>
 		</tr>
 	</tbody>
 </table>
@@ -261,7 +261,8 @@ Executes a whitelisted PHP function on your data. Attributes are passed to the f
 
 ### Example 
 
-In this example we will assume that the variable {{ html }} contains this string: '&lt;div class="test"&gt;My Test is %s&lt;/div&gt;'
+In this example we will assume that the variable {{ html }} contains this string:  
+`<div class="test">My Test is %s</div>`
 
     // note that you could name the attribute anything you want here. I used "value" as that is explanatory
     {{ noparse }}{{ helper:strip_tags value=html }}{{ /noparse }}
@@ -270,7 +271,7 @@ Returns:
 
     My Test is %s
 
-Now we'll use sprintf and pass both the string and the value as sprintf requires at least two arguments.
+Now we'll use `sprintf` and pass both the string and the value as `sprintf` requires at least two arguments.
 
     {{ noparse }}{{ helper:sprintf string=html status="Complete" }}{{ /noparse }}
 
@@ -280,7 +281,7 @@ Returns:
 
 ### Allowed Functions
 
-The functions that can be used are defined in system/cms/config/parser.php
+The functions that can be used are defined in <dfn>system/cms/config/parser.php</dfn>
 
 This is the current list:
 

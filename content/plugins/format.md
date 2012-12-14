@@ -1,4 +1,4 @@
-# Format Tags
+# Format Plugin
 
 The _format_ plugin allows you to format content with a specific processor, such as [Markdown](http://daringfireball.net/projects/markdown/syntax) or [Textile](http://www.textism.com/tools/textile/).
 
