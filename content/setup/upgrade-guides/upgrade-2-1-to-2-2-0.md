@@ -2,7 +2,7 @@
 
 Any version of 2.1.x can be upgraded to 2.2.0 by following these instructions.
 
-## 1.) Download PyroCMS v2.2.0
+## Step 1: Download PyroCMS v2.2.0
 
 You can download PyroCMS v2.2.0 [from GitHub](https://github.com/pyrocms/pyrocms/zipball/v2.2.0).
 
@@ -13,7 +13,7 @@ If you are using git, you can get the latest copy by running:
 Incidentally, if you are using Git to upgrade this is probably the last step you need to make - unless you have custom 
 addons.
 
-## 2.) Backup Your Add-ons and database.php
+## Step 2: Backup Your Add-ons and database.php
 
 We're going to replace the entire system, so you'll need to back up any files you've modified. Most likely, this is just 
 the <dfn>database.php</dfn> file, which is stored in <dfn>system/cms/config/database.php</dfn> and contains your database connection details.  
@@ -23,11 +23,11 @@ If you are using a GUI, take care you don't miss any "hidden" files like <dfn>.h
 Additionally, you'll want to back up any addons that you've added to the addons directory. We'll be replacing this entire 
 folder, so back those up.
 
-## 3.) Replace the addons and system folder
+## Step 3: Replace the addons and system folder
 
 Replace the system and addons folders with their new version, and then add your backed up <dfn>database.php</dfn> and addons back in.
 
-## 4.) Update your database.php
+## Step 4: Update your database.php
 
 At the bottom of this file, change:
 
@@ -35,17 +35,17 @@ At the bottom of this file, change:
 	// to
 	$query_builder = true;
 
-## 5.) Replace index.php with a the new version
+## Step 5: Replace index.php with a the new version
 
 This is not usually the case, but occasionally there will be changes to the root <dfn>index.php</dfn> file, so make sure you have 
 the latest one.
 
-## 6.) Ensure config/pagination.php is present
+## Step 6: Ensure config/pagination.php is present
 
 In all of this folder moving, you may be missing a new file: <dfn>system/cms/config/pagination.php</dfn>. Make sure that is in your 
 config folder.
 
-## 7.) Make sure the following folders are writable
+## Step 7: Make sure the following folders are writable
 
 These folders need to be writable (chmod 777) or "Writable by Everyone", and may have had their permissions reset when 
 you uploaded them to your server. Make sure they are still writable, along with all of their contents.
@@ -56,7 +56,7 @@ you uploaded them to your server. Make sure they are still writable, along with 
 * system/cms/config
 * uploads
 
-## 8.) Update your Addons (Developers)
+## Step 8: Update your Addons (Developers)
 
 CodeIgniter has been updated to v3.0 so you will need to take a look at the changelog.
 
@@ -82,7 +82,7 @@ may not exist, you will need to change the code like so:
 	// to
 	$this->dbforge->drop_table('sometable', true);
 	
-The <dfn>comment\_helper</dfn> has been removed, meaning `display_comments()` is gone. Normally we try to deprecate things nicely, 
+The <dfn>comment\_helper.php</dfn> has been removed, meaning `display_comments()` is gone. Normally we try to deprecate things nicely, 
 but this just had to go. Instead of calling just that function now you have more control over whether or not to show the 
 existing comments and the form itself separately. Here is an example of the blog module:
 
