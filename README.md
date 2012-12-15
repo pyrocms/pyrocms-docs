@@ -2,7 +2,7 @@
 
 This repo is home to the PyroCMS documentation source. 
 
-* [PyroCMS Documentation](http://pyrocms.com/docs)
+* [PyroCMS Documentation](http://docs.pyrocms.com/)
 
 ## Doc Versions
 
@@ -12,8 +12,7 @@ The documentation tags mirror the x.y release tags of PyroCMS, so the v2.2.0 doc
 
 To contribute to the PyroCMS docs, fork this repo to your local environment. The PyroCMS docs run off of [Fizl](https://github.com/parse19/Fizl), which is a flat-file based CMS written in CodeIgniter. It doesn't need a database to run, so you should be able to load up the docs easily.
 
-The actual doc files are contained in the **content** folder, and the folder structure mirrors the URL structure. Each page is a markdown file, so for instance, the **Constants and Globals** file is named **constants-and-globals.md**.
-
+The actual doc files are contained in the **content** folder, and the folder structure mirrors the URL structure. Each page is a markdown file which either has a matching URI name, such as **constants-and-globals.md**, or in a folder like **page-subsection/index.md**. For instance, the **Core Plugins** file is at **plugins/index.md**.
 ## Helping Grow the Docs
 
 Right now the following are high needs areas for the docs:
@@ -43,12 +42,15 @@ These boxes should be used when there is important information the user should t
 
 ### Organization
 
-The docs are organized into four sections:
+The docs are organized into multiple categorized sections:
 
-* General Info
-* Modules & Tags
-* Developers
-* PyroCMS Pro
+* About PyroCMS (About)
+* Installing & Upgrading (Setup)
+* Important Concepts (Concepts)
+* Theming Guide (Themes)
+* Modules, Plugins, Widgets, Field Types (for Core)
+* Developer Docs (More in-depth how to)
+* PyroCMS Pro (Pro features)
 
 Within these sections are sub sections separated into columns.
 
