@@ -16,33 +16,33 @@ addons.
 ## 2.) Backup Your Add-ons and database.php
 
 We're going to replace the entire system, so you'll need to back up any files you've modified. Most likely, this is just 
-the database.php file, which is stored in system/cms/config/database.php and contains your database connection details.  
+the <dfn>database.php</dfn> file, which is stored in <dfn>system/cms/config/database.php</dfn> and contains your database connection details.  
 
-If you are using a GUI, take care you don't miss any "hidden" files like .htaccess when copying.
+If you are using a GUI, take care you don't miss any "hidden" files like <dfn>.htaccess</dfn> when copying.
 
 Additionally, you'll want to back up any addons that you've added to the addons directory. We'll be replacing this entire 
 folder, so back those up.
 
 ## 3.) Replace the addons and system folder
 
-Replace the system and addons folders with their new version, and then add your backed up database.php and addons back in.
+Replace the system and addons folders with their new version, and then add your backed up <dfn>database.php</dfn> and addons back in.
 
 ## 4.) Update your database.php
 
 At the bottom of this file, change:
 
-	$active_record = TRUE;
+	$active_record = true;
 	// to
-	$query_builder = TRUE;
+	$query_builder = true;
 
 ## 5.) Replace index.php with a the new version
 
-This is not usually the case, but occasionally there will be changes to the root index.php file, so make sure you have 
+This is not usually the case, but occasionally there will be changes to the root <dfn>index.php</dfn> file, so make sure you have 
 the latest one.
 
 ## 6.) Ensure config/pagination.php is present
 
-In all of this folder moving, you may be missing a new file: system/cms/config/pagination.php. Make sure that is in your 
+In all of this folder moving, you may be missing a new file: <dfn>system/cms/config/pagination.php</dfn>. Make sure that is in your 
 config folder.
 
 ## 7.) Make sure the following folders are writable
@@ -60,21 +60,21 @@ you uploaded them to your server. Make sure they are still writable, along with 
 
 CodeIgniter has been updated to v3.0 so you will need to take a look at the changelog.
 
-In your modules, if you have been checking for an exact match to FALSE, you will need to change it to this:
+In your modules, if you have been checking for an exact match to `false`, you will need to change it to this:
 
 	// Old
-	$this->input->post('something') !== FALSE
+	$this->input->post('something') !== false
 
 	// New
-	$this->input->post('something') !== NULL
+	$this->input->post('something') !== null
 
 If your modules refer to either of the follow two hooks then you will need to change your code to use 
-{{ link uri="modules-and-tags" title="Events" }} instead.
+{{ link uri="developers/tools/events" title="Events" }} instead.
 
 	$this->hooks->call_hook('post_user_login');
 	$this->hooks->call_hook('post_user_activation');
 
-If you were using the MySQL or MySQLi drivers and your modules use $this->dbforge->drop_table() on tables that may or 
+If you were using the MySQL or MySQLi drivers and your modules use `$this->dbforge->drop_table()` on tables that may or 
 may not exist, you will need to change the code like so:
 
 	// from
@@ -82,9 +82,9 @@ may not exist, you will need to change the code like so:
 	// to
 	$this->dbforge->drop_table('sometable', true);
 	
-The comment\_helper has been removed, meaning `display_comments()` is gone. Normally we try to deprecate things nicely, 
-but this just had to go. Instead of calling just that function now you have more control over wether or not to show the 
-existing comments and the form itself seperately. Here is an example of the blog module:
+The <dfn>comment\_helper</dfn> has been removed, meaning `display_comments()` is gone. Normally we try to deprecate things nicely, 
+but this just had to go. Instead of calling just that function now you have more control over whether or not to show the 
+existing comments and the form itself separately. Here is an example of the blog module:
 
 	<?php if (Settings::get('enable_comments')): ?>
 		<div id="comments">
@@ -105,14 +105,14 @@ Notice the two class methods, instead of the one function call.
 Instead of loading the helper in your controller, load it like so:
 
 	$this->load->library('comments/comments', array(
-		'entry_id' 		=> $post->id,
-		'entry_title' 	=> $post->title,
-		'module' 		=> 'blog',
-		'singular' 		=> 'blog:post',
-		'plural' 		=> 'blog:posts',
+		'entry_id'    => $post->id,
+		'entry_title' => $post->title,
+		'module'      => 'blog',
+		'singular'    => 'blog:post',
+		'plural'      => 'blog:posts',
 	));
 
-This entry_title, singular and plural logic matches the Keywords structure, where you pass a language key 
+This `entry_title`, singular and plural logic matches the Keywords structure, where you pass a language key 
 or just an arbitrary string like "Chicken" to help identify multiple types of data within the same module.
 
 ## Rejoice
