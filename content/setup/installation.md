@@ -4,7 +4,7 @@ The first step in getting up and running with PyroCMS is downloading a copy of t
 
 ## Downloading PyroCMS Manually
 
-You can download the latest 2.1.x version of PyroCMS <a href="https://github.com/pyrocms/pyrocms/zipball/2.1/master">here</a>. Extract the files from the zip and copy or upload them to your webserver or development environment.
+You can download the latest version of PyroCMS <a href="https://github.com/pyrocms/pyrocms/zipball/{{ variables:get_var name='pyrocms_version' }}/master">here</a>. Extract the files from the zip and copy or upload them to your webserver or development environment.
  
 ## Downloading PyroCMS using Git
 

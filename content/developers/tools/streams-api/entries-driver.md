@@ -16,8 +16,8 @@ The get_entries function allows you to pull entries from a streams table. This w
 The params array contains all of the data to affect what data you get back from the get_entries function. The only two parameters that are required are **stream** and **namespace**.
 
 	$params = array(
-			'stream' 		=> 'faqs',
-			'namespace'		=> 'faq'
+		'stream'    => 'faqs',
+		'namespace' => 'faq'
 	);
 	
 	$entries = $this->streams->entries->get_entries($params);
@@ -27,9 +27,9 @@ Here is a full list of parameters and what they do:
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
 	<thead> 
 	<tr> 
-		<th width="150">Parameter</th> 
-		<th width="150">Type</th> 
-		<th width="150">Default</th> 
+		<th width="130">Parameter</th> 
+		<th width="70">Type</th> 
+		<th width="90">Default</th> 
 		<th></th> 
 	</tr>
 	</thead>
@@ -74,37 +74,37 @@ Here is a full list of parameters and what they do:
 		<td>date_by</td>
 		<td>string</td>
 		<td>created</td>
-		<td>The field to run date parameters through. This is the field that is used when using other time-based result restrictions such as show_upcoming.</td> 
+		<td>The field to run date parameters through. This is the field that is used when using other time-based result restrictions such as <em>show_upcoming</em>.</td> 
 	</tr> 
 	<tr>
 		<td>year</td>
 		<td>int</td>
 		<td></td> 
-		<td>Restrict results to a year (uses the date_by field).</td> 
+		<td>Restrict results to a year (uses the <em>date_by</em> field).</td> 
 	</tr> 
 	<tr>
 		<td>month</td>
 		<td>int</td>
 		<td></td> 
-		<td>Restrict results to a month (uses date_by field). Takes the numerical month value.</td> 
+		<td>Restrict results to a month (uses <em>date_by</em> field). Takes the numerical month value.</td> 
 	</tr> 
 	<tr> 
 		<td>day</td>
 		<td>int</td>
 		<td></td> 
-		<td>Restrict results to a day (uses the date_by field). Takes a numerical day value.</td> 
+		<td>Restrict results to a day (uses the <em>date_by</em> field). Takes a numerical day value.</td> 
 	</tr> 
 	<tr> 
 		<td>show_upcoming</td>
 		<td>'yes' or 'no'</td>
 		<td>yes</td>
-		<td>Choose yes or no to show entries dated in the future (uses the date_by field).</td> 
+		<td>Choose yes or no to show entries dated in the future (uses the <em>date_by</em> field).</td> 
 	</tr> 
 	<tr> 
 		<td>show_past</td> 
 		<td>'yes' or 'no'</td>
 		<td>yes</td> 
-		<td>Choose yes or no to show entries dated in the past (uses the date_by field).</td> 
+		<td>Choose yes or no to show entries dated in the past (uses the <em>date_by</em> field).</td> 
 	</tr> 
 	<tr> 
 		<td>where</td>
@@ -134,13 +134,13 @@ Here is a full list of parameters and what they do:
 		<td>paginate</td>
 		<td>string</td>
 		<td>'yes' or 'no' (default is 'no')</td>
-		<td>Allows you to enable pagination (generate a string with page navigation links). Pagination feature is tied to the "pag_segment" option bellow</td> 
+		<td>Allows you to enable pagination (generate a string with page navigation links). Pagination feature is tied to the <em>pag_segment</em> option below</td> 
 	</tr>
 	<tr> 
 		<td>pag_segment</td>
 		<td>int</td>
 		<td>2</td>
-		<td>Indicate which uri segment the CI pagination helper have to look into, to get the target page index. For instance, in the "http://my.app.com/controler/method/page_index", the pag_segment should be 3 ( 1 refers to 'controler', and 2 refers to 'method'</td> 
+		<td>Indicate which uri segment the CI pagination helper have to look into, to get the target page index. For instance, in the "http://my.app.com/controller/method/page_index", the pag_segment should be 3 ( 1 refers to 'controller', and 2 refers to 'method'</td> 
 	</tr>
 	</tbody> 
 </table>
@@ -151,7 +151,7 @@ Streams uses identical pagination config to the [CodeIgniter pagination paramete
 
 ### Return Format
 
-The get_entries() function will return an array with several values:
+The `get_entries()` function will return an array with several values:
 
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
 	<thead> 
@@ -170,18 +170,18 @@ The get_entries() function will return an array with several values:
 	<tr> 
 		<td>pagination</td>
 		<td>string</td>
-		<td>The pagination code if you are using paginaton (need to set 'paginate' and 'pag_segment' options)</td>
+		<td>The pagination code if you are using pagination (need to set <em>paginate</em> and <em>pag_segment</em> options)</td>
 	</tr> 
 	<tr> 
 		<td>total</td>
 		<td>int</td>
-		<td>Total results (total, not just based on pagination)</td>
+		<td>Total results (total, not just based on current page)</td>
 	</tr>
 </table>
 
 ## get\_entry(<var>$entry\_id, $stream\_slug, $namespace\_slug, $format = true</var>)
 
-The **get_entry()** function allows you to get a single entry. If you'd like to bypass the streams formatting, you can set the fourth parameter to FALSE.
+The `get_entry()` function allows you to get a single entry. If you'd like to bypass the streams formatting, you can set the fourth parameter to `false`.
 
 ## delete\_entry(<var>$entry\_id, $stream\_slug, $namespace\_slug</var>)
 
@@ -193,7 +193,7 @@ Allows you to add an entry in a stream.
 
 ### $entry\_data
 
-The **entry\_data** parameter is an array of values for each field. This data is not run through any field validation (for required, unique, etc). Keep in mind that many field types have a **pre\_save** function that formats data before it gets to the database columns.
+The **$entry\_data** parameter is an array of values for each field. This data is not run through any field validation (for required, unique, etc). Keep in mind that many field types have a **pre\_save** function that formats data before it gets to the database columns.
 
 ### $skips
 
@@ -201,27 +201,27 @@ The **$skips** parameter is an array of field slugs that you would like streams 
 
 ### $extra
 
-The **$extra** parameter is an associative array of data to be added to the database by bypassing any field formatting. For instance, if you have a field that you added to your streams table without using a field and field type, you could include that data there, and the insert\_entry function would simply add it to the data to be inserted.
+The **$extra** parameter is an associative array of data to be added to the database by bypassing any field formatting. For instance, if you have a field that you added to your streams table without using a field and field type, you could include that data there, and the `insert_entry` function would simply add it to the data to be inserted.
 
 ### Example
 
 	$entry_data = array(
-			'question' 	=> 'Why is the sky blue?',
-			'answer'	=> 'Because of science.'
-		);
+		'question' => 'Why is the sky blue?',
+		'answer'   => 'Because of science.'
+	);
 	$this->streams->entries->insert_entry($entry_data, 'faqs', 'faq');
 
 In this example, we have extra data.
 
 	$entry_data = array(
-			'question' 	=> 'Why is the sky blue?',
-			'answer'	=> 'Because of science.'
-		);
+		'question' => 'Why is the sky blue?',
+		'answer'   => 'Because of science.'
+	);
 	$this->streams->entries->insert_entry($entry_data, 'faqs', 'faq', array(), array('not_added_by_streams' => 'extra value'));
 
-## update\_entry(<var>$entry\_id, $entry\_data, $stream\, $namespace,$skips=array(), $extra = array()</var>)
+## update\_entry(<var>$entry\_id, $entry\_data, $stream, $namespace,$skips=array(), $extra = array()</var>)
 
-Allows you to update an entry in the stream. Identical to insert\_stream, except the first parameter is the id of the entry you want to update.
+Allows you to update an entry in the stream. Identical to `insert_stream`, except the first parameter is the id of the entry you want to update.
 
 	$entry_data = array(
 			'answer'	=> 'Because of magic.'

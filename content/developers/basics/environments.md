@@ -41,6 +41,6 @@ Class](http://codeigniter.com/user_guide/libraries/config.html#environments) doc
 
 ## Setting $\_SERVER['PYRO\_ENV']
 
-The easiest way to change ENVIONMENTS is to make your servers aware of what envionment PyroCMS expects them to be. You can do this with a nice interface if you use a Platform-as-a-Service like Pagoda Box or PHP Fog for your hosting, but can be a little more tricky for others. Apache supports a SetEnv via [mod\_env](http://httpd.apache.org/docs/2.2/mod/mod_env.html) and this can be done in your main Apache config, or you can open .htaccess in the root folder and remove the **`#`** from this line:
+The easiest way to change ENVIRONMENTS is to make your servers aware of what envionment PyroCMS expects them to be. You can do this with a nice interface if you use a Platform-as-a-Service like Pagoda Box or PHP Fog for your hosting, but can be a little more tricky for others. Apache supports a SetEnv via [mod\_env](http://httpd.apache.org/docs/2.2/mod/mod_env.html) and this can be done in your main Apache config, or you can open .htaccess in the root folder and remove the **`#`** from this line:
 
 	SetEnv PYRO_ENV production

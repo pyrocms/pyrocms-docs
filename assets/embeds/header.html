@@ -48,7 +48,7 @@
 
          <div id="box">
 
-          <div class="breadcrumbs"><strong>PyroCMS 2.1</strong> | {{ breadcrumbs:crumbs }}</div>
+          <div class="breadcrumbs"><strong>PyroCMS {{ variables:get_var name="pyrocms_version" }}</strong> | {{ breadcrumbs:crumbs }}</div>
 
 <div id="menu">
 
@@ -102,7 +102,7 @@
   {{ nav:auto start="pro" }}
 {{ endif }}
 
-<p><strong>{{ link uri="search" title="Search the Docs" }}</a></strong></p>
+<p><strong>{{ link uri="search" title="Search the Docs" }}</strong></p>
 
 </div><!--#menu-->
 

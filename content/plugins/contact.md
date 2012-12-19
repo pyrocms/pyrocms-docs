@@ -79,117 +79,117 @@ The following rules are available, and are reproduced here from the CodeIgniter 
 	</tr>
 
 	<tr>
-		<td class="td"><strong>required</strong></td>
-		<td class="td">Returns FALSE if the form element is empty.</td>
-		<td class="td">&nbsp;</td>
+		<td>required</td>
+		<td>Returns <code>false</code> if the form element is empty.</td>
+		<td>&nbsp;</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>matches</strong></td>
-		<td class="td">Returns FALSE if the form element does not match the one in the parameter.</td>
-		<td class="td">matches[form_item]</td>
+		<td>matches</td>
+		<td>Returns <code>false</code> if the form element does not match the one in the parameter.</td>
+		<td>matches[form_item]</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>min_length</strong></td>
-		<td class="td">Returns FALSE if the form element is shorter then the parameter value.</td>
-		<td class="td">min_length[6]</td>
+		<td>min_length</td>
+		<td>Returns <code>false</code> if the form element is shorter then the parameter value.</td>
+		<td>min_length[6]</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>max_length</strong></td>
-		<td class="td">Returns FALSE if the form element is longer then the parameter value.</td>
-		<td class="td">max_length[12]</td>
+		<td>max_length</td>
+		<td>Returns <code>false</code> if the form element is longer then the parameter value.</td>
+		<td>max_length[12]</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>exact_length</strong></td>
-		<td class="td">Returns FALSE if the form element is not exactly the parameter value.</td>
-		<td class="td">exact_length[8]</td>
+		<td>exact_length</td>
+		<td>Returns <code>false</code> if the form element is not exactly the parameter value.</td>
+		<td>exact_length[8]</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>greater_than</strong></td>
-		<td class="td">Returns FALSE if the form element is less than the parameter value or not numeric.</td>
-		<td class="td">greater_than[8]</td>
+		<td>greater_than</td>
+		<td>Returns <code>false</code> if the form element is less than the parameter value or not numeric.</td>
+		<td>greater_than[8]</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>less_than</strong></td>
-		<td class="td">Returns FALSE if the form element is greater than the parameter value or not numeric.</td>
-		<td class="td">less_than[8]</td>
+		<td>less_than</td>
+		<td>Returns <code>false</code> if the form element is greater than the parameter value or not numeric.</td>
+		<td>less_than[8]</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>alpha</strong></td>
-		<td class="td">Returns FALSE if the form element contains anything other than alphabetical characters.</td>
-		<td class="td">&nbsp;</td>
+		<td>alpha</td>
+		<td>Returns <code>false</code> if the form element contains anything other than alphabetical characters.</td>
+		<td>&nbsp;</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>alpha_numeric</strong></td>
-		<td class="td">Returns FALSE if the form element contains anything other than alpha-numeric characters.</td>
-		<td class="td">&nbsp;</td>
+		<td>alpha_numeric</td>
+		<td>Returns <code>false</code> if the form element contains anything other than alpha-numeric characters.</td>
+		<td>&nbsp;</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>alpha_dash</strong></td>
-		<td class="td">Returns FALSE if the form element contains anything other than alpha-numeric characters, underscores or dashes.</td>
-		<td class="td">&nbsp;</td>
+		<td>alpha_dash</td>
+		<td>Returns <code>false</code> if the form element contains anything other than alpha-numeric characters, underscores or dashes.</td>
+		<td>&nbsp;</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>numeric</strong></td>
-		<td class="td">Returns FALSE if the form element contains anything other than numeric characters.</td>
-		<td class="td">&nbsp;</td>
+		<td>numeric</td>
+		<td>Returns <code>false</code> if the form element contains anything other than numeric characters.</td>
+		<td>&nbsp;</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>integer</strong></td>
-		<td class="td">Returns FALSE if the form element contains anything other than an integer.</td>
-		<td class="td">&nbsp;</td>
+		<td>integer</td>
+		<td>Returns <code>false</code> if the form element contains anything other than an integer.</td>
+		<td>&nbsp;</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>decimal</strong></td>
-		<td class="td">Returns FALSE if the form element is not exactly the parameter value.</td>
-		<td class="td">&nbsp;</td>
+		<td>decimal</td>
+		<td>Returns <code>false</code> if the form element is not exactly the parameter value.</td>
+		<td>&nbsp;</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>is_natural</strong></td>
-		<td class="td">Returns FALSE if the form element contains anything other than a natural number: 0, 1, 2, 3, etc.</td>
-		<td class="td">&nbsp;</td>
+		<td>is_natural</td>
+		<td>Returns <code>false</code> if the form element contains anything other than a natural number: 0, 1, 2, 3, etc.</td>
+		<td>&nbsp;</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>is_natural_no_zero</strong></td>
-		<td class="td">Returns FALSE if the form element contains anything other than a natural number, but not zero: 1, 2, 3, etc.</td>
-		<td class="td">&nbsp;</td>
+		<td>is_natural_no_zero</td>
+		<td>Returns <code>false</code> if the form element contains anything other than a natural number, but not zero: 1, 2, 3, etc.</td>
+		<td>&nbsp;</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>valid_email</strong></td>
-		<td class="td">Returns FALSE if the form element does not contain a valid email address.</td>
-		<td class="td">&nbsp;</td>
+		<td>valid_email</td>
+		<td>Returns <code>false</code> if the form element does not contain a valid email address.</td>
+		<td>&nbsp;</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>valid_emails</strong></td>
-		<td class="td">Returns FALSE if any value provided in a comma separated list is not a valid email.</td>
-		<td class="td">&nbsp;</td>
+		<td>valid_emails</td>
+		<td>Returns <code>false</code> if any value provided in a comma separated list is not a valid email.</td>
+		<td>&nbsp;</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>valid_ip</strong></td>
-		<td class="td">Returns FALSE if the supplied IP is not valid. Accepts an optional parameter of "IPv4" or "IPv6" to specify an IP format.</td>
-		<td class="td">&nbsp;</td>
+		<td>valid_ip</td>
+		<td>Returns <code>false</code> if the supplied IP is not valid. Accepts an optional parameter of "IPv4" or "IPv6" to specify an IP format.</td>
+		<td>&nbsp;</td>
 	</tr>
 
 	<tr>
-		<td class="td"><strong>valid_base64</strong></td>
-		<td class="td">Returns FALSE if the supplied string contains anything other than valid Base64 characters.</td>
-		<td class="td">&nbsp;</td>
+		<td>valid_base64</td>
+		<td>Returns <code>false</code> if the supplied string contains anything other than valid Base64 characters.</td>
+		<td>&nbsp;</td>
 	</tr>
 
 
@@ -242,15 +242,15 @@ We also have access to all of the fields we put in the contact form in the email
 
 ### Example Email Template:
 
-	This message was sent via the contact form on with the following details:
-	<hr />
-	IP Address: {{ sender_ip }}
-	OS {{ sender_os }}
-	Agent {{ sender_agent }}
-	<hr />
-	{{ message }}
-	{{ name }},
-	{{ email }}
+	{{noparse}}This message was sent via the contact form on with the following details:
+<hr />
+IP Address: {{ sender_ip }}
+OS: {{ sender_os }}
+Agent: {{ sender_agent }}
+<hr />
+{{ message }}
+{{ name }},
+{{ email }}{{/noparse}}
     
 ## Form Attributes
 
