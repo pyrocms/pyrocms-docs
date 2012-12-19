@@ -52,6 +52,16 @@ Returns:
 	(empty) Adds the stylesheet to the 'page' group which will need to be rendered later.
 
 
+## asset:css_inline
+
+	{{noparse}}{{ asset:css_inline }}
+	#content { background: red }
+{{ /asset:css_inline }}{{/noparse}}
+
+Add inline CSS to be output later. Inline CSS is not grouped so everything will be added to the same global group. Also, inline CSS is not output automatically like the rest of the assets. You will need to use <a href="plugins/asset#asset-render_css_inline"><code>asset:render\_css\_inline</code></a> to output the CSS.
+
+<div class="tip"><strong>NOTE:</strong> Inline CSS is automatically wrapped in a <code>&lt;style&gt;</code> tag so you do not need to include it. </div>
+
 ## asset:css_url
 
 	{{ noparse }}{{ asset:css_url file="theme::styles.css" }}{{ /noparse }}
@@ -171,6 +181,17 @@ Adds a JavaScript file to a specific group. Returns empty.
 Returns:
 
 	(empty) Adds the JavaScript file to the 'effects' group which will need to be rendered later.
+
+
+## asset:js_inline
+
+	{{noparse}}{{ asset:js_inline }}
+	alert('Welcome to our site');
+{{ /asset:js_inline }}{{/noparse}}
+
+Add inline JS to be output later. Inline JS is not grouped so everything will be added to the same global group. Also, inline JS is not output automatically like the rest of the assets. You will need to use <a href="plugins/asset#asset-render_js_inline"><code>asset:render\_js\_inline</code></a> to output the JS.
+
+<div class="tip"><strong>NOTE:</strong> Inline JS is automatically wrapped in a <code>&lt;script&gt;</code> tag so you do not need to include it. </div>
 
 
 ## asset:js_url
@@ -450,6 +471,15 @@ Returns:
 
 
 
+## asset:render\_css\_inline
+
+	{{noparse}}{{ asset:render_css_inline }}{{/noparse}}
+
+Render any inline CSS previously set with `asset:css_inline` or `Asset::css_inline()`.
+
+<div class="tip"><strong>NOTE:</strong> Inline CSS is automatically wrapped in a <code>&lt;style&gt;</code> tag so you do not need to include it.</div>
+
+
 ## asset:render_js
 
 	{{ noparse }}{{ asset:render_js group="validation" }}{{ /noparse }}
@@ -487,3 +517,12 @@ Returns:
 
 
 <div class="tip"><strong>NOTE:</strong> Once a group is rendered, it cannot be rendered again. Please see {{ link title="Assets Library" uri="developers/tools/assets" }} for more information.</div>
+
+
+## asset:render\_js\_inline
+
+	{{noparse}}{{ asset:render_js_inline }}{{/noparse}}
+
+Render any inline JS previously set with `asset:js_inline` or `Asset::js_inline()`.
+
+<div class="tip"><strong>NOTE:</strong> Inline JS is automatically wrapped in a <code>&lt;script&gt;</code> tag so you do not need to include it.</div>
