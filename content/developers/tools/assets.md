@@ -249,7 +249,6 @@ When an enabled group is rendered, the files in that group are combined into a a
 **Not combine and minify:**
 When an enabled group is rendered, a separate &lt;script&gt; or &lt;link&gt; tag is created for each file.
 If a minified version of a file has been given, it will be linked to. Otherwise, the non-minified version is linked to.
-NOTE THAT THIS MIGHT BE UNEXPECTED BEHAVIOUR. It is useful, however, when linking to remote assets. See the section on remote assets.
 
 **Not combine and not minify**
 When an enabled group is rendered, a separate  &lt;script&gt; or &lt;link&gt; tag is created for each file.
