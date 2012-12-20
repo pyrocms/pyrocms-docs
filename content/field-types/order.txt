@@ -1,6 +1,6 @@
 choice
 country
-datetime
+datetime | DateTime
 email
 encrypt
 file
@@ -10,6 +10,6 @@ relationship
 slug
 text
 textarea
-us_state
+us_state | US State
 user
-wysiwyg
+wysiwyg | WYSIWYG
