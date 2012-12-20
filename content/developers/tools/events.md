@@ -36,21 +36,12 @@ PyroCMS includes the following event triggers:
 ### Blog Triggers
 <table>
 <tr>
-<<<<<<< HEAD
-<td class="one_third">Events::trigger('<b>post_created</b>', $id)</td>
+<td class="one_third">Events::trigger('<b>post\_created</b>', $id)</td>
 <td>Fired when a blog post is created. A blog post may or may not be live, so do not confuse with published.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>post_updated</b>', $id)</td>
-<td>Fired when a blog post is updated, but much like <b>post_created</b> it may not be live, or may have been put back into draft from live.</td>
-=======
-<td class="one_third">Events::trigger('<b>post\_created</b>', $id)</td>
-<td>Fired when a blog post is saved for the first time.</td>
-</tr>
-<tr>
 <td class="one_third">Events::trigger('<b>post\_updated</b>', $id)</td>
-<td>Fired when a blog post re-saved.</td>
->>>>>>> 20546ec9f3d1bdaad12852d9e564ccabcd1603ad
+<td>Fired when a blog post is updated, but much like <b>post_created</b> it may not be live, or may have been put back into draft from live.</td>
 </tr>
 <tr>
 <td class="one_third">Events::trigger('<b>post\_published</b>', $id)</td>

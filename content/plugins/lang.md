@@ -10,7 +10,7 @@ Returns the full name of the current language.
 
 ### Example Output:
 
-	English
+	'English'
 
 ## lang:folder
 
@@ -20,7 +20,7 @@ Returns the folder anme of the current language.
 
 ### Example Output:
 
-	english
+	'english'
 	
 ## lang:code
 
@@ -30,7 +30,7 @@ Returns the language code of the current language.
 
 ### Example Output:
 
-en
+	'en'
 	
 ## lang:direction
 
@@ -40,4 +40,4 @@ Returns the language direction of the current language.
 
 ### Example:
 
-	ltr
+	'ltr'

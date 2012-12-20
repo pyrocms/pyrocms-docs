@@ -13,28 +13,34 @@ Creates a list of links for a group.
 <table cellpadding="0" cellspacing="0">
 	<tbody>
 		<tr>
-			<th>Name</th>
-			<th>Default</th>
-			<th>Required</th>
+			<th width="100">Name</th>
+			<th width="100">Default</th>
+			<th width="70">Required</th>
 			<th>Description</th>
 		</tr>
 		<tr>
-			<td width="100">group</td>
-			<td width="100">None</td>
-			<td width="100">Yes</td>
+			<td>group</td>
+			<td>None</td>
+			<td>Yes</td>
 			<td>The navigation group the tag should use.</td>
 		</tr>
 		<tr>
 			<td>group_segment</td>
 			<td>None</td>
 			<td>No</td>
-			<td>If your navigation name is in the URI, you can specify the numeric URI segement here, and it will pull the value from the URI.</td>
+			<td>If your navigation name is in the URI, you can specify the numeric URI segment here, and it will pull the value from the URI.</td>
 		</tr>
 		<tr>
-			<td>list-tag</td>
+			<td>max_depth</td>
+			<td>None</td>
+			<td>No</td>
+			<td>The maximum number of levels deep the nav can go. For example, 2 would mean parent and child, no grandchildren.</td>
+		</tr>
+		<tr>
+			<td>list_tag</td>
 			<td>ul</td>
 			<td>No</td>
-			<td>Choose between ol and ul lists. The value of this is wrapped in brackets on either end.</td>
+			<td>Choose between <code>ol</code> and <code>ul</code> lists. The value of this is wrapped in brackets on either end.</td>
 		</tr>
 		<tr>
 			<td>tag</td>
@@ -49,25 +55,25 @@ Creates a list of links for a group.
 			<td>The CSS class to add when an element is the current page.</td>
 		</tr>
 		<tr>
-			<td>more-class</td>
-			<td>has_children</td>
+			<td>link_class</td>
+			<td>None</td>
 			<td>No</td>
-			<td>The class applied to a parent li when it contains a ul or ol.</td>
+			<td>The class names to apply in all anchor elements.</td>
 		</tr>
 		<tr>
-			<td>first-class</td>
+			<td>first_class</td>
 			<td>first</td>
 			<td>No</td>
 			<td>The class applied the first in a list of dropdown links.</td>
 		</tr>
 		<tr>
-			<td>last-class</td>
+			<td>last_class</td>
 			<td>last</td>
 			<td>No</td>
 			<td>The class applied to the last in a list of dropdown links.</td>
 		</tr>
 		<tr>
-			<td>more-class</td>
+			<td>more_class</td>
 			<td>None</td>
 			<td>No</td>
 			<td>The class to use when an element has child elements.</td>
@@ -79,28 +85,22 @@ Creates a list of links for a group.
 			<td>String that separates each navigation item.</td>
 		</tr>
 		<tr>
-			<td>items-only</td>
+			<td>items_only</td>
 			<td>true</td>
 			<td>No</td>
-			<td>true or false. Set if the output source code should be wrapped with an optional list-tag.</td>
+			<td><code>true</code> or <code>false</code>. Set if the output source code should be wrapped with an optional <em>list_tag</em>.</td>
 		</tr>
 		<tr>
 			<td>indent</td>
 			<td>None</td>
 			<td>No</td>
-			<td>'tab' or 'space'. Character used to indent the output of source code.</td>
-		</tr>
-		<tr>
-			<td>link-class</td>
-			<td>None</td>
-			<td>No</td>
-			<td>The class names to apply in all anchor elements.</td>
+			<td><em>tab</em> or <em>space</em>. Character used to indent the output of source code.</td>
 		</tr>
 		<tr>
 			<td>wrap</td>
 			<td>None</td>
 			<td>No</td>
-			<td>Html that that you wish to wrap the link title in. Most likely a span element</td>
+			<td>HTML that that you wish to wrap the link title in. Most likely a <code>span</code> element</td>
 		</tr>
 		<tr>
 			<td>top</td>
@@ -113,7 +113,7 @@ Creates a list of links for a group.
 
 ### Single Tag Usage
 
-You can use the basic single-tag approach to output a chunk of HTML by itself. This will apply the class names to the <kdb>&lt;li&gt;</kdb> tags (default) and use the <kdb>&lt;a&gt;</kdb> tags (default) to wrap the anchors.</p>
+You can use the basic single-tag approach to output a chunk of HTML by itself. This will apply the class names to the `<li>` tags (default) and use the `<a>` tags (default) to wrap the anchors.</p>
 
 	{{ noparse }}{{ navigation:links group="header" }}{{ /noparse }}
 	
@@ -123,7 +123,7 @@ Returns:
 
 You can use the basic single-tag approach like this to output a chunk of HTML that renders indented source code and adds a custom class name to all link anchors.
 
-	{{ noparse }}{{ navigation:links group="header" indent="tab" link-class="foo" }}{{ /noparse }}
+	{{ noparse }}{{ navigation:links group="header" indent="tab" link_class="foo" }}{{ /noparse }}
 	
 Returns:
 
@@ -213,14 +213,18 @@ The following variables are available to you in the tag pair:
 			<td width="150">{{ noparse }}{{ children }}{{ /noparse }}</td>
 			<td>Tag pair of child link elements. Each child element has all the same above variables as the main elements.</td>
 		</tr>
+		<tr>
+			<td width="150">{{ noparse }}{{ total }}{{ /noparse }}</td>
+			<td>The total number of links</td>
+		</tr>
 	</tbody>
 </table>
 
 ### Advanced Options
 
-You can use a combination of params to output a chunk of HTML that shows a short paragraph of navigation, using `<p>` as list\_tag to wrap all items by disabling items_only and using the tag `<span>` to wrap each anchor link.
+You can use a combination of params to output a chunk of HTML that shows a short paragraph of navigation, using `<p>` as __list\_tag__ to wrap all items by disabling __items\_only__ and using the tag `<span>` to wrap each anchor link.
 
-	{{ noparse }}{{ navigation:links group="header" tag="span" class="active" separator="|" list-tag="p" items-only="false" }}{{ /noparse }}
+	{{ noparse }}{{ navigation:links group="header" tag="span" class="active" separator="|" list_tag="p" items_only="false" }}{{ /noparse }}
 	
 Returns:
 

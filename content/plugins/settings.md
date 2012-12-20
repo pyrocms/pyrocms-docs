@@ -6,7 +6,7 @@ The _settings_ plugin allows access to site settings.
 	
 Returns a setting value. Most are simply text strings edited via the settings tab in PyroCMS. Some, however, are boolean and use 1 for true and 0 for false.
 
-For example, if you want to retrieve the mail_protocol protocol setting value, you can use:
+For example, if you want to retrieve the `mail_protocol` setting value, you can use:
 
 	{{ noparse }}{{ settings:mail_protocol }}{{ /noparse }}
 
@@ -19,7 +19,7 @@ For example, if you want to retrieve the mail_protocol protocol setting value, y
 			<th>Notes</th>
 		</tr>
 		<tr>
-			<td width="300">activation_email</td>
+			<td width="210">activation_email</td>
 			<td>1 or 0. Send out an e-mail when a user signs up with an activation link</td>
 		</tr>
 		<tr>

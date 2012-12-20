@@ -54,4 +54,4 @@ You can return an array or a string of the keywords with the following methods:
 	
 	"keyword_1, keyword_2, keyword_3"
 
-For more on usage see the [API Documentation: Keywords](/2.1/api/classes/Keywords.html).
+For more on usage see the <a href="/{{ variables:get_var name='pyrocms_version' }}/api/classes/Keywords.html">API Documentation: Keywords</a>.

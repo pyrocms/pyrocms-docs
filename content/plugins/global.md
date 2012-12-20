@@ -11,23 +11,23 @@ The global plugin's slug is **global**, so it can be used like so:
 Constants are automatically converted to uppercase by the plugin so you may type the constant name
 just like you would the rest of the tag.
 
-*Example:*
+__Example:__
 
     {{ noparse }}{{ global:addonpath }}{{ /noparse }}
 
 Outputs:
 
-    addons/default/
+	'addons/default/'
 
 
 ### Global Variables
 
 All global variables that are a string can be accessed with this plugin also.
 
-*Example:*
+__Example:__
 
     {{ noparse }}{{ global:module }}{{ /noparse }}
 
 Outputs:
 
-    blog
+	'blog'
