@@ -213,13 +213,13 @@ This function returns the form string unless **$view_override** is set to true, 
 ### Example:
 
 	$extra = array(
-		'return'			=> 'admin/streams_sample',
-		'success_message'	=> lang('streams_sample:submit_success'),
-		'failure_message'	=> lang('streams_sample:submit_failure'),
-		'title'				=> lang('streams_sample:new')
+		'return'			=> 'admin/faqs',
+		'success_message'	=> lang('faqs:submit_success'),
+		'failure_message'	=> lang('faqs:submit_failure'),
+		'title'				=> lang('faqs:new')
 	);
 	
-	$this->streams->cp->entry_form('faqs', 'streams_sample', 'new', null, true, $extra);
+	$this->streams->cp->entry_form('faqs', 'faq', 'new', null, true, $extra);
 	
 <hr id="field-form"/>
 
@@ -335,13 +335,13 @@ This allows you to easily create a form that users can use to add new fields to 
 ### Example:
 
 	$extra = array(
-		'return'			=> 'admin/streams_sample',
-		'success_message'	=> lang('streams_sample:submit_success'),
-		'failure_message'	=> lang('streams_sample:submit_failure'),
-		'title'				=> lang('streams_sample:new')
+		'return'			=> 'admin/faqs',
+		'success_message'	=> lang('faqs:submit_success'),
+		'failure_message'	=> lang('faqs:submit_failure'),
+		'title'				=> lang('faqs:new')
 	);
 
-	$this->streams->cp->field_form('faqs', 'streams_sample', 'new', 'admin/streams_sample/index', null, array(), true, $extra);
+	$this->streams->cp->field_form('faqs', 'faq', 'new', 'admin/faqs/index', null, array(), true, $extra);
 
 <hr id="fields-table"/>
 
@@ -423,21 +423,21 @@ Easily create a table of fields in a certain namespace.
 
 ### Example:
 
-	$extra['title'] = 'Streams Sample';
+	$extra['title'] = 'FAQ Fields';
 
 	$extra['buttons'] = array(
 		array(
 			'label' 	=> lang('global:edit'),
-			'url' 		=> 'admin/streams_sample/edit/-entry_id-'
+			'url' 		=> 'admin/faqs/edit/-entry_id-'
 		),
 		array(
 			'label'		=> lang('global:delete'),
-			'url' 		=> 'admin/streams_sample/delete/-entry_id-',
+			'url' 		=> 'admin/faqs/delete/-entry_id-',
 			'confirm'	=> true,
 		)
 	);
 	
-	$this->streams->cp->fields_table('streams_sample', 15, 'admin/streams_sample/index', true, $extra)
+	$this->streams->cp->fields_table('faq', 15, 'admin/faqs/index', true, $extra)
 
 <hr id="assignments-table"/>
 
@@ -519,25 +519,25 @@ Easily create a table of field assignments in a certain namespace.
 
 ### Example:
 
-	$extra['title'] = 'Streams Sample';
+	$extra['title'] = 'FAQ Fields';
 
 	$extra['buttons'] = array(
 		array(
 			'label' 	=> lang('global:edit'),
-			'url' 		=> 'admin/streams_sample/edit/-entry_id-'
+			'url' 		=> 'admin/faqs/edit/-entry_id-'
 		),
 		array(
 			'label'		=> lang('global:delete'),
-			'url' 		=> 'admin/streams_sample/delete/-entry_id-',
+			'url' 		=> 'admin/faqs/delete/-entry_id-',
 			'confirm'	=> true,
 		)
 	);
 
-	$this->streams->cp->assignments_table('faqs', 'streams_sample', 15, 'admin/streams_sample/index', true, $extra);
+	$this->streams->cp->assignments_table('faqs', 'faq', 15, 'admin/faqs/index', true, $extra);
 
 <hr id="teardown-assignment-field"/>
 
-## teardown\_assignment\_field(<var>$assign\_id, $force\_delete = FALSE</var>)
+## teardown\_assignment\_field(<var>$assign\_id, $force\_delete = false</var>)
 
 Tear down an assignment + field combo.
 
