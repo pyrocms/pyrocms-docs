@@ -154,7 +154,7 @@ Generates an &lt;img&gt; tag for an file in the current theme.
 
 Returns:
 
-	{{ noparse }}&lt;img href="themes/default/img/fun.jpg" alt="Fun!" /&gt;{{ /noparse }}
+	{{ noparse }}&lt;img src="themes/default/img/fun.jpg" alt="Fun!" /&gt;{{ /noparse }}
 
 ## theme:js
 
