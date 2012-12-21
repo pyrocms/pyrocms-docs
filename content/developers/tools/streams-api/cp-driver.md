@@ -7,6 +7,15 @@ You can call the entries driver like this:
 	$this->load->driver('Streams');
 	$this->streams->cp->function();
 
+## Functions
+
+* {{ docs:id_link title="Entries Table" }}
+* {{ docs:id_link title="Entry Form" }}
+* {{ docs:id_link title="Field Form" }}
+* {{ docs:id_link title="Fields Table" }}
+* {{ docs:id_link title="Assignments Table" }}
+* {{ docs:id_link title="Teardown Assignment Field" }}
+
 <hr id="entries-table"/>
 
 ## entries\_table(<var>$stream\_slug, $namespace\_slug, $pagination = null, $pagination\_uri = null, $view\_override = false, $extra = array()</var>)
