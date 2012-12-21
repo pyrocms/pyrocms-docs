@@ -29,4 +29,4 @@ PyroCMS is based off of CodeIgniter, which has a built-in language separation fu
 
 ## Translating PyroCMS
 
-We rely on a great network of developers who speak other langauges to help us translate PyroCMS. If you can translate PyroCMS into another language, or you can improve the accuracy or completeness of an existing translation, please see our [translating PyroCMS documentation]().
+We rely on a great network of developers who speak other langauges to help us translate PyroCMS. If you can translate PyroCMS into another language, or you can improve the accuracy or completeness of an existing translation, please see our {{ link uri="developers/contributing/translating-language-files" title="translating PyroCMS documentation" }}.
