@@ -315,13 +315,13 @@ After the first parameter, which should be the field type slug, the next three p
 
 If you need to have your field type access an ajax function, you can create a function in your field type prefixed with <strong>ajax_</strong>.
 
-    public function ajax_doit()
+    public function ajax_myfunction()
     {
         // AJAX functionality here.
     }
 
 You can then access that function via the following URL:
     
-    http://example.com/streams/public_ajax/[field_type_slug]/doit
+    http://example.com/streams_core/public_ajax/field/[field_type_slug]/myfunction
 
 Remember, this function is publicly accessible, so if you need data checks you need to do those yourself. (Ex: checking for a logged in user). The reason these ajax functions are kept public since we can't anticipate where the entry form using the field type will be used. It could be public or private.
