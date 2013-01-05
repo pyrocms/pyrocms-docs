@@ -64,7 +64,7 @@ The **add_stream** function allows you to create a stream. It will create the ac
 
 ### Example:
 
-In this example we add the "FAQ" stream. The module is also called "faqs", our namespace is called "faq". We are providing the "faq_" prefix, so our table will be created a **default\_faq\_faqs** (sitename, prefix and slug concatenated). Without specifying any prefix, it would be **default\_faqs** (sitename and slug concatenated).
+In this example we add the "FAQ" stream. The module is also called "faqs", our namespace is called "faq". We are providing the "faq_" prefix, so our table will be created as **default\_faq\_faqs** (sitename, prefix and slug concatenated). Without specifying any prefix, it would be **default\_faqs** (sitename and slug concatenated).
 
 	$this->streams->streams->add_stream('FAQ', 'faqs', 'faq', 'faq_', null);
 
@@ -141,7 +141,7 @@ Allows you to update basic stream metadata. You can pass any stream metadata val
 		'view_options'	=> array('question')
 	);
 	
-	$this->streams->streams->update_stream('faqs', 'streams_sample', $update_data);
+	$this->streams->streams->update_stream('faqs', 'faq', $update_data);
 
 ## delete_stream(<var>$stream\_slug, $namespace</var>)
 
@@ -151,7 +151,7 @@ This streams returns true or false, based on whether the streams was successfull
 		
 ### Example:
 
-	$this->streams->streams->delete_stream('faqs', 'streams_sample');
+	$this->streams->streams->delete_stream('faqs', 'faq');
 
 ## get_assignments(<var>$stream, $namespace</var>)
 
@@ -180,7 +180,7 @@ Returns:
 	            [field_id] => 10
 	            [field_name] => Question
 	            [field_slug] => question
-	            [field_namespace] => streams_sample
+	            [field_namespace] => faq
 	            [field_type] => text
 	            [field_data] => a:1:{s:10:"max_length";i:200;}
 	            [field_view_options] => 
@@ -201,7 +201,7 @@ Returns:
 	            [field_id] => 11
 	            [field_name] => Answer
 	            [field_slug] => answer
-	            [field_namespace] => streams_sample
+	            [field_namespace] => faq
 	            [field_type] => textarea
 	            [field_data] => a:0:{}
 	            [field_view_options] => 

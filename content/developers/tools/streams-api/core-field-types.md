@@ -292,7 +292,7 @@ The file field type allows you to upload and link to a file.
 	</tr>
         <tr>
 		<td>resize_height</td>
-		<td>Number of pixels to resize the image to height-wise. If left blank while the Resize Height field is filled, this will be calculated based on the dimensions of the image.</td>
+		<td>Number of pixels to resize the image to height-wise. If left blank while the Resize Width field is filled, this will be calculated based on the dimensions of the image.</td>
 	</tr>
         <tr>
 		<td>allowed_types</td>

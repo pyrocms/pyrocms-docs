@@ -161,7 +161,7 @@ Returns:
 	            [field_id] => 10
 	            [field_name] => Question
 	            [field_slug] => question
-	            [field_namespace] => streams_sample
+	            [field_namespace] => faq
 	            [field_type] => text
 	            [field_data] => a:1:{s:10:"max_length";i:200;}
 	            [field_view_options] => 
