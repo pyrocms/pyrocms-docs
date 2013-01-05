@@ -13,7 +13,7 @@
 - New Admin Menu System lets module developers control the main menu.
 - Improved the reset password system to use email OR username, not require both.
 - Link to /user/johnsmith instead of /user/1.
-- Added {{ blog:categories }} and {{ blog:tags }} to generate a list of available categories and a list of tags.
+- Added {{ noparse }}{{ blog:categories }} and {{ blog:tags }}{{ /noparse }} to generate a list of available categories and a list of tags.
 - Upgraded to latest CodeIgniter 3.0.
 - Updating jQuery to 1.8.3.
 - Upgrading to Ckeditor 3.6.4.
@@ -34,7 +34,7 @@
 - Added a password strength indicator to the installer password. 
 - Encrypt uploaded file names by default to close issue
 - Allow blog category slugs to be entered manually.
-- Added `{{ asset:render_js }}` and `{{ asset:render_css }}` to Assets Plugin.
+- Added {{ noparse }}`{{ asset:render_js }}` and `{{ asset:render_css }}`{{ /noparse }} to Assets Plugin.
 - Added Format Plugin.
 - Adding optional entry re-ordering in Streams API.
 - Added file_min to asset:js
