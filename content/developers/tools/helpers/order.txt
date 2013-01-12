@@ -1,6 +1,5 @@
 admin-theme-helper
 array-helper
-comments-helper
 date-helper
 debug-helper
 gravatar-helper
