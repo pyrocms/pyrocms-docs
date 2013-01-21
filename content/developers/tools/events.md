@@ -224,16 +224,16 @@ PyroCMS includes the following event triggers:
 <td>Fired when pages have been reordered.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>page_layout_created</b>', $id)</td>
-<td>Fired when a page layout has been created.</td>
+<td class="one_third">Events::trigger('<b>page_type_created</b>', $id)</td>
+<td>Fired when a page type has been created.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>page_layout_updated</b>', $id)</td>
-<td>Fired when a page layout has been updated.</td>
+<td class="one_third">Events::trigger('<b>page_type_updated</b>', $id)</td>
+<td>Fired when a page type has been updated.</td>
 </tr>
 <tr>
-<td class="one_third">Events::trigger('<b>page_layout_deleted</b>', $deleted_ids)</td>
-<td>Fired when a page layout(s) have been deleted.</td>
+<td class="one_third">Events::trigger('<b>page_type_deleted</b>', $id)</td>
+<td>Fired when a page type has been deleted.</td>
 </tr>
 </table>
 
