@@ -294,21 +294,6 @@ This allows you to easily create a form that users can use to add new fields to 
 		<td>array</td>
 		<td>You can remove fields from the form by adding their field slugs to this array. Field slugs in this array will not be put through validation. This is handy if you want to set a form value manually without allowing your user to do it.</td>
 	</tr>
-	<tr> 
-		<td>tabs</td>
-		<td>array</td>
-		<td>A optional multidimensional array that organizes your fields into tabs. Defaults to false.</td>
-	</tr>
-	<tr> 
-		<td>hidden</td>
-		<td>array</td>
-		<td>An optional array fields that will be hidden in the form. This is handy for str_id type fields.</td>
-	</tr>
-	<tr> 
-		<td>defualts</td>
-		<td>array</td>
-		<td>An optional associative array of fields => values that helps prepopulate the form with default data.</td>
-	</tr>
 </table>
 
 ### $extra Parameters
@@ -364,28 +349,8 @@ This allows you to easily create a form that users can use to add new fields to 
 		'failure_message'	=> lang('faqs:submit_failure'),
 		'title'				=> lang('faqs:new')
 	);
-	
-	$tabs = array(
-		array(
-			'title' 	=> "General Information",
-			'id'		=> 'general-tab',
-			'fields'	=> array('str_id', 'question', 'answer')
-		);
-		array(
-			'title' 	=> "Additional Information",
-			'id'		=> 'additional-tab',
-			'fields'	=> array('image', 'category')
-		)
-	);
-	
-	$hidden = array('str_id');
-	
-	$defaults = array(
-		'str_id' => md5(now()),
-		'question' => 'Type your question...'
-	);
 
-	$this->streams->cp->field_form('faqs', 'faq', 'new', 'admin/faqs/index', null, array(), true, $extra, $skips = array(), $tabs, $hidden, $defaults);
+	$this->streams->cp->field_form('faqs', 'faq', 'new', 'admin/faqs/index', null, array(), true, $extra);
 
 <hr id="fields-table"/>
 
