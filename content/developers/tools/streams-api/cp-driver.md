@@ -375,8 +375,8 @@ This allows you to easily create a form that users can use to add new fields to 
 			'title' 	=> "Additional Information",
 			'id'		=> 'additional-tab',
 			'fields'	=> array('image', 'category')
-		);
-	),
+		)
+	);
 	
 	$hidden = array('str_id');
 	
@@ -385,7 +385,7 @@ This allows you to easily create a form that users can use to add new fields to 
 		'question' => 'Type your question...'
 	);
 
-	$this->streams->cp->field_form('faqs', 'faq', 'new', 'admin/faqs/index', null, array(), true, $extra, $tabs, $hidden, $defaults);
+	$this->streams->cp->field_form('faqs', 'faq', 'new', 'admin/faqs/index', null, array(), true, $extra, $skips = array(), $tabs, $hidden, $defaults);
 
 <hr id="fields-table"/>
 
