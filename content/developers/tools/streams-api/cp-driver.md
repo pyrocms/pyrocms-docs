@@ -181,6 +181,21 @@ This function returns the form string unless **$view_override** is set to true, 
 		<td>array</td>
 		<td>You can remove fields from the form by adding their field slugs to this array. Field slugs in this array will not be put through validation. This is handy if you want to set a form value manually without allowing your user to do it.</td>
 	</tr>
+	<tr> 
+		<td>tabs</td>
+		<td>array</td>
+		<td>A optional multidimensional array that organizes your fields into tabs. Defaults to false.</td>
+	</tr>
+	<tr> 
+		<td>hidden</td>
+		<td>array</td>
+		<td>An optional array fields that will be hidden in the form. This is handy for str_id type fields.</td>
+	</tr>
+	<tr> 
+		<td>defualts</td>
+		<td>array</td>
+		<td>An optional associative array of fields => values that helps prepopulate the form with default data.</td>
+	</tr>
 </table>
 
 ### $extra Parameters
@@ -243,7 +258,27 @@ This function returns the form string unless **$view_override** is set to true, 
 		'title'				=> lang('faqs:new')
 	);
 	
-	$this->streams->cp->entry_form('faqs', 'faq', 'new', null, true, $extra);
+	$tabs = array(
+		array(
+			'title' 	=> "General Information",
+			'id'		=> 'general-tab',
+			'fields'	=> array('str_id', 'question', 'answer')
+		),
+		array(
+			'title' 	=> "Additional Information",
+			'id'		=> 'additional-tab',
+			'fields'	=> array('image', 'category')
+		)
+	);
+	
+	$hidden = array('str_id');
+	
+	$defaults = array(
+		'str_id' => md5(now()),
+		'question' => 'Type your question...'
+	);
+	
+	$this->streams->cp->entry_form('faqs', 'faq', 'new', null, true, $extra, $skips = array(), $tabs, $hidden, $defaults);
 	
 <hr id="field-form"/>
 
