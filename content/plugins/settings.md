@@ -59,14 +59,6 @@ For example, if you want to retrieve the `mail_protocol` setting value, you can 
 			<td>1 or 0</td>
 		</tr>
 		<tr>
-			<td>ga_email</td>
-			<td>Google Analytics email</td>
-		</tr>
-		<tr>
-			<td>ga_password</td>
-			<td>Google Analytics password</td>
-		</tr>
-		<tr>
 			<td>ga_profile</td>
 			<td>Google Analytics profile ID</td>
 		</tr>
