@@ -14,6 +14,18 @@ Returns:
 
 	'http://www.example.com/current/uri/'
 
+## url:uri_string
+
+Displays the current URI string.
+
+### Example
+
+	{{ noparse }}{{ url:uri_string }}{{ /noparse }}
+
+Returns:
+
+	'current/uri'
+
 ## url:site
 
 Displays the full site URL. Use this to generate links within your site - supply URL segments and generate a full (absolute) URL with domain name and path.
