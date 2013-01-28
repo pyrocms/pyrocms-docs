@@ -13,6 +13,7 @@ pages
 session
 settings
 streams
+template
 theme
 twitter
 url
