@@ -308,6 +308,7 @@ This is the current list:
  * preg\_match
  * preg\_replace
  * rtrim
+ * safe_mailto
  * sprintf
  * str\_replace
  * str\_word\_count
