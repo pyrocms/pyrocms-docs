@@ -1,9 +1,10 @@
 # Changelog
 
-## 2.2.0 - December 10, 2012
+## 2.2.0 - February 09, 2012
 
 ### Features
 
+- Custom Fields can be added to the Blog module using Field Types.
 - Modular Search allows you to search content from the frontend via a new "/search" page.
 - Control Panel search adds a bar to the header to help you find and edit content.
 - New "Grid" Field Type.
