@@ -100,6 +100,34 @@ array(
 
 
 
+### set\_attribute($param, $value)
+
+Allows you to set an attribute to a specific value. You can call this inside your plugin method and it will override whatever the user passed in.
+
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th width="100">Name</th>
+			<th width="100">Default</th>
+			<th width="100">Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>param</td>
+			<td></td>
+			<td>Yes</td>
+			<td>Attribute name</td>
+		</tr>
+		<tr>
+			<td>value</td>
+			<td></td>
+			<td>No</td>
+			<td>Value to set</td>
+		</tr>
+	</tbody>
+</table>
+
+
 
 ### parse\_parameter($value, $data = array())
 
