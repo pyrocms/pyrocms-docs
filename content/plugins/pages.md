@@ -80,6 +80,14 @@ Returns:
 		
 	<h2>Child Two</h2>
 	Body Content Two
+
+You can also return any custom field variables by using the {{ custom_fields }} array.
+
+	{{ noparse }}{{ pages:children id="1" }}
+	&lt;h2>{{ title }}&lt;/h2>
+	&lt;p>{{ custom_fields:introduction }}&lt;/p>
+	{{ body }}
+{{ /pages:children }}{{ /noparse }}
 	
 ## pages:display
 
@@ -123,6 +131,14 @@ Returns:
 
 	<h2>Page Title</h2>
 	<p>Page Body</p>
+
+You can also return any custom field variables by using the {{ custom_fields }} array.
+
+	{{ noparse }}{{ pages:display slug="home" }}
+	&lt;h2>{{ title }}&lt;/h2>
+	&lt;p>{{ custom_fields:introduction }}&lt;/p>
+	{{ body }}
+{{ /pages:display }}{{ /noparse }}
 
 ## pages:chunk
 
