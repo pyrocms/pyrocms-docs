@@ -707,5 +707,18 @@ The Year field type creates a dropdown of years for you.
        <tr>
 		<td>end_year</td>
 		<td>Specifies the year the dropdown should stop at.</td>
-	</tr> 
+	</tr>
+	<tr>
+		<td>default_year</td>
+		<td>Specifies the default year (YYYY) if field has no value.</td>
+	</tr>
+	
 </table>
+### Start/End Parameters
+
+
+	$extra = array(
+		'start_year' => '-20',
+		'end_year' => 'current',
+		'default' => '2010',
+	);
