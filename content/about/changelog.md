@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.2.0 - February 09, 2012
+## 2.2.0 Release Candidate
 
 ### Features
 
@@ -54,6 +54,15 @@
 - Creating a plugins add-on section.
 - Allow mailto link in navigation.
 - Date can now be added after 12:00 pm and before 1:00 am in a datetime field type
+- Changed page_children's default sort to "order" instead of alphabetically by "title". Fixes #2431
+- Sending any attributes to theme:partial will make them available in the view.
+- Fixed a bug in the installer where Step 4 could white screen with no errors output
+- Fixed a grammar error that only showed when no streams exist
+- Added a check to the Themes admin so it doesn't error if a theme doesn't return any options
+- Updated the Image & File field types' message when no folders are available to select
+- Converting tags to entities for several text inputs where tags are not necessary.
+- Setting textarea/wysiwyg parsing to no by default.
+- Upgraded Google Analytics API to v2.4.
 
 ### Developers
 
@@ -67,6 +76,13 @@
 - Updates for E_STRICT and E_DEPRECATED errors (meaning PHP 5.4 support is greatly improved).
 - Set iPad as a "full-browser" device. If you like it as mobile, move it back in system/cms/config/user_agents.php.
 - Support minify function in default theme.
+- Added .datepicker class instead of just having a datepicker id
+- Add sizes attribute to favicon
+- Add alt and description attribute to the image field.
+- Allow tags on the pages default body field.
+- Fixes BTREE screwing with MySQL installs below 5.0.5.
+- Return success as false if remote file container is not found
+- {{ pages:display }} can now access custom fields
 
 ## 2.1.5 - November 1, 2012
 
