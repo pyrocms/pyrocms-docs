@@ -2,33 +2,11 @@
 
 PyroCMS is built to have a fully multi-lingual interface, which means you can switch between different languages, and if your language is not supported you can easily translate from one of the existing languages into yours.
 
-## Currently Supported
-
-If your language is listed below then you do not need to translate anything, but keep in mind that the only officially supported language is English. Every other language is provided and maintained by the community. They could potentially be out of date or contain incorrect text.
-
-* English
-* Arabic
-* Brazilian
-* Chinese (Traditional)
-* Czech
-* Dutch
-* Finnish
-* French
-* German
-* Greek
-* Hebrew
-* Italian
-* Lithuanian
-* Polish
-* Russian
-* Slovenian
-* Spanish
-
 ### Step #1: Translate or Download a CodeIgniter language pack
 
-CodeIgniter has a large community of developers in many languages, so a quick check of the [CodeIgniter Translations Wiki](http://codeigniter.com/wiki/Language_Translation/) or Google may provide you with a language pack. Keep in mind that PyroCMS is running CodeIgniter Reactor v2.0.x so if you install v1.7.x or older you will most likely find that language lines are missing or incorrect.
+The [CodeIgniter translations](https://github.com/EllisLab/CodeIgniter/wiki/Language-Translation) are all now drastically out of date, as PyroCMS uses CodeIgniter 3.0, so you will need to translate them yourself.
 
-Either way, install your language pack to system/codeigniter/languages/*&lt;language-name&gt;*
+Copy the English translation folder from `system/codeigniter/languages/&lt;language-name&gt;` and translate each file to the new language.
 
 ### Step #2: Translate PyroCMS language pack
 
