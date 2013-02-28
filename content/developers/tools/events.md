@@ -71,6 +71,8 @@ PyroCMS includes the following event triggers:
 <tr>
 <td class="one_third">Events::trigger('<b>email</b>', $data, 'array')</td>
 <td>This is used to send an email. The second parameter is the data to send along and the Email Template to use, third parameter is the type of response you expect. The sending is done by an event registered in system/cms/modules/templates/events.php but can be triggered from anywhere in the application.</td>
+</tr>
+<tr>
 <td class="one_third">Events::trigger('<b>contact_form_success</b>', $_POST, 'array')</td>
 <td>Fired when a message has successfully been sent using the contact form plugin.</td>
 </tr>
