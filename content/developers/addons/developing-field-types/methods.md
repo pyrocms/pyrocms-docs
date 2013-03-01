@@ -168,7 +168,7 @@ Example:
 
  <p class="tip">You can also return a string with the <code>pre_output_plugin</code> method if you'd like.</p>
 
-<h3>pre_save<span>($input, $field, $stream, $row_id)</span></h3> 
+<h3>pre_save<span>($input, $field, $stream, $row_id, $form_data)</span></h3> 
  
 <p>This method allows you to modify the form input data in some way before it is saved to the database. It takes four parameters:</p> 
  
@@ -200,6 +200,11 @@ Example:
    <td>row_id</td>
    <td>int</td>
    <td>The id of the current row. Is `null` if this is a new entry and it hasn't been saved yet.</td> 
+  </tr> 
+  <tr> 
+   <td>form_data</td>
+   <td>array</td>
+   <td>An array containing the values from all the form fields.</td> 
   </tr> 
 </tbody> 
 </table>
