@@ -223,6 +223,23 @@ a:hover {
     color: #2B2915;
 }
 
+.doc_image {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+samp {
+    background: #F5EBEF;
+    text-shadow: none;
+    padding: 2px 4px;
+}
+dfn {
+    background: #E8E8E8;
+    text-shadow: none;
+    padding: 2px 4px;
+}
+
 table {
     font-size: 12px;
     text-align: left;
