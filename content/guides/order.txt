@@ -1,6 +1,6 @@
 the-control-panel
-organization | Organizing Your Site
 pyrocms-tags | PyroCMS Tags
+organization | Organizing Your Site
 pyrocms-urls | PyroCMS URLs
 themes
 streams | Streams

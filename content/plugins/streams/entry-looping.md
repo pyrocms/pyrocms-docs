@@ -1,4 +1,6 @@
-# Entry Looping
+# Entry Display
+
+One of the most fundamental functions of streams is displaying the entries that you can collected in your stream. The page outlines the various tools available to you to display your entries.
 
 * {{ docs:id_link title="The Loop Cycle" }}
 * {{ docs:id_link title="Parameters" }}
@@ -10,74 +12,50 @@
 * {{ docs:id_link title="Controlling the Pagination Markup" }}
 * {{ docs:id_link title="Separating Results into Sets" }}
 
+</div>
+<div class="doc_content">
+
 ## The Loop Cycle
 
-The most basic and common way of interacting with PyroStreams data is looping through it using the <em>cycle</em> plugin function. For example:
+The most basic and common way of interacting with PyroStreams data is looping through it using the <em>cycle</em> plugin function. Here's a very simple example where we display five entries from a stream called "bands":
  
 	{{ noparse }}{{ streams:cycle stream="bands" limit="5" }}
 
-	<p>{{ total }} entries returned.</p>
-
-	{{ entries }}
-
-		<h2>{{ name }}</h2>
-
-	{{ /entries }}
-
-	{{ pagination }}
+    &lt;h2>{{ name }}&lt;/h2>
 
 {{ /streams:cycle }}{{ /noparse }}
 
-Inside the tags, you have several variables to use as well as the <strong>entries</strong> tag pair, which you can use to access the returned entries.
-
-<table cellpadding="0" cellspacing="0" class="docs_table"> 
- <thead> 
-  <tr> 
-   <th width="150"> 
-    Tag</th> 
-   <th> 
-    Description</th> 
-  </tr> 
- </thead> 
- <tbody> 
-  <tr> 
-	<td>{{&nbsp;entries&nbsp;}}&nbsp;{{&nbsp;/entries&nbsp;}}</td> 
-    <td>Tag pair that cycles through all of the entries that were returned.</td> 
-  </tr> 
-  <tr> 
-	<td>{{&nbsp;total&nbsp;}}</td> 
-    <td>Counts the total number of entries returned, regardless of pagination.</td> 
-  </tr> 
-  <tr> 
-	<td>{{&nbsp;pagination&nbsp;}}</td> 
-    <td>The pagination HTML if pagination is on.</td> 
-  </tr> 
-</tbody>
-</table>
-
-PyroStreams comes with a lot of parameters to help you customize what data is being displayed. Below is a guide to those parameters and how to use them.
+Inside the tags, you have access to all of the fields you set up when you created your streams. There are a lot of options to customize what entries are returned, which are outlined below.
 
 <h3 id="short-syntax">Short Syntax</h3>
 
-Instead of specifying a stream with the stream="stream_slug" parameter, you can use it in the place of "cycle". For instance, if you have a stream called dogs, you can loop through them like this:
+Instead of specifying a stream with the stream="stream_slug" parameter, you can use it in the place of "cycle". For instance, if the tag code below is functionally equivalent to our first example above:
 
-    {{ noparse }}{{ streams:dogs limit="10" }}
+    {{ noparse }}{{ streams:bands limit="5" }}
 
-{{ /streams:dogs }}{{ /noparse }}
+    &lt;h2>{{ name }}&lt;/h2>
 
-<h3 id="entries-tags">Omitting the Entries Tags</h3>
+{{ /streams:bands }}{{ /noparse }}
 
-Since PyroStreams 2.1.3, if you are not using the {{&nbsp;total&nbsp;}} or {{&nbsp;pagination&nbsp;}} variables, you can omit the {{&nbsp;entries&nbsp;}}{{&nbsp;/entries&nbsp;}} tags:
+There is no real advantage to using the short syntax, except for saving some paramter space, which may come in handy if you have a lot of paramters.
 
-    {{ noparse }}{{ streams:cycle stream="bands" limit="5" }}
+## Filtering by Date
 
-&lt;h2>{{ name }}</h2>
+The cycle function contains a number of functions for filtering by date. For instance, you can specify a **year**, **month**, and **day**. Each of these should be a numerical value:
 
-{{ /streams:cycle }}{{ /noparse }}
+    {{ noparse }}{{ streams:events year="2013" month="01" day="14" }}{{ /noparse }}
 
-## Parameters
+You can also restrict the entries shown by telling the cycle plugin to show or not show entries before or after the current date by using **show_upcoming** and **show_previous**. Both of these are set to **yes** by default, so if you wanted to display a list of events that are upcoming you could do it like this:
 
-The following are basic parameters that restrict or modify the returned data in some way.
+    {{ noparse }}{{ streams:events show_past="no" }}{{ /noparse }}
+
+The parameters above need a field to filter the dates by, and this is the **created_by** column by default. However, if you have another field that you want to use instead, you can specify that with **date_by**:
+
+    {{ noparse }}{{ streams:events date_by="event_start" year="2013" month="01" day="14" }}{{ /noparse }}
+
+## Parameter Reference
+
+The following are basic parameters that restrict or modify the returned data in some way:
 
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
  <thead> 
@@ -241,25 +219,13 @@ The following are basic parameters that restrict or modify the returned data in 
 
 If you need to restrict your results, a handy way to do that is with the where parameter.
 
-### Where Syntax - 2.1.3 and above
-
-The syntax for the where parameter in PyroStreams 2.2 allows you to specify more advanced where statements. All you need to do is wrap the field name in backticks and your value in single quotes.
-
-This gives you the freedom to do some advanced where clauses:
-
     where="`field_slug`='value'"
 
     where="`one_field_slug`>='value' AND `another_field_slug`!='another_value'"
 
     where="`one_field_slug`>='value' AND (`another_field_slug`!='another_value' OR `yet_another_field_slug`='yet_another_value')" 
 
-### Where Syntax - 2.1.2 and below
-
-In PyroStreams 2.1.4, the where parameter can specify one parameter using the following syntax - the field slug and value separated by '==':
-
-    where="field_slug==value"
-
-<div class="tip"><strong>Note:</strong> The where clause is directly mapped to the where clause in MySQL, so you are limited in the values that you can restrict by. For instance, if you have a Choice dropdown field with a key and value, the key is stored in the database. So, if you want to restrict by that field, you need to restrict by the choice key and not the value.</div>
+<div class="note"><p><strong>Note:</strong> The where clause is directly mapped to the where clause in MySQL, so you are limited in the values that you can restrict by. For instance, if you have a Choice dropdown field with a key and value, the key is stored in the database. So, if you want to restrict by that field, you need to restrict by the choice key and not the value.</div>
 
 ## Extra Loop Variables
 

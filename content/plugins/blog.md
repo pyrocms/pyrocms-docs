@@ -2,6 +2,9 @@
 
 The blog plugin allows you to display posts and other data from the blog module.
 
+</div>
+<div class="doc_content">
+
 ## blog:posts
 
 	{{ noparse }}{{ blog:posts }}{{ /noparse }}

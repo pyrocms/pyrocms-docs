@@ -95,9 +95,10 @@ textarea {
 
 
 body {
-    background: #fafafa;
+    background: #F7F7F7;
    font-family: 'Helvetica', Arial, sans-serif;
    padding: 0!important;
+    text-shadow: 1px 1px 1px #fff!important;
 }
 p, ul li, ol li {
     font-size: 13px;
@@ -117,12 +118,19 @@ p, ul li, ol li {
 }
 
 a {
-    color: #FF7300;
+    color: #5088fb;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+#header {
+    background: #fff;
+    padding: 20px 30px;
 }
 
 #box {
-    background: #fff;
-    border: 1px solid #E4EAF0;
     overflow: hidden;
 }
 
@@ -130,13 +138,13 @@ a {
     font-size: 25px;
 }
 #box h2 {
-    font-size: 20px;
+    font-size: 18px;
     color: #3B3B3B;
     border-bottom: 1px solid #E4EAF0;
 }
 #box h3 {
     font-size: 16px;
-    color: #888;
+    color: #545454;
 }
 
 #menu {
@@ -157,7 +165,15 @@ a {
 
 #menu a {
     text-decoration: none;
-    color: #858585;
+    color: #AFBBC4;
+}
+#menu a:hover {
+    color: #5088fb;
+}
+
+.depth_1 li {
+    font-size: 12px;
+    line-height: 18px;
 }
 
 #menu p a {
@@ -173,15 +189,38 @@ a {
     display: block;
 }
 
+.doc_content {
+    padding: 18px 20px 20px 20px;
+    border-top: 1px dashed #ccc;
+    background: #FCFCFC;
+}
+
 #content {
     float: right;
-    width: 620px;
-    padding: 15px 15px 15px 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2)!important;
+    width: 650px;
+    margin-right: 10px;
+    margin-top: 5px;
+    display: block;
     height: 100%!important;
-    border-left: 1px dashed #E4EAF0;
 }
 #content img {
     max-width: 100%;
+}
+
+.note {
+    background: #fff;
+    padding: 5px 20px;
+    border-left: 2px solid #E6D240;
+    margin-bottom: 10px;
+    background: #FFFBDE;
+}
+.note p {
+    font-style: italic;
+    text-shadow: 1px 1px 1px #FFFDF2;
+    color: #2B2915;
 }
 
 table {
@@ -193,15 +232,13 @@ table td, table th {
     padding: 5px;
 }
 table th {
-    background: #FF7300;
+    background: #666;
     color: #fff;
+    text-shadow: none;
+    font-weight: bold!important;
 }
 table td {
     border-bottom: 1px solid #ccc;
-}
-
-code, pre {
-    font-size: 12px;
 }
 
 .breadcrumbs {

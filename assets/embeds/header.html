@@ -18,15 +18,17 @@
 
   {{ asset:css file="normalize.css" }}
 	{{ asset:css file="main.css" }}
-	{{ asset:css file="shCore.css" }}
-	{{ asset:css file="shCoreMidnight.css" }}
-	
-	{{ asset:js file="shCore.js" }}
-	{{ asset:js file="shBrushPhp.js" }}
-	{{ asset:js file="shBrushLex.js" }}
-  {{ asset:js file="jquery.scrollTo.js" }}
+	{{ asset:css file="code.css" }}
 
+  {{ asset:js file="jquery.snippet.min.js" }}
+	
 	<style>body {padding-top: 60px;}</style>
+
+  <script>
+  $(document).ready(function(){
+    $('pre').snippet('html',{style:'darkblue', showNum: false});
+  });
+  </script>
 
 <script>
   (function() {
@@ -48,28 +50,18 @@
 
          <div id="box">
 
-          <div class="breadcrumbs"><strong>PyroCMS {{ variables:get_var name="pyrocms_version" }}</strong> | {{ breadcrumbs:crumbs }}</div>
+          <!--<div class="breadcrumbs"><strong>PyroCMS {{ variables:get_var name="pyrocms_version" }}</strong> | {{ breadcrumbs:crumbs }}</div>-->
 
 <div id="menu">
 
-<p><strong>{{ link uri="about" title="About PyroCMS" }}</strong></p>
-{{ if segment_1 == 'about'}}
-  {{ nav:auto start="about" }}
+<p><strong>{{ link uri="getting-started" title="Getting Started" }}</strong></p>
+{{ if segment_1 == 'getting-started'}}
+  {{ nav:auto start="getting-started" }}
 {{ endif }}
 
-<p><strong>{{ link uri="setup" title="Installing &amp; Upgrading" }}</strong></p>
-{{ if segment_1 == 'setup'}}
-  {{ nav:auto start="setup" }}
-{{ endif }}
-
-<p><strong>{{ link uri="concepts" title="Important Concepts" }}</strong></p>
-{{ if segment_1 == 'concepts'}}
-  {{ nav:auto start="concepts" }}
-{{ endif }}
-
-<p><strong>{{ link uri="theming" title="Theming Guide" }}</strong></p>
-{{ if segment_1 == 'theming'}}
-  {{ nav:auto start="theming" }}
+<p><strong>{{ link uri="guides" title="Guides" }}</strong></p>
+{{ if segment_1 == 'guides'}}
+  {{ nav:auto start="guides" }}
 {{ endif }}
 
 <p><strong>{{ link uri="modules" title="Core Modules" }}</strong></p>
@@ -102,8 +94,13 @@
   {{ nav:auto start="pro" }}
 {{ endif }}
 
-<p><strong>{{ link uri="search" title="Search the Docs" }}</strong></p>
+<p><strong>{{ link uri="reference" title="Reference" }}</strong></p>
+{{ if segment_1 == 'reference'}}
+  {{ nav:auto start="reference" }}
+{{ endif }}
 
 </div><!--#menu-->
 
 <div id="content">
+
+  <div id="header">

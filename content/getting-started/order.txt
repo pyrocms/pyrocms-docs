@@ -1,0 +1,4 @@
+installing-pyrocms | Installing PyroCMS
+creating-a-theme | Creating a Theme
+creating-a-new-page | Creating a New Page
+installing-a-module | Installing a Module
