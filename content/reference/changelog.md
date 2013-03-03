@@ -7,7 +7,6 @@
 - Custom Fields can be added to the Blog module using Field Types.
 - Modular Search allows you to search content from the frontend via a new "/search" page.
 - Control Panel search adds a bar to the header to help you find and edit content.
-- New "Grid" Field Type.
 - Report Comments as spam to Akismet.
 - Maintain a "comment blacklist" to stop spammers from using the same email.
 - Blog comments can be configured to expier after X amount of time.
