@@ -2,13 +2,17 @@
 
 Starting with PyroCMS 2.1, the core of PyroStreams is now a module in PyroCMS called Streams Core. This means that all modules in PyroCMS can now take advantage of streams functions. The Streams API has been developed as a singular way to manipulate and use streams.
 
-## Driver Documentation
+* {{ docs:id_link title="API Basics" }}
+* {{ docs:id_link title="Streams Overview" }}
+* {{ docs:id_link title="Namespacing" }}
+* {{ docs:id_link title="Prefixing" }}
+* {{ docs:id_link title="Documentation Example" }}
+* {{ docs:id_link title="Drivers" }}
 
-{{ nav:auto start="developers/tools/streams-api" }}
+</div>
+<div class="doc_content">
 
 ## API Basics
-
-### Loading the API
 
 The Streams API is a driver, so it is loaded like so:
 
@@ -17,34 +21,16 @@ The Streams API is a driver, so it is loaded like so:
 Once the API has been loaded, you can use each driver like this:
 
 	$this->streams->driver_name->function();
-	
-### API Drivers
 
-The Streams API has five drivers:
+Individual drivers do not need to be loaded, they can simply be used.
 
-* Streams
-* Fields
-* Entries
-* CP
-* Utilities
+## The $stream Variable
 
-We'll go into depth about what each of these drivers does, but first, an overview of Streams in general.
+Whenever you see <var>$stream</var> variable being used as a parameter in the API, you are free to pass either a <dfn>string</dfn>, stream <dfn>object</dfn>, or stream <dfn>id</dfn>. This way, you can pass whatever information about your stream that you have handy, and the API will do the rest. Because of this, the <var>$namespace</var> parameter is only necessary when passing a <dfn>string</dfn>, since bother <dfn>object</dfn> and <dfn>id</dfn> will have namespace data associated with it.
 
 ## Streams Overview
 
-"Streams" is essentially a database abstraction layer. When you create a stream, you create a database table. When you create a field and assign it, you are creating a new column in that database. It gets more complex than that, but the basic idea is that Streams helps with data handling by abstracting it into streams, field types, and fields.
-
-### Namespacing and Prefixing
-
-Since modules can now use streams for data interactions, in order to prevent naming conflicts between tables, Streams can be namespaced and prefixed. For example, the users module has the namespace of **users**. That way, a field called _first\_name_ can exist for both the Users module and another module, without a naming conflict.
-
-In addition, you might want to also prefix you tables in some cases. The prefix is in addition to the **SITE\_REF** prefix used by PyroStreams, and helps lessen the chance of table name conflict. For instance, if you have a table named 'products' in your module, you might want to set a prefix so the actual table that is created is named 'mymodule_products'.
-
-### Streams Core vs. PyroStreams
-
-PyroStreams is still sold as a separate add-on on top of PyroCMS (although it comes with PyroCMS Pro), so what's the difference? PyroStreams now sits on top of the streams core and provides a GUI to create data structures. It also includes the PyroStreams plugin for outputting data. It is basically a free-form data creation tool now running on Streams core, where with the API you can create more set data structures needed for your module.
-
-### Why Use the Streams API?
+In a progamming sense, the streams concept is essentially a database abstraction layer. When you create a stream, you create a database table - there can be no stream without a database table. When you create a field and assign it, you are creating a new column in that database. It gets more complex than that, but the basic idea is that streams helps with data handling by abstracting it into streams, field types, and field assignments.
 
 You can of course use database interactions however you'd like in your modules, but Streams core gives you access to some big time savers and benefits:
 
@@ -52,10 +38,24 @@ You can of course use database interactions however you'd like in your modules, 
 * You allow your users to customize data structures to their needs using field types.
 * You get an easy to use, abstracted way to install and uninstall your modules.
 
-## Our Example
+Streams are a great way to 
 
-It will be clearer to have an example thread that runs through these docs:
+## Namespacing
 
-_Our module is a simple FAQ module. Users add FAQs and view them in a list. Our only stream is a faq stream and our namespace is faq\_._
+In order to prevent naming conflicts between tables, streams can be namespaced and prefixed. For example, the users module has the namespace of **users**. That way, a field called _first\_name_ can exist for both the Users module and another module, without a naming conflict.
 
-FAQ Stream module sources can be found at [https://github.com/pyrocms/streams-enabled-module-sample](https://github.com/pyrocms/streams-enabled-module-sample/blob/master/details.php).
+## Prefixing
+
+In addition, you might want to also prefix you tables in some cases. The prefix is in addition to the **SITE\_REF** prefix used by PyroStreams, and helps lessen the chance of table name conflict. For instance, if you have a table named <samp>products</samp> in your module, you might want to set a prefix so the actual table that is created is named <samp>mymodule_products</samp>.
+
+## Documentation Example
+
+For the purposes of our documentation, we have an example module that all of our examples stem from. In this case, our example is a simple FAQ module, powered by streams.
+
+The FAQ module source can be found at [https://github.com/pyrocms/streams-enabled-module-sample](https://github.com/pyrocms/streams-enabled-module-sample/blob/master/details.php).
+
+## Drivers
+
+The following drivers are available for the Streams API:
+
+{{ nav:auto start="developers/tools/streams-api" }}
