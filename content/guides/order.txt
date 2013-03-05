@@ -1,7 +1,8 @@
 the-control-panel
 pyrocms-tags | PyroCMS Tags
-organization | Organizing Your Site
 pyrocms-urls | PyroCMS URLs
+organization | Organizing Your Site
 themes
 streams | Streams
 addons | Add Ons
+git-workflow | git Workflow
