@@ -1,4 +1,5 @@
 changelog
 license
+server-requirements
 pyrocms-versions | PyroCMS Versions
 languages

@@ -15,6 +15,8 @@ To run PyroCMS, you'll need a development environment (like Apache) with PHP and
 * GD 2
 * cURL 7.10.5 or above
 
+For a more detailed look at PyroCMS server requirements, please see the {{ link uri="reference/server-requirements" title="server requirements page" }}.
+
 <hr>
 
 <a href="getting-started/installing-pyrocms" class="btn">Next: Installing PyroCMS</a>
