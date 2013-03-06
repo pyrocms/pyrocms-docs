@@ -19,7 +19,7 @@ Then you'll clone that forked repo to your dev environment. Using the terminal, 
 
 ## Step 2: Add Pyro as a Remote
 
-We want to be able to pull in changes from the PyroCMS repo, so we can add it as a remote named <samp>upstream</samp>:
+To be able to pull in changes from the PyroCMS repo, you can add it as a remote named <samp>upstream</samp>:
 
     git remote add upstream git://github.com/pyrocms/pyrocms.git
 
