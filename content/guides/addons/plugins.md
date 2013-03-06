@@ -1,26 +1,25 @@
 # Plugins 
 
-Plugins are the simplest type of add-on in PyroCMS, but they are at the core of how you access functionality via {{ link title="tags" uri="concepts/pyrocms-tags" }}.
+Plugins are the simplest type of add-on in PyroCMS, but they are at the core of how you access functionality via {{ link title="tags" uri="guides/pyrocms-tags" }}.
 
-For an example, let's take the user plugin, which is a part of the user module (modules can have a plugin as a part of the module, see the {{ link title="module overview" uri="concepts/addons/modules" }} for more info on that).
+</div>
+<div class="doc_content">
 
-Each plugin has a name (or slug) by which we reference it in the tags. For example, if we wanted to get the username of the current user, we would use:
+## Example Usage
 
-	{{ noparse }}{{ user:username }}{{ /noparse }}
+Let's take the user plugin, which is a part of the user module (modules can have a plugin as a part of the module, see the {{ link title="module overview" uri="guides/addons/modules" }} for more info on that).
 
-We can also specify a user id and get the username of a specific user:
+Each plugin has a name by which we reference it in the tags. For example, the {{ link title="format plugin" link="plugins/format" }}'s variables and functions can be referenced with <samp>format:foo</samp>. So, you can use the markdown's format function like this:
 
-	{{ noparse }}{{ user:username user_id="5" }}{{ /noparse }}
+	{{ noparse }}{{ format:markdown }}Let's _convert_ this to **HTML**.{{ /format:markdown }}{{ /noparse }}
 
-Whenever you are using tags in PyroCMS, you are interfacing with a plugin.
-
-## Tag Logic
-
-To get a full idea of what tags can do, make sure you read over the {{ link title="PyroCMS tag system documentation" uri="concepts/pyrocms-tags" }}.
+Genreally, whenever you are using tags in PyroCMS, you are interfacing with a plugin. To get familiar with the tag syntax in PyroCMS, check out the {{ link title="tags guide" uri="guides/pyrocms-tags" }}.
 
 ## Installing Plugins
 
-Plugins have no installation procedure. Just upload them to _addons/shared\_addons/plugins_ or _addons/[site-ref]/plugins_ and use the tag in your layouts!
+Plugins have no installation procedure. Just upload them to **addons/shared\_addons/plugins_ or _addons/[site-ref]/plugins** and use the tag in your layouts!
+
+You can see which plugins you have available to you by going to <samp>Add-ons &rarr; Plugins</smap> in the PyroCMS admin.
 
 ## Plugin Resources
 

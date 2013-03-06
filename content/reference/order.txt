@@ -3,3 +3,5 @@ license
 server-requirements
 pyrocms-versions | PyroCMS Versions
 languages
+nginx-with-php-fpm | Using PyroCMS with Nginx
+upgrade-guides

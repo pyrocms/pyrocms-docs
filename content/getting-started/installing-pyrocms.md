@@ -7,13 +7,13 @@ PyroCMS is simple to download and install - all you need is a basic development 
 
 ## Download PyroCMS
 
-Once you have an environment that meets the requirements, you'll need to download PyroCMS. The latest stable version of PyroCMS is available for download <a href="">here</a>.
+Once you have an environment that meets {{ link uri="reference/server-requirements" title="the requirements" }}, you'll need to download PyroCMS. The latest stable version of PyroCMS is available for download <a href="">here</a>.
 
 If you are familiar with [git](http://git-scm.com/), you can clone the latest version of PyroCMS from our [GitHub repo](https://github.com/pyrocms/pyrocms):
 
     git clone https://github.com/pyrocms/pyrocms
 
-Make sure you are using the correct branch - the {{ link title="PyroCMS versions guide" uri="/general/about/pyrocms-versions" }} explains the difference.
+Make sure you are using the correct branch - the {{ link title="PyroCMS versions guide" uri="reference/pyrocms-versions" }} explains the difference between branches. If you are using git to pull down changes from PyroCMS, check out our {{ link title="example git workflow" uri="guides/git-workflow" }}.
 
 ## Open the Installer
 
@@ -27,6 +27,10 @@ Once it's done, you'll have a link to your PyroCMS site as well as the admin are
 
     http://localhost/pyro/admin
 
-<div class="note"><p>Once you log into your admin panel for the first time, PyroCMS may prompt you to delete your installation folder if it wasn't able to do so autmoatically. <strong>It's very important to delete your installer!</strong></p></div>
+<div class="note"><p>Once you log into your admin panel for the first time, PyroCMS may prompt you to delete your installation folder if it wasn't able to do so autmoatically. <strong>It's very important to delete your install folder!</strong></p></div>
 
-Go ahead and log into PyroCMS for the first time with the account you created during the installation process. You're now ready to get started! Head to our <a href="">creating a theme</a> section for the next steps!
+Go ahead and log into PyroCMS for the first time with the account you created during the installation process. You're now ready to get started!
+
+<hr>
+
+{{ link uri="getting-started/creating-a-theme" title="Next: Creating a Theme" }}

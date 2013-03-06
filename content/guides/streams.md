@@ -1,17 +1,30 @@
 # Streams
 
-Many sites require data that is not in a page format. For instance – dates of live shows, lists of bands, or lists of pets. Each of these requires a data structure and a way to create, read, update, and delete entries.
+Every site requires defining structures of data. For instance, your site may need a list of events, or a roster of bands. Each of these requires a data structure and a way to create, read, update, and delete entries. Streams is PyroCMS way of handling this data, and it is baked into the structure of how PyroCMS works. This page explains what streams are, how you can use them, and where to find out more information on various streams-related topics.
 
-Streams is the underlying system in PyroCMS that allows you to setup those data structures. In Streams, each "list" of data is known as a "stream". So, a list of bands would be a stream. A list of live shows would be a stream.
+* {{ docs:id_link title="What Are Streams?" }}
+* {{ docs:id_link title="Field Types" }}
+* {{ docs:id_link title="The Streams Core" }}
+* {{ docs:id_link title="The Streams API" }}
+* {{ docs:id_link title="The Streams Module" }}
 
-In those streams, each field is defined by its field type. {{ link title="Field types" uri="concepts/addons/field_types" }} can be anything from a plain text field, to a date/time field, to a point on a map. PyroCMS comes with a set of core field types, and you can create your own or download ones from the store.
+</div>
+<div class="doc_content">
 
-## Where Streams Can Be Used
+## What Are Streams?
 
-PyroCMS Community comes with a Streams Core module, a number of core field types, and the Streams API. Between these tools, developers can create modules that use streams to make their data sets customizable. For instance, the Users module in PyroCMS is streams-enabled, so a site admin can set up the exact fields that the site they are building needs. If users need to fill out of a Twitter handle, they can add that field.
+Streams are simply structures of data that you can store data in. Almost anything can be a stream. For instance, the Blog Module has standard fields like <samp>Category</samp>, but the blog posts data structure is a stream, so you can easily add a custom field to it. Need to have an image for every blog post? You can add that as a custom field and display it alongside the other blog fields.
 
-Developers can also just use Streams for basic data functions, to standardize the code and eliminate the tedious process of writing CRUD functionliaty.
+## Field Types
 
-## Streams in Pro
+Every piece of data added to a stream needs some basic things defined. What kind of form input do we use to get the information into the database? Does this data need special validation? It is accessed in templated with just one variable, or are there several to choose from? Field types have the answers to all those questions, and they represent a type of data that can be aded to a structure.
 
-The Streams module, which allows you to set up free-form data structures and display that data in your templates via the Streams plugin, is only available in PyroCMS Pro or as a standalone module. This does not affect the ability for streams-enabled modules to function in PyroCMS Community, however. In fact, the Streams module uses the streams core module (which is part of PyroCMS community) to operate. 
+For instance, if you need to add a textarea to a stream, there is a {{ link uri="field-types/textarea" title="textarea field type" }}. There is an {{ link uri="field-types/image" title="image field type" }} type, a {{ link uri="field-types/textarea" title="textarea field type" }}, and even a Relationship field type, which allows you to related entries of different streams. For a list of all the field types that come with PyroCMS, check out the  {{ link title="Core Field Types documentation" uri="concepts/addons/field_types" }}. You can also find third party field types on the <a href="https://www.pyrocms.com/store/categories/field_types">PyroCMS addons listing</a>.
+
+## The Streams Core
+
+The Streams Core module comes with the free Community version of PyroCMS and contains all the core logic needed for streams to function. The Pages module, the Blog module, and the Users module all use the Streams Core in the community edition. The only thing you can't do is create your own Streams using a GUI interface. For that, you'll need the Streams Manager.
+
+You can find more information on the Streams Core module <a href="">here</a>.
+
+## The Streams 

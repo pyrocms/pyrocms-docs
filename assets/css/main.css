@@ -211,11 +211,10 @@ a:hover {
 }
 
 .note {
-    background: #fff;
     padding: 5px 20px;
-    border-left: 2px solid #E6D240;
+    border-left: 2px solid #DEDBAF;
     margin-bottom: 10px;
-    background: #FFFBDE;
+    background: #F5F4EB;
 }
 .note p {
     font-style: italic;
@@ -238,6 +237,14 @@ dfn {
     background: #E8E8E8;
     text-shadow: none;
     padding: 2px 4px;
+}
+var {
+    background: #ECF5D7;
+    text-shadow: none;
+    padding: 2px 4px;
+    font-family: monospace, serif;
+    font-style: normal;
+    color: #77825B;
 }
 
 table {

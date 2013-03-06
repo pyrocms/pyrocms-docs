@@ -1,4 +1,5 @@
 environments
+pyrocms-folder-structure | PyroCMS Folder Structure
 the-control-panel
 pyrocms-tags | PyroCMS Tags
 pyrocms-urls | PyroCMS URLs

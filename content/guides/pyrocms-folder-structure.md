@@ -2,6 +2,9 @@
 
 PyroCMS only has three root-level folders with its default install (once you delete the installer folder), so it's important to know what each does.
 
+</div>
+<div class="doc_content">
+
 ## /addons/
 
 All extra modules, plugins, widgets, and themes you add to PyroCMS go here in their respective folders. However, inside /addons/ there will be at least two folders:
@@ -25,13 +28,13 @@ The system folder contains two main things: a copy of CodeIgniter (the PHP frame
 
 ### /system/cms/config/database.php
 
-When PyroCMS installs, it will create this file for you with your MySQL credentials. However, if you want to change this data or add another {{ link uri="setup/environments" title="environment" }}, you'll need to edit this file.
+When PyroCMS installs, it will create this file for you with your MySQL credentials. However, if you want to change this data or add another {{ link uri="guides/environments" title="environment" }}, you'll need to edit this file.
 
 ### /system/cms/config/config.php
 
 The CodeIgniter application config file has a whole lot of items you'll never need to touch. In fact, PyroCMS automatically sets your base url so you may never need to look at this file and be fine!
 
-However, if you began without mod_rewriting URLs (i.e. with index.php still in them), and you want to {{ link uri="setup/removing-indexphp-from-urls" title="remove index.php from links" }} later on, you can remove that easily by finding:
+However, if you began without mod_rewriting URLs (i.e. with index.php still in them), and you want to {{ link uri="guides/pyrocms-urls#forcing-clean-urls" title="remove index.php from links" }} later on, you can remove that easily by finding:
 
 	$config['index_page'] = 'index.php';
 

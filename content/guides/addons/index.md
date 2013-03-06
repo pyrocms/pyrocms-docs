@@ -4,7 +4,8 @@ Add-ons are organized bundles of code that you can use to add functionality on t
 
 Add-ons are organized into four different types based on their structure and use: **Plugins**, **Widgets**, **Field Types**, and **Modules** .
 
-{{ nav:auto start="concepts/addons" }}
+</div>
+<div class="doc_content">
 
 ## The PyroCMS Store
 
@@ -13,3 +14,7 @@ The official listing of PyroCMS add-ons is on the [PyroCMS store](http://www.pyr
 ## Creating Your Own Add-ons
 
 Add-on development for PyroCMS is a great way to extend the functionality of PyroCMS in an organized way. Check out the {{ link uri="developers" title="developer docs" }} to learn about how add-on building works.
+
+## Add-on Types
+
+{{ nav:auto start="guides/addons" }}

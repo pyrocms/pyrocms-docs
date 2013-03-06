@@ -10,7 +10,7 @@ The download button on the [home page](http://www.pyrocms.com) will always downl
 
 All development for PyroCMS is done on the PyroCMS [GitHub Page](https://github.com/pyrocms/pyrocms). Git allows for different versions of software to exist via branches, and PyroCMS uses branches to create development versions that you can download and use if you'd like to test out new features.
 
-If you would like to test out features that are being developed for the next release of PyroCMS, fork the [PyroCMS GitHub repo](https://github.com/pyrocms/pyrocms) following the [instructions on GitHub](https://help.github.com/articles/fork-a-repo) and pull down the latest changes from the current development branch. Branches are designated by their release, so for instance, PyroCMS 2.1-2.1.4 were developed on the PyroCMS *2.1/develop* branch, while 2.2 is being developed on PyroCMS *2.2/develop*.
+If you would like to test out features that are being developed for the next release of PyroCMS, fork the [PyroCMS GitHub repo](https://github.com/pyrocms/pyrocms) following the [instructions on GitHub](https://help.github.com/articles/fork-a-repo) and pull down the latest changes from the current development branch. Branches are designated by their release, so for instance, PyroCMS 2.1-2.1.5 were developed on the PyroCMS 2.1/develop branch, while 2.2 is being developed on the 2.2/develop branch.
 
 ## Release Types
 
@@ -24,6 +24,6 @@ Maintenance Release | __2.1.3__ | Any release with a third number (3 in this cas
 
 {{/docs:table}}
 
-### Note on Beta Stability
+### Beta Stability
 
 Beware that beta versions of PyroCMS may have some bugs and other problems you'll run into. To report issues, use GitHub's [Issue Tracker](https://github.com/pyrocms/pyrocms/issues). You can report issues and get feedback and confirmation form the developers when the problem has been fixed.
