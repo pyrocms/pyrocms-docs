@@ -7,7 +7,7 @@ PyroCMS is simple to download and install - all you need is a basic development 
 
 ## Download PyroCMS
 
-Once you have an environment that meets {{ link uri="reference/server-requirements" title="the requirements" }}, you'll need to download PyroCMS. The latest stable version of PyroCMS is available for download <a href="">here</a>.
+Once you have an environment that meets {{ link uri="reference/server-requirements" title="the requirements" }}, you'll need to download PyroCMS. The latest stable version of PyroCMS is available for download on the <a href="http://pyrocms.com">PyroCMS home page</a>.
 
 If you are familiar with [git](http://git-scm.com/), you can clone the latest version of PyroCMS from our [GitHub repo](https://github.com/pyrocms/pyrocms):
 
@@ -33,4 +33,4 @@ Go ahead and log into PyroCMS for the first time with the account you created du
 
 <hr>
 
-{{ link uri="getting-started/creating-a-theme" title="Next: Creating a Theme" }}
+{{ link uri="getting-started/configuring-pyrocms" title="Next: Configuring PyroCMS" }}

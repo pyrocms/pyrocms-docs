@@ -23,8 +23,12 @@ Next, click the <samp>Page Content</samp> tab. This houses our page content text
 
 {{ asset:img file="docs/pagecontent.png" alt="Page Tabs" class="doc_image" }}
 
-Next, click <samp>Save</samp>, and you'll be taken back to your page tree, with <samp>About</samp> in the 
+Next, click <samp>Save</samp>, and you'll be taken back to your page tree, with <samp>About</samp> in the page tree. Click on it, and it'll show you some data aboue it in the right hand column:
 
-## Creating a New Page Type
+{{ asset:img file="docs/about.png" alt="Page Tabs" class="doc_image" }}
 
-A powerful tool for organizing your site is using <dfn>page types</dfn>. For this guide, let's make a 
+Click the link next to <samp>Slug:</samp> and you'll see how our new about page looks on your site. Pretty simple! However, there's a lot more we can do with the page tree.
+
+<hr>
+
+<a href="getting-started/creating-a-page-type">Next: Creating a Page Type</a>
