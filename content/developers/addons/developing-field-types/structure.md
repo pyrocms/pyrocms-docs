@@ -1,5 +1,8 @@
 # Structure
 
+Building a field type for use with PyroStreams is simple if you are familiar with PHP. Each field type is a folder with a php file containing a class that has information about your field type as well as methods for things like the form output. This page outlines the basic structure of a field type file.
+
+* {{ docs:id_link title="Basics" }}
 * {{ docs:id_link title="Field Parameters" }}
 * {{ docs:id_link title="Languages in Field Types" }}
 * {{ docs:id_link title="Validation" }}
@@ -8,8 +11,11 @@
 * {{ docs:id_link title="Using View Files" }}
 * {{ docs:id_link title="Field AJAX Functions" }}
 
-Building a field type for use with PyroStreams is simple if you are familiar with PHP. Each field type is a folder with a php file containing a class that has information about your field type as well as methods for things like the form output.
- 
+</div>
+<div class="doc_content">
+
+## Basics
+
 To get started, create a folder and a file with your chosen slug. For this example, we are going to use the Email field type, which has a slug called "email". Create a file with the prefix "field", then the slug, then the .php extension.
  
 	email/field.email.php
@@ -142,7 +148,7 @@ If you want to use the CodeIgniter super object in your field types, you can acc
   </tr> 
   <tr> 
    <td>default\_value</td> 
-   <td>Collects data on the default value of a field.</td> 
+   <td>Collects data on the default value of a field. This is only a simple text input, so if you need a special default input, you should create your own.</td> 
   </tr> 
 </tbody> 
 </table> 
@@ -157,11 +163,11 @@ If you want to use the CodeIgniter super object in your field types, you can acc
  
 To specify the label name of the parameter, just add a new language key in the format of:
 
-    $lang['streams.{your_field_type_slug}.{your_param_slug}'] = 'Label';
+    $lang['streams:{your_field_type_slug}.{your_param_slug}'] = 'Label';
 
 So if you have a parameter default_setting for your Setting field type, your language variable would look like this:
 
-    $lang['streams.setting.default_setting'] = 'Default Setting';
+    $lang['streams:setting.default_setting'] = 'Default Setting';
  
 <p>To specify an input, create a method in your field class with the prefix <strong>param_</strong></p> 
  
@@ -186,9 +192,9 @@ If you want to take it one step further, you can return an array (instead of a s
 
 ## Languages in Field Types
 
-As of PyroStreams 2.1, PyroStreams fully supports language files in PyroStreams. The canonical language for PyroStreams is English, so we'll use English in the following examples.
+Streams fully supports language files in field types. The canonical language for PyroStreams is English, so we'll use English in the following examples.
 
-Inside your field type folder, you'll need a folder called <strong>language</strong>. Inside this, you can add the different language folders. In this case, English.
+Inside your field type folder, you'll need a folder called **language**. Inside this, you can add the different language folders. In this case, English.
 
 PyroStreams will recognize and load a language file with the same slug as your field type. So if we are creating a language file for the Email field type, the structure would look like this:
 
@@ -198,10 +204,8 @@ PyroStreams will recognize and load a language file with the same slug as your f
 				--- email_lang.php
 
 Inside the <strong>email_lang.php</strong> file, you'll need an array like this:
-
-	<?php defined('BASEPATH') or exit('No direct script access allowed');
 	
-	$lang['streams.email.name'] = 'Email';
+	$lang['streams:email.name'] = 'Email';
 
 Each language item should follow the convention <strong>streams.yourslug.lang_slug</strong>. The only one that is required is <strong>streams.yourslug.name</strong> which will be used as the name of the field type.
 
@@ -215,8 +219,8 @@ In your field type:
 
 In your language file:
 
-	$lang['streams.choice.choice_data'] = 'Choice Data';
-	$lang['streams.choice.choice_type'] = 'Choice Type';
+	$lang['streams:choice.choice_data'] = 'Choice Data';
+	$lang['streams:choice.choice_type'] = 'Choice Type';
 
 ## Validation
  
@@ -277,7 +281,7 @@ If the data fails validation, you can return an error string. A return of **null
         return true;
     }
 
-Remember, you can stall access all the `$_POST` variables, so if you need to grab the row ID, you can use the **row\_edit\_id** from the phone data.
+Remember, you can still access all the <var>$_POST</var> variables, so if you need to grab the row ID, you can use the **row\_edit\_id** from the phone data.
 
     $this->CI->input->post('row_edit_id');
  
