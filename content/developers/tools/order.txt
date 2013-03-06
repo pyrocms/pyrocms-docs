@@ -1,3 +1,4 @@
+admin-menu
 constants-and-globals | Constants and Globals
 assets
 events
