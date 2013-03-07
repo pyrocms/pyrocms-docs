@@ -5,6 +5,9 @@ One of the most important functions of a CMS is to provide an organizational str
 </div>
 <div class="doc_content">
 
+_Coming Soon!_
+
+{{# 
 ## Our Example
 
 In this example, we are going to create a site for a chain of restaurants. They have five locations, and they may expand soon to several more (in which case, they want the ability to add new locations). They want a blog, and they also want an about page and a contact page with a contact form. On top of that, they want to be able to create simple text pages if they need to put up extra information.
@@ -19,6 +22,4 @@ For this example, we know that we need:
 * A blog
 * A generic text page where the client can add 
 
-## Locations: A Job for Page Types
-
-Not every page type is
+#}}
