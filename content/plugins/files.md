@@ -21,8 +21,14 @@ Creates a list of files within the specified folder.
 		<tr>
 			<td width="100">folder</td>
 			<td width="100">None</td>
-			<td width="100">Yes</td>
-			<td>Required. The folder to display files from. Can be an ID (123) or a path (images/blog/kittens).</td>
+			<td width="100">No</td>
+			<td>The folder to display files from. Can be an ID (123) or a path (images/blog/kittens).</td>
+		</tr>
+		<tr>
+			<td width="100">tagged</td>
+			<td width="100">None</td>
+			<td width="100">No</td>
+			<td>Only return images with this tag or tags. You can use this along with the "folder" attribute or by itself to search all files.</td>
 		</tr>
 		<tr>
 			<td>limit</td>

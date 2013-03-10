@@ -1,5 +1,7 @@
 RewriteEngine on
 
+RewriteRule ^setup/upgrade-guides/upgrade-2-1-to-2-2-0$ http://docs.pyrocms.com/2.2/manual/reference/upgrade-guides/upgrade-2-1-to-2-2-0 [R=301,L]
+
 # Don't try to rewrite images, css, etc
 RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpg|gif)$ $1.$3 [L]
 
