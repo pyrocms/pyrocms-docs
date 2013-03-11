@@ -147,6 +147,10 @@ a:hover {
     color: #545454;
 }
 
+#box h4 {
+    font-size: 13px;
+    color: #4b4b4b;
+}
 #menu {
     float: left;
     width: 180px;
