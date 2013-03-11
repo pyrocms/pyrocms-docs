@@ -86,7 +86,7 @@ You can also return any custom field variables by using the {{ custom_fields }} 
 	{{ noparse }}{{ pages:children id="1" }}
 	&lt;h2>{{ title }}&lt;/h2>
 	{{ custom_fields }}
-		&lt;{{ introduction }}&lt;/p>
+		&lt;p>{{ introduction }}&lt;/p>
 	{{ /custom_fields }}
 	{{ body }}
 {{ /pages:children }}{{ /noparse }}
@@ -139,7 +139,7 @@ You can also return any custom field variables by using the {{ custom_fields }} 
 	{{ noparse }}{{ pages:display slug="home" }}
 	&lt;h2>{{ title }}&lt;/h2>
 	{{ custom_fields }}
-		&lt;{{ introduction }}&lt;/p>
+		&lt;p>{{ introduction }}&lt;/p>
 	{{ /custom_fields }}
 	{{ body }}
 {{ /pages:display }}{{ /noparse }}
