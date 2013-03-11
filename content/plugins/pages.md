@@ -85,7 +85,9 @@ You can also return any custom field variables by using the {{ custom_fields }} 
 
 	{{ noparse }}{{ pages:children id="1" }}
 	&lt;h2>{{ title }}&lt;/h2>
-	&lt;p>{{ custom_fields:introduction }}&lt;/p>
+	{{ custom_fields }}
+		&lt;{{ introduction }}&lt;/p>
+	{{ /custom_fields }}
 	{{ body }}
 {{ /pages:children }}{{ /noparse }}
 	
@@ -93,7 +95,7 @@ You can also return any custom field variables by using the {{ custom_fields }} 
 
 	{{ noparse }}{{ pages:display }}{{ /noparse }}
 
-Display a page inside other content. Can be used as a single tag to output the page body only, or tag pair for ultimate control. 
+Display a page inside other content.
 
 ### Attributes
 
@@ -136,7 +138,9 @@ You can also return any custom field variables by using the {{ custom_fields }} 
 
 	{{ noparse }}{{ pages:display slug="home" }}
 	&lt;h2>{{ title }}&lt;/h2>
-	&lt;p>{{ custom_fields:introduction }}&lt;/p>
+	{{ custom_fields }}
+		&lt;{{ introduction }}&lt;/p>
+	{{ /custom_fields }}
 	{{ body }}
 {{ /pages:display }}{{ /noparse }}
 
