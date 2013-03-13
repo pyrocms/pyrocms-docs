@@ -218,7 +218,7 @@ A unix timestamp of when this blog post was created. It is usually used in conje
 
 The ID of the author of the post. This is usually used in conjunction with the {{ link title="user plugin" uri="plugins/user" }} to retrieve profile data about the user.
 
-	{{ noparse }}{ user:display_name user_id=created_by }}{{ /noparse }}
+	{{ noparse }}{{ user:display_name user_id=created_by }}{{ /noparse }}
 
 ## Blog Widgets
 
