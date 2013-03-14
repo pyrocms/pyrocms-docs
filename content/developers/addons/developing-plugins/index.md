@@ -14,7 +14,7 @@ A plugin inside a module would be something that compliments a custom module you
 
 ## Example Plugin
 
-This is the Session plugin which can be found in <dfn>system/pyrocms/plugins/session.php</dfn>.
+This is the Session plugin which can be found in <dfn>system/cms/plugins/session.php</dfn>.
 
 	<?php defined('BASEPATH') or exit('No direct script access allowed');
 	/**

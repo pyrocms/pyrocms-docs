@@ -1,6 +1,6 @@
 # Module Development
 
-PyroCMS is built to be modular, so creating modules is a pretty simple process. The core modules are stored in <dfn>system/pyrocms/modules</dfn> and you can install extra ones to <dfn>addons/default/modules</dfn> or <dfn>addons/shared_addons/modules</dfn>. Any module you create should go into one of those two locations, not in <dfn>system/cms/modules</dfn>.
+PyroCMS is built to be modular, so creating modules is a pretty simple process. The core modules are stored in <dfn>system/cms/modules</dfn> and you can install extra ones to <dfn>addons/default/modules</dfn> or <dfn>addons/shared_addons/modules</dfn>. Any module you create should go into one of those two locations, not in <dfn>system/cms/modules</dfn>.
 
 Each module can contain the following directories:
 

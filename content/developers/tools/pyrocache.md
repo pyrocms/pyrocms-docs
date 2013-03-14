@@ -28,7 +28,7 @@ This is basically a really simple way to wrap your model and library calls with 
 
 ### Where is the cache saved?
 
-This cache data is saved in **system/pyrocms/cache** and will have a name that matches the model or library that is provided. The actual cache file will be an encryption of the method name, the parameters passed to the method and a few other things. The file will not be web readable so no data could be read by unauthorised people. It can only be added and edited by PHP, or by you as a root user.</p>
+This cache data is saved in **system/cms/cache** and will have a name that matches the model or library that is provided. The actual cache file will be an encryption of the method name, the parameters passed to the method and a few other things. The file will not be web readable so no data could be read by unauthorised people. It can only be added and edited by PHP, or by you as a root user.</p>
 
 ### How can I clear the cache?
 

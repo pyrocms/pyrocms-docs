@@ -9,7 +9,7 @@ Your themes can be stored in one of two places:
 	addons/shared_addons/themes (for themes available to all sites)
 	addons/[site-name]/themes (for themes available to only one specific site)
 
-When creating your first theme it's a good idea to look at the default theme and see how it works. You might like to copy it and tweak it to create your own. The default theme is a &quot;core theme&quot; so it is located in <dfn>system/pyrocms/themes/default</dfn>. Copy that to <dfn>addons/</dfn><dfn>shared_addons/</dfn><dfn>themes/custom</dfn> or whatever name you like. Whenever you rename a theme folder you must rename the class name in theme.php to match the folder name.
+When creating your first theme it's a good idea to look at the default theme and see how it works. You might like to copy it and tweak it to create your own. The default theme is a &quot;core theme&quot; so it is located in <dfn>system/cms/themes/default</dfn>. Copy that to <dfn>addons/</dfn><dfn>shared_addons/</dfn><dfn>themes/custom</dfn> or whatever name you like. Whenever you rename a theme folder you must rename the class name in theme.php to match the folder name.
 
 ## Supported Folders
 

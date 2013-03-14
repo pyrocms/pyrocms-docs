@@ -238,7 +238,7 @@ Generates a `<link>` tag for a favicon file in the current theme.
 
 Returns:
 
-	{{ noparse }}&lt;link href="/system/pyrocms/themes/default/img/favicon.png" rel="shortcut icon" type="imagem/x-icon"&gt;{{ /noparse }}
+	{{ noparse }}&lt;link href="/system/cms/themes/default/img/favicon.png" rel="shortcut icon" type="imagem/x-icon"&gt;{{ /noparse }}
 
 ## theme:variables
 
