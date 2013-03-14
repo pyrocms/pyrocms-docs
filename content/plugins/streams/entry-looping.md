@@ -10,6 +10,7 @@ One of the most fundamental functions of streams is displaying the entries that 
 * {{ docs:id_link title="Nested Variables" }}
 * {{ docs:id_link title="Pagination" }}
 * {{ docs:id_link title="Controlling the Pagination Markup" }}
+* {{ docs:id_link title="Switching Namespaces" }}
 * {{ docs:id_link title="Separating Results into Sets" }}
 
 </div>
@@ -469,6 +470,22 @@ For this reason, you need to go into the page that you have streams pagination o
     {{ pagination }}
 
 {{ /streams:cycle }}{{ /noparse }}
+
+## Switching Namespaces
+
+Streams namespaces (not to be confused with [PHP namespaces](http://php.net/manual/en/language.namespaces.php)) allow modules to have their own sets of streams without worrying about naming conflicts. For instance, the Streams module can have a streams with <samp>products</samp> as the slug, and a store module can have a stream with <samp>products</samp> as the slug as well since each module has a difference namespace.
+
+The default namespace for the streams module is <samp>streams</samp>, so you don't have to set that using the streams plugin. However, you can switch streams by adding a <samp>namespace</samp> parameter. This allows you to display data from streams from anywhere in the system, as long as you know the namespace.
+
+For example if you wanted to display blog posts using the streams plugin (although there is a {{ link title="plugin" uri="plugins/blog" }} for that), you could do this:
+
+    {{ noparse }}{{ streams:cycle stream="blog" namespace="blogs" }}{{ /noparse }}
+
+<div class="note">
+  <p>It's important to remember, however, that many modules use streams in unique ways, so using the streams plugin may only get you so far. For example, in the Pages module, the pages table contains page data like the title, slug, parent page, etc., and then each page has the ID of the stream entry it is associated with. So, you can only get the page entry data - and not the pages table data - only the entries of the associated page type stream.</p>
+
+  <p>Your best bet is to use the respective plugins for each module, which often will contain extra data. For example, you can use the {{ link title="pages plugin" uri="plugins/pages#pages-children" }} to properly display lists of pages and their metadata.</p>
+</div>
 
 ## Separating Results into Sets
 
