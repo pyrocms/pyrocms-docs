@@ -458,17 +458,11 @@ For this reason, you need to go into the page that you have streams pagination o
 ### Pagination Example
 
     {{ noparse }}{{ streams:cycle stream="bands" limit="5" paginate="yes" pag_segment="2" limit="10" }}
-
-    <p>{{ total }} entries returned.</p>
-
+    &lt;p>{{ total }} entries returned.&lt;/p>
     {{ entries }}
-
-    <h2>{{ name }}</h2>
-
+      &lt;h2>{{ name }}&lt;/h2>
     {{ /entries }}
-
     {{ pagination }}
-
 {{ /streams:cycle }}{{ /noparse }}
 
 ## Switching Namespaces
