@@ -190,7 +190,7 @@ You may place javascript here that you would like appended to the &lt;head&gt; o
 	</tr>
 	<tr>
 		<td>Require an exact uri match</td>
-		<td>The "Require an exact uri match" field is a clever little tool that allows you to pass parameters in the url. By default PyroCMS looks for a page with the slug of "acme-widgets" that is the child of "products" when you visit products/acme-widgets. By checking this box in the Products page you are telling PyroCMS that it is now okay if there isn't a page named Acme Widgets. It will now load Products and 'acme-widgets' will just be a parameter. This makes it easy to pass parameters to embedded tags. An example using the Streams add-on to display the 'acme-widgets' stream on the Products page.</td>
+		<td>The "Require an exact uri match" field is a clever little tool that allows you to pass parameters in the url. By default PyroCMS looks for a page with the slug of "acme-widgets" that is the child of "products" when you visit products/acme-widgets. By un-checking this box in the Products page you are telling PyroCMS that it is now okay if there isn't a page named Acme Widgets. It will now load Products and 'acme-widgets' will just be a parameter. This makes it easy to pass parameters to embedded tags. An example using the Streams add-on to display the 'acme-widgets' stream on the Products page.</td>
 	</tr>
 </table>
 
