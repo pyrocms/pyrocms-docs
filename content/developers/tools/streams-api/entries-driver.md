@@ -219,7 +219,7 @@ In this example, we have extra data.
 	);
 	$this->streams->entries->insert_entry($entry_data, 'faqs', 'faq', array(), array('not_added_by_streams' => 'extra value'));
 
-## update\_entry(<var>$entry\_id, $entry\_data, $stream, $namespace,$skips=array(), $extra = array()</var>)
+## update\_entry(<var>$entry\_id, $entry\_data, $stream, $namespace, $skips=array(), $extra = array(), $include\_only\_passed = true</var>)
 
 Allows you to update an entry in the stream. Identical to `insert_stream`, except the first parameter is the id of the entry you want to update.
 
@@ -227,3 +227,7 @@ Allows you to update an entry in the stream. Identical to `insert_stream`, excep
 			'answer'	=> 'Because of magic.'
 		);
 	$this->streams->entries->update_entry(2, $entry_data, 'faqs', 'faq');
+	
+### $include_only_passed
+
+The **$include\_only\_passed** parameter is a boolean indicating whether or not fields should be modified if they are not present in the `$entry\_data` array. It defaults to `true`, so only the included fields are modified. If set to `false`, any fields not in the `$entry\_data` array will be updated to **NULL** in the database.
