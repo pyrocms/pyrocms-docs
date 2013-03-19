@@ -28,4 +28,4 @@ PyroCMS uses these third-party packages to run, but includes them in each releas
 
 * <a href="http://codeigniter.com/" target="_blank">CodeIgniter 2.1.x</a>
 * <a href="http://jquery.com/" target="_blank">jQuery 1.7.x</a>
-* <a href="http://github.com/happyninjas/lex" target="_blank">Lex</a>
+* <a href="http://github.com/pyrocms/lex" target="_blank">Lex</a>

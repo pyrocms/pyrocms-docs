@@ -58,7 +58,7 @@ This will let PyroCMS know which database connection group to use.
 
 ## Step 6: Upgrade your themes
 
-You may be using a third-party theme. If so go to the [Add-on Store](http://www.pyrocms.com/store) and see if it has been upgraded to 2.0. Otherwise you'll need to upgrade this theme to use the new [Lex Parser](https://github.com/happyninjas/lex) - which is a slightly different but greatly improved Tag system added in 2.0.
+You may be using a third-party theme. If so go to the [Add-on Store](http://www.pyrocms.com/store) and see if it has been upgraded to 2.0. Otherwise you'll need to upgrade this theme to use the new [Lex Parser](https://github.com/pyrocms/lex) - which is a slightly different but greatly improved Tag system added in 2.0.
 
 This is not a list of all of the new features of Lex, it is simply a guide for upgrading your templates to work with Lex.
 

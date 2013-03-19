@@ -1,6 +1,6 @@
 # PyroCMS Tags
 
-One of the unique features of PyroCMS is Tags, powered by the [Lex Parser](https://github.com/happyninjas/lex). Tags allow you to tap into more advanced functionality using simple syntax right inside your layouts, page layouts, and even pages themselves. Tags can allow you to do some really powerful things without crowding your layouts with messy PHP code.
+One of the unique features of PyroCMS is Tags, powered by the [Lex Parser](https://github.com/pyrocms/lex). Tags allow you to tap into more advanced functionality using simple syntax right inside your layouts, page layouts, and even pages themselves. Tags can allow you to do some really powerful things without crowding your layouts with messy PHP code.
 
 The following guide will teach you the basics of tags and how to use them in your layouts.
 
