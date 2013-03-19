@@ -4,7 +4,7 @@ The _variables_ module you to create variables that are accessible throughout yo
 
 ## Creating Variables
 
-To create a new variable, go into the Admin Panel, and select *Variables* from the *Content* menu. Click **+ Add Variables** and create a slug and a value for your variable. The slug is what you'll use to refer to the variable in your layouts.
+To create a new variable, go into the Admin Panel, and select *Variables* from the *Data* menu. Click **+ Add Variables** and create a slug and a value for your variable. The slug is what you'll use to refer to the variable in your layouts.
 
 {{ asset:img file="docs/variables/vars.png" alt="Variables" class="doc_image" }}
 
