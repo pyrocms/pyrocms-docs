@@ -13,13 +13,13 @@ One of the most important concepts to understand about PyroCMS is where URLs res
 
 ## Page URLs
 
-By default, most URLs are routed to the PyroCMS Pages module, which is where your site's page tree is stored. If you Under **Content &rarr; Pages**, you'll see something like this:
+By default, most URLs are routed to the PyroCMS Pages module, which is where your site's page tree is stored. If you go to **Content &rarr; Pages**, you'll see something like this:
 
 {{ asset:img file="docs/pages.png" alt="Page Tree" class="doc_image" }}
 
 If you are familiar with a page tree, you should be right at home! This represents pages in a nested hierarchy, so if you have a page at <samp>yoursite.com/about</samp>, a nested page with the slug of <samp>history</samp> will be accessed at <samp>yoursite.com/about/history</samp>. Pretty simple!
 
-By default, URLs are _strict_ meaning that if you create a page with the URL <samp>yoursite.com/team</samp> and you tried to access <samp>yoursite.com/team/bob</samp>, the Pages module would only look for a page with the URI of <samp>about</samp> and return a 404. However, in the <dfn>Options</dfn> tab of your pages, you can turn strict URLs, so that <samp>yoursite.com/team/bob</samp> will display the page you created at <samp>yoursite.com/team</samp> (so will <samp>yoursite.com/team/foo</samp> and anything else, for that matter). See the <a href="">Pages module documentation</a> for more information. 
+By default, URLs are _strict_ meaning that if you create a page with the URL <samp>yoursite.com/team</samp> and you tried to access <samp>yoursite.com/team/bob</samp>, the Pages module would only look for a page with the URI of <samp>team</samp> and return a 404. However, in the <dfn>Options</dfn> tab of your pages, you can turn strict URLs, so that <samp>yoursite.com/team/bob</samp> will display the page you created at <samp>yoursite.com/team</samp> (so will <samp>yoursite.com/team/foo</samp> and anything else, for that matter). See the {{ link uri="modules/pages" title="Pages module documentation" }} for more information.
 
 ## The Home Page
 
@@ -41,7 +41,7 @@ Most modules do not use front-end URLs, but some do. Check with the documentatio
 
 ## Forcing Clean URLs
 
-During installation, PyroCMS will ask you if you have Apache's [mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html) installed. This has to do with the PHP framework PyroCMS is built on, 
+During installation, PyroCMS will ask you if you have Apache's [mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html) installed. This has to do with the PHP framework PyroCMS is built on,
 [CodeIgniter](http://www.codeigniter.com).
 
 In CodeIgniter, everything is routed through the index.php file, so your URL might look like:
