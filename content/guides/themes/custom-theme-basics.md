@@ -31,7 +31,7 @@ or
 
      addons/[site-ref]/themes/my_theme_name/theme.php
 
-No real PHP experience is required to edit this file, just remember to change the last part of &quot;Theme\_Custom&quot; in the them file below to match your folder. It must always start with &quot;Theme\_&quot; and then have the folder name with the first letter capitalized. As mentioned below in the Theme Options section the &quot;public $options&quot; array is optional. If you do not want to add options, simply remove that section.
+No real PHP experience is required to edit this file, just remember to change the last part of &quot;Theme\_Custom&quot; in the theme file below to match your folder. It must always start with &quot;Theme\_&quot; and then have the folder name with the first letter capitalized. As mentioned below in the Theme Options section the &quot;public $options&quot; array is optional. If you do not want to add options, simply remove that section.
 
 		<?php defined('BASEPATH') OR exit('No direct script access allowed');
 		class Theme_Custom extends Theme
