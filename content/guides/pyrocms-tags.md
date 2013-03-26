@@ -35,7 +35,7 @@ So if we put the above tag in our layout, and our {{ link uri="plugins/settings"
 
 ## Comments
 
-If you'd like to comment out section of code or content, you can wrap them inside **&#123;&#123;#** and **#&#125;&#125;**. Ex: **&#123;&#123;# This is a comment #&#125;&#125;**. 
+If you'd like to comment out a section of code or content, you can wrap them inside **&#123;&#123;#** and **#&#125;&#125;**. Ex: **&#123;&#123;# This is a comment #&#125;&#125;**.
 This has the advantage over conventional [HTML comment tags](http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.2.4) that it won't be visible to users viewing your website's source code.
 
 <div id="attributes"></div>
@@ -60,7 +60,7 @@ If the first segment is empty, the tag will return "home".
 
 ## Using Tags and Variables In Tag Parameters
 
-_inside quotes, PyroCMS cannot parse curly braces_. So, for instance, if you wanted to pass the value of the slug from the page plugin, this **will not work**:
+_Inside quotes, PyroCMS cannot parse curly braces_. So, for instance, if you wanted to pass the value of the slug from the page plugin, this **will not work**:
 
     {{ noparse }}{{ url:segments segment="1" default="{{ page:slug }}" }}{{ /noparse }}
 
@@ -92,7 +92,7 @@ Another powerful feature of PyroCMS tags is the ability to use data between tags
 
 As you'll notice, we have an opening and closing tag here. In this case, the {{ link uri="modules/blog" title="blog" }} **posts** function will repeat and parse the content between our tag pair for each blog post that matches the criteria we set up with our tag parameters. So for this tag, we might get this output:
 
-    <h2>Blog Post One&lt</h2>
+    <h2>Blog Post One</h2>
     <h2>Blog Post Two</h2>
 
 Tag pairs don't necessarily loop through content, however. For example, we can simply use the content between the tags like we would a parameter, like in the format plugin:

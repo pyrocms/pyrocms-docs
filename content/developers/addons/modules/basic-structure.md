@@ -33,11 +33,11 @@ If you wish to create a module that is available for use across all sites on a M
 Here is the basic structure for the details.php file:
 
 	<?php defined('BASEPATH') or exit('No direct script access allowed');
-	
+
 	class Module_Sample extends Module {
-	
+
 		public $version = '2.0';
-		
+
 		public function info()
 		{
 			return array(
@@ -65,12 +65,12 @@ Here is the basic structure for the details.php file:
 					)
 			);
 		}
-		
+
 		public function install()
 		{
 			$this->dbforge->drop_table('sample');
 			$this->db->delete('settings', array('module' => 'sample'));
-		
+
 			$sample = array(
 		        'id' => array(
 				'type' => 'INT',
@@ -86,7 +86,7 @@ Here is the basic structure for the details.php file:
 					'constraint' => '100'
 				),
 			);
-		
+
 			$sample_setting = array(
 				'slug' => 'sample_setting',
 				'title' => 'Sample Setting',
@@ -99,50 +99,50 @@ Here is the basic structure for the details.php file:
 				'is_gui' => 1,
 				'module' => 'sample'
 			);
-		
+
 			$this->dbforge->add_field($sample);
 			$this->dbforge->add_key('id', true);
-		
+
 			// Let's try running our DB Forge Table and inserting some settings
 			if ( ! $this->dbforge->create_table('sample') OR ! $this->db->insert('settings', $sample_setting))
 			{
 				return false;
 			}
-		
+
 			// No upload path for our module? If we can't make it then fail
 			if ( ! is_dir($this->upload_path.'sample') AND ! @mkdir($this->upload_path.'sample',0777,true))
 			{
 				return false;
 			}
-		
+
 			// We made it!
 			return true;
 		}
-		
+
 		public function uninstall()
 		{
 			$this->dbforge->drop_table('sample');
-		
+
 			$this->db->delete('settings', array('module' => 'sample'));
-		
+
 			// Put a check in to see if something failed, otherwise it worked
 			return true;
 		}
-		
-		
+
+
 		public function upgrade($old_version)
 		{
 			// Your Upgrade Logic
 			return true;
 		}
-		
+
 		public function help()
 		{
 			// Return a string containing help info
 			return "Here you can enter HTML with paragrpah tags or whatever you like";
-				
+
 			// or
-			
+
 			// You could include a file and return it here.
 			return $this->load->view('help', null, true); // loads modules/sample/views/help.php
 		}
@@ -151,6 +151,7 @@ Here is the basic structure for the details.php file:
 The array contains details that will be read and saved to the database on install. You can supply as many extra languages as you like, by default the en version of name and description will be used.
 
 This array will be available in your Public\_Controller's and Admin\_Controller's via `$this->module_details['name']`. Notice, name and description will use the active language, not return the whole array.
+
 
 ## Detail File Resources
 
@@ -163,11 +164,11 @@ Because the installer is a separate CodeIgniter application, you cannot load any
 In a normal CodeIgniter installation there is only one controller class. In PyroCMS there are four. Controller, MY\_Controller, Admin\_Controller and Public\_Controller. To use one of these you can extend them like so:
 
 	class News extends Public_Controller {
-		
+
 		function index()
 		{
 			$message = "Hello World!";
-	
+
 			// Loads from addons/<site-ref>/modules/blog/views/view_name.php
 			$this->template
 					->set('message' , $message)
@@ -184,13 +185,13 @@ Admin controllers have a few different properties to them. It will automatically
 <dfn>addons/<strong>&lt;site-ref&gt;</strong>/modules/<strong>&lt;module-name&gt;</strong>/controllers/admin.php</dfn>
 
 	class Admin extends Admin_Controller {
-	
+
 		protected $section = "item"; //This must match the name in the 'sections' field in details.php
-	
+
 		function index()
 		{
-			$message = "Hello logged in admin guy!";			
-	
+			$message = "Hello logged in admin guy!";
+
 			// Loads from addons/modules/blog/views/admin/view_name.php
 			$this->template
 					->set('message' , $message)
@@ -198,4 +199,12 @@ Admin controllers have a few different properties to them. It will automatically
 		 }
 	}
 
+<div class="tip">Pay special attention to <strong>protected $section="item"</strong> above as this is what triggers any shortcuts you have have setup in your details.php file.  Set the value equal to what you want the default to be when the module is loaded.</div>
+
 This page can be accessed via "http://example.com/admin/<module-name>".
+
+## Other
+
+Language files are not automatically loaded so if you want to make use of them, make sure that you are loading them in your controllers.
+
+	$this->lang->load('MODULENAME');

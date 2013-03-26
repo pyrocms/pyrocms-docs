@@ -9,7 +9,7 @@ Your themes can be stored in one of two places:
 	addons/shared_addons/themes (for themes available to all sites)
 	addons/[site-name]/themes (for themes available to only one specific site)
 
-When creating your first theme it's a good idea to look at the default theme and see how it works. You might like to copy it and tweak it to create your own. The default theme is a &quot;core theme&quot; so it is located in <dfn>system/cms/themes/default</dfn>. Copy that to <dfn>addons/</dfn><dfn>shared_addons/</dfn><dfn>themes/custom</dfn> or whatever name you like. Whenever you rename a theme folder you must rename the class name in theme.php to match the folder name.
+When creating your first theme it's a good idea to look at the default theme and see how it works. You might like to copy it and tweak it to create your own. The default theme is a &quot;core theme&quot; so it is located in <dfn>system/cms/themes/default</dfn>. Copy that to <dfn>addons/shared_addons/themes/custom</dfn> or whatever name you like. Whenever you rename a theme folder you must rename the class name in theme.php to match the folder name.
 
 ## Supported Folders
 
@@ -31,7 +31,7 @@ or
 
      addons/[site-ref]/themes/my_theme_name/theme.php
 
-No real PHP experience is required to edit this file, just remember to change the last part of &quot;Theme\_Custom&quot; in the them file below to match your folder. It must always start with &quot;Theme\_&quot; and then have the folder name with the first letter capitalized. As mentioned below in the Theme Options section the &quot;public $options&quot; array is optional. If you do not want to add options, simply remove that section.
+No real PHP experience is required to edit this file, just remember to change the last part of &quot;Theme\_Custom&quot; in the theme file below to match your folder. It must always start with &quot;Theme\_&quot; and then have the folder name with the first letter capitalized. As mentioned below in the Theme Options section the &quot;public $options&quot; array is optional. If you do not want to add options, simply remove that section.
 
 		<?php defined('BASEPATH') OR exit('No direct script access allowed');
 		class Theme_Custom extends Theme
@@ -42,7 +42,7 @@ No real PHP experience is required to edit this file, just remember to change th
 		    public $website         = 'http://example.com/themes/mytheme';
 		    public $description     = 'An awesome theme in blue and green with two columns and stuff.';
 		    public $version         = '1.0';
-		
+
 		    public $options         =  array(
 		        'show_breadcrumbs' =>   array('title'         => 'Show Breadcrumbs',
 		                                      'description'   => 'Would you like to display breadcrumbs?',
@@ -57,7 +57,7 @@ No real PHP experience is required to edit this file, just remember to change th
 		                                      'options'       => '2 column=Two Column|full-width=Full Width',
 		                                      'is_required'   => TRUE),
 		     );
-		
+
 		 }
 		/* End of file theme.php */
 
