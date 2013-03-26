@@ -1,18 +1,31 @@
 # Pages
 
+The pages module is a simple but powerful way to manage static content on your site. Page layouts can be managed and widgets embedded without ever editing the template files.
+
+* {{ docs:id_link title="How Pages Work in PyroCMS" }}
 * {{ docs:id_link title="The Page Tree" }}
 * {{ docs:id_link title="Re-Ordering Pages" }}
 * {{ docs:id_link title="Modifying Pages" }}
 * {{ docs:id_link title="Default Pages" }}
 * {{ docs:id_link title="Modifying Pages" }}
 * {{ docs:id_link title="Adding a New Page" }}
-* {{ docs:id_link title="Page Layouts" }}
 
-The pages module is a simple but powerful way to manage static content on your site. Page layouts can be managed and widgets embedded without ever editing the template files.
+</div>
+<div class="doc_content">
+
+## How Pages Work in PyroCMS
+
+Every page on a website has a purpose. For instance, a page's purpose could be to displays a member of a company's staff. It could be to display a product. It could be a combination of things. Every page has some common elements as well. For instance, a page will always have metadata, privacy settings, etc.
+
+PyroCMS's pages module let's you take all of this into account when managing pages on your site. Each page has common fields (like metadata), but you can also create data structures that allow you to enter only the data you need for that page. We call these **page types**. For instance, for your staff member page you can create a <samp>Staff Member</samp> page type and add a <samp>Bio</samp> and <samp>Headshot Image</samp> field. You could create a <samp>Product</samp> page type with all sorts of fields like product description, price, etc.
+
+Page types even house how those fields are displayed in the page type layout field, so you can define your fields and also define how they should be displayed on a page.
 
 ## The Page Tree
 
-The page tree is a visual, heirarchical overview of all the pages on your site. Note that these do not include module URIs (see {{ link title="PyroCMS URLs" uri="concepts/pyrocms-urls" }} for an overview of how URLs work in PyroCMS).
+The page tree is a visual, heirarchical overview of all the pages on your site. Module URIs don't show up here (see {{ link title="PyroCMS URLs" uri="guides/pyrocms-urls" }} for an overview of how URLs work in PyroCMS), just pages.
+
+You can have any combination of page types in your page tree as well - they'll all show up in your page tree.
 
 ## Re-Ordering Pages
 
@@ -193,10 +206,3 @@ You may place javascript here that you would like appended to the &lt;head&gt; o
 		<td>The "Require an exact uri match" field is a clever little tool that allows you to pass parameters in the url. By default PyroCMS looks for a page with the slug of "acme-widgets" that is the child of "products" when you visit products/acme-widgets. By un-checking this box in the Products page you are telling PyroCMS that it is now okay if there isn't a page named Acme Widgets. It will now load Products and 'acme-widgets' will just be a parameter. This makes it easy to pass parameters to embedded tags. An example using the Streams add-on to display the 'acme-widgets' stream on the Products page.</td>
 	</tr>
 </table>
-
-## Page Layouts
-
-Page layouts allows you to control the layout of the page without modifying the theme files. You can also select theme layout files when creating Page Layouts. You can embed tags into the page layout instead of placing them in every page.
-
-See the {{ link title="structure docs" uri="concepts/organization" }} for more information on how page layouts can be used.
-
