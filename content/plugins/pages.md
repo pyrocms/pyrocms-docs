@@ -70,25 +70,22 @@ Tag pair that loops through the children of a parent page.
 
 	{{ noparse }}{{ pages:children id="1" limit="2" }}
 	&lt;h2>{{ title }}&lt;/h2>
-	{{ body }}
 {{ /pages:children }}{{ /noparse }}
 
 Returns:
 
 	<h2>Child One</h2>
-	Body Content One
 		
 	<h2>Child Two</h2>
-	Body Content Two
 
-You can also return any custom field variables by using the {{ custom_fields }} array.
+You can also return any custom content variables by using the {{ custom_fields }} array.
 
 	{{ noparse }}{{ pages:children id="1" }}
 	&lt;h2>{{ title }}&lt;/h2>
 	{{ custom_fields }}
 		&lt;p>{{ introduction }}&lt;/p>
+		{{ body }}
 	{{ /custom_fields }}
-	{{ body }}
 {{ /pages:children }}{{ /noparse }}
 	
 ## pages:display
@@ -126,22 +123,20 @@ Display a page inside other content.
 
 	{{ noparse }}{{ pages:display slug="home" }}
 	&lt;h2>{{ title }}&lt;/h2>
-	{{ body }}
 {{ /pages:display }}{{ /noparse }}
 
 Returns:
 
 	<h2>Page Title</h2>
-	<p>Page Body</p>
 
 You can also return any custom field variables by using the {{ custom_fields }} array.
 
 	{{ noparse }}{{ pages:display slug="home" }}
 	&lt;h2>{{ title }}&lt;/h2>
 	{{ custom_fields }}
+		{{ body }}
 		&lt;p>{{ introduction }}&lt;/p>
 	{{ /custom_fields }}
-	{{ body }}
 {{ /pages:display }}{{ /noparse }}
 
 ## pages:chunk
@@ -149,6 +144,8 @@ You can also return any custom field variables by using the {{ custom_fields }} 
 	{{ noparse }}{{ pages:chunk }}{{ /noparse }}
 
 A tag that allows any one page chunk to be displayed anywhere on the site, even inside another page's content.
+
+<div class="note"><p>Page chunks were discountinued in PyroCMS 2.2, but are still present in installations upgraded from 2.1.x to 2.2.</p></div>
 
 ### Attributes
 
