@@ -1,6 +1,7 @@
 changelog
 license
 server-requirements
+troubleshooting
 pyrocms-versions | PyroCMS Versions
 languages
 nginx-with-php-fpm | Using PyroCMS with Nginx
