@@ -165,6 +165,39 @@ Here is an example of form markup:
 
 <div class="tip"><strong>Note:</strong> PyroCMS handles the display of all flash messages (such as errors), so as long as you are using the Form Validation class in CodeIgniter, you do not need to worry about showing inline error messages in forms.</div>
 
+## Columns
+Any element of an admin page may be split into as many as four columns using the CSS classes .one\_quarter, .one\_half, .three\_quarters, and .one\_full. For instance, three columns with the leftmost using half the parent's width:
+
+	<div class="one_half">
+		...
+	</div>
+	
+	<div class="one_quarter">
+		...
+	</div>
+	
+	<div class="one_quarter">
+		...
+	</div>
+
+Columns will float below as necessary, as when using two columns followed by one full-width column:
+	
+	<div class="one_half">
+		...
+	</div>
+	
+	<div class="one_half">
+		...
+	</div>
+	
+	<div class="one_full">
+		...
+	</div>
+
+The .last class may be applied to float a class right instead of left. This is useful in ensuring that the right edge of the last column aligns with the right edge of the parent element.
+
+<div class="tip"><strong>Note:</strong> Sections using the .item or .title classes cannot be directly turned into columns. You must wrap the section in a div which can then be styled as a column.</div>
+
 ## Flash Messages
 
 Coming soon.
