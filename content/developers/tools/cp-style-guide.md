@@ -13,12 +13,12 @@ A basic module page, containing a single box element with a grey header bar and 
 	</section>
 	
 	<section class="item">
-		
+		<section class="content">
 		Your module section content.
-	
+		</div>
 	</section>
 
-As you can see, we have two _section_ elements: title and item. Very simple! All of your module content can go inside the item section.
+As you can see, we have two section elements: <samp>title</samp> and <samp>item</samp>. For a padded buffer inside of the <samp>item</samp> section, use a div with a class of <samp>content</samp>. All of your module content can go inside the item section.
 
 ### Section Title Guidelines
 
