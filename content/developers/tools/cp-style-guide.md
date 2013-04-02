@@ -4,6 +4,16 @@ PyroCMS comes with a wide range of tools to make developing module UI interfaces
 
 To keep things consistent, this page also contains notes on GUI guidelines - from button naming and placement to phrasing. We strongly recommend following these guidelines, but if you need to ignore some of them, please keep a consistent user experience in mind.
 
+* {{ docs:id_link title="Basic Module Page" }}
+* {{ docs:id_link title="Buttons" }}
+* {{ docs:id_link title="Data Tables" }}
+* {{ docs:id_link title="Forms" }}
+* {{ docs:id_link title="Columns" }}
+* {{ docs:id_link title="Confirmation Messages" }}
+
+</div>
+<div class="doc_content">
+
 ## Basic Module Page
 
 A basic module page, containing a single box element with a grey header bar and white body, would be marked up like this: 
@@ -31,7 +41,7 @@ As you can see, we have two section elements: <samp>title</samp> and <samp>item<
 
 Buttons on the PyroCMS admin area come in two flavors: the smaller, gray buttons (secondary buttons) and the larger buttons (primary) that can be colored.
 
-Secondary buttons require a class of *button*. Primary buttons require a class of *btn* and a color class, such as *blue* or *gray*.
+Secondary buttons require a class of <samp>button</samp>. Primary buttons require a class of <samp>btn</samp> and a color class, such as <samp>blue</samp> or <samp>gray</samp>.
 
 ### Color Guidelines
 
@@ -49,11 +59,15 @@ Action buttons such as Save, Save & Close, Cancel, etc. should be primary button
 
 * Buttons on the same line should be of the same size (ie: don't mix primary and secondary buttons next to each other).
 
-## Data Listings
+## Data Tables
 
 Sections are the main building block of the PyroCMS 2.0 interface. They consist of a section title and a section item:
 
-Listing data in a table format is a common module need - PyroCMS has a default table style that is automatically applied to table elements.
+### Tables
+
+Listing data in a table format is a common module need. To create a basic table listing, use the following table tag:
+
+	<table class="table-list" border="0" cellspacing="0">
 
 ### Action Buttons
 
@@ -61,9 +75,9 @@ Many table rows need a column of action buttons (such as Edit, Delete, etc.). Th
 
 	<td class="actions">
 		<?php echo
-			anchor('sample', lang('sample:view'), 'class="button" target="_blank"').' '.
-			anchor('admin/sample/edit/'.$item->id, lang('sample:edit'), 'class="button"').' '.
-			anchor('admin/sample/delete/'.$item->id, 	lang('sample:delete'), 'class="button"');
+			anchor('sample', lang('global:view'), 'class="button" target="_blank"').' '.
+			anchor('admin/sample/edit/'.$item->id, lang('global:edit'), 'class="button"').' '.
+			anchor('admin/sample/delete/'.$item->id, lang('global:delete'), 'class="button"');
 		?>
 	</td>
 	
@@ -198,6 +212,6 @@ The .last class may be applied to float a class right instead of left. This is u
 
 <div class="tip"><strong>Note:</strong> Sections using the .item or .title classes cannot be directly turned into columns. You must wrap the section in a div which can then be styled as a column.</div>
 
-## Flash Messages
+## Confirmation Messages
 
-Coming soon.
+A class of <samp>confirm</samp> can be added to links and buttons to create a confirmation Javascript modal appear before any action is taken.
