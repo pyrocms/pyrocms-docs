@@ -89,11 +89,13 @@ You'll notice that on a default install of PyroCMS there are some pages already 
 
 ## Adding a New Page
 
-To add a new page, click **Add Page**. You'll get a multi-tabbed form with a lot of options. The following sections go over each tab.
+To add a new page, click <samp>Add Page</samp>. If you only have one page type, your new page will automatically use that page type. However, if you have several page types, you'll be able to select each page type from a pop up menu.
 
-{{ asset:img file="docs/pages/tabs.png" alt="Page Tabs" class="doc_image" }}
+{{ asset:img file="docs/choosept.png" alt="Choose a Page Type" class="doc_image" }}
 
-### Page Content
+Once you select your page type, you'll see the page form. The page form is divided into tabs:
+
+### Page Details
 
 This is the basic info about your page - title, content, etc.
 
@@ -104,7 +106,7 @@ This is the basic info about your page - title, content, etc.
 	</tr>
 	<tr>
 		<td>Title</td>
-		<td>The full title of your page.</td>
+		<td>The full title of your page. You can override the title of this field when editing your page type, by changing the value of the <samp>Title Label</samp> field.</td>
 	</tr>
 	<tr>
 		<td>Slug</td>
@@ -114,13 +116,13 @@ This is the basic info about your page - title, content, etc.
 		<td>Status</td>
 		<td>"Live" or "Draft". Draft pages can be seen by Administrators, but will not be available to other groups.</td>
 	</tr>
-	<tr>
-		<td>Default Chunk</td>
-		<td>There is no "page content" area in the pages form, only a default chunk. You can create and remove chunks on the page form, and then use them in your templates using the <a href="plugins/pages">pages plugin</a>.</td>
-	</tr>
 </table>
 
-### Meta Data
+### Page Content
+
+If the page type for this page has fields added to it, those fields will show up here. You can override the name of this tab when editing your page type, using the <samp>Content Tab Label</samp> field. This is so you can name it something more descriptive like "Product Info".
+
+### Meta data
 
 The meta section allows you to control the meta data of your page. This is the data that is traditionally used by search engines (sans keywords) to populate the text preview of your page that shows up in search results.
 
@@ -143,40 +145,13 @@ The meta section allows you to control the meta data of your page. This is the d
 	</tr>
 </table>
 
-### Design
+### CSS
 
-The design tab allows you to select a custom page layout and optionally apply different css styles to it on this page only.
-
-<table>
-	<tr>
-		<th width="30%">Field</th>
-		<th>Notes</th>
-	</tr>
-	<tr>
-		<td>Page Layout</td>
-		<td>The page layout that you'd like to use to render your page.</td>
-	</tr>
-	<tr>
-		<td>CSS</td>
-		<td>Extra CSS that will be added to your page.</td>
-	</tr>
-</table>
+The CSS tab allows you to add extra CSS that will be added to your page (inline). PyroCMS will wrap the appropriate `<style>` tags around the CSS.
 
 ### Script
 
-You may place javascript here that you would like appended to the &lt;head&gt; of the page.
-
-<table>
-	<tr>
-		<th width="30%">Field</th>
-		<th>Notes</th>
-	</tr>
-	<tr>
-		<td>Javascript</td>
-		<td>JS that will be added to your page.</td>
-	</tr>
-
-</table>
+You may place javascript here that you would like appended to the `<head>` of the page. PyroCMS will wrap the appropriate `<script>` tags around the javascript.
 
 ### Options
 
