@@ -16,7 +16,7 @@ Displays the page's slug. "home" for example
 
 ## page:title
 
-The page title visible in the admin panel. "Home" for the default home page.
+The page title visible in the admin panel. This is "Home" for the default home page.
 
 	{{ noparse }}{{ page:title }}{{ /noparse }}
 
