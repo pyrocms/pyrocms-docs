@@ -212,6 +212,23 @@ The .last class may be applied to float a class right instead of left. This is u
 
 <div class="tip"><strong>Note:</strong> Sections using the .item or .title classes cannot be directly turned into columns. You must wrap the section in a div which can then be styled as a column.</div>
 
+## Tabs
+
+PyroCMS uses the jQuery UI for tabs on admin pages. Use the <samp>.tabs</samp> and <samp>.tab-menu</samp> classes as follows:
+
+	<div class="tabs">
+		<ul class="tab-menu">
+			<li><a href="#panel1"><span>First Panel</span></a></li>
+			<li><a href="#panel2"><span>Second Panel</span></a></li>
+		</ul>
+		<div id="panel1">
+			...
+		</div>
+		<div id="panel2">
+			...
+		</div>
+	</div>
+
 ## Confirmation Messages
 
 A class of <samp>confirm</samp> can be added to links and buttons to create a confirmation Javascript modal appear before any action is taken.
