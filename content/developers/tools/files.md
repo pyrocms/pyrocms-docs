@@ -120,6 +120,25 @@ file will be uploaded to the cloud with no extra effort on your part.
 			<td>No</td>
 			<td>Boolean</td>
 		</tr>
+		<tr>
+			<td>$allowed_types</td>
+			<td>A string of allowed types for uploading, separated by pipe characters. Ex: png|jpg. Defaults to the file type of the file being uploaded.</td>
+			<td>No</td>
+			<td>String</td>
+		</tr>
+		<tr>
+			<td>$alt</td>
+			<td>Value for the 'alt_attribute' column for files. Useful for photos.</td>
+			<td>No</td>
+			<td>String</td>
+		</tr>
+		<tr>
+			<td>$replace_file</td>
+			<td>If you want to update a file on the server, pass a file row object in this parameter. It will update the file instead of creating a new one, preserving the filename, name, description, and alt_attribute fields.</td>
+			<td>No</td>
+			<td>Mixed</td>
+		</tr>
+
 	</tbody>
 </table>
 
