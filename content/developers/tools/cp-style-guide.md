@@ -162,12 +162,12 @@ Here is an example of form markup:
 	<ul>
 		<li>
 			<label for="name"><?php echo lang('sample:name'); ?> <span>*</span></label>
-			<div class="input"><?php echo form_input('name', set_value('name', $name), 'class="width-15"'); ?></div>
+			<div class="input"><?php echo form_input('name', set_value('name', $name)); ?></div>
 		</li>
 	
 		<li>
 			<label for="slug"><?php echo lang('sample:slug'); ?> <span>*</span></label>
-			<div class="input"><?php echo form_input('slug', set_value('slug', $slug), 'class="width-15"'); ?></div>
+			<div class="input"><?php echo form_input('slug', set_value('slug', $slug)); ?></div>
 		</li>
 	</ul>
 	
