@@ -23,6 +23,8 @@ Download and extract the PyroCMS files into your development folder of choice. N
 
 The installer will load an walk you throught the necessary steps to install PyroCMS.
 
+<div class="note"><p>Installation troubles? Check out some troubleshooting tips in our <a href="reference/troubleshooting">Troubleshooting Guide</a>.</p></div>
+
 Once it's done, you'll have a link to your PyroCMS site as well as the admin area so you can log in. The admin panel is always located at /admin, in our **pyro** folder example, you can find your admin panel at:
 
     http://localhost/pyro/admin

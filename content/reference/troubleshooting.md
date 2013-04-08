@@ -2,8 +2,32 @@
 
 Before you hit the forums, check out our list of some common issues and their solutions.
 
+* {{ docs:id_link title="Installation Problems on GoDaddy" }}
+* {{ docs:id_link title="Emails Are Not Being Sent" }}
+
+
 </div>
 <div class="doc_content">
+
+## Installation Problems on GoDaddy
+
+If you are trying to install PyroCMS on GoDaddy servers, you may need to make some adjustments:
+
+First add an .htaccess to the install directory:
+
+    RewriteEngine on
+    RewriteBase /installer/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?/$1 [L]
+
+Then, in <samp>installer/config/config.php</samp>, change the <var>$config['index_page']</var>:
+
+    $config['index_page'] = "index.php?";
+
+In the same file, change <var>$config['uri_protocol']</var>:
+
+    $config['uri_protocol'] = "QUERY_STRING";
 
 ## Emails Are Not Being Sent
 
