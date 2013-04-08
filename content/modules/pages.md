@@ -15,7 +15,7 @@ The pages module is a simple but powerful way to manage static content on your s
 
 ## How Pages Work in PyroCMS
 
-Every page on a website has a purpose. For instance, a page's purpose could be to displays a member of a company's staff. It could be to display a product. It could be a combination of things. Every page has some common elements as well. For instance, a page will always have metadata, privacy settings, etc.
+Every page on a website has a purpose. For instance, a page's purpose could be to display a member of a company's staff. It could be to display a product. It could be a combination of things. Every page has some common elements as well. For instance, a page will always have metadata, privacy settings, etc.
 
 PyroCMS's pages module let's you take all of this into account when managing pages on your site. Each page has common fields (like metadata), but you can also create data structures that allow you to enter only the data you need for that page. We call these **page types**. For instance, for your staff member page you can create a <samp>Staff Member</samp> page type and add a <samp>Bio</samp> and <samp>Headshot Image</samp> field. You could create a <samp>Product</samp> page type with all sorts of fields like product description, price, etc.
 
