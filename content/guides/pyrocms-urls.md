@@ -33,9 +33,11 @@ All pages that are not found in PyroCMS are routed to the Pages module, where a 
 
 ## Module URLs
 
-PyroCMS is a _modular_ CMS, and modules in PyroCMS can sometimes have their own front-end URLs in additon to back end URLs.
+PyroCMS is a _modular_ CMS, and modules in PyroCMS can have their own front-end URLs in additon to back-end URLs.
 
-For instance, the sitemap module comes with a built-in URL that displays your site's sitemap index at <samp>/sitemap/sitemap/xml</samp> (this is simplified in the routes for this module to just be <samp>/sitemap.xml</samp>).
+The first segment in a URL will be the module name, so to access the "news" module you would call <samp>/news</samp>. This would then load the news.php controller in your news module (because the names match) and reference the index() method. Calling <samp>/news/category</samp> would call the method foo() inside the news.php controller.
+
+The second segment could be a method inside the default controller as outlined above, or it could be a secondary controller. For example, <samp>/news/gallery/view/some-article</samp> would load the gallery.php controller inside the news module, and reference the view() method.
 
 Most modules do not use front-end URLs, but some do. Check with the documentation of your modules to see if they have any front-end URLs.
 
