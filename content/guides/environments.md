@@ -27,14 +27,14 @@ On Apache, you can tell PyroCMS what environment to load by setting a variable i
 
      SetEnv PYRO_ENV production
 
-Once you've done this you'll need to be careful not to copy your .htaccess back to your development server by mistake (or vice-versa). If you're using 
+Once you've done this you'll need to be careful not to copy your .htaccess back to your development server by mistake (or vice-versa). If you're using
 git you can prevent this with .gitignore, as described below.
 
 If you are using Nginx and php-fpm, you can add PYRO_ENV parameter to Nginx config file like this:
 
      fastcgi_param PYRO_ENV production;
 
-You choices for the value of **PYRO_ENV** are:
+Your choices for the value of **PYRO_ENV** are:
 
 * <samp>development</samp>
 * <samp>staging</samp>

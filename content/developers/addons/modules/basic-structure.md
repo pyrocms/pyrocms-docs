@@ -208,3 +208,23 @@ This page can be accessed via "http://example.com/admin/<module-name>".
 Language files are not automatically loaded so if you want to make use of them, make sure that you are loading them in your controllers.
 
 	$this->lang->load('MODULENAME');
+
+The config folder is where you can place your config files should they be needed.  They follow the CodeIgniter setup.  you can find more information <a href="http://ellislab.com/codeigniter/user-guide/libraries/config.html" target="blank">here</a>.
+
+If you need to have more than one admin controller you will need to setup a routes.php which will reside in your config file.  For instance:
+
+	<?php  defined('BASEPATH') or exit('No direct script access allowed');
+
+
+	// admin
+	$route['mymodule/admin/domagic(/:any)?']       = 'admin_domagic$1';
+	$route['mymodule/admin/moremagic(/:any)?']     = 'admin_moremagic$1';
+
+
+This would mean you would have the following files in your module:
+
+	controllers/admin_domagic.php
+	controllers/admin_moremagic.php
+
+More information on routes can be found <a href="http://ellislab.com/codeigniter/user-guide/general/routing.html" target="blank">here</a>.
+
