@@ -13,7 +13,7 @@ Display all blog posts or blog posts by category.
 
 ### Attributes
 
-The blog plugin is powered by streams, so it can take all of the parameters that the {{ link title="streams cycle" uri="" }} can take except for <samp>stream</samp>, <samp>namespace</samp>, and <samp>where</samp>. 
+The blog plugin is powered by streams, so it can take all of the parameters that the {{ link title="streams cycle" uri="plugins/streams/entry-looping#parameter-reference" }} can take except for <samp>stream</samp>, <samp>namespace</samp>, and <samp>where</samp>. 
 
 In addition the following extra parameters are available:
 
