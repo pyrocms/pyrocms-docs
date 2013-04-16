@@ -23,9 +23,11 @@ If you are using a GUI, take care you don't miss any "hidden" files like <dfn>.h
 Additionally, you'll want to back up any addons that you've added to the addons directory. We'll be replacing this entire 
 folder, so back those up.
 
-## Step 3: Replace the addons and system folder
+## Step 3: Replace the addons and system folders
 
-Replace the system and addons folders with their new version, and then add your backed up <dfn>database.php</dfn> and addons back in.
+Delete the system and addons folders, then replace/upload the new versions.
+
+Replace/upload your addons. 
 
 ## Step 4: Update your database.php
 
@@ -34,6 +36,8 @@ At the bottom of this file, change:
 	$active_record = true;
 	// to
 	$query_builder = true;
+
+Replace/upload your backed up <dfn>database.php</dfn>.
 
 ## Step 5: Replace index.php with a the new version
 
