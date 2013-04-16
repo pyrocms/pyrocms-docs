@@ -59,9 +59,27 @@ Tag pair that loops through the children of a parent page.
 		</tr>
 		<tr>
 			<td width="100">limit</td>
-			<td width="100">None</td>
+			<td width="100">10</td>
 			<td width="100">No</td>
 			<td>Number of pages to return.</td>
+		</tr>
+		<tr>
+			<td width="100">order-by</td>
+			<td width="100">order</td>
+			<td width="100">No</td>
+			<td>Order by column name</td>
+		</tr>
+		<tr>
+			<td width="100">order-dir</td>
+			<td width="100">ASC</td>
+			<td width="100">No</td>
+			<td>Order direction. Ex: <code>ASC</code> or <code>DESC</code></td>
+		</tr>
+		<tr>
+			<td width="100">include_types</td>
+			<td width="100">None</td>
+			<td width="100">No</td>
+			<td>Allows you to return only specific Page Types. Pass Page Type ID in a pipe-separated list: Ex. <code>4|6|7</code></td>
 		</tr>
 	</tbody>
 </table>
