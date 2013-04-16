@@ -5,6 +5,10 @@ If you've never used PyroCMS before, this guide will get you up and running with
 </div>
 <div class="doc_content">
 
+## What is PyroCMS?
+
+~~~Suggest adding some text about what PyroCMS is, who's it aimed at, and its philosophy...a cut down version of https://www.pyrocms.com/about.~~~
+
 ## What You'll Need
 
 To run PyroCMS, you'll need a development environment (like Apache) with PHP and MySQL installed. Specifically, you'll need:
