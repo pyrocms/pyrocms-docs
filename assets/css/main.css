@@ -112,7 +112,8 @@ p, ul li, ol li {
     margin-bottom: 15px;
 }
 
-#container {
+#container,
+#header_inner {
     width: 860px;
     margin: 0 auto 20px auto!important;
 }
@@ -161,7 +162,7 @@ a:hover {
 #menu ul {
     list-style-type: none;
     margin-left: 2px;
-    padding-left: 14px;
+    padding-left: 10px;
     width: 180px;
     margin-bottom: 2px;
     margin-top: 0!important;
@@ -169,7 +170,7 @@ a:hover {
 
 #menu a {
     text-decoration: none;
-    color: #AFBBC4;
+    color: #9CAAB5;
 }
 #menu a:hover {
     color: #5088fb;
@@ -184,7 +185,7 @@ a:hover {
     color: #363636;
     font-weight: bold;
     font-family: "Helvetica", Arial, sans-serif;
-    padding-left: 15px;
+    padding-left: 8px;
     display: block;
     width: 180px;
 }
@@ -270,27 +271,31 @@ table td {
 }
 
 .breadcrumbs {
-    padding: 6px 10px;
+    padding: 1px 10px;
     font-size: 12px;
-    background: #fcfcfc;
-    border-bottom: 1px solid #E4EAF0;
-    color: #888;
+    color: #9CAAB5;
     font-family: "Helvetica", Arial, sans-serif;
 }
 .breadcrumbs a {
     text-decoration: none;
-    color: #888;
+    color: #9CAAB5;
 }
 .breadcrumbs strong {
-    color: #888;
+    color: #9CAAB5;
 }
 
 #footer p {
+    text-align: center;
     font-size: 11px;
     color: #888;
+    margin-bottom: 60px;
 }
 #footer p a {
     color: #888;
+}
+
+#header_inner h3 {
+    margin-left: 10px;
 }
 
 /* ==========================================================================

@@ -43,13 +43,25 @@
 
   <body>
 
-    <div id="container">
+    <div id="main_header">
 
-        <h3><a href=""><img src="assets/img/logo.png" /></a></h3>
+      <div id="header_inner">
+
+          <h3><a href=""><img src="assets/img/logo.png" alt="PyroCMS" /></a></h3>
+          <div class="breadcrumbs"><strong>PyroCMS {{ variables:get_var name="pyrocms_version" }}</strong> | {{ breadcrumbs:crumbs }}</div>
+
+          
+      </div>
+
+    </div>
+
+    <div id="container">
 
          <div id="box">
 
-          <!--<div class="breadcrumbs"><strong>PyroCMS {{ variables:get_var name="pyrocms_version" }}</strong> | {{ breadcrumbs:crumbs }}</div>-->
+
+
+
 
 <div id="menu">
 
