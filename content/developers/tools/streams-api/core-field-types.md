@@ -657,7 +657,7 @@ The WYSIWYG field creates a PyroCMS WYSIWYG text editor.
         
         <tr>
 		<td>editor_type</td>
-                <td>Advanced</td>
+                <td>simple</td>
 		<td>You can choose between a simple or advanced editor.</td>
 	</tr>
 </table>
