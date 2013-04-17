@@ -1,6 +1,9 @@
-# Upgrading 1.x to 2.0
+# Upgrading 1.3 to 2.0
 
-To update your PyroCMS installation you will need to do a little bit of work. We've made it as easy as possible but 2.0 brings lots of new features and changes the way a few things work. We feel that the only way the upgrade could be easier is if we did not change anything, which is not how the PyroCMS team roll.
+The following instructions are for users upgrading from PyroCMS 1.3 to PyroCMS 2.0.
+
+</div>
+<div class="doc_content">
 
 ## Step 1: Backup your config and addons
 

@@ -2,6 +2,9 @@
 
 Any version of 2.1.x can be upgraded to 2.2.0 by following these instructions.
 
+</div>
+<div class="doc_content">
+
 ## Step 1: Download PyroCMS v2.2.0
 
 You can download PyroCMS v2.2.0 [from GitHub](https://github.com/pyrocms/pyrocms/zipball/v2.2.0).
@@ -25,7 +28,7 @@ folder, so back those up.
 
 ## Step 3: Replace the addons and system folders
 
-Delete the system and addons folders, then replace/upload the new versions.
+Delete the <dfn>system</dfn> and <dfn>addons</dfn> folders, then replace/upload the new versions.
 
 Replace/upload your addons. 
 
@@ -116,8 +119,20 @@ Instead of loading the helper in your controller, load it like so:
 		'plural'      => 'blog:posts',
 	));
 
-This `entry_title`, singular and plural logic matches the Keywords structure, where you pass a language key 
+This <var>entry_title</var>, singular and plural logic matches the Keywords structure, where you pass a language key 
 or just an arbitrary string like "Chicken" to help identify multiple types of data within the same module.
+
+## Update Blog Syntax
+
+If you are overloading the blog module, be aware that the blog now uses PyroCMS tags instead of straight PHP, and your overloaded views will need to be updated.
+
+You can find the new views at <dfn>system/cms/modules/blog/view/</dfn>. The files that use PyroCMS tags now are:
+
+* archive.php
+* posts.php
+* view.php
+
+rss.php remains as it was in previous versions.
 
 ## Rejoice
 

@@ -2,6 +2,9 @@
 
 Any version of the 2.0 or the 2.1 branch can be upgraded to any version of the 2.1 branch by following these instructions.
 
+</div>
+<div class="doc_content">
+
 ## Download the latest copy of PyroCMS
 
 You can download the latest version of PyroCMS 2.1.x [here](https://github.com/pyrocms/pyrocms/zipball/2.1/master).

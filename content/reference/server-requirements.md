@@ -2,6 +2,9 @@
 
 Below are the server requirements for running PyroCMS 2.x. If you aren't sure if you have all of these, PyroCMS will check for them on installation for you.
 
+</div>
+<div class="doc_content">
+
 ### a HTTP web-server of some description
 
 Apache 2.x, Abyss Web Server, Uniform Server, Zend Community Server, etc. So far PyroCMS only seems to struggle with IIS.
