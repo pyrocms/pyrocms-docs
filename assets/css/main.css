@@ -297,6 +297,10 @@ table td {
 #header_inner h3 {
     margin-left: 10px;
 }
+code {
+    font-size: 11px;
+    text-shadow: none;
+}
 
 /* ==========================================================================
    Helper classes

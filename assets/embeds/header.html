@@ -10,6 +10,7 @@
 	<base href="{{ base_url }}" /> 
 
   {{ asset:js file="jquery.js" }}
+  {{ asset:js file="highlight.pack.js" }}
 
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -17,15 +18,14 @@
 
   {{ asset:css file="normalize.css" }}
 	{{ asset:css file="main.css" }}
-	{{ asset:css file="code.css" }}
-
-  {{ asset:js file="jquery.snippet.min.js" }}
+	{{ asset:css file="rainbow.css" }}
 	
 	<style>body {padding-top: 60px;}</style>
 
   <script>
   $(document).ready(function(){
-    $('pre').snippet('html',{style:'darkblue', showNum: false});
+    hljs.tabReplace = '    '; // Make our tabs 4 spaces
+    hljs.initHighlightingOnLoad();
   });
   </script>
 
@@ -50,7 +50,7 @@
           <h3><a href=""><img src="assets/img/logo.png" alt="PyroCMS" /></a></h3>
           <div class="breadcrumbs"><strong>PyroCMS {{ variables:get_var name="pyrocms_version" }}</strong> | {{ breadcrumbs:crumbs }}</div>
 
-          
+
       </div>
 
     </div>
