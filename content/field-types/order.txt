@@ -10,6 +10,7 @@ relationship
 slug
 text
 textarea
+url | URL
 us_state | US State
 user
 wysiwyg | WYSIWYG
