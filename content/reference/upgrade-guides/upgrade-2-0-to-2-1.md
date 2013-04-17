@@ -22,9 +22,11 @@ If you are using a GUI, take care you don't miss any "hidden" files like .htacce
 
 Additionally, you'll want to back up any addons that you've added to the addons directory. We'll be replacing this entire folder, so back those up.
 
-## Replace the addons and system folder
+## Replace the addons and system folders
 
-Replace the system and addons folders with their new version, and then add your backed up configuration files and addons back in.
+Delete the system and addons folders, then replace/upload the new versions.
+
+Then replace/upload your backed up configuration files and addons back in.
 
 ## Replace index.php with a the new version.
 
