@@ -1,4 +1,4 @@
-# Upgrading to 2.0 from 1.x
+# Upgrading 1.x to 2.0
 
 To update your PyroCMS installation you will need to do a little bit of work. We've made it as easy as possible but 2.0 brings lots of new features and changes the way a few things work. We feel that the only way the upgrade could be easier is if we did not change anything, which is not how the PyroCMS team roll.
 
@@ -14,7 +14,7 @@ Copy the following files and folders to a safe location:
 
 ## Step 2: Replace files
 
-Replace the following files and folders with the new content from the zip you downloaded:
+Delete the following files and folders, then upload/replace with the new content from the zip you downloaded:
 
 * addons/
 * system/
