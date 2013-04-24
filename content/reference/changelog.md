@@ -7,7 +7,7 @@
 
 ### Features
 
-- Added "Parse" option for Textarea Field Type which allows the text to be parsed as HTML, plain text, or markdown. Plain text will strip all HTML tags. The default is HTML.
+- Added "Parse" option for {{ link title="Textarea Field Type" uri="field-types/textarea" }} which allows the text to be parsed as HTML, plain text, or markdown. Plain text will strip all HTML tags. The default is HTML.
 - Adding a timespan function to the helper plugin.
 - Added a {{ noparse }}{{ url:redirect to="some/page" }}{{ /noparse }} {{ link title="function" uri="plugins/url#url-redirect" }}.
 - Added Folder contents listing to files plugin.
