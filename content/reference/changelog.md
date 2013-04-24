@@ -70,7 +70,6 @@
 - Fixed #2663. There can now be multiple keyword fields on a single page.
 - Fixed issues with menu in admin theme for IE.
 - Fixed template plugin functions set_template and set_title.
-- Improved streams pagination to support per page and query string pagination.
 - Added an event and a server log for monitoring failed login attempts.
 - Fixed an issue with adding files keywords when the site isn't using mod_rewrite.
 - Added reuse_query_string as param for pagination.
