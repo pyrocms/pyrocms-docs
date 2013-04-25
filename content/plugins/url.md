@@ -160,3 +160,30 @@ Generates an anchor tag (a link) with an absolute URL (domain name and path) fro
 Returns:
 
 	<a href="http://www.example.com/users/login" class="login">Login</a>
+
+## url:redirect
+
+_Since 2.2.1_. Allows you to perform a 302 redirect to another page or URL.
+
+### Attributes
+
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th width="100">Name</th>
+			<th width="100">Default</th>
+			<th width="100">Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>to</td>
+			<td>None</td>
+			<td>Yes</td>
+			<td>The URI to redirect to.</td>
+		</tr>
+	</tbody>
+</table>
+
+### Example
+
+	{{ noparse }}{{ url:redirect to="new/page" }}{{ /noparse }}

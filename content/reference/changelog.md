@@ -3,6 +3,78 @@
 </div>
 <div class="doc_content">
 
+## 2.2.1 - April 24, 2013
+
+### Features
+
+- Added "Parse" option for {{ link title="Textarea Field Type" uri="field-types/textarea" }} which allows the text to be parsed as HTML, plain text, or markdown. Plain text will strip all HTML tags. The default is HTML.
+- Adding a timespan function to the helper plugin.
+- Added a {{ noparse }}{{ url:redirect to="some/page" }}{{ /noparse }} {{ link title="function" uri="plugins/url#url-redirect" }}.
+- Added Folder contents listing to files plugin.
+- Added noindex,nofollow to the admin login screen.
+- Added a subtle indicator (italic title) that a page is draft on the pages index.
+- Add keyword searching to Files module search pane.
+- Add Robots: nofollow and Robots: noindex options to the Pages metadata tab.
+- Made "Remember Me" checked by default in the admin login screen.
+- Files can now be marked as "hidden" when storing them from a third-party module.
+- Email line endings now have a setting in the Settings are. Defaults to \r\n.
+- Added rtl support for admin panel.
+
+### Improvements
+
+- Fixed the blog edit form which populated the "Written By" field as the currently logged in user, rather than the author of the post.
+- Added the missing offset attribute to pages:children. Limit was there but not offset
+- Re-added IP v6 support for fresh installs. We added a migration back in september to make installs IP v6, but the installer was not updated.
+- Added class support for entries\_table buttons.
+- Fixed site active/inactive toggle in the MSM.
+- Fixed bug where activation email sent upon registration even when Setting is "No activation".
+- Fixed installer undefined variable warnings.
+- Adding the ability to overload the page template.
+- Updated the page module parse order to fix issues with parsing WYSIWYG and Textarea content.
+- Fixed issue with related fields not showing up with pages.
+- Added .dropdown class for navigation plugin.
+- Fixed pagination error with assignments Streams API CP function.
+- Fixed a bug where an "unknown index 'user\_id'" error appeared while adding a comment as a guest we have no 'user\_id' index for.
+- Fixed #2604. Plugin docs did not allow an integer value of 0 as default value.
+- Fixed #2603. Chinese and English translations for Variables help was transposed
+- Fixed a bug with default attributes in {{ blog:posts }}.
+- Fixed #2599. Removed the default limit of 10 from pages, files, and blog. Unlimited now unless specified which is the expected behavior.
+- Fixed #2596. Parse the blog's rss feed in case Lex tags are used in intro.
+- Clarified the activation settings label to say "Instant Activation".
+- Fixed #2592. If pages already had a keyword hash migration 98 would double hash.
+- Fixed issue with ajax error continually trying to show empty error messages.
+- Updated the router, this requires updates to index.php and config.php.
+- Moved installation of email templates module before other modules in case the email templates are needed for installation.
+- Adding {{ noparse }}{{ comment\_count }}{{ /noparse }} variable to the blog index.
+- Fixed issues with login widget redirecting to wrong URL.
+- Fixed pagination for variables module.
+- Updated the regex for mysql version detection in installer.
+- Added condition status='live' tagged blog stream.
+- Fixed #2636: Page Type model was not always loaded when needed.
+- Added svg extension to files uploads.
+- Fixed issue streams class cache would sometimes be outdated.
+- Fixed variable typo in the installer library.
+- Fixed instances of relative URLs in blog.
+- Replaced login slide down animation with shorter fade in and bounce.
+- Removed old setting for require\_lastname. This is now all handled in the profile.
+- Removed unused twitter settings.
+- Fixed issue where duplicating pages would result in incomplete page data in copy.
+- Removed Cufon from themes.
+- Resolved conflict in the datetime field's default input\_type.
+- Optimized get\_tagged method.
+- Optimized $.ajaxSetup code and oddities.
+- Added ability to set a stream in the template library.
+- Fixed issue with search result not being highlighted in Files.
+- Switched file library to initialize separate from class load for uploading from multiple file inputs in one request.
+- Added first\_url to streams API config for pagination.
+- Fixed #2663. There can now be multiple keyword fields on a single page.
+- Fixed issues with menu in admin theme for IE.
+- Fixed template plugin functions set\_template and set\_title.
+- Added an event and a server log for monitoring failed login attempts.
+- Fixed an issue with adding files keywords when the site isn't using mod\_rewrite.
+- Added reuse\_query\_string as param for pagination.
+- Added the analytics tag to the Minimal theme.
+
 ## 2.2.0 - March 7, 2013
 
 ### Features
