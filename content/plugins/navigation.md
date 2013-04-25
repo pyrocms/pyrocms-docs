@@ -169,7 +169,7 @@ If you'd like complete control over your navigation markup, you can use the link
 
 	{{ noparse }}&lt;ul>
 {{ navigation:links group="header" }}
-&lt;li><a href="{{ url }}" class="{{ class }}">{{ title }}</a>
+&lt;li>&lt;a href="{{ url }}" class="{{ class }}">{{ title }}&lt;/a>
 	{{ if children }}
 	&lt;ul>
 	{{ children }}
