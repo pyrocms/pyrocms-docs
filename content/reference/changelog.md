@@ -25,7 +25,7 @@
 - Fixed the blog edit form which populated the "Written By" field as the currently logged in user, rather than the author of the post.
 - Added the missing offset attribute to pages:children. Limit was there but not offset
 - Re-added IP v6 support for fresh installs. We added a migration back in september to make installs IP v6, but the installer was not updated.
-- Added class support for entries_table buttons.
+- Added class support for entries\_table buttons.
 - Fixed site active/inactive toggle in the MSM.
 - Fixed bug where activation email sent upon registration even when Setting is "No activation".
 - Fixed installer undefined variable warnings.
@@ -34,7 +34,7 @@
 - Fixed issue with related fields not showing up with pages.
 - Added .dropdown class for navigation plugin.
 - Fixed pagination error with assignments Streams API CP function.
-- Fixed a bug where an "unknown index 'user_id'" error appeared while adding a comment as a guest we have no 'user_id' index for.
+- Fixed a bug where an "unknown index 'user\_id'" error appeared while adding a comment as a guest we have no 'user\_id' index for.
 - Fixed #2604. Plugin docs did not allow an integer value of 0 as default value.
 - Fixed #2603. Chinese and English translations for Variables help was transposed
 - Fixed a bug with default attributes in {{ blog:posts }}.
@@ -45,7 +45,7 @@
 - Fixed issue with ajax error continually trying to show empty error messages.
 - Updated the router, this requires updates to index.php and config.php.
 - Moved installation of email templates module before other modules in case the email templates are needed for installation.
-- Adding {{ noparse }}{{ comment_count }}{{ /noparse }} variable to the blog index.
+- Adding {{ noparse }}{{ comment\_count }}{{ /noparse }} variable to the blog index.
 - Fixed issues with login widget redirecting to wrong URL.
 - Fixed pagination for variables module.
 - Updated the regex for mysql version detection in installer.
@@ -56,23 +56,23 @@
 - Fixed variable typo in the installer library.
 - Fixed instances of relative URLs in blog.
 - Replaced login slide down animation with shorter fade in and bounce.
-- Removed old setting for require_lastname. This is now all handled in the profile.
+- Removed old setting for require\_lastname. This is now all handled in the profile.
 - Removed unused twitter settings.
 - Fixed issue where duplicating pages would result in incomplete page data in copy.
 - Removed Cufon from themes.
-- Resolved conflict in the datetime field's default input_type.
-- Optimized get_tagged method.
+- Resolved conflict in the datetime field's default input\_type.
+- Optimized get\_tagged method.
 - Optimized $.ajaxSetup code and oddities.
 - Added ability to set a stream in the template library.
 - Fixed issue with search result not being highlighted in Files.
 - Switched file library to initialize separate from class load for uploading from multiple file inputs in one request.
-- Added first_url to streams API config for pagination.
+- Added first\_url to streams API config for pagination.
 - Fixed #2663. There can now be multiple keyword fields on a single page.
 - Fixed issues with menu in admin theme for IE.
-- Fixed template plugin functions set_template and set_title.
+- Fixed template plugin functions set\_template and set\_title.
 - Added an event and a server log for monitoring failed login attempts.
-- Fixed an issue with adding files keywords when the site isn't using mod_rewrite.
-- Added reuse_query_string as param for pagination.
+- Fixed an issue with adding files keywords when the site isn't using mod\_rewrite.
+- Added reuse\_query\_string as param for pagination.
 - Added the analytics tag to the Minimal theme.
 
 ## 2.2.0 - March 7, 2013
