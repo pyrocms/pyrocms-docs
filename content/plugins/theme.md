@@ -118,11 +118,71 @@ Generates a `<link>` to a css file in the current theme.
 
 Returns:
 
-	{{ noparse }}&lt;link href="themes/default/css/style.css" type="text/css" rel="stylesheet" /&gt;{{ /noparse }}
+	{{ noparse }}&lt;link href="/addons/shared_addons/themes/default/css/style.css" type="text/css" rel="stylesheet" /&gt;{{ /noparse }}
+
+## theme:css_path
+
+Generates an absolute web path to a CSS file in the current theme.
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">file</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>Name of the CSS file.</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example:**
+
+	{{ noparse }}&#123;&#123; theme:css_path file="style.css" &#125;&#125;{{ /noparse }}
+
+Returns:
+
+	{{ noparse }}/addons/shared_addons/themes/default/css/style.css{{ /noparse }}
+
+## theme:css_url
+
+Generates an absolute URL to a CSS file in the current theme.
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">file</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>Name of the CSS file.</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example:**
+
+	{{ noparse }}&#123;&#123; theme:css_url file="style.css" &#125;&#125;{{ /noparse }}
+
+Returns:
+
+	{{ noparse }}http://example.com/addons/shared_addons/themes/default/css/style.css{{ /noparse }}
 
 ## theme:image
 
-Generates an `<img>` tag for an file in the current theme.
+Generates an `<img>` tag for an image in the current theme.
 
 **Attributes**
 <table cellpadding="0" cellspacing="0">
@@ -143,7 +203,7 @@ Generates an `<img>` tag for an file in the current theme.
 			<td width="100"><em>misc</em></td>
 			<td width="100">None</td>
 			<td width="100">No</td>
-			<td>This function will take any other image tag attributes and pass them along to the image tag.</td>
+			<td>This function will take any other attributes and turn them into img HTML attributes.</td>
 		</tr>
 	</tbody>
 </table>
@@ -154,7 +214,67 @@ Generates an `<img>` tag for an file in the current theme.
 
 Returns:
 
-	{{ noparse }}&lt;img src="themes/default/img/fun.jpg" alt="Fun!" /&gt;{{ /noparse }}
+	{{ noparse }}&lt;img src="/addons/shared_addons/themes/default/img/fun.jpg" alt="Fun!" /&gt;{{ /noparse }}
+
+## theme:image_path
+
+Generates an absolute web path for an image in the current theme.
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">file</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>Name of the image file.</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example:**
+
+	{{ noparse }}&#123;&#123; theme:image_path file="fun.jpg" &#125;&#125;{{ /noparse }}
+
+Returns:
+
+	{{ noparse }}/addons/shared_addons/themes/default/img/fun.jpg{{ /noparse }}
+
+## theme:image_url
+
+Generates an absolute web URL for an image in the current theme.
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">file</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>Name of the image file.</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example:**
+
+	{{ noparse }}&#123;&#123; theme:image_url file="fun.jpg" &#125;&#125;{{ /noparse }}
+
+Returns:
+
+	{{ noparse }}http://example.com/addons/shared_addons/themes/default/img/fun.jpg{{ /noparse }}
 
 ## theme:js
 
@@ -184,7 +304,67 @@ Generates a `<script>` link for a javascript file in the current theme.
 
 Returns:
 
-	{{ noparse }}&lt;script type="text/javascript" src="themes/default/js/extra.js"&gt;&lt;/script&gt;{{ /noparse }}
+	{{ noparse }}&lt;script type="text/javascript" src="/addons/shared_addons/themes/default/js/extra.js"&gt;&lt;/script&gt;{{ /noparse }}
+
+## theme:js_path
+
+Generates an absolute web path for a javascript file in the current theme.
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">file</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>Name of the javascript file.</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example:**
+
+	{{ noparse }}&#123;&#123; theme:js_path file="extra.js" &#125;&#125;{{ /noparse }}
+
+Returns:
+
+	{{ noparse }}/addons/shared_addons/themes/default/js/extra.js{{ /noparse }}
+
+## theme:js_url
+
+Generates an asbolute web path for a javascript file in the current theme.
+
+**Attributes**
+<table cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Default</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td width="100">file</td>
+			<td width="100">None</td>
+			<td width="100">Yes</td>
+			<td>Name of the javascript file.</td>
+		</tr>
+	</tbody>
+</table>
+
+**Example:**
+
+	{{ noparse }}&#123;&#123; theme:js_url file="extra.js" &#125;&#125;{{ /noparse }}
+
+Returns:
+
+	{{ noparse }}http://example.com/addons/shared_addons/themes/default/js/extra.js{{ /noparse }}
 
 ## theme:favicon
 
