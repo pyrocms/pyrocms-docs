@@ -1,6 +1,6 @@
 # Custom Theme Basics
 
-PyroCMS supports themes which allow you to easily change the look and feel of your web-site. The way it works is with a master {{ link title="layout" uri="theming/theme-layouts" }} file and multiple {{ link title="partials" uri="theming/theme-partials" }} that share presentation logic between different layouts.
+PyroCMS supports themes which allow you to easily change the look and feel of your web-site. The way it works is with a master {{ link title="layout" uri="guides/themes/theme-layouts" }} file and multiple {{ link title="partials" uri="guides/themes/theme-partials" }} that share presentation logic between different layouts.
 
 ## Creating a theme
 
