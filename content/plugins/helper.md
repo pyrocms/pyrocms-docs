@@ -183,7 +183,7 @@ Count the number of items being output in a tag loop
 			<th>Description</th>
 		</tr>
 		<tr>
-			<td width="100">indentifier</td>
+			<td width="100">identifier</td>
 			<td width="100">default</td>
 			<td width="100">No</td>
 			<td>An identifier to make each counter unique if using multiple counters on the same site.</td>
