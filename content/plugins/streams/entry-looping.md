@@ -46,7 +46,7 @@ The cycle function contains a number of functions for filtering by date. For ins
 
     {{ noparse }}{{ streams:events year="2013" month="01" day="14" }}{{ /noparse }}
 
-You can also restrict the entries shown by telling the cycle plugin to show or not show entries before or after the current date by using **show_upcoming** and **show_previous**. Both of these are set to **yes** by default, so if you wanted to display a list of events that are upcoming you could do it like this:
+You can also restrict the entries shown by telling the cycle plugin to show or not show entries before or after the current date by using **show_upcoming** and **show_past**. Both of these are set to **yes** by default, so if you wanted to display a list of events that are upcoming you could do it like this:
 
     {{ noparse }}{{ streams:events show_past="no" }}{{ /noparse }}
 
