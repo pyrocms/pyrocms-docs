@@ -159,7 +159,7 @@ class Nav extends Plugin {
 			}
 			else
 			{
-				$file = $order_string;
+				$file = trim($order_string);
 				$name = $this->guess_name($file);
 			}
 
