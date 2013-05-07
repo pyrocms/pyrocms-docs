@@ -11,12 +11,12 @@ The {{ link uri="guides" title="guides" }} section of the docs takes you through
 
 ## Install Some Add-ons
 
-We have a growing add-on community, and you can find all of them on our [add-on] (https://www.pyrocms.com/store) store. Some are paid, and some are free.
+We have a growing add-on community, and you can find all of them on our [add-on](https://www.pyrocms.com/store) store. Some are paid, and some are free.
 
 ## Get Help in the Forums
 
-Our [forums] (https://forum.pyrocms.com/) are a great place to get help and ask questions about PyroCMS.
+Our [forums](https://forum.pyrocms.com/) are a great place to get help and ask questions about PyroCMS.
 
 ## Get Involved on GitHub
 
-PyroCMS is open source, so you can report issues and make pull requests on our [GitHub repo] (https://github.com/pyrocms/pyrocms). You can even make [pull requests to the documentation](https://github.com/pyrocms/pyrocms-docs).
+PyroCMS is open source, so you can report issues and make pull requests on our [GitHub repo](https://github.com/pyrocms/pyrocms). You can even make [pull requests to the documentation](https://github.com/pyrocms/pyrocms-docs).
