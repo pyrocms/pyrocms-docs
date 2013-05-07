@@ -21,7 +21,7 @@ The WYSIWYG field type creates a PyroCMS WYSIWYG text editor using the CKEditor.
 	<tbody> 
 		<tr> 
 			<td>Editor Type</td> 
-			<td>Advanced</td> 
+			<td>simple</td> 
 			<td>You can choose between a simple or advanced editor. The settings for each editor are available in <dfn>Settings &rarr; WYSIWYG</dfn></td> 
 		</tr> 
 		<tr> 
