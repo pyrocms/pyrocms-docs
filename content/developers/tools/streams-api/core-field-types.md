@@ -10,7 +10,7 @@ Below is a reference of all the core PyroCMS field types.
 
 * {{ docs:id_link title="Choice" }}
 * {{ docs:id_link title="Country" }}
-* {{ docs:id_link title="Date/Time" }}
+* {{ docs:id_link title="Date Time" }}
 * {{ docs:id_link title="Email" }}
 * {{ docs:id_link title="Encrypt" }}
 * {{ docs:id_link title="File" }}
@@ -90,7 +90,7 @@ The country field type creates a dropdown list of countries to choose from.
 	</tr>
 </table>
 
-## Date/Time
+## Date Time
 
 The date/time field type stores date and time information. You can choose to just store the date, or store the date and time.
 
