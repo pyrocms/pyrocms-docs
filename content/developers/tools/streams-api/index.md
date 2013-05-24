@@ -52,7 +52,7 @@ In addition, you might want to also prefix you tables in some cases. The prefix 
 
 For the purposes of our documentation, we have an example module that all of our examples stem from. In this case, our example is a simple FAQ module, powered by streams.
 
-The FAQ module source can be found at [https://github.com/pyrocms/streams-enabled-module-sample](https://github.com/pyrocms/streams-enabled-module-sample/blob/master/details.php).
+The FAQ module source can be found at [https://github.com/pyrocms/streams-enabled-module-sample](https://github.com/pyrocms/streams-enabled-module-sample/).
 
 ## Drivers
 
