@@ -12,13 +12,13 @@ The streams plugin search form allows you to set up some of the basic bits of in
 	  
 	{{ form_open }}
 	 
-	&lt;p>{{ search_input }}&lt;/p>
+	<p>{{ search_input }}</p>
 	 
-	&lt;p>{{ form_submit }}&lt;/p>
+	<p>{{ form_submit }}</p>
 	 
 	{{ form_close }}
 	 
-{{ /streams:search_form }}{{ /noparse }}
+	{{ /streams:search_form }}{{ /noparse }}
 
 ### Parameters
 
@@ -89,17 +89,17 @@ The streams plugin search form allows you to set up some of the basic bits of in
 
 	{{ noparse }}{{ streams:search_results per_page="10" cache_segment="2" }}
 	  
-	&lt;p>Your search for {{ search_term }} returned {{ total_results }} results.&lt;/p>
+	<p>Your search for {{ search_term }} returned {{ total_results }} results.</p>
 	 
 	{{ results }}
 	  
-	&lt;h2>{{ name }}&lt;/p>
+	<h2>{{ name }}</p>
 	  
 	{{ /results }}
 	 
 	{{ pagination }}
 	  
-{{ /streams:search_results }}{{ /noparse }}
+	{{ /streams:search_results }}{{ /noparse }}
 
 ### Parameters
 
