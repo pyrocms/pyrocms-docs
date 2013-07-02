@@ -8,17 +8,21 @@ It's important to note that this search only searches what is in the streams tab
  
 The streams plugin search form allows you to set up some of the basic bits of info about your search. Here is an example form:
 
-	{{ noparse }}{{ streams:search_form stream="artists" fields="name|bio" results_page="search" }}
+	{{ noparse }}
+	
+		{{ streams:search_form stream="artists" fields="name|bio" results_page="search" }}
 	  
-	{{ form_open }}
+		{{ form_open }}
 	 
-	&lt;p>{{ search_input }}&lt;/p>
+			<p>{{ search_input }}</p>
 	 
-	&lt;p>{{ form_submit }}&lt;/p>
+			<p>{{ form_submit }}</p>
 	 
-	{{ form_close }}
+		{{ form_close }}
 	 
-{{ /streams:search_form }}{{ /noparse }}
+		{{ /streams:search_form }}
+	
+	{{ /noparse }}
 
 ### Parameters
 
