@@ -38,7 +38,7 @@ Instead of specifying a stream with the stream="stream_slug" parameter, you can 
 
 {{ /streams:bands }}{{ /noparse }}
 
-There is no real advantage to using the short syntax, except for saving some paramter space, which may come in handy if you have a lot of paramters.
+There is no real advantage to using the short syntax, except for saving some paramter space, which may come in handy if you have a lot of parameters.
 
 ## Filtering by Date
 
