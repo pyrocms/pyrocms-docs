@@ -360,7 +360,7 @@ Once you've created your template, you can add the necessary variables to the fo
 	<tbody> 
 <tr> 
 	<td>notify_{ID}</td> 
-	<td>The email address (or addresses) to send the notification to. Multiple addresses can be separated by a pipe (|) character. You can also use form input values here, so if you have a field called _your_email_address_, you can use _your_email_address_ as an email value and it will send it to the user's input.</td> 
+	<td>The email address (or addresses) to send the notification to. Multiple addresses can be separated by a pipe (|) character. You can also use form input values here, so if you have a field called <em>your_email_address</em>, you can use <em>your_email_address</em> as an email value and it will send it to the user's input.</td> 
 </tr> 
 <tr> 
 	<td>notify_template_{ID}</td> 

@@ -68,26 +68,25 @@ Creates a list of files within the specified folder.
 
 This example would create a list of thumbnails 200px wide by 150px tall:
 
-	{{ noparse }}
-	{{ files:listing folder=&quot;5&quot; }}
-		&lt;img src="{{ url:site }}files/thumb/{{ id }}/200/150" alt="{{ description }}"/>
-	{{ /files:listing }}
+	{{ noparse }}{{ files:listing folder=&quot;5&quot; }}
+	&lt;img src="{{ url:site }}files/thumb/{{ id }}/200/150" alt="{{ description }}"/>
+{{ /files:listing }}
 
-	Available Variables:
-	{{ id }}
-	{{ file_id }}
-	{{ folder_id }}
-	{{ user_id }}
-	{{ type }}
-	{{ name }}
-	{{ filename }}
-	{{ description }}
-	{{ extension }}
-	{{ mimetype }}
-	{{ width }}
-	{{ height }}
-	{{ filesize }}
-	{{ date_added }}{{ /noparse }}
+Available Variables:
+{{ id }}
+{{ file_id }}
+{{ folder_id }}
+{{ user_id }}
+{{ type }}
+{{ name }}
+{{ filename }}
+{{ description }}
+{{ extension }}
+{{ mimetype }}
+{{ width }}
+{{ height }}
+{{ filesize }}
+{{ date_added }}{{ /noparse }}
 	
 Returns:
 
@@ -99,23 +98,22 @@ Returns:
 
 You can could also create a list of file download links:
 
-	{{ noparse }}
-	{{ files:listing folder=&quot;5&quot; }}
-		&lt;a href="{{ url:site }}files/download/{{ id }}">Download {{ name }}&lt;/a>
-	{{ /files:listing }}
+	{{ noparse }}{{ files:listing folder=&quot;5&quot; }}
+	&lt;a href="{{ url:site }}files/download/{{ id }}">Download {{ name }}&lt;/a>
+{{ /files:listing }}
 
-	Available Variables:
-	{{ id }}
-	{{ folder_id }}
-	{{ user_id }}
-	{{ type }}
-	{{ name }}
-	{{ filename }}
-	{{ description }}
-	{{ extension }}
-	{{ mimetype }}
-	{{ filesize }}
-	{{ date_added }}{{ /noparse }}
+Available Variables:
+{{ id }}
+{{ folder_id }}
+{{ user_id }}
+{{ type }}
+{{ name }}
+{{ filename }}
+{{ description }}
+{{ extension }}
+{{ mimetype }}
+{{ filesize }}
+{{ date_added }}{{ /noparse }}
 	
 Returns:
 

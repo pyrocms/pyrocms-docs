@@ -35,11 +35,10 @@ Display a number of blog posts from a specific Twitter user.
 
 ### Example
 
-	{{ noparse }}
-    {{ twitter:feed username="stephenfry" limit="1" }}
-        <div class="tweet">
-            <p>{{ text }}</p>
-            <p>Posted: {{ timespan }}</p>
-        </div>
-    {{ /twitter:feed }}{{ /noparse }}
+	{{ noparse }}{{ twitter:feed username="stephenfry" limit="1" }}
+	&lt;div class="tweet"&gt;
+		&lt;p&gt;{{ text }}&lt;/p&gt;
+		&lt;p&gt;Posted: {{ timespan }}&lt;/p&gt;
+	&lt;/div&gt;
+{{ /twitter:feed }}{{ /noparse }}
 

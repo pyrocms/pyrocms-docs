@@ -146,8 +146,8 @@ Load a template partial previously set with `$this->template->set_partial()` or 
 Check if a template partial exists. If it does, parse the content inside the tags where `{{noparse}}{{ partial }}{{/noparse}}` will be the partials contents. Template partials are set with `$this->template->set_partial()` or `$this->template->inject_partial()`.
 
 	{{noparse}}{{ template:has_partial name="sidebar" }}
-  <h2>Sidebar</h2>
-  {{ partial }}
+	&lt;h2&gt;Sidebar&lt;/h2&gt;
+	{{ partial }}
 {{ /template:has_partial }}{{/noparse}}
 
 ### Attributes
