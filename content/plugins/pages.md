@@ -76,7 +76,7 @@ Tag pair that loops through the children of a parent page.
 			<td>Order direction. Ex: <code>ASC</code> or <code>DESC</code></td>
 		</tr>
 		<tr>
-			<td width="100">include_types</td>
+			<td width="100">include-types</td>
 			<td width="100">None</td>
 			<td width="100">No</td>
 			<td>Allows you to return only specific Page Types. Pass Page Type ID in a pipe-separated list: Ex. <code>4|6|7</code></td>
@@ -163,7 +163,7 @@ You can also return any custom field variables by using the {{ custom_fields }} 
 
 A tag that allows any one page chunk to be displayed anywhere on the site, even inside another page's content.
 
-<div class="note"><p>Page chunks were discountinued in PyroCMS 2.2, but are still present in installations upgraded from 2.1.x to 2.2.</p></div>
+<div class="note"><p>Page chunks were discontinued in PyroCMS 2.2, but are still present in installations upgraded from 2.1.x to 2.2.</p></div>
 
 ### Attributes
 
