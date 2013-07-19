@@ -12,9 +12,9 @@ The streams plugin search form allows you to set up some of the basic bits of in
 	  
 	{{ form_open }}
 	 
-	&lt;p>{{ search_input }}&lt;/p>
+	&lt;p&gt;{{ search_input }}&lt;/p&gt;
 	 
-	&lt;p>{{ form_submit }}&lt;/p>
+	&lt;p&gt;{{ form_submit }}&lt;/p&gt;
 	 
 	{{ form_close }}
 	 
@@ -65,19 +65,19 @@ The streams plugin search form allows you to set up some of the basic bits of in
  </thead> 
  <tbody> 
   <tr> 
-	<td>{{&nbsp;form_open&nbsp;}}</td>
+	<td>{{&nbsp;form\_open&nbsp;}}</td>
     <td>Form open tag.</td> 
   </tr> 
   <tr> 
-	<td>{{&nbsp;form_close&nbsp;}}</td>
+	<td>{{&nbsp;form\_close&nbsp;}}</td>
     <td>Form close tag.</td> 
   </tr> 
   <tr> 
-	<td>{{&nbsp;search_input&nbsp;}}</td>
+	<td>{{&nbsp;search\_input&nbsp;}}</td>
     <td>The search input.</td> 
   </tr> 
   <tr> 
-	<td>{{&nbsp;form_submit&nbsp;}}</td>
+	<td>{{&nbsp;form\_submit&nbsp;}}</td>
     <td>The search from submit.</td> 
   </tr> 
 </tbody>
@@ -88,17 +88,17 @@ The streams plugin search form allows you to set up some of the basic bits of in
  The search results tag allows you to display search results from your search_form input.
 
 	{{ noparse }}{{ streams:search_results per_page="10" cache_segment="2" }}
-	  
-	&lt;p>Your search for {{ search_term }} returned {{ total_results }} results.&lt;/p>
+	
+	&lt;p&gt;Your search for {{ search_term }} returned {{ total_results }} results.&lt;/p&gt;
 	 
 	{{ results }}
-	  
-	&lt;h2>{{ name }}&lt;/p>
-	  
+	
+	&lt;h2&gt;{{ name }}&lt;/p&gt;
+	
 	{{ /results }}
 	 
 	{{ pagination }}
-	  
+	
 {{ /streams:search_results }}{{ /noparse }}
 
 ### Parameters
@@ -154,11 +154,11 @@ The streams plugin search form allows you to set up some of the basic bits of in
     <td>Pagination, if you are paginating results.</td> 
   </tr> 
   <tr> 
-	<td>{{&nbsp;search_term&nbsp;}}</td>
+	<td>{{&nbsp;search\_term&nbsp;}}</td>
     <td>The search term that was submitted.</td> 
   </tr> 
   <tr> 
-	<td>{{&nbsp;total_results&nbsp;}}</td>
+	<td>{{&nbsp;total\_results&nbsp;}}</td>
     <td>The total number of results returned.</td> 
   </tr> 
 </tbody>

@@ -9,7 +9,7 @@ Let's start by explaining what PyroCMS is all about.
 
 ## What is PyroCMS?
 
-PyroCMS is a PHP-based CMS that has been translated into more than 22 languages, accepted code from over 120 contributors and had more 43,000 installations. More recently PyroCMS has evolved into two logical branches: Community and Professional. One is free, one asks a little in return for some features only those making money from PyroCMS.
+PyroCMS is a PHP-based CMS that has been translated into more than 22 languages, accepted code from over 120 contributors and has had more than 50,000 installations. More recently PyroCMS has evolved into two logical branches: Community and Professional. Community is free and available as an Open Source project. Professional offers additional features such as multi-site management and white labeling among other additions useful for business users or clients.
 
 PyroCMS takes a different approach to many content management systems and tries very hard not to try too hard. PyroCMS can make the majority of simple websites out of the box and will be the first 80% of anything more complex. When you need to fill in the final 20% you can take a look at the [Add-on] (https://www.pyrocms.com/store) store for existing modules, widgets and plugins or you can make your own and sell them afterwards.
 
