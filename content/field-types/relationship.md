@@ -22,7 +22,7 @@ For instance, if you have an events stream, it might look like this:
 		- Event Name
 		- Description
 		- Start Date and Time
-		- Location (relationship field type, liked to Locations)
+		- Location (relationship field type, linked to Locations)
 
  	Locations:
  		- Street
