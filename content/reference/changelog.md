@@ -3,6 +3,13 @@
 </div>
 <div class="doc_content">
 
+## 2.2.3 - August 13, 2013
+
+### Improvements
+
+- Removed a flag in the WYSIWYG field type that was incompatible with php 5.3 and older
+- Fixed a migration filename that could cause the last migration to fail on some systems
+
 ## 2.2.2 - August 6, 2013
 
 ### Improvements
