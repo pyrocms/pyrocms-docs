@@ -122,7 +122,7 @@ The <var>$extra</var> array possible values are as follows. None of them are req
 		<td><var>sorting</var></td>
 		<td>title</td>
 		<td>string (<dfn>title<dfn> or <dfn>custom</dfn>)</td>
-		<td>This determines the entry sorting where supported. <dfn>title</dfn> will sort the title column DESC, and <dfn>custom</dfn> will sort by the <dfn>ordering_count</dfn> column DESC.</td>
+		<td>This determines the entry sorting where supported. <dfn>title</dfn> will sort the title column DESC, and <dfn>custom</dfn> will sort by the <dfn>ordering_count</dfn> column ASC.</td>
 	</tr>
 	<tr>
 		<td><var>menu_path</var></td>
