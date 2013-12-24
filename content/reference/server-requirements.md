@@ -5,17 +5,27 @@ Below are the server requirements for running PyroCMS 2.x. If you aren't sure if
 </div>
 <div class="doc_content">
 
-### a HTTP web-server of some description
+### A HTTP Server
 
-Apache 2.x, Nginx, Abyss Web Server, Uniform Server, Zend Community Server, etc. So far PyroCMS only seems to struggle with IIS.
+Any of the following HTTP servers will work.
 
-### MySQL 5.x or higher
+* Apache 2.x
+* nginx
+* Abyss Web Server
+* Uniform Server
+* Zend Community Server
 
-There are plans for other database systems, but for now the newer MySQL version the better.
+So far PyroCMS only seems to struggle with IIS.
 
-### PHP 5.3.7 or higher
+### Database Server
 
-PHP 5.3.7 and up (including PHP 5.4.x) are both fully supported.
+* MySQL v5.1 or higher
+* PostgreSQL v8.0 or higher
+* SQLite v3.6 or higher
+
+### PHP
+
+PHP 5.3.7 and up (including PHP 5.4.x and 5.5.x) are both fully supported.
 
 ### GD 2
 
