@@ -1,6 +1,6 @@
 # HTML Helper
 
-This helper adds functionality not available in the [CodeIgniter HTML Helper](http://codeigniter.com/user_guide/helpers/html_helper.html).
+This helper adds functionality not available in the [CodeIgniter HTML Helper](http://ellislab.com/codeigniter/user-guide/helpers/html_helper.html).
 
 ## Functions
 

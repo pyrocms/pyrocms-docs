@@ -22,7 +22,7 @@ Below is a full list of folders you can put in your addons directory:
 
 All of your custom code should fit into one of those folders and should be developed in the same way as you normally would in a CodeIgniter application.
 
-An important note is that you cannot extend helpers or libraries found in the <dfn>/system/</dfn> directory automatically (neither <dfn>system/cms</dfn> or <dfn>system/codeigniter</dfn>) as the <a href="http://codeigniter.com/user_guide/libraries/loader.html" target="_blank">CodeIgniter Loader class</a> does not know to look there. The only way to do this is to extend the library in the addons folder, and reference it manually.
+An important note is that you cannot extend helpers or libraries found in the <dfn>/system/</dfn> directory automatically (neither <dfn>system/cms</dfn> or <dfn>system/codeigniter</dfn>) as the <a href="http://ellislab.com/codeigniter/user-guide/libraries/loader.html" target="_blank">CodeIgniter Loader class</a> does not know to look there. The only way to do this is to extend the library in the addons folder, and reference it manually.
 
 To extend a core library, build a class similar to the following:
 

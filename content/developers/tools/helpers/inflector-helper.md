@@ -1,6 +1,6 @@
 # Inflector Helper
 
-This helper adds functionality not available in the [CodeIgniter Inflector Helper](http://codeigniter.com/user_guide/helpers/inflector_helper.html).
+This helper adds functionality not available in the [CodeIgniter Inflector Helper](http://ellislab.com/codeigniter/user-guide/helpers/inflector_helper.html).
 
 ## Functions
 

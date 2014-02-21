@@ -37,7 +37,7 @@ Optionally, you can have PyroCMS load environment-specific
 configuration files. This may be useful for managing things like
 differing API keys across multiple environments. This is described in
 more detail in the environment section of the [CodeIgniter Config
-Class](http://codeigniter.com/user_guide/libraries/config.html#environments) documentation.
+Class](http://ellislab.com/codeigniter/user-guide/libraries/config.html#environments) documentation.
 
 ## Setting $\_SERVER['PYRO\_ENV']
 

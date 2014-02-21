@@ -1,6 +1,6 @@
 # URL Helper
 
-This helper adds functionality not available in the [CodeIgniter URL Helper](http://codeigniter.com/user_guide/helpers/url_helper.html).
+This helper adds functionality not available in the [CodeIgniter URL Helper](http://ellislab.com/codeigniter/user-guide/helpers/url_helper.html).
 
 ## Functions
 

@@ -351,7 +351,7 @@ For this reason, you need to go into the page that you have streams pagination o
   
 ## Controlling the Pagination Markup
  
-<p>You can control the markup of the pagination with the following parameters. These are taken directly from the CodeIgniter <a href="http://codeigniter.com/user_guide/libraries/pagination.html">pagination markup parameters</a>.</p>
+<p>You can control the markup of the pagination with the following parameters. These are taken directly from the CodeIgniter <a href="http://ellislab.com/codeigniter/user-guide/libraries/pagination.html">pagination markup parameters</a>.</p>
 
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
 <thead> 

@@ -1,6 +1,6 @@
 # Encrypt Field Type
 		
-The encrypt field type stores a string as encrypted data in the database and decrypts it for output. It uses CodeIgniter's [Encryption Class](http://codeigniter.com/user_guide/libraries/encryption.html). This should not be used to store passwords.
+The encrypt field type stores a string as encrypted data in the database and decrypts it for output. It uses CodeIgniter's [Encryption Class](http://ellislab.com/codeigniter/user-guide/libraries/encryption.html). This should not be used to store passwords.
  
 ## Parameters
  

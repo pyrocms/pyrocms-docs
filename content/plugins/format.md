@@ -56,7 +56,7 @@ Returns:
 
 	{{ noparse }}{{ format:url_title string="Some Long Post Title" separator="-" lowercase="true" }}{{ /noparse }}
 	
-A shortcut to the [CodeIgniter URL Helper](http://codeigniter.com/user_guide/helpers/url_helper.html) `url_title($string, $separator, $lowercase)` function.
+A shortcut to the [CodeIgniter URL Helper](http://ellislab.com/codeigniter/user-guide/general/helpers.html) `url_title($string, $separator, $lowercase)` function.
 
 ### Attributes
 
