@@ -126,7 +126,11 @@ This function returns the table string unless **$view_override** is set to true,
 	);
 	
 	$this->streams->cp->entries_table('faqs', 'faq', 15, 'admin/faq/index', true, $extra);
+	
+It is possible to sort records dynamically wherever you use this method by appending query string to your actual URL.
 
+	?order-<stream-slug>=<field-slug>[&sort-<field_slug>=asc|desc]
+	
 <hr id="entry-form"/>
 
 ## entry\_form(<var>$stream\_slug, $namespace\_slug, $mode = 'new', $entry = null, $view\_override = false, $extra = array(), $skips = array()</var>)

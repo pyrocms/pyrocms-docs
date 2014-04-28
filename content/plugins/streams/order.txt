@@ -2,3 +2,4 @@ parameter-variables
 entry-looping
 entry-form
 caching-and-optimization
+basic-search

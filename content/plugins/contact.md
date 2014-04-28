@@ -65,7 +65,7 @@ Creates a select dropdown element. Since required is the only real validation ru
 
 If you want to specify keys, you can:
 
-	subject="dropdown|required|support=Support Request|complimet=Compliment"
+	subject="dropdown|required|support=Support Request|compliment=Compliment"
 
 ## Available Field Validation Rules
 

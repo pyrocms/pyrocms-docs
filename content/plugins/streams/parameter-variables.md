@@ -2,7 +2,7 @@
 
 <p>As a convenience feature, PyroStreams allows you to pass commonly-used variables in parameters using a special bracket syntax. For example, if you wanted to use the third URI segment in a parameter, you could use the <strong>[segment_3]</strong> plugin variable like this:</p>
 
-<pre class="prettify"><code class="language-html">{{ streams:single stream="bands" id="[segment_3]" }}</code></pre>
+<pre class="prettify"><code class="language-html">{{noparse}}{{ streams:single stream="bands" id="[segment_3]" }}{{/noparse}}</code></pre>
 
 <p>Below is a list of variables available for use:</p>
 

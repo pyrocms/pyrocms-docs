@@ -110,5 +110,4 @@ Display all blog categories available.
 	{{ blog:categories order-by=&quot;title&quot; limit=&quot;5&quot; }}
 	&lt;li&gt;&lt;a href=&quot;{{ url }}&quot; class=&quot;button {{ slug }}&quot;&gt;{{ title }}&lt;/a&gt;&lt;/li&gt;
 	{{ /blog:categories }}
-&lt;/ul&gt;
-{{ /noparse }}
+&lt;/ul&gt;{{ /noparse }}

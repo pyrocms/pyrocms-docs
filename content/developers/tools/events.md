@@ -276,6 +276,21 @@ PyroCMS includes the following event triggers:
 </tr>
 </table>
 
+### Streams Triggers
+
+These are in the streams core, so the streams module is not required to use these triggers.
+
+<table>
+<tr>
+	<td>Events::trigger('<strong>streams_post_insert_entry</strong>', $data)</td>
+	<td>Called immediately after a new entry is added. Passed an array of the following values: 'entry_id' (The ID of the newly-added entry) and 'stream' (An object of the stream we are adding an entry to).</td>
+</tr>
+<tr>
+	<td>Events::trigger('<strong>streams_post_update_entry</strong>', $data)</td>
+	<td>Called immediately after a new entry is updated. Passed an array of the following values: 'entry_id' (The ID of the newly-added entry) and 'stream' (An object of the stream we are updating an entry in).</td>
+</tr>
+</table>
+
 ### Templates Triggers
 
 <table>

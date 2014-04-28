@@ -1,6 +1,6 @@
-# Structure
+# Field Type Basics
 
-Building a field type for use with PyroStreams is simple if you are familiar with PHP. Each field type is a folder with a php file containing a class that has information about your field type as well as methods for things like the form output. This page outlines the basic structure of a field type file.
+Building a field type for use with streams is simple if you are familiar with PHP. Each field type is a folder with a php file containing a class that has information about your field type as well as methods for things like the form output. This page outlines the basic structure of a field type file.
 
 * {{ docs:id_link title="Basics" }}
 * {{ docs:id_link title="Field Parameters" }}

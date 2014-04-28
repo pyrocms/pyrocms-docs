@@ -18,4 +18,4 @@ Now you can edit that view however you like and upgrade PyroCMS knowing your cus
 
 You can still use PHP in these overloaded views. This means you can just copy whatever is there exactly and change it. In later versions we may be removing this as there is always the possibility that themes can contain malicious PHP if downloaded from a third-party site, but we will likely make this a setting.
 
-Either way, you can use {{ link uri="concepts/pyrocms-tags" title="Tag syntax" }} and this is most likely the safest, but can be more complicated for converting.
+Either way, you can use {{ link uri="guides/pyrocms-tags" title="Tag syntax" }} and this is most likely the safest, but can be more complicated for converting.

@@ -95,25 +95,23 @@ Or you can search for multiple types of entry:
 
 Create a search form with the Search plugin using double-tag syntax.
 
-	{{ noparse }}
-	{{ search:form class="search-form" }} 
-		<input name="q" placeholder="Search terms..." />
-	{{ /search:form }}{{ /noparse }}
+	{{ noparse }}{{ search:form class="search-form" }} 
+	&lt;input name="q" placeholder="Search terms..." /&gt;
+{{ /search:form }}{{ /noparse }}
 
 On the results page you can use the following syntax to loop through the entries and even display pagination:
 
-	{{ noparse }}
-	{{ search:results }}
-		{{ total }} results for "{{ query }}".
-		<hr />
-		{{ entries }}
-			<article>
-				<h4>{{ singular }}: <a href="{{ url }}">{{ title }}</a></h4>
-				<p>{{ description }}</p>
-			</article>
-		{{ /entries }}
-		{{ pagination }}
-	{{ /search:results }}{{ /noparse }}
+	{{ noparse }}{{ search:results }}
+	{{ total }} results for "{{ query }}".
+	&lt;hr /&gt;
+	{{ entries }}
+		&lt;article&gt;
+			&lt;h4&gt;{{ singular }}: &lt;a href="{{ url }}"&gt;{{ title }}&lt;/a&gt;&lt;/h4&gt;
+			&lt;p&gt;{{ description }}&lt;/p&gt;
+		&lt;/article&gt;
+	{{ /entries }}
+	{{ pagination }}
+{{ /search:results }}{{ /noparse }}
 
 The URL for this results page will most likely be:
 
@@ -121,10 +119,9 @@ The URL for this results page will most likely be:
 
 You can create links that re-use the search term and modify the filter variable to create "Filter By" links:
 
-	{{ noparse }}
-	<a href="/search/results?q={{ url:get key="q" }}&amp;filter[blog]=blog:posts">
-		Blog posts
-	</a>{{ /noparse }}
+	{{ noparse }}&lt;a href="/search/results?q={{ url:get key='q' }}&amp;filter[blog]=blog:posts"&gt;
+	Blog posts
+&lt;/a&gt;{{ /noparse }}
 
 For more on usage see the [API Documentation: Search](/2.2/api/classes/Search.html).
 

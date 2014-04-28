@@ -2,6 +2,17 @@
 
 The url plugin gives you access to URL data and logic.
 
+* {{ docs:id_link title="url:current" }}
+* {{ docs:id_link title="url:uri\_string" }}
+* {{ docs:id_link title="url:site" }}
+* {{ docs:id_link title="url:base" }}
+* {{ docs:id_link title="url:segments" }}
+* {{ docs:id_link title="url:anchor" }}
+* {{ docs:id_link title="url:redirect" }}
+
+</div>
+<div class="doc_content">
+
 ## url:current
 
 Displays the full current URL.

@@ -3,6 +3,51 @@
 </div>
 <div class="doc_content">
 
+## 2.2.3 - August 13, 2013
+
+### Improvements
+
+- Removed a flag in the WYSIWYG field type that was incompatible with php 5.3 and older
+- Fixed a migration filename that could cause the last migration to fail on some systems
+
+## 2.2.2 - August 6, 2013
+
+### Improvements
+
+- Added new Lithuanian language translations
+- Fixes a bug for `parse_param` plugin attribute being passed to tag generators (img)
+- Altered options field in the settings table to allow for larger option strings
+- Fixed CKEditor moono-dark theme width in Safari
+- fixed vertical alignment of "+" on admin shortcut buttons
+- After delete, show message in files manager on error, not just success
+- Fixing issue with editing stream relationship fields
+- Drastically improved speed on large paginated stream results.
+- Validate input type in choices field
+- Fixing name variable issue with admin user preview
+- Fixing missing recaptcha config load.
+- Don't add the js/css files for the image field type multiple times.
+- Fixes streams field.choice form dropdown value - Issue #2729
+- Adding parent class to the navigation plugin.
+- Added 'filesize' to File Field Type
+- Adding alternator to list of allowed functions
+- Updated spanish translations, translated remain items
+- Treat 0 or '0' as nonempty values in Lex
+- Allow get_stream_fields to prefix the field slugs.
+- Update filters partial for Blog admin
+- Fixing Overzealous Caching in the Pages module
+- When saving keywords, delete existing applied keywords first
+- Adding query caching for streams row model.
+- Changing the way theme details classes are spawned
+- Add indexes for quick DB queries
+- Fixes html entities when validation fails. Fixes #2614, #2476, #2787
+- Fixes #2741, First Name and Last Name are now undeletable.
+- Fixes #2787. WYSIWYG would strip characters when decoding on some systems
+- Add ob_end_clean to a few places that need it in order for the admin to work correctly when gzip is enabled
+- RSS feeds were being double parsed. This was forcing the <?xml declarations to get escaped funny, and provided no obvious benefit.
+- Try to set the mysql charset *before* mysql_real_escape_string is used
+- Fixes #2548. Page type creation failed if title field was chinese characters
+- Fixing issue with date verification and drop downs.
+
 ## 2.2.1 - April 24, 2013
 
 ### Features

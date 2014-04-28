@@ -4,7 +4,7 @@
 
 The goal of PyroStreams is to be as transparent a layer as possible between a database schema and an abstraction to pull data from it. Obviously, it's good to optimize database interactions as much as possible for performance, and PyroStreams gives you a few tools to allow you to keep your database queries low.
 
-h2. Disabling Fields
+## Disabling Fields
 
 You can disable any fields you'd like in stream functions using the <strong>disable</strong> parameter. This essentially tells PyroStreams to bypass the row formatting, which allows you to minimize resource use.
 
@@ -48,7 +48,7 @@ There are three parameters available to the functions that support caching withi
 	<tr>
 		<td>cache_time_format</td>
 		<td>minutes</td>
-		<td>When you set the cache time number with the <var>cache</var> parameter, you are setting it in minutes by defualt. However, you can choose to set the cache time in seconds if you'd like by setting this parameter to "seconds".</td>
+		<td>When you set the cache time number with the <var>cache</var> parameter, you are setting it in minutes by default. However, you can choose to set the cache time in seconds if you'd like by setting this parameter to "seconds".</td>
 	</tr>
 	<tr>
 		<td>cache_type</td>
