@@ -1,6 +1,6 @@
 # Methods
 
-The following methods can be placed in your field type file and will be run by PyroStreams at various times. The only truly required method is **form_output**, the rest are optional.
+The following methods can be placed in your field type file and will be run by Streams at various times. The only truly required method is **form_output**, the rest are optional.
 
 * {{ docs:id_link title="Basic Data Formatting" }}
 * {{ docs:id_link title="Alternative Formatting" }}
@@ -8,7 +8,7 @@ The following methods can be placed in your field type file and will be run by P
 
 ## Basic Data Formatting
  
-The following functions are available for data formatting and saving and make up the core of what you can do with PyroStreams field types.
+The following functions are available for data formatting and saving and make up the core of what you can do with Streams field types.
 
 ### form\_output<span>($data, $entry\_id, $field)</span>
  

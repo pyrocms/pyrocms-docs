@@ -1,6 +1,6 @@
 # Entry Form
 
-<p>PyroStreams gives you tools to allow for modification of data through PyroCMS page templates, so you can build data interactions without having to give users access to your control panel.</p>
+<p>Streams gives you tools to allow for modification of data through PyroCMS page templates, so you can build data interactions without having to give users access to your control panel.</p>
 	
 * {{ docs:id_link title="The Entry Form" }}
 * {{ docs:id_link title="Form Parameters" }}
@@ -15,7 +15,7 @@
 
 ## The Entry Form
  
-<p>PyroStreams allows you to display a create or edit form using the PyroCMS tag system. Forms are generated using the following format:</p>
+<p>Streams allows you to display a create or edit form using the PyroCMS tag system. Forms are generated using the following format:</p>
 
 	{{ noparse }}{{ streams:form stream="concerts" mode="new" }}
 
@@ -302,7 +302,7 @@ Many PyroCMS themes have built-in displays for flash data (that is, data that is
 
 ## Using reCAPTCHA
 
-reCAPTCHA is a simple and high quality CAPTCHA tool, and PyroStreams makes it easy to implement. To start, get your public and private keys from <a href="http://www.google.com/recaptcha">reCAPTCHA</a>. Then, add those keys into the reCAPTCHA config file, located in <strong>streams/config/recaptcha.php</strong>.
+reCAPTCHA is a simple and high quality CAPTCHA tool, and Streams makes it easy to implement. To start, get your public and private keys from <a href="http://www.google.com/recaptcha">reCAPTCHA</a>. Then, add those keys into the reCAPTCHA config file, located in <strong>streams/config/recaptcha.php</strong>.
 
 After that, all you need to do is add <strong>use_recaptcha="yes"</strong> in your form tag, and add the following tags:
 
@@ -368,7 +368,7 @@ Once you've created your template, you can add the necessary variables to the fo
 </tr> 
 <tr> 
 	<td>notify_from_{ID}</td> 
-	<td>Optional custom from email. This can be a single email address or an email address and name separated by a pipe (|) character. If no value is provided, PyroStreams will use your admin email and site name as the from value.</td> 
+	<td>Optional custom from email. This can be a single email address or an email address and name separated by a pipe (|) character. If no value is provided, Streams will use your admin email and site name as the from value.</td> 
 </tr> 
 </table>
 

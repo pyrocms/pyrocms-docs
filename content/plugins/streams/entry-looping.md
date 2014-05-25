@@ -18,7 +18,7 @@ One of the most fundamental functions of streams is displaying the entries that 
 
 ## The Loop Cycle
 
-The most basic and common way of interacting with PyroStreams data is looping through it using the <em>cycle</em> plugin function. Here's a very simple example where we display five entries from a stream called "bands":
+The most basic and common way of interacting with Streams data is looping through it using the <em>cycle</em> plugin function. Here's a very simple example where we display five entries from a stream called "bands":
  
 	{{ noparse }}{{ streams:cycle stream="bands" limit="5" }}
 
@@ -257,7 +257,7 @@ If you need to restrict your results, a handy way to do that is with the where p
 
 ## Restrict by User
 
-<p>PyroStreams gives you the option of restricting a to a specific user. Each stream automatically tracks which user created an entry using the <strong>created_by</strong> field that is automatically added. Turning on user restricting means that only the entries created by the specified user will be returned.</p>
+<p>Streams gives you the option of restricting a to a specific user. Each stream automatically tracks which user created an entry using the <strong>created_by</strong> field that is automatically added. Turning on user restricting means that only the entries created by the specified user will be returned.</p>
 
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
  <thead> 
@@ -303,7 +303,7 @@ If you need to restrict your results, a handy way to do that is with the where p
 
 ## Pagination
  
-<p>Very often you'll want to paginate large data sets. PyroStreams allows you to do this quickly and easily. The following parameters are used in the <strong>cycle</strong> function for creating pagination.</p> 
+<p>Very often you'll want to paginate large data sets. Streams allows you to do this quickly and easily. The following parameters are used in the <strong>cycle</strong> function for creating pagination.</p> 
  
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
 	<thead> 
@@ -485,7 +485,7 @@ For example if you wanted to display blog posts using the streams plugin (althou
 
 Sometimes you don't want to show all of your stream entry results at the same time. The most common use case for this is separating results into equal columns.
 
-PyroStreams has a built-in feature to take care of this, and can be called using the <strong>partial</strong> parameter. The <strong>partial</strong> parameter will take input like this:
+Streams has a built-in feature to take care of this, and can be called using the <strong>partial</strong> parameter. The <strong>partial</strong> parameter will take input like this:
 
     partial="1of3"
 

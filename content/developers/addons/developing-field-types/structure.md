@@ -65,14 +65,14 @@ To get started, create a folder and a file with your chosen slug. For this examp
   </tr> 
   <tr> 
    <td>db\_col\_type </td> 
-   <td>Type of MySQL column that PyroStreams should create to store the data for this field. Any type can be used, but the most common are varchar, text, and int.</td> 
+   <td>Type of MySQL column that Streams should create to store the data for this field. Any type can be used, but the most common are varchar, text, and int.</td> 
   </tr> 
 </tbody> 
 </table> 
  
 <p>Aside from the class variables, one method is necessary &ndash; <strong>form_output</strong>. This method is called when building the form and allows you to include logic and customized input for your fields. In this case, we are just returning a basic input. You can find more about this method on the {{ link title="Methods" uri="developers/addons/developing-field-types/methods" }} page.</p> 
  
-<p class="note">PyroStreams uses <a href="http://codeigniter.com/user_guide/helpers/form_helper.html">CodeIgniter's Form Helper</a> when creating inputs, and it is available in third party field types as well.</p> 
+<p class="note">Streams uses <a href="http://codeigniter.com/user_guide/helpers/form_helper.html">CodeIgniter's Form Helper</a> when creating inputs, and it is available in third party field types as well.</p> 
 
 ### Tapping Into CodeIgniter
 
@@ -82,7 +82,7 @@ If you want to use the CodeIgniter super object in your field types, you can acc
 
 ### Optional Class Properties
 
-<p>You can also add some other class properties to change how PyroStreams interacts with the field type.</p>
+<p>You can also add some other class properties to change how Streams interacts with the field type.</p>
 
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
  <thead> 
@@ -96,7 +96,7 @@ If you want to use the CodeIgniter super object in your field types, you can acc
   <tr> 
    <td>extra_validation</td> 
    <td>string</td>
-   <td>Validation for required, unique, etc. is added automatically with PyroStreams. However, you might need to add some extra validation from time to time. You can do that by adding a class variable named extra_validation.</td> 
+   <td>Validation for required, unique, etc. is added automatically with Streams. However, you might need to add some extra validation from time to time. You can do that by adding a class variable named extra_validation.</td> 
   </tr> 
   <tr> 
    <td>input_is_file </td>
@@ -106,7 +106,7 @@ If you want to use the CodeIgniter super object in your field types, you can acc
   <tr>
   	<td>alt_process</td>
   	<td>bool</td>
-  	<td>Sometimes you don't want to actually have a column created for your field type (such as in the case of having a related rows table). Setting this to true will tell PyroStreams to ignore the column in the stream when it needs to because there is none.</td>
+  	<td>Sometimes you don't want to actually have a column created for your field type (such as in the case of having a related rows table). Setting this to true will tell Streams to ignore the column in the stream when it needs to because there is none.</td>
   </tr>
    <tr>
   	<td>version</td>
@@ -192,11 +192,11 @@ If you want to take it one step further, you can return an array (instead of a s
 
 ## Languages in Field Types
 
-Streams fully supports language files in field types. The canonical language for PyroStreams is English, so we'll use English in the following examples.
+Streams fully supports language files in field types. The canonical language for Streams is English, so we'll use English in the following examples.
 
 Inside your field type folder, you'll need a folder called **language**. Inside this, you can add the different language folders. In this case, English.
 
-PyroStreams will recognize and load a language file with the same slug as your field type. So if we are creating a language file for the Email field type, the structure would look like this:
+Streams will recognize and load a language file with the same slug as your field type. So if we are creating a language file for the Email field type, the structure would look like this:
 
 	email
 		- language
@@ -295,7 +295,7 @@ Remember, you can still access all the <var>$_POST</var> variables, so if you ne
 
 ## CSS/JS Files
 
-Often times you need to use additional assets in your field type. This could be a CSS file or a view. PyroStreams is set up to allow you to pull in these files without having to figure out where your field type is in the file system.
+Often times you need to use additional assets in your field type. This could be a CSS file or a view. Streams is set up to allow you to pull in these files without having to figure out where your field type is in the file system.
 
 If you need to add CSS or Javascript on the back end of PyroCMS, you can put them into a <strong>css</strong> or <strong>js</strong> folder in the field type, and add them by adding a function called <strong>event()</strong>:
 

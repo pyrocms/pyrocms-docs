@@ -1,6 +1,6 @@
 # Streams Core API
 
-Starting with PyroCMS 2.1, the core of PyroStreams is now a module in PyroCMS called Streams Core. This means that all modules in PyroCMS can now take advantage of streams functions. The Streams API has been developed as a singular way to manipulate and use streams.
+Starting with PyroCMS 2.1, the core of Streams is now a module in PyroCMS called Streams Core. This means that all modules in PyroCMS can now take advantage of streams functions. The Streams API has been developed as a singular way to manipulate and use streams.
 
 * {{ docs:id_link title="API Basics" }}
 * {{ docs:id_link title="Streams Overview" }}
@@ -46,7 +46,7 @@ In order to prevent naming conflicts between tables, streams can be namespaced a
 
 ## Prefixing
 
-In addition, you might want to also prefix you tables in some cases. The prefix is in addition to the **SITE\_REF** prefix used by PyroStreams, and helps lessen the chance of table name conflict. For instance, if you have a table named <samp>products</samp> in your module, you might want to set a prefix so the actual table that is created is named <samp>mymodule_products</samp>.
+In addition, you might want to also prefix you tables in some cases. The prefix is in addition to the **SITE\_REF** prefix used by Streams, and helps lessen the chance of table name conflict. For instance, if you have a table named <samp>products</samp> in your module, you might want to set a prefix so the actual table that is created is named <samp>mymodule_products</samp>.
 
 ## Documentation Example
 
