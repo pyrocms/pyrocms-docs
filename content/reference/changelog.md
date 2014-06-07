@@ -3,6 +3,22 @@
 </div>
 <div class="doc_content">
 
+## 2.2.5 - June 07, 2014
+
+### Security
+
+- Implemented a patch made to CodeIgniter, to solve a [reported vulnerability](http://www.dionach.com/blog/codeigniter-session-decoding-vulnerability). **The [mcrypt extension](http://php.net/mcrypt) is now required.**
+
+### Features
+
+- Merged [#3275](https://github.com/pyrocms/pyrocms/pull/3275): Added option to turn Accept-language on/off
+
+### Improvements
+
+- Fixes [#2921](https://github.com/pyrocms/pyrocms/issues/2921): fix error in admin nav controller when trying to flush buffer when there was none
+- Fixes [#3193](https://github.com/pyrocms/pyrocms/issues/3193): Lang keys were not changed in DB
+- Fixes [#3288](https://github.com/pyrocms/pyrocms/issues/3288): Multiselect fix for multiple permissions
+
 ## 2.2.4 - April 28, 2014
 
 ### Improvements
