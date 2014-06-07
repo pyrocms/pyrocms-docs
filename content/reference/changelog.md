@@ -3,6 +3,49 @@
 </div>
 <div class="doc_content">
 
+## 2.2.5 - June 07, 2014
+
+### Security
+
+- Implemented a patch made to CodeIgniter, to solve a [reported vulnerability](http://www.dionach.com/blog/codeigniter-session-decoding-vulnerability). **The [mcrypt extension](http://php.net/mcrypt) is now required.**
+
+### Features
+
+- Merged [#3275](https://github.com/pyrocms/pyrocms/pull/3275): Added option to turn Accept-language on/off
+
+### Improvements
+
+- Fixes [#2921](https://github.com/pyrocms/pyrocms/issues/2921): fix error in admin nav controller when trying to flush buffer when there was none
+- Fixes [#3193](https://github.com/pyrocms/pyrocms/issues/3193): Lang keys were not changed in DB
+- Fixes [#3288](https://github.com/pyrocms/pyrocms/issues/3288): Multiselect fix for multiple permissions
+
+## 2.2.4 - April 28, 2014
+
+### Improvements
+
+- Fixed [#2846](https://github.com/pyrocms/pyrocms/issues/2846): Config class does not overload the core - Config class
+- Fixed [#2857](https://github.com/pyrocms/pyrocms/issues/2857): Child pages with duplicate slugs now handled..
+- Fixed [#2921](https://github.com/pyrocms/pyrocms/issues/2921) & [#2964](https://github.com/pyrocms/pyrocms/issues/2964): Error in navigation with ob_clean. 
+- Fixed [#2961](https://github.com/pyrocms/pyrocms/issues/2961): Changed uninitialized var time to - thumb_modified
+- Fixed [#2974](https://github.com/pyrocms/pyrocms/issues/2974): Wrong notification on permissions page
+- Fixed [#3084](https://github.com/pyrocms/pyrocms/issues/3084): Cannot use a stdObject as an array
+- Fixed [#3115](https://github.com/pyrocms/pyrocms/issues/3115): Fix for breadcrumb logic loading and - 'executing' all the parent pages
+- Fixed [#3118](https://github.com/pyrocms/pyrocms/issues/3118): Removed two erroneous assignments by reference
+- Fixed [#3276](https://github.com/pyrocms/pyrocms/issues/3276): Automatically sets encryption keys for on - install so users don't need to
+- Add a link to MaxCDNs PyroCMS Partnership Page. 
+- Fixed: Added check to see if an admin user is attempting to search via ajax in the control panel.
+- Fix double home page bug
+- Fix for pages:url plugin loading and 'executing' the page it links to
+- Updated Brazilian and Swedish translations
+- Check if file ID exists before inserting into DB
+
+### Security
+
+- Fixed [#3278](https://github.com/pyrocms/pyrocms/issues/3278): SQL Injection in CodeIgniter used by PyroCMS
+- Limit the scope of plugin data
+- Clean form inputs if they fail validation
+- Escape Lex tags in user settings
+
 ## 2.2.3 - August 13, 2013
 
 ### Improvements
