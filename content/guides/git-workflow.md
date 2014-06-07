@@ -23,9 +23,9 @@ To be able to pull in changes from the PyroCMS repo, you can add it as a remote 
 
     git remote add upstream git://github.com/pyrocms/pyrocms.git
 
-That's it! You now have your own repository on your account and on your local environment that has PyroCMS as a remote. To pull down changes from PyroCMS, simply run this command, where <samp>2.2/develop</samp> is the PyroCMS branch you want to use:
+That's it! You now have your own repository on your account and on your local environment that has PyroCMS as a remote. To pull down changes from PyroCMS, simply run this command, where <samp>2.3/develop</samp> is the PyroCMS branch you want to use:
 
-    git pull upstream 2.2/develop
+    git pull upstream 2.3/develop
 
 You can use git as you would in any other repo, so you can even create a different branch for your site:
 
