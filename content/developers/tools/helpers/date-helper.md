@@ -1,6 +1,6 @@
 # Date Helper
 
-This helper adds functionality not available in the [CodeIgniter Date Helper](http://codeigniter.com/user_guide/helpers/date_helper.html).
+This helper adds functionality not available in the [CodeIgniter Date Helper](http://ellislab.com/codeigniter/user-guide/helpers/date_helper.html).
 
 ## Functions
 

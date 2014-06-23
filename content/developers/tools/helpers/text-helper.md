@@ -1,6 +1,6 @@
 # Text Helper
 
-This helper adds functionality not available in the [CodeIgniter Text Helper](http://codeigniter.com/user_guide/helpers/text_helper.html).
+This helper adds functionality not available in the [CodeIgniter Text Helper](http://ellislab.com/codeigniter/user-guide/helpers/text_helper.html).
 
 ## Functions
 

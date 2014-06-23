@@ -1,6 +1,6 @@
 # Array Helper
 
-This helper adds functionality not available in the [CodeIgniter Array Helper](http://codeigniter.com/user_guide/helpers/array_helper.html).
+This helper adds functionality not available in the [CodeIgniter Array Helper](http://ellislab.com/codeigniter/user-guide/helpers/array_helper.html).
 
 ## Functions
 

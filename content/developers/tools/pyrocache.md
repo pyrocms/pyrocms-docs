@@ -1,6 +1,6 @@
 # PyroCache
 
-PyroCMS takes Caching very seriously as it can make a massive difference between a quick site and something that takes so long to load people give up. We use the library PyroCache (renamed recently to avoid conflicting with the <a href="http://codeigniter.com/user_guide/libraries/caching.html" target="_blank">Cache class</a> added in CodeIgniter Reactor). The benefit of using PyroCache over the built in Cache class is that it had simple model and library call modes.
+PyroCMS takes Caching very seriously as it can make a massive difference between a quick site and something that takes so long to load people give up. We use the library PyroCache (renamed recently to avoid conflicting with the <a href="http://ellislab.com/codeigniter/user-guide/libraries/caching.html" target="_blank">Cache class</a> added in CodeIgniter Reactor). The benefit of using PyroCache over the built in Cache class is that it had simple model and library call modes.
 
 No idea what that means? Have a look at this example. Here is an uncached module call:
 

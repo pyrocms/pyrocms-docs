@@ -238,7 +238,7 @@ Standard field type validation is added as a class variable named **extra_valida
  
     public $extra_validation = 'numeric|integer'; 
  
-Any of [CodeIgniter's Form Validation](http://codeigniter.com/user_guide/libraries/form_validation.html) rules can be used here, separated by a pipe character.
+Any of [CodeIgniter's Form Validation](http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html) rules can be used here, separated by a pipe character.
 
 ### Custom Field Type Validation
 

@@ -147,7 +147,7 @@ Here is a full list of parameters and what they do:
 
 ### $pagination_config
 
-Streams uses identical pagination config to the [CodeIgniter pagination parameters](http://codeigniter.com/user_guide/libraries/pagination.html). You usually won't need to touch these if you are displaying your pagination in the control panel.
+Streams uses identical pagination config to the [CodeIgniter pagination parameters](http://ellislab.com/codeigniter/user-guide/libraries/pagination.html). You usually won't need to touch these if you are displaying your pagination in the control panel.
 
 ### Return Format
 
