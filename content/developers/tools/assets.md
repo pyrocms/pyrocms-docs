@@ -12,7 +12,7 @@ Asset management is handled by a PHP library called Asset written by Antony Male
 Basic usage
 -----------
 
-JS and CSS files are handled the same way, so we'll just consider JS. Just substitude 'js' with 'css' for css-related functions.
+JS and CSS files are handled the same way, so we'll just consider JS. Just substitute 'js' with 'css' for css-related functions.
 
 Javascript files can be added using the following, where **myfile.js** and **myfile2.js** are the javascript files you want to include,
 and are located at **assets/js/myfile.js** and **assets/js/myfile2.js** (configurable).
