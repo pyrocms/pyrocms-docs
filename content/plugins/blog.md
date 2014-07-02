@@ -39,6 +39,29 @@ In addition the following extra parameters are available:
 			<td>
 				Display posts from this category only.</td>
 		</tr>
+		
+		
+				<tr>
+			<td width="100">
+				keyword</td>
+			<td width="100">
+				Any Keyword</td>
+			<td width="100">
+				No</td>
+			<td>
+				Filters posts to show only this keyword.</td>
+		</tr>
+		
+		
+		<tr>
+			<td width="100">
+				additonal filtering</td>
+			<td colspan="3">
+		Everything in {{ link title="streams cycle" uri="plugins/streams/entry-looping#parameter-reference" }} except for <samp>stream</samp>, <samp>namespace</samp>, and <samp>where</samp>	
+				</td>
+		</tr>
+		
+		
 	</tbody>
 </table>
 
