@@ -123,10 +123,10 @@ You can create links that re-use the search term and modify the filter variable 
 	Blog posts
 &lt;/a&gt;{{ /noparse }}
 
-For more on usage see the [API Documentation: Search](/2.2/api/classes/Search.html).
+For more on usage see the [API Documentation: Search](/2.3/api/classes/Search.html).
 
-  [searchindex]: /2.2/api/classes/Search_index_m.html
-  [search-method]: /2.2/api/classes/Search_index_m.html#search
-  [filter-method]: /2.2/api/classes/Search_index_m.html#filter
-  [index-method]: /2.2/api/classes/Search_index_m.html#index
-  [keywords]: /2.2/manual/index.php/developers/tools/keywords
+  [searchindex]: /2.3/api/classes/Search_index_m.html
+  [search-method]: /2.3/api/classes/Search_index_m.html#search
+  [filter-method]: /2.3/api/classes/Search_index_m.html#filter
+  [index-method]: /2.3/api/classes/Search_index_m.html#index
+  [keywords]: /2.3/manual/index.php/developers/tools/keywords
