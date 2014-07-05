@@ -8,7 +8,7 @@ First of all, you might be wondering what is so great about developing for PyroC
 
 PyroCMS...
 
-* is built on CodeIgniter 
+* is built on CodeIgniter and uses Laravel packages
 * is built with logically structured, clean code
 * provides structures for your add-ons (modules, widgets, and plugins) 
 * provides tools to speed up development (PyroCache, Events, Permissions)
@@ -20,6 +20,10 @@ Whether you want to create modules for your own projects, or create things the P
 ## CodeIgniter
 
 To be effective at developing with PyroCMS, you should have a working knowledge of CodeIgniter, which is the PHP framework that PyroCMS is built on. Luckily, CodeIgniter is straightforward and not difficult to pick up. You can download CodeIgniter and read the documentation at <a href="http://codeigniter.com">codeigniter.com</a>.
+
+## Laravel / Packages
+
+PyroCMS uses Eloquent and the Caching library from Laravel. While not required it is very helpful to have a working knowledge of how Laravel and it's components work. You can learn about Laravel and it's components at <a href="http://laravel.com">laravel.com</a>.
 
 ## Getting Started
 

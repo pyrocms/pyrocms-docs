@@ -1,6 +1,6 @@
 # Field Type Basics
 
-Building a field type for use with streams is simple if you are familiar with PHP. Each field type is a folder with a php file containing a class that has information about your field type as well as methods for things like the form output. This page outlines the basic structure of a field type file.
+Building a field type for use with streams is simple if you are familiar with PHP and PSR-0 autoloading. Each field type is a folder with a php file containing a class that has information about your field type as well as methods for things like the form output. This page outlines the basic structure of a field type file.
 
 * {{ docs:id_link title="Basics" }}
 * {{ docs:id_link title="Field Parameters" }}
@@ -16,38 +16,40 @@ Building a field type for use with streams is simple if you are familiar with PH
 
 ## Basics
 
-To get started, create a folder and a file with your chosen slug. For this example, we are going to use the Email field type, which has a slug called "email". Create a file with the prefix "field", then the slug, then the .php extension.
+To get started, create a folder and PSR-0 autoloaded class with your chosen slug. For this example, we are going to use the Email field type, which has a slug called "email".
  
-	email/field.email.php
+	email/src/Pyro/FieldType/Email.php
  
 <p>You can put this file in  <strong>addons/shared\_addons/field\_types</strong> or <strong>addons/[site-slug]/field\_types</strong> and streams will recognize and use it automatically.</p> 
  
 <p>Each field type has a basic structure with data that needs to be there for it work correctly. Here is an example of a very basic field type:</p> 
- 
-    class Field_email 
+
+    <?php namespace Pyro\FieldType;
+
+    use Pyro\Module\Streams\FieldType\FieldTypeAbstract;
+
+    class Email extends FieldTypeAbstract
     {
-     public $field_type_slug = 'email';
+        public $field_type_slug				= 'email';
 
-     public $db_col_type = 'varchar';
+        public $db_col_type					= 'string';
 
-     /**
-      * Output form input
-      *
-      * @access public
-      * @param array
-      * @return string
-      */
-     public function form_output($data)
-     {
-        $options['name']   = $data['form_slug'];
-        $options['id']   = $data['form_slug'];
-        $options['value']  = $data['value'];
+        /**
+        * Output form input
+        *
+        * @return string
+        */
+        public function formInput()
+        {
+            $options['name'] 	= $this->getFormSlug();
+            $options['id']		= $this->getFormSlug();
+            $options['value']	= $this->value;
 
-        return form_input($options);
-     }
+            return form_input($options);
+        }
     }
- 
-<p>As you can see, we have a class name of <strong>Field_yourslug</strong>. Inside we have some basic class variables:</p> 
+
+<p>As you can see, we have a class name of <strong>Yourslug</strong>. Inside we have some basic class variables:</p>
  
 <table cellpadding="0" cellspacing="0" class="docs_table"> 
  <thead> 
@@ -70,7 +72,7 @@ To get started, create a folder and a file with your chosen slug. For this examp
 </tbody> 
 </table> 
  
-<p>Aside from the class variables, one method is necessary &ndash; <strong>form_output</strong>. This method is called when building the form and allows you to include logic and customized input for your fields. In this case, we are just returning a basic input. You can find more about this method on the {{ link title="Methods" uri="developers/addons/developing-field-types/methods" }} page.</p> 
+<p>Aside from the class variables, one method is necessary &ndash; <strong>formInput</strong>. This method is called when building the form and allows you to include logic and customized input for your fields. In this case, we are just returning a basic input. You can find more about this method on the {{ link title="Methods" uri="developers/addons/developing-field-types/methods" }} page.</p>
  
 <p class="note">Streams uses <a href="http://codeigniter.com/user_guide/helpers/form_helper.html">CodeIgniter's Form Helper</a> when creating inputs, and it is available in third party field types as well.</p> 
 
@@ -171,7 +173,7 @@ So if you have a parameter default_setting for your Setting field type, your lan
  
 <p>To specify an input, create a method in your field class with the prefix <strong>param_</strong></p> 
  
-	public function param_my_custom_one($value)
+	public function paramMyCustomOne()
 	{
 	  // Return the form input
 	}
@@ -182,11 +184,11 @@ So if you have a parameter default_setting for your Setting field type, your lan
 
 If you want to take it one step further, you can return an array (instead of a string) of the input and the instructions for that input:
 
-    public function param_choice_data($value = null)
+    public function paramChoiceData()
     {
       return array(
-          'input'     => form_textarea('choice_data', $value),
-          'instructions'  => $this->CI->lang->line('streams.choice.instructions')
+          'input'        => form_textarea('choice_data', $value),
+          'instructions' => $this->CI->lang->line('streams.choice.instructions')
         );
     }
 
@@ -271,19 +273,19 @@ Sometimes, the standard validation rules aren't enough for your input, and you n
 
 If the data fails validation, you can return an error string. A return of **null** or **true** indicates that your validation has passed the test. Here's a simple example: 
 
-    public function validate($value, $mode, $field)
+    public function validate()
     {
-        if ($value != 'the value we want')
+        if ($this->value != 'the value we want')
         {
-            return 'The '.$field->field_name.' field needs to be the value we want!';
+            return 'The '.$this->field->field_name.' field needs to be the value we want!';
         }
 
         return true;
     }
 
-Remember, you can still access all the <var>$_POST</var> variables, so if you need to grab the row ID, you can use the **row\_edit\_id** from the phone data.
+Remember, you can still access all the <var>$_POST</var> variables. If you need the entry ID simply access the entry object.
 
-    $this->CI->input->post('row_edit_id');
+    $this->entry->getKey(); // Returns the ID or null
  
 ## Working With File Uploads
 
@@ -301,8 +303,8 @@ If you need to add CSS or Javascript on the back end of PyroCMS, you can put the
 
     public function event()
     {
-        $this->CI->type->add_css('email', 'example.css'));
-        $this->CI->type->add_js('email', 'example.js'));
+        $this->css('example.css', 'email'));
+        $this->js('example.js', 'email'));
     }
 
 The above code will add the _example.css_ and _example.js_ files to the admin area from the email field type.
@@ -311,21 +313,21 @@ The above code will add the _example.css_ and _example.js_ files to the admin ar
 
 If you'd like to load a view file from your field type, create a <strong>views</strong> folder in your field type folder and place your view file in there. You can call your view file like this:
 
-    $this->CI->type->load_view('field_type_slug', 'view_file', $data, true);
+    $this->view('view_file', $data, $field_type_slug);
 
-After the first parameter, which should be the field type slug, the next three parameters are the same as CodeIgniter's `$this->load->view()` function.
+The first two parameters are the same as CodeIgniter's `$this->load->view()` function. The third parameter is the field\_type\_slug of the field type the view belongs to if different than current field type.
 
 ## Field AJAX Functions
 
-If you need to have your field type access an ajax function, you can create a function in your field type prefixed with <strong>ajax_</strong>.
+If you need to have your field type access an ajax function, you can create a function in your field type prefixed with <strong>ajax</strong>.
 
-    public function ajax_myfunction()
+    public function ajaxMyFunction()
     {
         // AJAX functionality here.
     }
 
 You can then access that function via the following URL:
     
-    http://example.com/streams_core/public_ajax/field/[field_type_slug]/myfunction
+    http://example.com/streams_core/public_ajax/field/[field_type_slug]/my_function
 
 Remember, this function is publicly accessible, so if you need data checks you need to do those yourself. (Ex: checking for a logged in user). The reason these ajax functions are kept public since we can't anticipate where the entry form using the field type will be used. It could be public or private.
