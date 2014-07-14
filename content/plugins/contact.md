@@ -372,6 +372,17 @@ The following attributes can be used to customize your form. None of these attri
 				in the auto-reply template as in the regular contact template. This is useful if you want to send the user an email message along the lines of "thank for you filling out this form". Make sure to include an input called 'email' - this is where the email will be sent.
 			</td>
 		</tr>
+		<tr>
+			<td width="100">
+				action
+			</td>
+			<td width="100">
+				Current url
+			</td>
+			<td>
+				"different/url" Default is current_url(). This can be used to place a contact form in the footer (for example) and have it send via the regular contact page. Errors will then be displayed on the regular contact page.
+			</td>
+		</tr>
     </tbody>
 </table>
 
