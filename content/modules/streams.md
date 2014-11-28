@@ -14,7 +14,7 @@ In Streams, each "list" of data is known as a "stream". So, a list of bands woul
 
 ## Where to Get Streams
 
-The Streams module is part of [PyroCMS Pro](https://www.pyrocms.com/store/details/pyrocms_professional) and is also available as a [standalone module](https://www.pyrocms.com/store/details/pyrostreams). Streams Core and the Streams API is available in the Community version of PyroCMS. For a primer on the different parts of streams, see the {{ link title="streams concept page" uri="concepts/streams" }}.
+The Streams module is part of [PyroCMS Pro](https://www.pyrocms.com/store/details/pyrocms_professional) and is also available as a [standalone module](https://www.pyrocms.com/store/details/pyrostreams). Streams Core and the Streams API is available in the Community version of PyroCMS. For a primer on the different parts of streams, see the {{ link title="streams concept page" uri="guides/streams" }}.
 
 ## Creating a Stream
 
