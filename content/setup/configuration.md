@@ -19,7 +19,7 @@ When PyroCMS is in maintenance mode (see [Laravel Configuration](http://laravel.
 
 ### Maintenance Mode Response Views
 
-To overload the views for maintenance mode and other status codes create a view in your theme's `views/override`:
+To override the views for maintenance mode and other status codes create a view in your theme's `views/override`:
 
 	example-theme/resources/views/override/streams/errors/503.twig
 
