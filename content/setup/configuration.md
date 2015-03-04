@@ -9,7 +9,7 @@
 
 ## Introduction
 
-All of the configuration files for PyroCMS are stored in the config directory. Many of the options use the `.env` file that was generated during installation in PyroCMS's root directory.
+All of the configuration files for PyroCMS are stored in the config directory. Many of the options use or can use the `.env` file that was generated during installation in PyroCMS's root directory.
 
 <div class="note"><strong>Note: </strong> Some of the file based configuration is configurable through and then overridden by the Settings or Preferences modules where applicable.</div>
 
