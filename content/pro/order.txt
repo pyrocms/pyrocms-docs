@@ -1,3 +1,0 @@
-pyrocms-pro-license
-multi-site-manager
-pyrostreams | Streams

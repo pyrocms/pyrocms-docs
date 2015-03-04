@@ -15,7 +15,7 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: #222222;
 }
 
 body {
@@ -47,7 +47,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #cccccc;
     margin: 1em 0;
     padding: 0;
 }
@@ -84,8 +84,8 @@ textarea {
 
 .chromeframe {
     margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
+    background: #cccccc;
+    color: #000000;
     padding: 0.2em 0;
 }
 
@@ -93,42 +93,60 @@ textarea {
    PyroCMS Docs custom styles
    ========================================================================== */
 
-
 body {
-    background: #F7F7F7;
-   font-family: 'Helvetica', Arial, sans-serif;
-   padding: 0!important;
-    text-shadow: 1px 1px 1px #fff!important;
+    padding: 0 !important;
+    font-family: 'Helvetica', Arial, sans-serif;
+    text-shadow: 1px 1px 1px #ffffff !important;
 }
+
 p, ul li, ol li {
-    font-size: 13px;
-    color: #3B3B3B;
+    font-size: 15px;
+    color: #525252;
+}
+
+h1, h2, h3, h4 {
+    color: #545454;
+}
+
+h1 em, h2 em, h3 em, h4 em {
+    display: block;
+    color: #747474;
+    font-size: 15px;
+}
+
+h1 a, h2 a, h3 a, h4 a {
+    color: #545454;
 }
 
 .tip {
     font-size: 13px;
-    color: #3B3B3B;
+    color: #3b3b3b;
     font-style: italic;
     margin-bottom: 15px;
 }
 
+#main_header h3 img {
+    height: 70px;
+}
+
 #container,
 #header_inner {
-    width: 860px;
-    margin: 0 auto 20px auto!important;
+    width: 1140px;
+    margin: 0 auto 20px auto !important;
 }
 
 a {
-    color: #5088fb;
+    color: #ee3240;
     text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
 }
 
 #header {
-    background: #fff;
-    padding: 20px 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f2f1;
+}
+
+#header h1 {
+    font-weight: lighter;
 }
 
 #box {
@@ -136,22 +154,26 @@ a:hover {
 }
 
 #box h1 {
-    font-size: 25px;
+    font-size: 38px;
 }
+
 #box h2 {
-    font-size: 18px;
-    color: #3B3B3B;
-    border-bottom: 1px solid #E4EAF0;
+    font-size: 32px;
+    font-weight: 300;
+    margin-top: 40px;
 }
+
 #box h3 {
-    font-size: 16px;
     color: #545454;
+    font-size: 24px;
+    margin-top: 40px;
 }
 
 #box h4 {
     font-size: 13px;
     color: #4b4b4b;
 }
+
 #menu {
     float: left;
     width: 180px;
@@ -165,15 +187,16 @@ a:hover {
     padding-left: 10px;
     width: 180px;
     margin-bottom: 2px;
-    margin-top: 0!important;
+    margin-top: 0 !important;
 }
 
 #menu a {
     text-decoration: none;
-    color: #9CAAB5;
+    color: #999999;
 }
+
 #menu a:hover {
-    color: #5088fb;
+    color: #555555;
 }
 
 .depth_1 li {
@@ -194,37 +217,37 @@ a:hover {
     display: block;
 }
 
-.doc_content {
-    padding: 18px 26px 20px 26px;
-    border-top: 1px dashed #ccc;
-    background: #FCFCFC;
-}
-
 #content {
     float: right;
-    border: 1px solid #ccc;
     border-radius: 4px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2)!important;
-    width: 650px;
+    width: 940px;
     margin-right: 10px;
     margin-top: 5px;
     display: block;
-    height: 100%!important;
+    height: 100% !important;
 }
+
 #content img {
     max-width: 100%;
 }
 
 .note {
-    padding: 5px 20px;
-    border-left: 2px solid #DEDBAF;
-    margin-bottom: 10px;
-    background: #F5F4EB;
+    color: #ffffff;
+    text-shadow: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: 10px 0 20px;
+    background: #ea404d;
+    font-weight: lighter;
 }
-.note p {
-    font-style: italic;
-    text-shadow: 1px 1px 1px #FFFDF2;
-    color: #2B2915;
+
+.note a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.note strong {
+    color: #ff8d9a;
 }
 
 .doc_image {
@@ -234,22 +257,24 @@ a:hover {
 }
 
 samp {
-    background: #F5EBEF;
+    background: #f5ebef;
     text-shadow: none;
     padding: 2px 4px;
 }
+
 dfn {
-    background: #E8E8E8;
+    background: #e8e8e8;
     text-shadow: none;
     padding: 2px 4px;
 }
+
 var {
-    background: #ECF5D7;
+    background: #ecf5d7;
     text-shadow: none;
     padding: 2px 4px;
     font-family: monospace, serif;
     font-style: normal;
-    color: #77825B;
+    color: #77825b;
 }
 
 table {
@@ -257,46 +282,57 @@ table {
     text-align: left;
     width: 100%;
 }
+
 table td, table th {
     padding: 5px;
 }
+
 table th {
-    background: #666;
-    color: #fff;
+    background: #666666;
+    color: #ffffff;
     text-shadow: none;
-    font-weight: bold!important;
+    font-weight: bold !important;
 }
+
 table td {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #cccccc;
 }
 
 .breadcrumbs {
     padding: 1px 10px;
     font-size: 12px;
-    color: #9CAAB5;
+    color: #9caab5;
     font-family: "Helvetica", Arial, sans-serif;
 }
+
 .breadcrumbs a {
     text-decoration: none;
-    color: #9CAAB5;
+    color: #9caab5;
 }
+
 .breadcrumbs strong {
-    color: #9CAAB5;
+    color: #9caab5;
+}
+
+#footer {
+    margin-top: 50px;
 }
 
 #footer p {
     text-align: center;
     font-size: 11px;
-    color: #888;
+    color: #888888;
     margin-bottom: 60px;
 }
+
 #footer p a {
-    color: #888;
+    color: #888888;
 }
 
 #header_inner h3 {
     margin-left: 10px;
 }
+
 code {
     font-size: 11px;
     text-shadow: none;
@@ -403,7 +439,7 @@ code {
     *zoom: 1;
 }
 
-h1 a.anchor, 
+h1 a.anchor,
 h2 a.anchor,
 h3 a.anchor,
 h4 a.anchor,
@@ -411,17 +447,19 @@ h5 a.anchor,
 h6 a.anchor {
     background: url(../img/anchor.png) no-repeat left center;
     position: absolute;
-    margin-left: -22px;
+    margin-left: -32px;
     height: 18px;
-    width: 22px;
+    width: 32px;
     display: block;
     text-decoration: none;
 }
+
 h1 a.anchor {
-    margin-top: 8px; 
+    margin-top: 8px;
 }
+
 h2 a.anchor {
-    margin-top: 4px; 
+    margin-top: 4px;
 }
 
 .anchor-top {
@@ -440,8 +478,7 @@ h2 a.anchor {
     /* Style adjustments for viewports that meet the condition */
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -453,8 +490,8 @@ h2 a.anchor {
 @media print {
     * {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow:none !important;
+        color: #000000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
         text-shadow: none !important;
     }
 
@@ -474,7 +511,6 @@ h2 a.anchor {
     /*
      * Don't show links for images, or javascript/internal links
      */
-
     .ir a:after,
     a[href^="javascript:"]:after,
     a[href^="#"]:after {
@@ -483,7 +519,7 @@ h2 a.anchor {
 
     pre,
     blockquote {
-        border: 1px solid #999;
+        border: 1px solid #999999;
         page-break-inside: avoid;
     }
 

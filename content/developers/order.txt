@@ -1,4 +1,0 @@
-basics
-addons
-tools
-contributing

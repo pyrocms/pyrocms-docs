@@ -1,4 +1,0 @@
-plugins
-widgets
-field_types | Field Types
-modules
