@@ -1,4 +1,4 @@
-# Welcome to PyroCMS! *The CMS built for everyone.*
+# Welcome to PyroCMS!
 
 To get started, start with one of the following:
 
