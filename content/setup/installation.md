@@ -32,7 +32,7 @@ After the download finishes you must run `composer install` from your PyroCMS di
 
 You can install PyroCMS by using the Composer create-project command in your terminal:
 
-	composer create-project anomaly/pyrocms dev-3.0/develop --prefer-dist
+	composer create-project anomaly/pyrocms 3.0.0-alpha1 --prefer-dist
 
 ### Run Installer
 
