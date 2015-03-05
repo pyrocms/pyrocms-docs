@@ -32,13 +32,13 @@ After the download finishes you must run `composer install` from your PyroCMS di
 
 You can install PyroCMS by using the Composer create-project command in your terminal:
 
-composer create-project pyrocms/pyrocms --prefer-dist
+	composer create-project anomaly/pyrocms 3.0.0-alpha1 --prefer-dist
 
 ### Run Installer
 
 After you have downloaded PyroCMS and installed it's dependencies you must run the installer by visiting your installation URL. The installer will load and will walk you through the simple requirements to install PyroCMS.
 
-<div class="note"><strong>Note:</strong> If PyroCMS was installed via Composer or Git then loading the installer may take longer than normal while the system publishes assets for the first time.</div>
+<div class="note"><strong>Note:</strong> If PyroCMS was installed via Composer or Git, loading the installer may take longer than normal while the system publishes assets for the first time.</div>
 
 Once the installer finishes, you are all set! You can now login or view the site. The admin control panel is always located at `/admin`:
 
