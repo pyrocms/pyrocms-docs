@@ -17,7 +17,7 @@
     {{ asset:css file="docs.css" }}
 
     <script type="text/javascript">
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('.ui.sticky').sticky({
                 context: '.main.container'
             });
@@ -46,6 +46,7 @@
 
                 <div class="item">
                     <a class="title"><b>Introduction</b></a>
+
                     <div class="active content menu">
                         {{ nav:auto start="introduction" }}
                     </div>
@@ -53,8 +54,25 @@
 
                 <div class="item">
                     <a class="title"><b>Setup</b></a>
+
                     <div class="active content menu">
                         {{ nav:auto start="setup" }}
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a class="title"><b>Services</b></a>
+
+                    <div class="active content menu">
+                        {{ nav:auto start="services" }}
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a class="title"><b>Development</b></a>
+
+                    <div class="active content menu">
+                        {{ nav:auto start="development" }}
                     </div>
                 </div>
 

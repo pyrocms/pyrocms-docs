@@ -1,4 +1,4 @@
-# Streams <small>Streams is awesome</small>
+# Streams
 
 Streams is a concept introduced to PyroCMS in 2012 that has since evolved into the core of PyroCMS.
 
