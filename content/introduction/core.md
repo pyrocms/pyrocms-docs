@@ -1,8 +1,5 @@
 ## Streams
 
-</div>
-<div class="doc_content">
-
 ## What is PyroCMS?
 
 PyroCMS is a modern CMS built over the Streams Platform using Laravel.

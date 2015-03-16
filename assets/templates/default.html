@@ -1,7 +1,72 @@
-{{ variables:set name="title" regex="(\#)s? (.+)" }}{{ content }}{{ /variables:set }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
 
-{{ embed file="header" }}
+    {{ variables:set name="title" regex="(\#)s? (.+)" }}{{ content }}{{ /variables:set }}
 
-{{ content }}
+    <title>{{ variables:get_var name="title" }} | {{ site_title }}</title>
 
-{{ embed file="footer" }}
+    <meta name="author" content="PyroCMS Dev Team">
+
+    <base href="{{ base_url }}"/>
+
+    {{ asset:js file="jquery.js" }}
+    {{ asset:js file="semantic.js" }}
+    {{ asset:css file="semantic.css" }}
+    {{ asset:css file="docs.css" }}
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.ui.sticky').sticky({
+                context: '.main.container'
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+<section class="masthead">
+
+    <a href="" class="icon">
+        <img src="assets/img/icon-white.png"/>
+    </a>
+
+    <h1>{{ variables:get_var name="title" }}</h1>
+
+</section>
+
+<section class="main container">
+
+    <div class="ui right rail close">
+        <div class="ui sticky">
+            <div class="ui secondary vertical following fluid accordion menu">
+
+                <div class="item">
+                    <a class="title"><b>Introduction</b></a>
+                    <div class="active content menu">
+                        {{ nav:auto start="introduction" }}
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a class="title"><b>Setup</b></a>
+                    <div class="active content menu">
+                        {{ nav:auto start="setup" }}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        {{ content }}
+    </div>
+
+</section>
+
+</body>
+</html>
