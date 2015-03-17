@@ -54,7 +54,7 @@ The form model determines what kind of entry you will be creating or editing. Th
 
 ### `$fields = ['first_name', 'last_name']`
 
-The form fields define the stream fields you want to use and display in your form. Each array value should be a valid [field definition](definitions/fields).
+The form fields define the stream fields you want to use and display in your form. Each array value should be a valid [field definition](streams/fields#array-definition).
 
 By default, the assignment label will be used as the input label. If no label is defined the field name will be used. Instructions and placeholder text will also be taken from the stream, field, and assignment information.
 
@@ -72,7 +72,7 @@ In most cases the field slug will suffice. However you may override streams info
 		]
 	];
 
-For a full list of possible parameters please see [field definitions](definitions/fields).
+For a full list of possible parameters please see [field definitions](streams/fields#array-definition).
 
 You may also use a handler instead of an array of fields. This is helpful when you have a lot of overriding logic or want to use closures for field parameters. For example:
 
@@ -92,59 +92,4 @@ The builder instance will be passed to the handle method in this case:
 
 ### `$actions = ['save'];`
 
-The actions property defines post actions displayed in the form. Possible form actions could be "Save", "Save & Continue", "Save & Exit", or "Save & Add More". Some shortcut actions are predefined for you but you can make an action for anything you want.
-
-Each array value should be an [action definition](definitions/form_actions). Below are some properties available for actions.
-
-	'my_action' => [
-		'button'   => 'green',
-		'text'     => 'Do something cool',
-		'redirect' => 'admin/example/cool_thing/{entry.id}'
-	]
-
-You may also use a handler instead of an array of actions. This is helpful when you have large definitions or want to use closures for action parameters. For example:
-
-`$actions = 'YourVendor\ExampleModule\Example\Form\ExampleFormActions@handle';`
-
-The builder instance will be passed to the handle method in this case:
-
-	class ExampleFormActions
-	{
-		public function handle(ExampleFormBuilder $builder)
-		{
-			$builder->setActions(['save']);
-		}
-	}
-
-{{ segment:purple text="If no actions are defined but a matching actions handler class exists, it will be used automatically.<br><br>For example:<br>`YourVendor\ExampleModule\Example\Form\ExampleFormBuilder`<br>Will attempt to use:<br>`YourVendor\ExampleModule\Example\Form\ExampleFormActions`<br><br>If no class exists then only a simple save action will be used." }}
-
-### `$buttons = [];`
-
-The buttons property defines form buttons displayed in the form. Form buttons float right from the form actions and behave like simple links. Possible form buttons could be "Cancel", "Delete", or "View". Some shortcut buttons are predefined for you but you can make a form button for anything you want.
-
-Each array value should be an [form button definition](definitions/form_buttons). Below are some properties available for buttons.
-
-	[
-		'button'   => 'blue',
-		'text'     => 'Preview',
-		'href'     => 'admin/preview/{entry.id}',
-		'attributes' => [
-			'data-modal' => 'standard'
-		]
-	]
-
-You may also use a handler instead of an array of buttons. This is helpful when you have large definitions or want to use closures for button parameters. For example:
-
-`$buttons = 'YourVendor\ExampleModule\Example\Form\ExampleFormButtons@handle';`
-
-The builder instance will be passed to the handle method in this case:
-
-	class ExampleFormButtons
-	{
-		public function handle(ExampleFormBuilder $builder)
-		{
-			$builder->setButtons(['cancel', 'delete']);
-		}
-	}
-
-{{ segment:purple text="If no buttons are defined but a matching buttons handler class exists, it will be used automatically.<br><br>For example:<br>`YourVendor\ExampleModule\Example\Form\ExampleFormBuilder`<br>Will attempt to use:<br>`YourVendor\ExampleModule\Example\Form\ExampleFormButtons`<br><br>If no class exists then no buttons will be displayed." }}
+Actions define post actions displayed in the form.

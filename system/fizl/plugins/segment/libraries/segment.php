@@ -18,6 +18,10 @@ class Segment extends Plugin {
         if ($method == 'green') {
             $title = 'Pro Tip';
         }
+
+        if ($method == 'purple') {
+            $title = 'Automation';
+        }
         
         return Markdown('<div class="ui segment '.$this->get_param('type', $method).'"><strong>'.$this->get_param('title', $title).':</strong> '.$this->get_param('text').'</div>');
 	}
