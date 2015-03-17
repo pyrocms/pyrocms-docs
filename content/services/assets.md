@@ -113,7 +113,7 @@ The debug filter forces the service to re-publish the file or collection upon ev
 
 ## Usage
 
-The Asset and AssetPaths classes are a singletons. This means you will want to resolve them form the IoC container by using `app('Anomaly\Streams\Platform\Asset\AssetPaths')` or by letting Laravel automatically injection dependencies.
+The Asset and AssetPaths classes are a singletons. This means you will want to resolve them form the IoC container by using `app('Anomaly\Streams\Platform\Asset\AssetPaths')` or by letting Laravel automatically inject it.
 
 Here is an example of injecting the class into your controller, adding some assets and retrieving the URL, path and tag for the resulting file:
 
