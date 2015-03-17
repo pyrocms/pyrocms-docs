@@ -1,4 +1,4 @@
-# Images <small>Powerful image management and manipulation for addons.</small>
+# Images <small>Powerful image management and manipulation.</small>
 
 The `Anomaly\Streams\Platform\Image\Image` class provides a very simple API for adding images to your views from various locations in your project.
 

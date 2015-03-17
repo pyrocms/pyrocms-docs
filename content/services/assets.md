@@ -1,4 +1,4 @@
-# Assets <small>Hassle free asset management for addons.</small>
+# Assets <small>Hassle free asset management and processing.</small>
 
 The `Anomaly\Streams\Platform\Asset\Asset` class provides a very simple API for adding assets to your views from various locations in your project.
 
