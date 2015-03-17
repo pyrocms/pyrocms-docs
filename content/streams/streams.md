@@ -1,3 +1,3 @@
-# Streams <small>Build anything. Better.</small>
+# Streams <small>Build entities like a boss.</small>
 
 More soon.

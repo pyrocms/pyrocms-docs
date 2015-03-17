@@ -1,3 +1,3 @@
-# Streams <small>Build anything. Better.</small>
+# Introduction <small>Build anything. Better.</small>
 
 More soon.

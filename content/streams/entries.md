@@ -1,3 +1,3 @@
-# Streams <small>Build anything. Better.</small>
+# Entries <small>Highly automated entity objects.</small>
 
 More soon.

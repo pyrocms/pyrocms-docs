@@ -1,5 +1,4 @@
-introduction | Introduction
-streams | Streams
-fields | Fields
-assignments | Assignments
-entries | Entries
+introduction
+streams
+fields
+entries

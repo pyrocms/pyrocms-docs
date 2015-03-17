@@ -4,6 +4,8 @@ The `Anomaly\Streams\Platform\Ui\Form\FormBuilder` class is responsible for help
 
 * {{ docs:id_link title="Introduction" }}
 * {{ docs:id_link title="Streams Usage" }}
+* {{ docs:id_link title="Non-Streams Usage" }}
+* {{ docs:id_link title="Further Configuration" }}
 
 
 ## Introduction
@@ -148,3 +150,13 @@ The builder instance will be passed to the handle method in this case:
 	}
 
 {{ segment:purple text="If no buttons are defined but a matching buttons handler class exists, it will be used automatically.<br><br>For example:<br>`YourVendor\ExampleModule\Example\Form\ExampleFormBuilder`<br>Will attempt to use:<br>`YourVendor\ExampleModule\Example\Form\ExampleFormButtons`<br><br>If no class exists then no buttons will be displayed." }}
+
+
+## Non-Streams Usage
+
+Coming Soon
+
+
+## Further Configuration
+
+Coming Soon
