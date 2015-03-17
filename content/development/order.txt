@@ -2,6 +2,6 @@ introduction | Introduction
 modules | Modules
 field_types | Field Types
 themes | Themes
-plugin | Plugin
+plugins | Plugins
 extensions | Extensions
 blocks | Blocks
