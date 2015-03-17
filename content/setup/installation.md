@@ -1,4 +1,4 @@
-# Installation
+# Installation <small>You are three steps away from development bliss.</small>
 
 * {{ docs:id_link title="Install Composer" }}
 * {{ docs:id_link title="Install PyroCMS" }}
@@ -38,7 +38,7 @@ composer create-project pyrocms/pyrocms --prefer-dist
 
 After you have downloaded PyroCMS and installed it's dependencies you must run the installer by visiting your installation URL. The installer will load and will walk you through the simple requirements to install PyroCMS.
 
-<div class="note"><strong>Note:</strong> If PyroCMS was installed via Composer or Git then loading the installer may take longer than normal while the system publishes assets for the first time.</div>
+<div class="ui segment blue"><strong>Note:</strong> If PyroCMS was installed via Composer or Git then loading the installer may take longer than normal while the system publishes assets for the first time.</div>
 
 Once the installer finishes, you are all set! You can now login or view the site. The admin control panel is always located at `/admin`:
 
@@ -67,4 +67,4 @@ The [settings](#settings) and [Preferences](#preferences) modules will override 
 
 PyroCMS may require some permissions to be configured: folders within **storage** and **public/assets** require write access by the web server.
 
-<div class="note"><strong>Note:</strong> PyroCMS is built on Laravel. In some cases it may be helpful to consult the <a href="http://laravel.com/docs">Laravel documentation</a>.</div>
+<div class="ui segment blue"><strong>Note:</strong> PyroCMS is built on Laravel. In some cases it may be helpful to consult the <a href="http://laravel.com/docs">Laravel documentation</a>.</div>

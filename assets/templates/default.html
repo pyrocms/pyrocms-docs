@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
 
-    {{ variables:set name="title" regex="(\#)s? (.+)" }}{{ content }}{{ /variables:set }}
+    {{ variables:set name="title" regex="(\#)s?(.+)(?= \<small)" }}{{ content }}{{ /variables:set }}
+    {{ variables:set name="heading" regex="(\#.)(.+)(\<small>)(.+)" }}{{ content }}{{ /variables:set }}
 
     <title>{{ variables:get_var name="title" }} | {{ site_title }}</title>
 
@@ -16,14 +17,6 @@
     {{ asset:css file="semantic.css" }}
     {{ asset:css file="docs.css" }}
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.ui.sticky').sticky({
-                context: '.main.container'
-            });
-        });
-    </script>
-
 </head>
 
 <body>
@@ -34,49 +27,17 @@
         <img src="assets/img/icon-white.png"/>
     </a>
 
-    <h1>{{ variables:get_var name="title" }}</h1>
+    <h1>{{ variables:get_var name="heading" }}</h1>
 
 </section>
 
 <section class="main container">
 
     <div class="ui right rail close">
-        <div class="ui sticky">
-            <div class="ui secondary vertical following fluid accordion menu">
+        <div class="ui secondary vertical following fluid accordion menu">
 
-                <div class="item">
-                    <a class="title"><b>Introduction</b></a>
+            {{ embed file="navigation" }}
 
-                    <div class="active content menu">
-                        {{ nav:auto start="introduction" }}
-                    </div>
-                </div>
-
-                <div class="item">
-                    <a class="title"><b>Setup</b></a>
-
-                    <div class="active content menu">
-                        {{ nav:auto start="setup" }}
-                    </div>
-                </div>
-
-                <div class="item">
-                    <a class="title"><b>Services</b></a>
-
-                    <div class="active content menu">
-                        {{ nav:auto start="services" }}
-                    </div>
-                </div>
-
-                <div class="item">
-                    <a class="title"><b>Development</b></a>
-
-                    <div class="active content menu">
-                        {{ nav:auto start="development" }}
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
 

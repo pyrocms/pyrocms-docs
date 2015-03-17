@@ -1,2 +1,2 @@
 pyrocms | PyroCMS
-streams | Streams
+core | Core

@@ -8,7 +8,7 @@
  * http://opensource.org/licenses/MIT
  *
  */
-@import 'https://fonts.googleapis.com/css?family=Lato:100,300,700,400italic,700italic&subset=latin';
+@import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,400italic,700italic&subset=latin';
 /*!
  * # Semantic UI 1.11.4 - Reset
  * http://github.com/semantic-org/semantic-ui/
@@ -554,15 +554,16 @@ h5 {
 
 h1 {
   min-height: 1rem;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 1.714rem;
+  font-size: 2rem;
 }
 
 h3 {
   font-size: 1.28rem;
+  font-weight: normal;
 }
 
 h4 {
@@ -594,8 +595,10 @@ h5:last-child {
 *******************************/
 
 p {
+  font-weight: normal;
   margin: 0em 0em 1em;
   line-height: 1.33;
+  color: #555555;
 }
 
 p:first-child {
@@ -604,6 +607,23 @@ p:first-child {
 
 p:last-child {
   margin-bottom: 0em;
+}
+
+/*-------------------
+        Code
+--------------------*/
+
+code {
+  color: #d95c5c;
+  padding: 2px 3px;
+  border-radius: 2px;
+  background: #efefef;
+}
+
+pre {
+  padding: 1em;
+  border-radius: 2px;
+  background: #efefef;
 }
 
 /*-------------------

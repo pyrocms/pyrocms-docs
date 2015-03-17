@@ -1,17 +1,16 @@
-# Configuration
+# Configuration <small>No configuration necessary, but you can configure to your heart's content.</small>
 
 * {{ docs:id_link title="Introduction" }}
 * {{ docs:id_link title="Maintenance Mode" }}
 * {{ docs:id_link title="Pretty URLs" }}
 
-</div>
-<div class="doc_content">
 
 ## Introduction
 
 All of the configuration files for PyroCMS are stored in the config directory. Many of the options use or can use the `.env` file that was generated during installation in PyroCMS's root directory.
 
-<div class="note"><strong>Note: </strong> Some of the file based configuration is configurable through and then overridden by the Settings or Preferences modules where applicable.</div>
+<div class="ui segment blue"><strong>Note: </strong> Some of the file based configuration is configurable through and then overridden by the Settings or Preferences modules where applicable.</div>
+
 
 ## Maintenance Mode
 
@@ -23,7 +22,8 @@ To override the views for maintenance mode and other status codes create a view 
 
 	example-theme/resources/views/override/streams/errors/503.twig
 
-<div class="note"><strong>Note: </strong> 404 and 500 response views will be used accordingly when PyroCMS is not in debug mode.</div>
+<div class="ui segment blue"><strong>Note: </strong> 404 and 500 response views will be used accordingly when PyroCMS is not in debug mode.</div>
+
 
 ## Pretty URLs
 
