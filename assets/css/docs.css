@@ -21,7 +21,7 @@ body {
 
 .masthead h1 {
     font-size: 4em;
-    margin-top: 80px;
+    margin-top: 70px;
     font-weight: 100;
 }
 
@@ -32,6 +32,10 @@ body {
     max-width: 500px;
     font-weight: 300;
     line-height: 1.5em;
+}
+
+.masthead .icon {
+    float: left;
 }
 
 .masthead .icon img {
@@ -56,8 +60,9 @@ body {
     display: none;
 }
 
-.main.container .ui.close.right.rail {
+.main.container .ui.close.left.rail {
     margin: 0;
+    width: 150px;
 }
 
 .main.container .ui.vertical.menu .item:not(.dropdown) > .menu > .item {
@@ -80,13 +85,12 @@ body {
         margin: 0em auto;
     }
 
-    .container .right.rail {
+    .container .left.rail {
         width: 200px;
-        padding-left: 0em;
+        padding-right: 0em;
     }
 
-    .main.container > .right.rail .sticky,
-    .main.container > .tab > .right.rail .sticky {
+    .main.container > .left.rail {
         width: 200px;
     }
 }
