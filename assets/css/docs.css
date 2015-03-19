@@ -69,10 +69,9 @@ body {
     padding: 0.5rem 0.25rem;
 }
 
-@media only screen and (min-width: 998px) and (max-width: 1200px) {
+@media (min-width: 998px) and (max-width: 1200px) {
     .header.segment .container {
         width: 878px;
-        right: -24px;
     }
 
     .tab.header.segment .tabular.menu {
@@ -81,7 +80,6 @@ body {
 
     .container {
         width: 680px;
-        right: 75px;
         margin: 0em auto;
     }
 
@@ -95,15 +93,21 @@ body {
     }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1355px) {
+@media (max-width: 1024px) {
     .container {
-        width: 765px;
-        right: 128px;
+        width: 565px;
         margin: 0em auto;
     }
 }
 
-@media only screen and (min-width: 1355px) {
+@media (min-width: 1200px) and (max-width: 1355px) {
+    .container {
+        width: 765px;
+        margin: 0em auto;
+    }
+}
+
+@media (min-width: 1355px) {
     .container {
         width: 850px;
     }
