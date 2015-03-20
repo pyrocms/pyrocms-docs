@@ -28,11 +28,16 @@ You can install PyroCMS by simply cloning it to your machine:
 
 After the download finishes you must run `composer install` from your PyroCMS directory.
 
+<div class="ui basic segment disabled">
+{{ format:format }}
 ### Via Composer
 
 You can install PyroCMS by using the Composer create-project command in your terminal:
 
 	composer create-project pyrocms/pyrocms --prefer-dist
+
+{{ /format:format }}
+</div>
 
 ### Run Installer
 
