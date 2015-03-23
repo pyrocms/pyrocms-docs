@@ -33,6 +33,18 @@ By default, the dashboard view in your active module located at `resources/views
 
 You may override this default option by manually setting the dashboard's `dashboard_view` option.
 
+### Displaying A Dashboard
+
+To display your dashboard inject it into your controller and return it's render method:
+
+	class ExampleDashboardController extends AdminController
+	{
+		public function index(ExampleDashboardBuilder $dashboard)
+		{
+			return $dashboard->render();
+		}
+	}
+
 ### Rendering A Widget
 
 To render a widget that has been loaded for a dashboard, simply refer to it in your dashboard's view like this:
