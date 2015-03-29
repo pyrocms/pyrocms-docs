@@ -8,6 +8,7 @@ Definitions are a standardized way to provide information to PyroCMS so that it 
 * {{ docs:id_link title="Evaluating" }}
 * {{ docs:id_link title="Normalizing" }}
 * {{ docs:id_link title="Guessing" }}
+* {{ docs:id_link title="Constructing" }}
 
 
 ## Introduction
