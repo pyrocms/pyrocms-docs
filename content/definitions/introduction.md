@@ -22,6 +22,8 @@ A simple, bare bones example of definitions would be just like this:
 		protected $property = ['foo', 'bar'];
 	}
 
+You would not think so, but PyroCMS can build very powerful and complex objects from only the information above.
+
 Definitions are used in a way loosely related to the builder pattern and they *all* go through the same exact set of processing and play by the same rules.
 
 
