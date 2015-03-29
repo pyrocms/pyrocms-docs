@@ -19,6 +19,10 @@ class Segment extends Plugin {
             $title = 'Pro Tip';
         }
 
+        if ($method == 'blue') {
+            $title = 'Learn More';
+        }
+
         if ($method == 'purple') {
             $title = 'Automation';
         }
