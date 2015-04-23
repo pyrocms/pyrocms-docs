@@ -27,7 +27,7 @@ The Streams Platform is responsible for everything from booting your application
 
 ## So what does "PyroCMS" do?
 
-Nothing. PyroCMS is simply the Streams Platform, a custom admin theme, and preloaded addons designed specifically for building and maintaining **websites**. The pages, blog, files and navigation modules are just a handful of examples of modules specifically designed for the purpose of running a website.
+PyroCMS is a distribution of the Streams Platform and various addons. PyroCMS is simply 1.) the Streams Platform, 2.) the admin theme, and 3.) preloaded addons designed specifically for building and maintaining **websites**. The pages, blog, files and navigation modules are just a handful of examples of modules specifically designed for the purpose of running a website.
 
 PyroCMS used to come in community and pro versions, each with slightly different code bases. Today PyroCMS and it's available versions is ***only*** defined by what the product comes packaged with. The code base is exactly the same, only different addons.
 
