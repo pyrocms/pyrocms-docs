@@ -1,0 +1,2 @@
+installation | Installation
+configuration | Configuration

@@ -72,7 +72,7 @@ class Nav extends Plugin {
 			if($this->level > $tmp_level):
 				
 				// We are stepping into a shallower level.
-				// Close off the ul and the li and 
+				// Close off the ul and the li and
 				$html .= "</li>\n</ul>\n";
 				
 			endif;
@@ -146,8 +146,6 @@ class Nav extends Plugin {
 
 		endif;
 
-		$html .= '<ul class="unstyled depth_'.$this->depth.'">'."\n";
-		
 		foreach($ord as $order_string):
 					
 			$pieces = explode('|', $order_string);
@@ -165,11 +163,11 @@ class Nav extends Plugin {
 
 			if (in_array($file.'.md', $map))
 			{
-				$html .= '<li><a href="'.site_url(implode('/', $this->segs).'/'.$file).'">'.$name. '</a></li>';
+				$html .= '<a class="item" href="'.site_url(implode('/', $this->segs).'/'.$file).'">'.$name. '</a></li>';
 			}
 			elseif (array_key_exists($file, $map))
 			{
-				$html .= '<li><a href="'.site_url(implode('/', $this->segs).'/'.$file).'">'.$name.'</a>';
+				$html .= '<a class="item" href="'.site_url(implode('/', $this->segs).'/'.$file).'">'.$name.'</a>';
 
 				$this->depth++;
 				$this->seg_depth++;
@@ -180,14 +178,10 @@ class Nav extends Plugin {
 				$this->depth--;
 				$this->seg_depth--;
 				array_pop($this->segs);
-
-				$html .= '</li>';
 			}
 
 		endforeach;
 
-		$html .= '</ul>';	
-				
 		return $html;
 	}
 

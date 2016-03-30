@@ -1,0 +1,4 @@
+assets | Assets
+images | Images
+forms | Forms
+tables | Tables

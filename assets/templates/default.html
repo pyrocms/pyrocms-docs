@@ -1,7 +1,51 @@
-{{ variables:set name="title" regex="(\#)s? (.+)" }}{{ content }}{{ /variables:set }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
 
-{{ embed file="header" }}
+    {{ variables:set name="title" regex="(\#)s?(.+)(?= \<small)" }}{{ content }}{{ /variables:set }}
+    {{ variables:set name="heading" regex="(\#.)(.+)(\<small>)(.+)" }}{{ content }}{{ /variables:set }}
 
-{{ content }}
+    <title>{{ variables:get_var name="title" }} | {{ site_title }}</title>
 
-{{ embed file="footer" }}
+    <meta name="author" content="PyroCMS Dev Team">
+
+    <base href="{{ base_url }}"/>
+
+    {{ asset:js file="jquery.js" }}
+    {{ asset:js file="semantic.js" }}
+    {{ asset:css file="semantic.css" }}
+    {{ asset:css file="docs.css" }}
+
+</head>
+
+<body>
+
+<section class="masthead">
+
+    <a href="" class="icon">
+        <img src="assets/img/icon-white.png"/>
+    </a>
+
+    <h1>{{ variables:get_var name="heading" }}</h1>
+
+</section>
+
+<section class="main container">
+
+    <div class="ui left rail close">
+        <div class="ui secondary vertical following fluid accordion menu">
+
+            {{ embed file="navigation" }}
+
+        </div>
+    </div>
+
+    <div>
+        {{ content }}
+    </div>
+
+</section>
+
+</body>
+</html>

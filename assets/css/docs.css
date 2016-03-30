@@ -1,0 +1,119 @@
+body {
+    overflow-x: hidden;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.masthead {
+    padding: 0em;
+    height: 300px;
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    border-bottom: none;
+    margin-bottom: 20px;
+    vertical-align: middle;
+    background-color: #181818;
+}
+
+.masthead h1 {
+    font-size: 4em;
+    margin-top: 70px;
+    font-weight: 100;
+}
+
+.masthead h1 small {
+    margin: auto;
+    display: block;
+    font-size: .4em;
+    max-width: 500px;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+.masthead .icon {
+    float: left;
+}
+
+.masthead .icon img {
+    width: 36px;
+    float: left;
+    margin: 15px;
+}
+
+.main.container {
+    z-index: 1;
+    margin: 0em auto;
+    position: relative;
+    padding: 2em 2em 7em;
+    background-color: #ffffff;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.main.container h1 small {
+    display: none;
+}
+
+.main.container .ui.close.left.rail {
+    margin: 0;
+    width: 150px;
+}
+
+.main.container .ui.vertical.menu .item:not(.dropdown) > .menu > .item {
+    padding: 0.5rem 0.25rem;
+}
+
+@media (min-width: 998px) and (max-width: 1200px) {
+    .header.segment .container {
+        width: 878px;
+    }
+
+    .tab.header.segment .tabular.menu {
+        width: 680px;
+    }
+
+    .container {
+        width: 680px;
+        margin: 0em auto;
+    }
+
+    .container .left.rail {
+        width: 200px;
+        padding-right: 0em;
+    }
+
+    .main.container > .left.rail {
+        width: 200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 565px;
+        margin: 0em auto;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1355px) {
+    .container {
+        width: 765px;
+        margin: 0em auto;
+    }
+}
+
+@media (min-width: 1355px) {
+    .container {
+        width: 850px;
+    }
+
+    .item .container,
+    .card .container {
+        width: 965px;
+    }
+}

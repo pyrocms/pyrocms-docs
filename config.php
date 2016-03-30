@@ -18,4 +18,4 @@ $config['fizl_date_format']		= 'Y-m-d H:i:s';
  */
  
 // The current PyroCMS version
-$config['pyrocms_version']		= '2.2';
+$config['pyrocms_version']		= '3.0';
